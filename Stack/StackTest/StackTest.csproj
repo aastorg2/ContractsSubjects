@@ -56,6 +56,9 @@
     <Compile Include="Properties\PexAssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StackContractTest.cs" />
+    <Compile Include="StackContractTest.PUT_PopContract.g.cs">
+      <DependentUpon>StackContractTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="StackContractTestDebug.cs" />
   </ItemGroup>
   <ItemGroup>
