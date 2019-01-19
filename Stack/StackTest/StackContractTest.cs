@@ -20,10 +20,6 @@ namespace Stack.Test
             
             //PexAssume.IsTrue(s1.Count > 0);
 
-            
-
-            //intVariables = ['Old_s1Count', 'New_s1Count','Old_Top','New_Top', 'Old_x','New_x']
-            //boolVariables = ["New_s1ContainsX", "Old_s1ContainsX"]
 
             int Old_s1Count = s1.Count;
             int Old_Top = s1.Peek();
@@ -33,10 +29,7 @@ namespace Stack.Test
             //PexAssume.IsTrue(Old_x != Old_Top); 
 
             AssumePrecondition.IsTrue(true);
-            //PexObserve.ValueForViewing("$input_Old_s1Count", s1.Count);
-            //PexObserve.ValueForViewing("$input_Old_s1Peek", s1.Peek());
-            //PexObserve.ValueForViewing("$input_x", x);
-
+            
             s1.Push(x);
 
             int New_s1Count = s1.Count;
@@ -53,8 +46,7 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$old_s1_contains_x", Old_s1ContainsX);
             PexObserve.ValueForViewing("$new_s1_contains_x", New_s1ContainsX);
 
-            PexAssert.IsTrue(((New_s1ContainsX) && (Old_s1Count == 1) && (New_s1Count == 2) && (Old_Top == 10) && (New_Top == 0) && (Old_x == 0) && (New_x == 0)));
-            
+            PexAssert.IsTrue(((New_s1ContainsX) && (New_x == Old_x) && (New_s1Count == 1 + Old_s1Count) && (New_Top == New_x) && (Old_s1Count >= 1) && (Old_Top >= -10)));
         }
 
 
