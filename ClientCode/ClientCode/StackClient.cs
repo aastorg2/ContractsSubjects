@@ -31,9 +31,11 @@ namespace ClientAPI
         {
             Stack<int>stack = new Stack<int>();
             string output = "";
+            int currbit = -2;
             while (n > 0)
             {
-                stack.Push(n % 2);
+                currbit = n % 2;
+                stack.Push(currbit);
                 n /= 2;
             }
             while (stack.Count > 0)

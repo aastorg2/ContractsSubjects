@@ -154,12 +154,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientStackTest.PUT_ToBinaryStackSummaryTest.g.cs">
-      <DependentUpon>StackClientTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ClientStackTest.PUT_ToBinaryStackTest.g.cs">
-      <DependentUpon>StackClientTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Factories\StackAbstractFactory.cs" />
     <Compile Include="Factories\StackFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
