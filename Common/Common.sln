@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{7626F9EC-0539-4483-AE0E-B87AFA9D9212}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PexAPIWrapper", "PexAPIWrapper\PexAPIWrapper.csproj", "{223278D6-D89F-4E09-A932-335B4A9C178D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{7626F9EC-0539-4483-AE0E-B87AFA9D9212}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7626F9EC-0539-4483-AE0E-B87AFA9D9212}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7626F9EC-0539-4483-AE0E-B87AFA9D9212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{223278D6-D89F-4E09-A932-335B4A9C178D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{223278D6-D89F-4E09-A932-335B4A9C178D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{223278D6-D89F-4E09-A932-335B4A9C178D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{223278D6-D89F-4E09-A932-335B4A9C178D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

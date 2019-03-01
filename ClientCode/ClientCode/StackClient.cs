@@ -4,24 +4,27 @@ using Microsoft.Pex.Framework;
 using Microsoft.Pex.Framework.Settings;
 using Microsoft.Pex.Framework.Exceptions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DataStructures;
-using DataStructures.Utility;
+using ClientAPI;
+using Stack;
 using PexAPIWrapper;
 
-namespace DataStructures
+namespace ClientAPI
 {
     public class StackClient
     {
-        public StackAbstract stack;
+        AbstractStack stack;
 
         public StackClient()
         {
-            this.stack = new StackAbstract();
+            this.stack = new AbstractStack(-1, 0, false);
         }
     
-        public StackClient(StackAbstract stack)
+        public StackClient(AbstractStack stack)
         {
-            this.stack = stack;
+            if (stack == null)
+                this.stack = new AbstractStack(-1, 0, false);
+            else
+                this.stack = stack;
         }
 
         public string ToBinaryStack(int n)
@@ -42,11 +45,13 @@ namespace DataStructures
 
         public string ToBinaryStackSummary(int n)
         {
-            string output = "";
 
+            string output = "";
+            int currbit = -2;
             while (n > 0)
             {
-                stack.Push(n % 2);
+                currbit = n % 2;
+                stack.Push(currbit);
                 n /= 2;
             }
             while (stack.Count > 0)

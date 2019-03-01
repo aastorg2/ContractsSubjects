@@ -6,21 +6,22 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Collections.Generic;
-using DataStructures.Utility;
 using PexAPIWrapper;
 using Microsoft.Pex.Framework;
 
-namespace DataStructures
+namespace ClientAPI
 {
-    public class StackAbstract
+    public class AbstractStack
     {
-        int _top = 0;
-        int _count = 0;
-        bool _containsX = false;
+        int _top;
+        int _count;
+        bool _containsX;
 
-        public StackAbstract()
+        public AbstractStack(int initTop, int initCount, bool initContainsX)
         {
-            _count = 0;
+            _count = initCount;
+            _top = initTop;
+            _containsX = initContainsX;
         }
 
         public int Count
@@ -32,13 +33,16 @@ namespace DataStructures
                 bool oldContainsX = _containsX;
                 int ret = 0;
 
-                PexAssert.IsTrue(true); 
-                PexAssume.IsTrue(oldCount == _count && oldContainsX == _containsX && oldTop == _top && ret == _count);
-
+                PexAssert.IsTrue(true);
+                
                 _top = PexChoose.Value<int>("_topCount");
                 _count = PexChoose.Value<int>("_countCount");
                 _containsX = PexChoose.Value<bool>("_containsXCount");
                 ret = PexChoose.Value<int>("_retCount");
+
+                PexAssume.IsTrue(oldCount == _count && oldContainsX == _containsX && oldTop == _top && ret == _count);
+
+               
                 
                 return ret;
             }
@@ -54,12 +58,15 @@ namespace DataStructures
                 int ret = 0;
 
                 PexAssert.IsTrue(_count > 0);
-                PexAssume.IsTrue(oldCount == _count && oldContainsX == _containsX && oldTop == _top && ret == _top);
-
+                
                 _top = PexChoose.Value<int>("_topTop");
                 _count = PexChoose.Value<int>("_countTop");
                 _containsX = PexChoose.Value<bool>("_containsXTop");
                 ret = PexChoose.Value<int>("_retTop");
+
+                PexAssume.IsTrue(oldCount == _count && oldContainsX == _containsX && oldTop == _top && ret == _top);
+
+                
 
                 return ret;
             }
@@ -70,15 +77,20 @@ namespace DataStructures
             int oldX = x;
             int oldTop = _top;
             int oldCount = _count;
-            // bool oldContainsX = _containsX;
+            bool oldContainsX = _containsX;
 
             PexAssert.IsTrue(true);
-            PexAssume.IsTrue((_containsX == true)  && (_top == oldX) && (_count == oldCount + 1) && (oldX == x));
 
             _top = PexChoose.Value<int>("_topPush");
             _count = PexChoose.Value<int>("_countPush");
             _containsX = PexChoose.Value<bool>("_containsXPush");
-        }
+
+
+            PexAssume.IsTrue((_containsX == true)  && (_top == x) && (_count == oldCount + 1) && (oldX == x));
+            
+            //(New_s1ContainsX) && (New_Top == Old_x) && (New_s1Count == 1 + Old_s1Count) && (New_Top == New_x)
+            
+                    }
 
         public int Pop()
         {
@@ -87,13 +99,17 @@ namespace DataStructures
             bool oldContainsX = _containsX;
             int ret = 0;
 
+            
             PexAssert.IsTrue(_count > 0);
-            PexAssume.IsTrue((_count == oldCount - 1) && (ret == _top));
 
             _top = PexChoose.Value<int>("_topPop");
             _count = PexChoose.Value<int>("_countPop");
             _containsX = PexChoose.Value<bool>("_containsXPop");
             ret = PexChoose.Value<int>("_retPop");
+
+            PexAssume.IsTrue((_count == oldCount - 1) && (ret == oldTop));
+
+           
 
             return ret;
         }
