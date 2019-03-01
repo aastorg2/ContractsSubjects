@@ -12,7 +12,17 @@ namespace DataStructures
 {
     public class StackClient
     {
-        
+        public StackAbstract stack;
+
+        public StackClient()
+        {
+            this.stack = new StackAbstract();
+        }
+    
+        public StackClient(StackAbstract stack)
+        {
+            this.stack = stack;
+        }
 
         public string ToBinaryStack(int n)
         {
@@ -30,46 +40,13 @@ namespace DataStructures
             return output;
         }
 
-        //public string ToBinaryStackSummary(int n)
-        //{
-        //    StackAbstract stack = new StackAbstract();
-
-        //    string output = "";
-        //    int currBit = -1;
-
-        //    while (n > 0)
-        //    {
-        //        currBit = n % 2;
-        //        stack.Push(currBit);
-                
-        //        n /= 2;
-        //    }
-        //    while (stack.Count > 0)
-        //    {
-        //        output += stack.Pop().ToString();
-        //    }
-        //    return output;
-        //}
-
         public string ToBinaryStackSummary(int n)
         {
-            Stack<int> stack = new Stack<int>();
-
             string output = "";
-            int oldBit = -1;
-            int currBit = -1;
-            int oldCount = 0;
-
 
             while (n > 0)
             {
-                currBit = n % 2;
-                oldBit = currBit;
-                oldCount = stack.Count;
-                //stack.Push(currBit);
-
-                PexAssert.IsTrue(true);
-                PexAssume.IsTrue((stack.Count > 0 ? stack.Peek() == currBit : true) && currBit == oldBit && stack.Contains(currBit) && stack.Count == oldCount + 1);
+                stack.Push(n % 2);
                 n /= 2;
             }
             while (stack.Count > 0)
