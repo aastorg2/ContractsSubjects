@@ -85,8 +85,11 @@ namespace ClientAPI
             _count = PexChoose.Value<int>("_countPush");
             _containsX = PexChoose.Value<bool>("_containsXPush");
 
+            Debug.WriteLine("_top is: "+ _top);
+            Debug.WriteLine("_count is: " + _count);
+            Debug.WriteLine("_count is: " + _containsX);
 
-            PexAssume.IsTrue((_containsX == true)  && (_top == x) && (_count == oldCount + 1) && (oldX == x));
+            PexAssume.IsTrue((_containsX == true) && (_top == x) && (_count == oldCount + 1) && (oldX == x));
             
             //(New_s1ContainsX) && (New_Top == Old_x) && (New_s1Count == 1 + Old_s1Count) && (New_Top == New_x)
             
