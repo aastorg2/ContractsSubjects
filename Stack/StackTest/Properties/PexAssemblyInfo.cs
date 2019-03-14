@@ -1,7 +1,7 @@
 // <copyright file="PexAssemblyInfo.cs">Copyright ©  2017</copyright>
 using Microsoft.Pex.Framework.Creatable;
 using Microsoft.Pex.Framework.Instrumentation;
-//using Microsoft.Pex.Framework.Moles;
+using Microsoft.Pex.Framework.Moles;
 using Microsoft.Pex.Framework.Settings;
 using Microsoft.Pex.Framework.Validation;
 using Microsoft.Pex.Framework.Coverage;
@@ -41,8 +41,8 @@ using Stack;
 [assembly: PexAllowedXmlDocumentedException]
 
 // Microsoft.Pex.Framework.Moles
-//[assembly: PexAssumeContractEnsuresFailureAtBehavedSurface]
-//[assembly: PexChooseAsBehavedCurrentBehavior]
+[assembly: PexAssumeContractEnsuresFailureAtBehavedSurface]
+[assembly: PexChooseAsBehavedCurrentBehavior]
 
 [assembly: PexInstrumentAssembly("Microsoft.VisualBasic", InstrumentationLevel = PexInstrumentationLevel.Excluded)]
 
