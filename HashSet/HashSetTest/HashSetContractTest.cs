@@ -19,7 +19,7 @@ namespace HashSet.Test
 
             int Old_hsCount = hs.Count;
             int Old_x = x;
-            bool Old_Ret = PexChoose.Value<bool>("default_Ret"); ;
+            bool Old_Ret = PexChoose.Value<bool>("default_Ret");
             bool Old_hsContainsX = hs.Contains(x);
 
             bool New_Ret = hs.Add(x);
@@ -47,7 +47,7 @@ namespace HashSet.Test
 
             int Old_hsCount = hs.Count;
             int Old_x = x;
-            bool Old_Ret = PexChoose.Value<bool>("default_Ret"); ;
+            bool Old_Ret = PexChoose.Value<bool>("default_Ret");
             bool Old_hsContainsX = hs.Contains(x);
 
             bool New_Ret = hs.Remove(x);
@@ -95,7 +95,7 @@ namespace HashSet.Test
 
             int Old_hsCount = hs.Count;
             int Old_x = x;
-            bool Old_Ret = PexChoose.Value<bool>("default_Ret"); ;
+            bool Old_Ret = PexChoose.Value<bool>("default_Ret");
             bool Old_hsContainsX = hs.Contains(x);
 
             bool New_Ret = hs.Contains(x);
