@@ -43,7 +43,7 @@ namespace HashSet.Test
         [PexMethod]
         public void PUT_RemoveContract([PexAssumeUnderTest]HashSet.HashSet<int> hs, int x)
         {
-            AssumePrecondition.IsTrue(hs.Count > 0);
+            AssumePrecondition.IsTrue(true);
 
             int Old_hsCount = hs.Count;
             int Old_x = x;
