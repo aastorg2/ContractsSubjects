@@ -65,7 +65,7 @@ namespace Common.Utility
         /// </summary>
         /// <param name="bitArray">int array to hold bits</param>
         /// <param name="length">length of int array</param>
-        internal BitHelper(int* bitArrayPtr, int length)
+        public BitHelper(int* bitArrayPtr, int length)
         {
             _arrayPtr = bitArrayPtr;
             _length = length;
@@ -77,7 +77,7 @@ namespace Common.Utility
         /// </summary>
         /// <param name="bitArray">int array to hold bits</param>
         /// <param name="length">length of int array</param>
-        internal BitHelper(int[] bitArray, int length)
+        public BitHelper(int[] bitArray, int length)
         {
             _array = bitArray;
             _length = length;
@@ -87,7 +87,7 @@ namespace Common.Utility
         /// Mark bit at specified position
         /// </summary>
         /// <param name="bitPosition"></param>
-        internal void MarkBit(int bitPosition)
+        public void MarkBit(int bitPosition)
         {
             int bitArrayIndex = bitPosition / IntSize;
             if (bitArrayIndex < _length && bitArrayIndex >= 0)
@@ -109,7 +109,7 @@ namespace Common.Utility
         /// </summary>
         /// <param name="bitPosition"></param>
         /// <returns></returns>
-        internal bool IsMarked(int bitPosition)
+        public bool IsMarked(int bitPosition)
         {
             int bitArrayIndex = bitPosition / IntSize;
             if (bitArrayIndex < _length && bitArrayIndex >= 0)
@@ -133,7 +133,7 @@ namespace Common.Utility
         /// </summary>
         /// <param name="n"></param>
         /// <returns></returns>
-        internal static int ToIntArrayLength(int n)
+        public static int ToIntArrayLength(int n)
         {
             return n > 0 ? ((n - 1) / IntSize + 1) : 0;
         }

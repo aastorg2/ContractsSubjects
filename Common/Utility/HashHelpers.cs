@@ -21,7 +21,8 @@ using System.Threading;
 
 namespace Common.Utility
 {
-    internal static class HashHelpers
+    //internal static class HashHelpers
+    public static class HashHelpers
     {
         // Table of prime numbers to use as hash table sizes. 
         // A typical resize algorithm would pick the smallest prime number in this array
