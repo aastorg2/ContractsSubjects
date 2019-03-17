@@ -52,10 +52,10 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\QueueFactory.cs" />
     <Compile Include="Properties\PexAssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueueContractTest.cs" />
-    <Compile Include="Factories\StackFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Queue\Queue.csproj">
