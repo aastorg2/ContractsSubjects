@@ -106,7 +106,8 @@ namespace Common.Utility
         // object until OnDeserialization is called.
         private static ConditionalWeakTable<object, SerializationInfo> s_serializationInfoTable;
 
-        internal static ConditionalWeakTable<object, SerializationInfo> SerializationInfoTable
+        //internal static ConditionalWeakTable<object, SerializationInfo> SerializationInfoTable
+        public static ConditionalWeakTable<object, SerializationInfo> SerializationInfoTable
         {
             get
             {
@@ -119,7 +120,8 @@ namespace Common.Utility
     }
     // This interface is implemented by string comparers in the framework that can opt into
     // randomized hashing behaviors. 
-    internal interface IWellKnownStringEqualityComparer
+    //internal interface IWellKnownStringEqualityComparer
+    public interface IWellKnownStringEqualityComparer
     {
         // Get an IEqualityComparer that has the same equality comparision rules as "this" but uses Randomized Hashing.
         System.Collections.IEqualityComparer GetRandomizedEqualityComparer();

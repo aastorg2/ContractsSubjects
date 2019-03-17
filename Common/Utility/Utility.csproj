@@ -45,6 +45,8 @@
     <Compile Include="DictionaryHashHelper.cs" />
     <Compile Include="EmptyArray.cs" />
     <Compile Include="HashHelpers.cs" />
+    <Compile Include="IReadOnlyCollection.cs" />
+    <Compile Include="IReadOnlyDictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
