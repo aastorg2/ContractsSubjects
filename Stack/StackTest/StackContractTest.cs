@@ -13,16 +13,6 @@ namespace Stack.Test
     [PexClass,TestClass]
     public partial class StackContractTest
     {
-        /* Post Condition with entropy:
-         * ((New_s1ContainsX) && (New_Top == Old_x) && (New_s1Count == 1 + Old_s1Count) && (New_Top == New_x) && (Old_s1ContainsX)) || 
-         * ((New_s1ContainsX) && (New_Top == Old_x) && (New_s1Count == 1 + Old_s1Count) && (New_Top == New_x) && ( ! (Old_Top == New_Top)))
-         * 
-         * 
-         * Post Condition with max conjuncts:
-         * 
-         * 
-         */
-
         //[PexMethod(TestEmissionFilter= PexTestEmissionFilter.All)]
         //[PexMethod(TestEmissionFilter= PexTestEmissionFilter.FailuresAndUniquePaths, MaxRuns=100)]
         [PexMethod]
