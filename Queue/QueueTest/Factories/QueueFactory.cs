@@ -7,7 +7,7 @@ using Microsoft.Pex.Framework;
 
 namespace Queue.Test.Factories
 {
-    public static class StackFactory
+    public static class QueueFactory
     {
         /*
         [PexFactoryMethod(typeof(Stack.Stack<int>))]
