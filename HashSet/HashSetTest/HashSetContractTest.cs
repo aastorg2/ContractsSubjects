@@ -20,8 +20,10 @@ namespace HashSet.Test
             int Old_hsCount = hs.Count;
             int Old_x = x;
             bool Old_Ret = PexChoose.Value<bool>("default_Ret");
+            //bool Old_Ret = ;
             bool Old_hsContainsX = hs.Contains(x);
 
+            //code
             bool New_Ret = hs.Add(x);
 
             int New_hsCount = hs.Count;
@@ -32,12 +34,12 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
             PexObserve.ValueForViewing("$old_hs_x", Old_x);
             PexObserve.ValueForViewing("$new_hs_x", New_x);
-            PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
-            PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
             PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
+            PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
+            PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
 
-            PexAssert.IsTrue(((New_hsContainsX) && (!Old_hsContainsX) && (New_Ret) && (New_x == Old_x) && (New_hsCount == 1 + Old_hsCount)) || ((New_hsContainsX) && (Old_hsContainsX) && (!New_Ret) && (New_x == Old_x) && (New_hsCount == Old_hsCount)));
+            PexAssert.IsTrue(((New_hsContainsX) && (New_x == Old_x) && (New_Ret) && ( ! (Old_hsCount == New_hsCount))) || ((New_hsContainsX) && (New_x == Old_x) && (Old_hsCount == New_hsCount) && (Old_hsContainsX)));
         }
 
         [PexMethod]
@@ -65,7 +67,7 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
 
-            PexAssert.IsTrue(((!New_hsContainsX) && (!Old_hsContainsX) && (!New_Ret) && (New_x == Old_x) && (New_hsCount == Old_hsCount)) || ((!New_hsContainsX) && (Old_hsContainsX) && (New_Ret) && (New_x == Old_x) && (New_hsCount == Old_hsCount - 1)));
+            PexAssert.IsTrue(false);
         }
 
         [PexMethod]
@@ -85,7 +87,8 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
 
-            PexAssert.IsTrue((New_hsCount == Old_hsCount) && (New_Ret == Old_hsCount));
+            PexAssert.IsTrue(false);
+
         }
 
         [PexMethod]
@@ -113,7 +116,8 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
 
-            PexAssert.IsTrue((New_hsCount == Old_hsCount) && (New_hsContainsX == Old_hsContainsX) && (New_x == Old_x));
+            PexAssert.IsTrue(false);
+
         }
     }
 }
