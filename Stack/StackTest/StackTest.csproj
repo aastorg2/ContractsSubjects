@@ -55,7 +55,6 @@
     <Compile Include="Properties\PexAssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StackContractTest.cs" />
-    <Compile Include="StackContractTestDebug.cs" />
     <Compile Include="Factories\StackFactory.cs" />
   </ItemGroup>
   <ItemGroup>

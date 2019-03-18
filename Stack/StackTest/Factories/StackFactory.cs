@@ -50,7 +50,7 @@ namespace Stack.Test.Factories
         {
             //PexAssume.AreDistinctValues(elems);
             //PexAssume.TrueForAll(elems, e => e != 0);
-            //PexAssume.TrueForAll(0, elems.Length, _i => elems[_i] > -101 && elems[_i] < 101);
+            PexAssume.TrueForAll(0, elems.Length, _i => elems[_i] > -11 && elems[_i] < 11);
             Stack.Stack<int> ret = new Stack.Stack<int>();// DataStructure has big enough capacity for Commutativity Test
             for (int i = 0; i < elems.Length; i++)
             {
