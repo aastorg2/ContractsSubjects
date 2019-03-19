@@ -62,10 +62,11 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
             PexObserve.ValueForViewing("$old_hs_x", Old_x);
             PexObserve.ValueForViewing("$new_hs_x", New_x);
-            PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
-            PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
             PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
+            PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
+            PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
+
 
             PexAssert.IsTrue(false);
         }
@@ -111,10 +112,11 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
             PexObserve.ValueForViewing("$old_hs_x", Old_x);
             PexObserve.ValueForViewing("$new_hs_x", New_x);
-            PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
-            PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
             PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
+            PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
+            PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
+
 
             PexAssert.IsTrue(false);
 
