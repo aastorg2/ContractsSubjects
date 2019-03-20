@@ -60,6 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DictionaryContractTest.cs" />
+    <Compile Include="DictionaryContractTest.PUT_AddContract.g.cs">
+      <DependentUpon>DictionaryContractTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Factories\DictionaryFactory.cs" />
     <Compile Include="Properties\PexAssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
