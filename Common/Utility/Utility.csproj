@@ -43,11 +43,35 @@
   <ItemGroup>
     <Compile Include="BitHelper.cs" />
     <Compile Include="DictionaryHashHelper.cs" />
+    <Compile Include="Edge.cs" />
+    <Compile Include="EdgeEqualityComparer.cs" />
+    <Compile Include="EdgeEventArgs.cs" />
+    <Compile Include="EdgeNotFoundException.cs" />
     <Compile Include="EmptyArray.cs" />
+    <Compile Include="GraphColor.cs" />
+    <Compile Include="GraphContracts.cs" />
     <Compile Include="HashHelpers.cs" />
+    <Compile Include="IEdge.cs" />
+    <Compile Include="IEdgeListGraph.cs" />
+    <Compile Include="IEdgeSet.cs" />
+    <Compile Include="IGraph.cs" />
+    <Compile Include="IImplicitGraph.cs" />
+    <Compile Include="IIncidenceGraph.cs" />
+    <Compile Include="IMutableEdgeListGraph.cs" />
+    <Compile Include="IMutableGraph.cs" />
+    <Compile Include="IMutableIncidenceGraph.cs" />
+    <Compile Include="IMutableUndirectedGraph.cs" />
+    <Compile Include="IMutableVertexListGraph.cs" />
     <Compile Include="IReadOnlyCollection.cs" />
     <Compile Include="IReadOnlyDictionary.cs" />
+    <Compile Include="IUndirectedGraph.cs" />
+    <Compile Include="IVertexAndEdgeListGraph.cs" />
+    <Compile Include="IVertexAndEdgeSet.cs" />
+    <Compile Include="IVertexListGraph.cs" />
+    <Compile Include="IVertexSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VertexEventArgs.cs" />
+    <Compile Include="VertexNotFoundException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
