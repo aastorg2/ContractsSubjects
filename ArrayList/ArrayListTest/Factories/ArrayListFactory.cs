@@ -12,7 +12,7 @@ namespace ArrayList.Test.Factories
         [PexFactoryMethod(typeof(ArrayList))]
         public static ArrayList Create([PexAssumeNotNull]int[] elems)
         {
-            PexAssume.IsTrue( elems.Length < 11);
+            //PexAssume.IsTrue( elems.Length < 11);
             //PexAssume.TrueForAll(0, elems.Length, _i => elems[_i] > -11 && elems[_i] < 11);
             ArrayList ret = new ArrayList(elems.Length + 2);
 
@@ -26,5 +26,8 @@ namespace ArrayList.Test.Factories
             return ret;
 
         }
+        
+
+
     }
 }
