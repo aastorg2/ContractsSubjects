@@ -39,7 +39,8 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
             PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
 
-            PexAssert.IsTrue(((New_hsContainsX) && (New_x == Old_x) && (New_Ret) && ( ! (Old_hsCount == New_hsCount))) || ((New_hsContainsX) && (New_x == Old_x) && (Old_hsCount == New_hsCount) && (Old_hsContainsX)));
+            PexAssert.IsTrue(((New_x == Old_x) && (New_hsContainsX) && ( ! (New_Ret)) && (Old_hsContainsX) && (Old_hsCount == New_hsCount)) || ((New_x == Old_x) && (New_Ret) && (New_hsContainsX) && ( ! (Old_hsContainsX)) && ( ! (Old_hsCount == New_hsCount))));
+
         }
 
         [PexMethod]
@@ -68,7 +69,7 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
 
 
-            PexAssert.IsTrue(((New_x == Old_x) && (New_Ret) && (Old_hsContainsX)) || ((New_x == Old_x) && (Old_hsCount == New_hsCount)));
+            PexAssert.IsTrue(((New_x == Old_x) && (New_Ret) && ( ! (New_hsContainsX)) && (Old_hsContainsX) && ( ! (Old_hsCount == New_hsCount))) || ((New_x == Old_x) && ( ! (New_hsContainsX)) && (Old_hsCount == New_hsCount) && ( ! (New_Ret)) && ( ! (Old_hsContainsX))));
         }
 
         [PexMethod]
@@ -110,15 +111,15 @@ namespace HashSet.Test
 
             PexObserve.ValueForViewing("$old_hs_Count", Old_hsCount);
             PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
-            PexObserve.ValueForViewing("$old_hs_x", Old_x);
-            PexObserve.ValueForViewing("$new_hs_x", New_x);
+            PexObserve.ValueForViewing("$old_x", Old_x);
+            PexObserve.ValueForViewing("$new_x", New_x);
             PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
             PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
 
 
-            PexAssert.IsTrue(((New_x == Old_x) && (New_hsCount == Old_hsCount)));
+            PexAssert.IsTrue(((New_x == Old_x) && (New_hsCount == Old_hsCount) && (New_Ret) && (New_hsContainsX) && (Old_hsContainsX)) || ((New_x == Old_x) && (New_hsCount == Old_hsCount) && ( ! (New_hsContainsX)) && ( ! (New_Ret)) && ( ! (Old_hsContainsX))));
 
         }
     }
