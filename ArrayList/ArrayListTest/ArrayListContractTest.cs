@@ -56,7 +56,9 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$old_al_contains_x", Old_alContainsX);
             PexObserve.ValueForViewing("$new_al_contains_x", New_alContainsX);
 
-            PexAssert.IsTrue(((New_alContainsX) && ( ! (New_alCount == Old_alIndexOfX)) && ( ! (New_alCount == New_alIndexOfX)) && ( ! (New_alCount == Old_alLastIndexOfX)) && ( ! (Old_alIndexOfX == New_Ret)) && ( ! (Old_alLastIndexOfX == New_Ret)) && (New_alLastIndexOfX == Old_alCount) && (New_x == Old_x) && (New_alCount == 1 + Old_alCount) && (New_Ret == Old_alCount)));
+            PexAssert.IsTrue(((New_alContainsX) && ( ! (New_alCount == Old_alIndexOfX)) && ( ! (New_alCount == New_alIndexOfX)) && ( ! (New_alCount == Old_alLastIndexOfX)) 
+                && ( ! (Old_alIndexOfX == New_Ret)) && ( ! (Old_alLastIndexOfX == New_Ret)) && (New_alLastIndexOfX == Old_alCount) && (New_x == Old_x) && (New_alCount == 1 + Old_alCount) 
+                && (New_Ret == Old_alCount)));
         }
 
         // Remove x at al.IndexOf(x)
