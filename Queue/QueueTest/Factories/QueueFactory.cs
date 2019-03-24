@@ -50,11 +50,11 @@ namespace Queue.Test.Factories
         {
             //PexAssume.AreDistinctValues(elems);
             //PexAssume.TrueForAll(elems, e => e != 0);
-            PexAssume.TrueForAll(0, elems.Length, _i => elems[_i] > -11 && elems[_i] < 11);
+            //PexAssume.TrueForAll(0, elems.Length, _i => elems[_i] > -11 && elems[_i] < 11);
             Queue.Queue<int> ret = new Queue.Queue<int>();// DataStructure has big enough capacity for Commutativity Test
             for (int i = 0; i < elems.Length; i++)
             {
-                // For stack, add any element. 
+                
                 ret.Enqueue(elems[i]);
             }
             return ret;

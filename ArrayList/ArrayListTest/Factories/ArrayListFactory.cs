@@ -1,21 +1,21 @@
 using System;
 using System.Text;
-using ArrayList;
-using Common.Utility;
+//using Common.Utility;
 using Microsoft.Pex.Framework;
+using ArrayList;
+using ArrayList.Utility;
 
 namespace ArrayList.Test.Factories
 {
     
     public static class ArrayListFactory
     {
-        [PexFactoryMethod(typeof(ArrayList))]
+        [PexFactoryMethod(typeof( ArrayList))]
         public static ArrayList Create([PexAssumeNotNull]int[] elems)
         {
             //PexAssume.IsTrue( elems.Length < 11);
             //PexAssume.TrueForAll(0, elems.Length, _i => elems[_i] > -11 && elems[_i] < 11);
             ArrayList ret = new ArrayList();
-
             
             for (int i = 0; i < elems.Length; i++)
             {
@@ -27,7 +27,7 @@ namespace ArrayList.Test.Factories
 
         }
 
-       [PexFactoryMethod(typeof(ArrayList))]
+        [PexFactoryMethod(typeof(ArrayList))]
         public static ArrayList CreateWithConstants(int num)
         {
             PexAssume.IsTrue(num > 0 && num < 11);
