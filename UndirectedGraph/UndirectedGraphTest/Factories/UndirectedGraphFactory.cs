@@ -179,7 +179,10 @@ namespace UndirectedGraph.Test.Factories
                     g.AddVertex(target);
                 }
 
-                g.AddEdge(new Edge<int>(source, target));
+                if (source != target)
+                {
+                    g.AddEdge(new Edge<int>(source, target));
+                }
             }
 
 
