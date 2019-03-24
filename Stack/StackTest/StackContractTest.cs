@@ -18,12 +18,14 @@ namespace Stack.Test
         [PexMethod]
         public void PUT_PushContract([PexAssumeUnderTest]Stack.Stack<int> s1, int x)
         {
+            AssumePrecondition.IsTrue(true);
+
             int Old_s1Count =  s1.Count;
+            //int Old_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("old_top");
             int Old_Top = s1.Peek();
             int Old_x = x;
             bool Old_s1ContainsX = s1.Contains(x);
 
-            AssumePrecondition.IsTrue(true);
             s1.Push(x);
 
             int New_s1Count = s1.Count;
@@ -40,7 +42,7 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$old_s1_contains_x", Old_s1ContainsX);
             PexObserve.ValueForViewing("$new_s1_contains_x", New_s1ContainsX);
             
-            PexAssert.IsTrue(((New_s1ContainsX) && (New_x == Old_x) && (New_s1Count == 1 + Old_s1Count) && (New_Top == Old_x) && (Old_s1ContainsX)) || ((New_s1ContainsX) && (New_x == Old_x) && (New_s1Count == 1 + Old_s1Count) && (New_Top == Old_x) && ( ! (Old_Top == New_Top))));
+            PexAssert.IsTrue(false);
         }
 
 
@@ -49,14 +51,14 @@ namespace Stack.Test
         {
             AssumePrecondition.IsTrue(s1.Count > 0);
             int Old_s1Count = s1.Count;
-            int Old_Ret = 2;
+            int Old_Ret = PexChoose.Value<int>("old_ret"); ;
             int Old_Top = s1.Peek();
             
             /*code*/
             int New_Ret = s1.Pop();
             
             //Old_ret = New_ret;
-            int New_Top = PexChoose.Value<int>("new_top_exception");
+            int New_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("old_ret");
             int New_s1Count = s1.Count;
             
             PexObserve.ValueForViewing("$Old_s1_Count", Old_s1Count);
@@ -123,17 +125,17 @@ namespace Stack.Test
         [PexMethod]
         public void PUT_ContainsContract([PexAssumeUnderTest]Stack.Stack<int> s1, int x)
         {
-
+            int undefinedTop = PexChoose.Value<int>("old_top");
             AssumePrecondition.IsTrue(true);
             int Old_s1Count = s1.Count;
-            int Old_Top = s1.Peek();
+            int Old_Top = s1.Count > 0 ? s1.Peek() : undefinedTop;
             bool Old_Ret = PexChoose.Value<bool>("default_Ret");
             bool Old_s1ContainsX = s1.Contains(x);
             /*Code */
             bool New_Ret = s1.Contains(x);
 
             int New_s1Count = s1.Count;
-            int New_Top = s1.Peek();
+            int New_Top = s1.Count > 0 ? s1.Peek() : undefinedTop;
             bool New_s1ContainsX = s1.Contains(x);
 
             PexObserve.ValueForViewing("$old_s1_Count", Old_s1Count);
@@ -145,7 +147,7 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$old_s1_contains_x", Old_s1ContainsX);
             PexObserve.ValueForViewing("$new_s1_contains_x", New_s1ContainsX);
 
-            PexAssert.IsTrue(((New_s1Count == Old_s1Count) && (New_Top == Old_Top)));
+            PexAssert.IsTrue(((New_s1Count == Old_s1Count) && (New_Top == Old_Top) && (Old_s1ContainsX) && (New_Ret) && (New_s1ContainsX)) || ((New_s1Count == Old_s1Count) && (New_Top == Old_Top) && ( ! (New_s1ContainsX)) && ( ! (New_Ret)) && ( ! (Old_s1ContainsX))));
         }
 
     }

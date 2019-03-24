@@ -9,7 +9,7 @@ using Microsoft.Pex.Framework.Using;
 using ArrayList.Utility;
 using Microsoft.Pex.Framework.Explorable;
 using Microsoft.Pex.Framework;
-//using PexReportParser;
+
 using ArrayList;
 
 
@@ -20,7 +20,7 @@ using ArrayList;
 [assembly: PexAssemblySettings(TestFramework = "VisualStudioUnitTest")]
 
 // Microsoft.Pex.Framework.Instrumentation
-[assembly: PexAssemblyUnderTest("HashSet")]
+[assembly: PexAssemblyUnderTest("ArrayList")]
 [assembly: PexInstrumentAssembly("System.Core")]
 
 [assembly: PexUseTypeAttribute(typeof(ArrayListEqualityComparer))]
