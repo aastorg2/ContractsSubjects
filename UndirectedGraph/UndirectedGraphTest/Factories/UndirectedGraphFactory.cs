@@ -14,32 +14,28 @@ namespace UndirectedGraph.Test.Factories
     /// <summary>A factory for QuickGraph.UndirectedGraph`2[System.String,QuickGraph.Edge`1[System.String]] instances</summary>
     public static partial class UndirectedGraphFactory
     {
-        [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
-        public static UndirectedGraph<int, Edge<int>> CreateEmptyGraph()
-        {
-            ////UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
-
-            bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
-            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(allowParallelEdges);
-
-            //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
-            
-            return g;
-
-        }
         /*1. Add one Vertex*/
         [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
         public static UndirectedGraph<int, Edge<int>> CreateGraphOneNode(int node1)
         {
-            //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
-            bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
-            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(!allowParallelEdges);
-
-            //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
             g.AddVertex(node1);
             return g;
 
         }
+
+        /*2. Add array of vertex (no edges) - check distinct elements and not zero */
+        /*[PexFactoryMethod(typeof(QuickGraph.UndirectedGraph<int, Edge<int>>))]
+        public static UndirectedGraph<int, Edge<int>> CreateGraphArrayOfNodes([PexAssumeNotNull]int[] nodes)
+        {
+            //PexAssume.IsTrue(nodes.Length < 12);
+            PexAssume.AreDistinctValues(nodes);
+            PexAssume.TrueForAll(nodes, e => e != 0);
+            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+            foreach (int ele in nodes)
+                g.AddVertex(ele);
+            return g;
+        }*/
 
         [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
         public static UndirectedGraph<int, Edge<int>> CreateGraphArrayOfNodesAndEdges([PexAssumeNotNull]int[] nodes,
@@ -49,10 +45,7 @@ namespace UndirectedGraph.Test.Factories
             PexAssume.AreDistinctValues(nodes);
             PexAssume.TrueForAll(nodes, e => e != 0);
 
-            bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
-            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(allowParallelEdges);
-
-            //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
             foreach (int ele in nodes)
             {
                 g.AddVertex(ele);
@@ -61,8 +54,7 @@ namespace UndirectedGraph.Test.Factories
             for (int i = 0; i < edges.Length; i++)
             {
                 int source = PexChoose.IndexValue("indexed value", nodes);
-                //if (edges[i] == false)    Note: see UnitTest for the reason of nodes[source] != nodes[i]
-                if (edges[i] == false/*&& nodes[source] != nodes[i]*/)
+                if (edges[i] == false)
                     g.AddEdge(new Edge<int>(nodes[source], nodes[i]));
             }
             return g;
@@ -78,10 +70,7 @@ namespace UndirectedGraph.Test.Factories
             PexAssume.AreDistinctValues(nodes);
             //PexAssume.TrueForAll(nodes, e => e != 0);
 
-            bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
-            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(!allowParallelEdges);
-
-            //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
             foreach (int ele in nodes)
             {
                 g.AddVertex(ele);
@@ -91,8 +80,8 @@ namespace UndirectedGraph.Test.Factories
 
             for (int i = 0; i < edges.Length; i++)
             {
-                //if (edges[i] == false)
-                if (edges[i] == false/* && nodes[source] != nodes[i]*/)
+
+                if (edges[i] == false)
                     g.AddEdge(new Edge<int>(nodes[source], nodes[i]));
             }
             return g;
