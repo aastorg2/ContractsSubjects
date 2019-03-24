@@ -17,7 +17,7 @@ namespace UndirectedGraph.Test.UnitTest
         [TestMethod]
         public void TestClearAdjacentEdges()
         {
-            var g = new UndirectedGraph<int, Edge<int>>();
+            var g = new UndirectedGraph<int, Edge<int>>(true);
             g.AddVertex(1);
             g.AddEdge(new Edge<int>(1, 1));
             g.ClearAdjacentEdges(1);

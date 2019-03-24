@@ -17,9 +17,13 @@ namespace UndirectedGraph.Test.Factories
         [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
         public static UndirectedGraph<int, Edge<int>> CreateEmptyGraph()
         {
-            //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+            ////UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+
             bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
             UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(allowParallelEdges);
+
+            //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+            
             return g;
 
         }
@@ -30,6 +34,8 @@ namespace UndirectedGraph.Test.Factories
             //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
             bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
             UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(!allowParallelEdges);
+
+            //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
             g.AddVertex(node1);
             return g;
 
@@ -44,9 +50,9 @@ namespace UndirectedGraph.Test.Factories
             PexAssume.TrueForAll(nodes, e => e != 0);
 
             bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
+            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(allowParallelEdges);
 
             //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
-            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(allowParallelEdges);
             foreach (int ele in nodes)
             {
                 g.AddVertex(ele);
@@ -56,7 +62,7 @@ namespace UndirectedGraph.Test.Factories
             {
                 int source = PexChoose.IndexValue("indexed value", nodes);
                 //if (edges[i] == false)    Note: see UnitTest for the reason of nodes[source] != nodes[i]
-                if (edges[i] == false && nodes[source] != nodes[i])
+                if (edges[i] == false/*&& nodes[source] != nodes[i]*/)
                     g.AddEdge(new Edge<int>(nodes[source], nodes[i]));
             }
             return g;
@@ -73,9 +79,9 @@ namespace UndirectedGraph.Test.Factories
             //PexAssume.TrueForAll(nodes, e => e != 0);
 
             bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
+            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(!allowParallelEdges);
 
             //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
-            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(!allowParallelEdges);
             foreach (int ele in nodes)
             {
                 g.AddVertex(ele);
@@ -86,109 +92,109 @@ namespace UndirectedGraph.Test.Factories
             for (int i = 0; i < edges.Length; i++)
             {
                 //if (edges[i] == false)
-                if (edges[i] == false && nodes[source] != nodes[i])
+                if (edges[i] == false/* && nodes[source] != nodes[i]*/)
                     g.AddEdge(new Edge<int>(nodes[source], nodes[i]));
             }
             return g;
         }
 
-        [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
-        public static UndirectedGraph<int, Edge<int>> CreateGraphByNumNodesConstantEdges(int num)
-        {
-            //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+        //[PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
+        //public static UndirectedGraph<int, Edge<int>> CreateGraphByNumNodesConstantEdges(int num)
+        //{
+        //    bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
+        //    UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(allowParallelEdges);
 
-            bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
-            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(allowParallelEdges);
-            PexAssume.IsTrue(num > 0 && num < 11);
-
-
-            for (int i = 0; i < num; i++)
-            {
-                g.AddVertex(i);
-            }
-
-            for (int i = 1; i < num; i++)
-            {
-                g.AddEdge(new Edge<int>(0, i));
-            }
-
-            return g;
-        }
-
-        [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
-        public static UndirectedGraph<int, Edge<int>> CreateGraphByNumNodesPexChooseEdges(int num)
-        {
-            //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
-
-            bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
-            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(!allowParallelEdges);
-            PexAssume.IsTrue(num > 0 && num < 11);
+        //    //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+        //    PexAssume.IsTrue(num > 0 && num < 11);
 
 
-            for (int i = 0; i < num; i++)
-            {
-                g.AddVertex(i);
-            }
+        //    for (int i = 0; i < num; i++)
+        //    {
+        //        g.AddVertex(i);
+        //    }
 
-            for (int i = 0; i < num; i++)
-            {
-                for (int j = i + 1; j < num; j++)
-                {
-                    bool add = PexChoose.Value<bool>("add");
-                    if (!add)
-                    {
-                        g.AddEdge(new Edge<int>(i, j));
-                    }
-                }
-            }
+        //    for (int i = 1; i < num; i++)
+        //    {
+        //        g.AddEdge(new Edge<int>(0, i));
+        //    }
 
-            return g;
-        }
+        //    return g;
+        //}
 
-        [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
-        public static UndirectedGraph<int, Edge<int>> CreateGraphByNumNodesNumEdgesPexChoose(int numVertex, int numEdge)
-        {
-            //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+        //[PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
+        //public static UndirectedGraph<int, Edge<int>> CreateGraphByNumNodesPexChooseEdges(int num)
+        //{
+        //    bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
+        //    UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(!allowParallelEdges);
 
-            bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
-            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(allowParallelEdges);
-            PexAssume.IsTrue(numVertex > 0 && numVertex < 20);
-            PexAssume.IsTrue(numEdge > 0 && numEdge < 20);
+        //    //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+        //    PexAssume.IsTrue(num > 0 && num < 20);
 
 
-            for (int i = 0; i < numVertex; i++)
-            {
-                int value = PexChoose.Value<int>("value");
-                if (!g.ContainsVertex(value))
-                {
-                    g.AddVertex(i);
-                }
-            }
+        //    for (int i = 0; i < num; i++)
+        //    {
+        //        g.AddVertex(i);
+        //    }
 
-            for (int i = 0; i < numEdge; i++)
-            {
-                int source = PexChoose.Value<int>("value");
-                int target = PexChoose.Value<int>("target");
-                if (!g.ContainsVertex(source))
-                {
-                    g.AddVertex(source);
-                }
+        //    for (int i = 0; i < num; i++)
+        //    {
+        //        for (int j = i + 1; j < num; j++)
+        //        {
+        //            bool add = PexChoose.Value<bool>("add");
+        //            if (!add)
+        //            {
+        //                g.AddEdge(new Edge<int>(i, j));
+        //            }
+        //        }
+        //    }
 
-                if (!g.ContainsVertex(target))
-                {
-                    g.AddVertex(target);
-                }
+        //    return g;
+        //}
 
-                if (source != target)
-                {
-                    g.AddEdge(new Edge<int>(source, target));
-                }
-            }
+        //[PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
+        //public static UndirectedGraph<int, Edge<int>> CreateGraphByNumNodesNumEdgesPexChoose(int numVertex, int numEdge)
+        //{
+        //    bool allowParallelEdges = PexChoose.Value<bool>("allowParallelEdges");
+        //    UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(allowParallelEdges);
+
+        //    //UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+        //    PexAssume.IsTrue(numVertex > 0 && numVertex < 20);
+        //    PexAssume.IsTrue(numEdge > 0 && numEdge < 20);
 
 
-            return g;
+        //    for (int i = 0; i < numVertex; i++)
+        //    {
+        //        int value = PexChoose.Value<int>("value");
+        //        if (!g.ContainsVertex(value))
+        //        {
+        //            g.AddVertex(i);
+        //        }
+        //    }
 
-        }
+        //    for (int i = 0; i < numEdge; i++)
+        //    {
+        //        int source = PexChoose.Value<int>("value");
+        //        int target = PexChoose.Value<int>("target");
+        //        if (!g.ContainsVertex(source))
+        //        {
+        //            g.AddVertex(source);
+        //        }
+
+        //        if (!g.ContainsVertex(target))
+        //        {
+        //            g.AddVertex(target);
+        //        }
+
+        //        if (source != target)
+        //        {
+        //            g.AddEdge(new Edge<int>(source, target));
+        //        }
+        //    }
+
+
+        //    return g;
+
+        //}
 
     }
 }
