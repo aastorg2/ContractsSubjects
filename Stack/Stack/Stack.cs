@@ -36,6 +36,11 @@ namespace Stack
 
         private const int DefaultCapacity = 4;
 
+        public int Capacity()
+        {
+            return _array.Length;
+        }
+
         public Stack()
         {
             _array = EmptyArray<T>.Value;

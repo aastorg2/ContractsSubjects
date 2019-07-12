@@ -21,8 +21,8 @@ namespace Stack.Test
             AssumePrecondition.IsTrue(true);
 
             int Old_s1Count =  s1.Count;
-            //int Old_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("old_top");
-            int Old_Top = s1.Peek();
+            int Old_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("old_top");
+            //int Old_Top = s1.Peek();
             int Old_x = x;
             bool Old_s1ContainsX = s1.Contains(x);
 
