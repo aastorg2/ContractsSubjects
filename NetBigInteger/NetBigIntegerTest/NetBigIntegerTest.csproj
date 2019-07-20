@@ -8,9 +8,9 @@
     <!-- update GUID here -->
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lidgren.Network</RootNamespace>
+    <RootNamespace>NetBigIntegerTest</RootNamespace>
     <!-- update root namespace -->
-    <AssemblyName>Lidgren.Network.Tests</AssemblyName>
+    <AssemblyName>NetBigIntegerTest</AssemblyName>
     <!-- update assembly name -->
     <CodeContractsEnableRuntimeChecking>True</CodeContractsEnableRuntimeChecking>
     <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
