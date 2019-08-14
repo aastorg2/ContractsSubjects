@@ -11,6 +11,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Collections.Generic;
 using Common.Utility;
+using System.Diagnostics.Contracts;
 
 namespace Stack
 {

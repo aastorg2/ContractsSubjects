@@ -56,9 +56,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StackContractTest.cs" />
     <Compile Include="Factories\StackFactory.cs" />
-    <Compile Include="StackContractTest.PUT_PushContract.g.cs">
-      <DependentUpon>StackContractTest.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stack\Stack.csproj">
