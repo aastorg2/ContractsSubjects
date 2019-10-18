@@ -384,3 +384,6 @@ z3/
 *.txt
 information
 example.yaml
+#### binaries
+*.dll
+*.exe
