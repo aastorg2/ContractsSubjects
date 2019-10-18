@@ -29,20 +29,20 @@ namespace Dictionary.Test.Factories
         }*/
 
         [PexFactoryMethod(typeof(Dictionary.Dictionary<int, int>))]
-        public static Dictionary<int, int> CreateKeyValPair([PexAssumeNotNull]System.Collections.Generic.KeyValuePair<int,int>[] pairs)
+        public static Dictionary<int, int> createDictionaryArrays([PexAssumeNotNull]int[] keys, int max)
         {
-
-            PexAssume.IsTrue(pairs.Length < 11);
+            PexAssume.AreDistinctValues(keys);
+            PexAssume.IsTrue(max > 0);
+            PexAssume.IsTrue(keys.Length <= 5 || keys.Length > 5);
             
-            PexAssume.TrueForAll(pairs, p => (p.Key > -11 && p.Key < 11) && (p.Value > -11 && p.Value < 11));
+            //PexAssume.TrueForAll(pairs, p => (p.Key > -11 && p.Key < 11) && (p.Value > -11 && p.Value < 11));
             //DataStructures.Utility.Int32EqualityComparer comparer = new DataStructures.Utility.Int32EqualityComparer();
 
-            Dictionary.Dictionary<int, int> ret = new Dictionary.Dictionary<int, int>(pairs.Length+2);// DataStructure has big enough capacity for Commutativity Test
-            for (int i = 0; i < pairs.Length; i++)
+            Dictionary.Dictionary<int, int> ret = new Dictionary.Dictionary<int, int>();// DataStructure has big enough capacity for Commutativity Test
+            for (int i = 0; i < keys.Length; i++)
             {
-                 
-                if (!ret.ContainsKey(pairs[i].Key))
-                    ret.Add(pairs[i].Key, pairs[i].Value);
+                    ret.Add(keys[i],PexChoose.ValueFromRange("value",0, max));
+
             }
             return ret;
 
