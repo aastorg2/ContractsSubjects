@@ -30,7 +30,7 @@ namespace ArrayList.Test
 
             int Old_alCount = al.Count;
             int Old_x = x;
-            int Old_Ret = PexChoose.Value<int>("old_Ret");
+            //int Old_Ret = PexChoose.Value<int>("old_Ret");
             int Old_alIndexOfX = al.IndexOf(x);
             int Old_alLastIndexOfX = al.LastIndexOf(x);
             bool Old_alContainsX = al.Contains(x);
@@ -51,12 +51,12 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$new_al_IndexOf_x", New_alIndexOfX);
             PexObserve.ValueForViewing("$old_al_LastIndexOf_x", Old_alLastIndexOfX);
             PexObserve.ValueForViewing("$new_al_LastIndexOf_x", New_alLastIndexOfX);
-            PexObserve.ValueForViewing("$Old_ret", Old_Ret);
+            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_al_contains_x", Old_alContainsX);
             PexObserve.ValueForViewing("$new_al_contains_x", New_alContainsX);
 
-            PexAssert.IsTrue((New_alContainsX && New_alCount == Old_alCount + 1 && New_x == Old_x && New_alLastIndexOfX == Old_alCount && New_Ret == Old_alCount && Old_alCount != New_alCount && Old_alCount != Old_alIndexOfX && Old_alCount != Old_alLastIndexOfX && Old_alCount == New_alLastIndexOfX && Old_alCount == New_Ret && New_alCount != Old_alIndexOfX && New_alCount != New_alIndexOfX && New_alCount != Old_alLastIndexOfX && New_alCount != New_alLastIndexOfX && New_alCount != New_Ret && Old_x == New_x && Old_alIndexOfX != New_alLastIndexOfX && Old_alIndexOfX != New_Ret && Old_alLastIndexOfX != New_alLastIndexOfX && Old_alLastIndexOfX != New_Ret && New_alLastIndexOfX == New_Ret));
+            PexAssert.IsTrue(((New_alContainsX && New_alCount == Old_alCount + 1 && New_x == Old_x && New_alLastIndexOfX == Old_alCount && New_Ret == Old_alCount && New_alCount != Old_alCount && Old_alIndexOfX != Old_alCount && Old_alLastIndexOfX != Old_alCount && Old_alIndexOfX != New_alCount && New_alIndexOfX != New_alCount && Old_alLastIndexOfX != New_alCount && New_alLastIndexOfX != New_alCount && New_Ret != New_alCount && New_alLastIndexOfX != Old_alIndexOfX && New_Ret != Old_alIndexOfX && New_alLastIndexOfX != Old_alLastIndexOfX && New_Ret != Old_alLastIndexOfX && New_Ret == New_alLastIndexOfX) && ((((New_alIndexOfX == Old_alIndexOfX && New_alIndexOfX != Old_alCount && New_alLastIndexOfX != New_alIndexOfX && New_Ret != New_alIndexOfX) && (((New_alIndexOfX == Old_x &&  Old_x != Old_alCount &&  New_x != Old_alCount &&  Old_x != New_alCount &&  New_x != New_alCount &&  Old_alIndexOfX == Old_x &&  New_alLastIndexOfX != Old_x &&  New_Ret != Old_x &&  Old_alIndexOfX == New_x &&  New_alLastIndexOfX != New_x &&  New_Ret != New_x) && New_alIndexOfX == New_x) || ((Old_alIndexOfX != Old_x &&  New_alIndexOfX != Old_x &&  Old_alIndexOfX != New_x &&  New_alIndexOfX != New_x) && (!(New_alIndexOfX == New_x))))) && Old_alContainsX) || (((New_alIndexOfX == Old_alCount && New_alIndexOfX != Old_alIndexOfX && Old_alLastIndexOfX == Old_alIndexOfX && Old_alLastIndexOfX != New_alIndexOfX && New_alLastIndexOfX == New_alIndexOfX && New_Ret == New_alIndexOfX) && (((New_x == Old_alCount &&  Old_x == Old_alCount &&  Old_x != New_alCount &&  New_x != New_alCount &&  Old_alIndexOfX != Old_x &&  New_alIndexOfX == Old_x &&  Old_alLastIndexOfX != Old_x &&  New_alLastIndexOfX == Old_x &&  New_Ret == Old_x &&  Old_alIndexOfX != New_x &&  New_alIndexOfX == New_x &&  Old_alLastIndexOfX != New_x &&  New_alLastIndexOfX == New_x) && New_Ret == New_x) || ((Old_x != Old_alCount &&  New_x != Old_alCount &&  New_alIndexOfX != Old_x &&  New_alLastIndexOfX != Old_x &&  New_Ret != Old_x &&  New_alIndexOfX != New_x &&  New_alLastIndexOfX != New_x &&  New_Ret != New_x) && (!(New_Ret == New_x))))) && (!(Old_alContainsX))))));
         }
 
         // Remove x at al.IndexOf(x)
@@ -100,7 +100,7 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$old_al_contains_x", Old_alContainsX);
             PexObserve.ValueForViewing("$new_al_contains_x", New_alContainsX);
 
-            PexAssert.IsTrue((New_x == Old_x && New_alLastIndexOfX ==    Old_alLastIndexOfX - Old_alIndexOfX - 1 && Old_alCount != Old_alIndexOfX && Old_alCount != New_alIndexOfX && Old_alCount != Old_alLastIndexOfX && Old_alCount != New_alLastIndexOfX && New_alCount != New_alIndexOfX && New_alCount != New_alLastIndexOfX && Old_x == New_x));
+            PexAssert.IsTrue(((New_x == Old_x && Old_alIndexOfX != Old_alCount && New_alIndexOfX != Old_alCount && Old_alLastIndexOfX != Old_alCount && New_alLastIndexOfX != Old_alCount && New_alIndexOfX != New_alCount && New_alLastIndexOfX != New_alCount) && ((((New_alCount ==                   Old_alIndexOfX +                   Old_alCount - Old_alLastIndexOfX && New_alIndexOfX == Old_alIndexOfX && Old_alIndexOfX != New_alCount && New_alLastIndexOfX == New_alIndexOfX) && (((New_alCount == Old_x &&  Old_x == New_alCount &&  Old_alIndexOfX != Old_x &&  New_alIndexOfX != Old_x &&  New_alLastIndexOfX != Old_x &&  Old_alIndexOfX != New_x &&  New_alIndexOfX != New_x &&  New_alLastIndexOfX != New_x) && New_x == New_alCount) || ((Old_x != New_alCount &&  New_x != New_alCount) && (!(New_x == New_alCount))))) && New_alLastIndexOfX == Old_alIndexOfX) || (((Old_alContainsX && New_alCount == Old_alCount - 1 && New_alCount != Old_alCount && New_alLastIndexOfX != Old_alIndexOfX && Old_alLastIndexOfX != New_alIndexOfX && New_alLastIndexOfX != Old_alLastIndexOfX) && (((Old_x != Old_alCount &&  New_x != Old_alCount &&  Old_alIndexOfX == Old_x &&  New_alLastIndexOfX != Old_x &&  New_alLastIndexOfX != New_x) && Old_alIndexOfX == New_x) || ((Old_alIndexOfX != Old_x &&  Old_alIndexOfX != New_x) && (!(Old_alIndexOfX == New_x))))) && (!(New_alLastIndexOfX == Old_alIndexOfX))))));
         }
 
         // Insert
@@ -149,7 +149,7 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$old_al_contains_x", Old_alContainsX);
             PexObserve.ValueForViewing("$new_al_contains_x", New_alContainsX);
 
-            PexAssert.IsTrue((New_alContainsX && New_alCount == Old_alCount + 1 && New_x == Old_x && New_index == Old_index && Old_alCount != New_alCount && Old_alCount != Old_alIndexOfX && Old_alCount != Old_alLastIndexOfX && New_alCount != Old_index && New_alCount != New_index && New_alCount != Old_alIndexOfX && New_alCount != New_alIndexOfX && New_alCount != Old_alLastIndexOfX && New_alCount != New_alLastIndexOfX && Old_x == New_x && Old_index == New_index && Old_alIndexOfX != New_alLastIndexOfX && Old_alLastIndexOfX != New_alLastIndexOfX));
+            PexAssert.IsTrue(((New_alContainsX && New_alCount == Old_alCount + 1 && New_x == Old_x && New_index == Old_index && New_alCount != Old_alCount && Old_alIndexOfX != Old_alCount && Old_alLastIndexOfX != Old_alCount && Old_index != New_alCount && New_index != New_alCount && Old_alIndexOfX != New_alCount && New_alIndexOfX != New_alCount && Old_alLastIndexOfX != New_alCount && New_alLastIndexOfX != New_alCount && New_alLastIndexOfX != Old_alIndexOfX && New_alLastIndexOfX != Old_alLastIndexOfX) && ((((New_alIndexOfX == Old_index) && (((New_index == Old_x &&  New_alIndexOfX == Old_x &&  New_alLastIndexOfX ==                          Old_alLastIndexOfX + Old_x + 1 &&  Old_x != New_alCount &&  New_x != New_alCount &&  Old_index == Old_x &&  Old_index == New_x &&  New_index == New_x) && New_alIndexOfX == New_x) || ((Old_index != Old_x &&  New_index != Old_x &&  New_alIndexOfX != Old_x &&  New_alLastIndexOfX != Old_x &&  Old_index != New_x &&  New_index != New_x &&  New_alIndexOfX != New_x &&  New_alLastIndexOfX != New_x) && (!(New_alIndexOfX == New_x))))) && New_alIndexOfX == New_index) || (((Old_alContainsX && New_alIndexOfX == Old_alIndexOfX && New_alIndexOfX != Old_alCount && Old_alIndexOfX != Old_index && New_alIndexOfX != Old_index && Old_alIndexOfX != New_index && New_alIndexOfX != New_index && New_alLastIndexOfX != New_alIndexOfX) && (((New_alLastIndexOfX == Old_index &&  Old_alLastIndexOfX != Old_index &&  Old_alLastIndexOfX != New_index &&  New_alLastIndexOfX == New_index &&  Old_alLastIndexOfX ==                          Old_alIndexOfX) && Old_alLastIndexOfX == New_alIndexOfX) || ((New_alLastIndexOfX ==                          Old_alLastIndexOfX + 1 &&  Old_alLastIndexOfX !=                          Old_alIndexOfX &&  Old_alLastIndexOfX !=                          New_alIndexOfX) && (!(Old_alLastIndexOfX ==                          New_alIndexOfX))))) && (!(New_alIndexOfX == New_index))))));
         }
 
         // Set
@@ -198,7 +198,7 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$old_al_contains_x", Old_alContainsX);
             PexObserve.ValueForViewing("$new_al_contains_x", New_alContainsX);
 
-            PexAssert.IsTrue((New_alContainsX && New_alCount == Old_alCount && New_x == Old_x && Old_alCount == New_alCount && Old_alCount != Old_index && Old_alCount != New_index && Old_alCount != Old_alIndexOfX && Old_alCount != New_alIndexOfX && Old_alCount != Old_alLastIndexOfX && Old_alCount != New_alLastIndexOfX && New_alCount != Old_index && New_alCount != New_index && New_alCount != Old_alIndexOfX && New_alCount != New_alIndexOfX && New_alCount != Old_alLastIndexOfX && New_alCount != New_alLastIndexOfX && Old_x == New_x && Old_index == New_index));
+            PexAssert.IsTrue(((New_alContainsX && New_alCount == Old_alCount && New_x == Old_x && New_index == Old_index && Old_index != Old_alCount && New_index != Old_alCount && Old_alIndexOfX != Old_alCount && New_alIndexOfX != Old_alCount && Old_alLastIndexOfX != Old_alCount && New_alLastIndexOfX != Old_alCount && Old_index != New_alCount && New_index != New_alCount && Old_alIndexOfX != New_alCount && New_alIndexOfX != New_alCount && Old_alLastIndexOfX != New_alCount && New_alLastIndexOfX != New_alCount) && ((((Old_alContainsX && New_alLastIndexOfX == Old_alCount - 1) && (((New_x == 0 &&  New_index == 0 &&  New_alIndexOfX == 0 &&  New_alLastIndexOfX ==                          Old_alLastIndexOfX &&  Old_x != Old_alCount &&  New_x != Old_alCount &&  Old_x != New_alCount &&  New_x != New_alCount &&  Old_index == Old_x &&  New_index == Old_x &&  Old_alIndexOfX == Old_x &&  New_alIndexOfX == Old_x &&  Old_index == New_x &&  Old_alIndexOfX == New_x &&  New_alIndexOfX == New_x &&  Old_alIndexOfX == Old_index &&  New_alIndexOfX == Old_index &&  Old_alIndexOfX == New_index &&  New_alIndexOfX == New_index) && New_index == New_x) || ((Old_index != Old_x &&  New_index != Old_x &&  Old_index != New_x &&  New_index != New_x) && (!(New_index == New_x))))) && New_alIndexOfX == Old_alIndexOfX) || (((New_alIndexOfX == Old_index && Old_alIndexOfX != Old_index && Old_alLastIndexOfX != Old_index && Old_alIndexOfX != New_index && New_alIndexOfX == New_index && Old_alLastIndexOfX != New_index && New_alIndexOfX != Old_alIndexOfX && Old_alLastIndexOfX != New_alIndexOfX) && (((New_x == Old_alCount &&  New_alLastIndexOfX == Old_index &&  (!(Old_alContainsX)) &&  Old_x == Old_alCount &&  Old_x == New_alCount &&  Old_index != Old_x &&  New_index != Old_x &&  Old_alIndexOfX != Old_x &&  New_alIndexOfX != Old_x &&  Old_alLastIndexOfX != Old_x &&  New_alLastIndexOfX != Old_x &&  Old_index != New_x &&  New_index != New_x &&  Old_alIndexOfX != New_x &&  New_alIndexOfX != New_x &&  Old_alLastIndexOfX != New_x &&  New_alLastIndexOfX != New_x &&  New_alLastIndexOfX == New_index &&  Old_alLastIndexOfX ==                          Old_alIndexOfX &&  New_alLastIndexOfX !=                          Old_alIndexOfX &&  New_alLastIndexOfX ==                          New_alIndexOfX &&  New_alLastIndexOfX !=                          Old_alLastIndexOfX) && New_x == New_alCount) || ((Old_x != Old_alCount &&  New_x != Old_alCount &&  Old_x != New_alCount &&  New_x != New_alCount) && (!(New_x == New_alCount))))) && (!(New_alIndexOfX == Old_alIndexOfX))))));
         }
 
         [PexMethod]
@@ -207,7 +207,7 @@ namespace ArrayList.Test
             AssumePrecondition.IsTrue(index < al.Count && index >= 0);
 
             int Old_alCount = al.Count;
-            int Old_Ret = 2;
+            //int Old_Ret = 2;
             int Old_index = index;
 
             int New_Ret = (int)(al[index]);
@@ -220,10 +220,10 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$new_al_Count", New_alCount);
             PexObserve.ValueForViewing("$old_al_index", Old_index);
             PexObserve.ValueForViewing("$new_al_index", New_index);
-            PexObserve.ValueForViewing("$Old_ret", Old_Ret);
+            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
 
-            PexAssert.IsTrue((New_alCount == Old_alCount && Old_alCount == New_alCount && Old_alCount != Old_index && Old_alCount != New_index && New_alCount != Old_index && New_alCount != New_index && Old_index == New_index));
+            PexAssert.IsTrue((New_alCount == Old_alCount && New_index == Old_index && Old_index != Old_alCount && New_index != Old_alCount && Old_index != New_alCount && New_index != New_alCount));
         }
 
         [PexMethod]
@@ -233,7 +233,7 @@ namespace ArrayList.Test
 
             int Old_alCount = al.Count;
             int Old_x = x;
-            bool Old_Ret = PexChoose.Value<bool>("default_Ret");
+            //bool Old_Ret = PexChoose.Value<bool>("default_Ret");
             int Old_alIndexOfX = al.IndexOf(x);
             int Old_alLastIndexOfX = al.LastIndexOf(x);
             bool Old_alContainsX = al.Contains(x);
@@ -254,12 +254,12 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$new_al_IndexOf_x", New_alIndexOfX);
             PexObserve.ValueForViewing("$old_al_LastIndexOf_x", Old_alLastIndexOfX);
             PexObserve.ValueForViewing("$new_al_LastIndexOf_x", New_alLastIndexOfX);
-            PexObserve.ValueForViewing("$Old_ret", Old_Ret);
+            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_al_contains_x", Old_alContainsX);
             PexObserve.ValueForViewing("$new_al_contains_x", New_alContainsX);
 
-            PexAssert.IsTrue((New_alCount == Old_alCount && New_x == Old_x && New_alIndexOfX == Old_alIndexOfX && New_alLastIndexOfX == Old_alLastIndexOfX && Old_alCount == New_alCount && Old_alCount != Old_alIndexOfX && Old_alCount != New_alIndexOfX && Old_alCount != Old_alLastIndexOfX && Old_alCount != New_alLastIndexOfX && New_alCount != Old_alIndexOfX && New_alCount != New_alIndexOfX && New_alCount != Old_alLastIndexOfX && New_alCount != New_alLastIndexOfX && Old_x == New_x && Old_alIndexOfX == New_alIndexOfX && Old_alLastIndexOfX == New_alLastIndexOfX));
+            PexAssert.IsTrue(((New_alCount == Old_alCount && New_x == Old_x && New_alIndexOfX == Old_alIndexOfX && New_alLastIndexOfX == Old_alLastIndexOfX && Old_alIndexOfX != Old_alCount && New_alIndexOfX != Old_alCount && Old_alLastIndexOfX != Old_alCount && New_alLastIndexOfX != Old_alCount && Old_alIndexOfX != New_alCount && New_alIndexOfX != New_alCount && Old_alLastIndexOfX != New_alCount && New_alLastIndexOfX != New_alCount) && ((((New_Ret && Old_alContainsX) && (((New_alLastIndexOfX ==                          Old_alIndexOfX &&  Old_alLastIndexOfX ==                          Old_alIndexOfX &&  Old_alLastIndexOfX ==                          New_alIndexOfX) && New_alLastIndexOfX == New_alIndexOfX) || ((New_alIndexOfX == 0 &&  Old_alLastIndexOfX !=                          Old_alIndexOfX &&  New_alLastIndexOfX !=                          Old_alIndexOfX &&  Old_alLastIndexOfX !=                          New_alIndexOfX &&  New_alLastIndexOfX !=                          New_alIndexOfX) && (!(New_alLastIndexOfX ==                          New_alIndexOfX))))) && New_alContainsX) || (((New_alLastIndexOfX == Old_alIndexOfX && (!(New_Ret)) && (!(Old_alContainsX)) && Old_alLastIndexOfX == Old_alIndexOfX && Old_alLastIndexOfX == New_alIndexOfX && New_alLastIndexOfX == New_alIndexOfX) && (((New_x == Old_alCount &&  Old_x == Old_alCount &&  Old_x == New_alCount &&  Old_alIndexOfX != Old_x &&  New_alIndexOfX != Old_x &&  Old_alLastIndexOfX != Old_x &&  New_alLastIndexOfX != Old_x &&  Old_alIndexOfX != New_x &&  New_alIndexOfX != New_x &&  Old_alLastIndexOfX != New_x &&  New_alLastIndexOfX != New_x) && New_x == New_alCount) || ((Old_x != Old_alCount &&  New_x != Old_alCount &&  Old_x != New_alCount &&  New_x != New_alCount) && (!(New_x == New_alCount))))) && (!(New_alContainsX))))));
         }
 
         [PexMethod]
@@ -269,7 +269,7 @@ namespace ArrayList.Test
 
             int Old_alCount = al.Count;
             int Old_x = x;
-            int Old_Ret = 2;
+            //int Old_Ret = 2;
             int Old_alIndexOfX = al.IndexOf(x);
             int Old_alLastIndexOfX = al.LastIndexOf(x);
             bool Old_alContainsX = al.Contains(x);
@@ -290,12 +290,12 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$new_al_IndexOf_x", New_alIndexOfX);
             PexObserve.ValueForViewing("$old_al_LastIndexOf_x", Old_alLastIndexOfX);
             PexObserve.ValueForViewing("$new_al_LastIndexOf_x", New_alLastIndexOfX);
-            PexObserve.ValueForViewing("$Old_ret", Old_Ret);
+            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_al_contains_x", Old_alContainsX);
             PexObserve.ValueForViewing("$new_al_contains_x", New_alContainsX);
 
-            PexAssert.IsTrue((New_alCount == Old_alCount && New_alIndexOfX == Old_alIndexOfX && New_alLastIndexOfX == Old_alLastIndexOfX && New_Ret == Old_alIndexOfX && Old_alCount == New_alCount && Old_alCount != Old_alIndexOfX && Old_alCount != New_alIndexOfX && Old_alCount != Old_alLastIndexOfX && Old_alCount != New_alLastIndexOfX && Old_alCount != New_Ret && New_alCount != Old_alIndexOfX && New_alCount != New_alIndexOfX && New_alCount != Old_alLastIndexOfX && New_alCount != New_alLastIndexOfX && New_alCount != New_Ret && Old_x == New_x && Old_alIndexOfX == New_alIndexOfX && Old_alIndexOfX != Old_Ret && Old_alIndexOfX == New_Ret && New_alIndexOfX != Old_Ret && New_alIndexOfX == New_Ret && Old_alLastIndexOfX == New_alLastIndexOfX && Old_Ret != New_Ret));
+            PexAssert.IsTrue(((New_alCount == Old_alCount && New_x == Old_x && New_alIndexOfX == Old_alIndexOfX && New_alLastIndexOfX == Old_alLastIndexOfX && New_Ret == Old_alIndexOfX && Old_alIndexOfX != Old_alCount && New_alIndexOfX != Old_alCount && Old_alLastIndexOfX != Old_alCount && New_alLastIndexOfX != Old_alCount && New_Ret != Old_alCount && Old_alIndexOfX != New_alCount && New_alIndexOfX != New_alCount && Old_alLastIndexOfX != New_alCount && New_alLastIndexOfX != New_alCount && New_Ret != New_alCount && New_Ret == New_alIndexOfX) && ((((Old_alContainsX) && (((New_alLastIndexOfX ==                          Old_alIndexOfX &&  Old_alLastIndexOfX ==                          Old_alIndexOfX &&  Old_alLastIndexOfX ==                          New_alIndexOfX &&  New_alLastIndexOfX ==                          New_alIndexOfX &&  New_Ret == Old_alLastIndexOfX) && New_Ret == New_alLastIndexOfX) || ((Old_alLastIndexOfX !=                          Old_alIndexOfX &&  New_alLastIndexOfX !=                          Old_alIndexOfX &&  Old_alLastIndexOfX !=                          New_alIndexOfX &&  New_alLastIndexOfX !=                          New_alIndexOfX &&  New_Ret != Old_alLastIndexOfX &&  New_Ret != New_alLastIndexOfX) && (!(New_Ret == New_alLastIndexOfX))))) && New_alContainsX) || (((New_alLastIndexOfX == Old_alIndexOfX && (!(Old_alContainsX)) && Old_alLastIndexOfX == Old_alIndexOfX && Old_alLastIndexOfX == New_alIndexOfX && New_alLastIndexOfX == New_alIndexOfX && New_Ret == Old_alLastIndexOfX && New_Ret == New_alLastIndexOfX) && (((New_x == Old_alCount &&  Old_x == Old_alCount &&  Old_x == New_alCount &&  Old_alIndexOfX != Old_x &&  New_alIndexOfX != Old_x &&  Old_alLastIndexOfX != Old_x &&  New_alLastIndexOfX != Old_x &&  New_Ret != Old_x &&  Old_alIndexOfX != New_x &&  New_alIndexOfX != New_x &&  Old_alLastIndexOfX != New_x &&  New_alLastIndexOfX != New_x &&  New_Ret != New_x) && New_x == New_alCount) || ((Old_x != Old_alCount &&  New_x != Old_alCount &&  Old_x != New_alCount &&  New_x != New_alCount) && (!(New_x == New_alCount))))) && (!(New_alContainsX))))));
         }
 
         [PexMethod]
@@ -305,7 +305,7 @@ namespace ArrayList.Test
 
             int Old_alCount = al.Count;
             int Old_x = x;
-            int Old_Ret = 2;
+            //int Old_Ret = 2;
             int Old_alIndexOfX = al.IndexOf(x);
             int Old_alLastIndexOfX = al.LastIndexOf(x);
             bool Old_alContainsX = al.Contains(x);
@@ -326,12 +326,12 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$new_al_IndexOf_x", New_alIndexOfX);
             PexObserve.ValueForViewing("$old_al_LastIndexOf_x", Old_alLastIndexOfX);
             PexObserve.ValueForViewing("$new_al_LastIndexOf_x", New_alLastIndexOfX);
-            PexObserve.ValueForViewing("$Old_ret", Old_Ret);
+            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_al_contains_x", Old_alContainsX);
             PexObserve.ValueForViewing("$new_al_contains_x", New_alContainsX);
 
-            PexAssert.IsTrue((New_alCount == Old_alCount && New_alIndexOfX == Old_alIndexOfX && New_alLastIndexOfX == Old_alLastIndexOfX && New_Ret == Old_alLastIndexOfX && Old_alCount == New_alCount && Old_alCount != Old_alIndexOfX && Old_alCount != New_alIndexOfX && Old_alCount != Old_alLastIndexOfX && Old_alCount != New_alLastIndexOfX && Old_alCount != New_Ret && New_alCount != Old_alIndexOfX && New_alCount != New_alIndexOfX && New_alCount != Old_alLastIndexOfX && New_alCount != New_alLastIndexOfX && New_alCount != New_Ret && Old_x == New_x && Old_alIndexOfX == New_alIndexOfX && Old_alIndexOfX != Old_Ret && New_alIndexOfX != Old_Ret && Old_alLastIndexOfX == New_alLastIndexOfX && Old_alLastIndexOfX == New_Ret && New_alLastIndexOfX == New_Ret));
+            PexAssert.IsTrue(((New_alCount == Old_alCount && New_x == Old_x && New_alIndexOfX == Old_alIndexOfX && New_alLastIndexOfX == Old_alLastIndexOfX && New_Ret == Old_alLastIndexOfX && Old_alIndexOfX != Old_alCount && New_alIndexOfX != Old_alCount && Old_alLastIndexOfX != Old_alCount && New_alLastIndexOfX != Old_alCount && New_Ret != Old_alCount && Old_alIndexOfX != New_alCount && New_alIndexOfX != New_alCount && Old_alLastIndexOfX != New_alCount && New_alLastIndexOfX != New_alCount && New_Ret != New_alCount && New_Ret == New_alLastIndexOfX) && ((((Old_alContainsX) && (((New_alLastIndexOfX ==                          Old_alIndexOfX &&  New_Ret == Old_alIndexOfX &&  Old_alLastIndexOfX ==                          Old_alIndexOfX &&  Old_alLastIndexOfX ==                          New_alIndexOfX &&  New_alLastIndexOfX ==                          New_alIndexOfX) && New_Ret == New_alIndexOfX) || ((Old_alLastIndexOfX !=                          Old_alIndexOfX &&  New_alLastIndexOfX !=                          Old_alIndexOfX &&  New_Ret != Old_alIndexOfX &&  Old_alLastIndexOfX !=                          New_alIndexOfX &&  New_alLastIndexOfX !=                          New_alIndexOfX &&  New_Ret != New_alIndexOfX) && (!(New_Ret == New_alIndexOfX))))) && New_alContainsX) || (((New_alLastIndexOfX == Old_alIndexOfX && New_Ret == Old_alIndexOfX && (!(Old_alContainsX)) && Old_alLastIndexOfX == Old_alIndexOfX && Old_alLastIndexOfX == New_alIndexOfX && New_alLastIndexOfX == New_alIndexOfX && New_Ret == New_alIndexOfX) && (((New_x == Old_alCount &&  Old_x == Old_alCount &&  Old_x == New_alCount &&  Old_alIndexOfX != Old_x &&  New_alIndexOfX != Old_x &&  Old_alLastIndexOfX != Old_x &&  New_alLastIndexOfX != Old_x &&  New_Ret != Old_x &&  Old_alIndexOfX != New_x &&  New_alIndexOfX != New_x &&  Old_alLastIndexOfX != New_x &&  New_alLastIndexOfX != New_x &&  New_Ret != New_x) && New_x == New_alCount) || ((Old_x != Old_alCount &&  New_x != Old_alCount &&  Old_x != New_alCount &&  New_x != New_alCount) && (!(New_x == New_alCount))))) && (!(New_alContainsX))))));
         }
 
         [PexMethod]
@@ -340,7 +340,7 @@ namespace ArrayList.Test
             AssumePrecondition.IsTrue(true);
 
             int Old_alCount = al.Count;
-            int Old_Ret = 2;
+            //int Old_Ret = 2;
 
             int New_Ret = al.Count;
 
@@ -348,10 +348,10 @@ namespace ArrayList.Test
 
             PexObserve.ValueForViewing("$old_al_Count", Old_alCount);
             PexObserve.ValueForViewing("$new_al_Count", New_alCount);
-            PexObserve.ValueForViewing("$Old_ret", Old_Ret);
+            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
 
-            PexAssert.IsTrue((New_alCount == Old_alCount && New_Ret == Old_alCount && Old_alCount == New_alCount && Old_alCount == New_Ret && New_alCount == New_Ret));
+            PexAssert.IsTrue((New_alCount == Old_alCount && New_Ret == Old_alCount && New_Ret == New_alCount));
         }
     }
 }
