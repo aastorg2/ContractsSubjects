@@ -54,9 +54,6 @@
   <ItemGroup>
     <Compile Include="Factories\HashSetFactory.cs" />
     <Compile Include="HashSetContractTest.cs" />
-    <Compile Include="HashSetContractTest.PUT_AddContract.g.cs">
-      <DependentUpon>HashSetContractTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\PexAssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

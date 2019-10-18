@@ -19,7 +19,7 @@ namespace HashSet.Test
 
             int Old_hsCount = hs.Count;
             int Old_x = x;
-            bool Old_Ret = PexChoose.Value<bool>("default_Ret");
+            //bool Old_Ret = PexChoose.Value<bool>("default_Ret");
             //bool Old_Ret = ;
             bool Old_hsContainsX = hs.Contains(x);
 
@@ -34,12 +34,12 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
             PexObserve.ValueForViewing("$old_hs_x", Old_x);
             PexObserve.ValueForViewing("$new_hs_x", New_x);
-            PexObserve.ValueForViewing("$Old_ret", Old_Ret);
+            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
             PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
 
-            PexAssert.IsTrue((New_hsContainsX && New_x == Old_x && Old_x == New_x));
+            PexAssert.IsTrue(((New_hsContainsX && New_x == Old_x) && ((((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((Old_x == Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount) && (!(New_x == Old_hsCount))))) && (!(Old_hsContainsX))))));
 
         }
 
@@ -50,7 +50,7 @@ namespace HashSet.Test
 
             int Old_hsCount = hs.Count;
             int Old_x = x;
-            bool Old_Ret = PexChoose.Value<bool>("default_Ret");
+            //bool Old_Ret = PexChoose.Value<bool>("default_Ret");
             bool Old_hsContainsX = hs.Contains(x);
 
             bool New_Ret = hs.Remove(x);
@@ -63,13 +63,13 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
             PexObserve.ValueForViewing("$old_hs_x", Old_x);
             PexObserve.ValueForViewing("$new_hs_x", New_x);
-            PexObserve.ValueForViewing("$Old_ret", Old_Ret);
+            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
             PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
 
 
-            PexAssert.IsTrue((New_x == Old_x && (!(New_hsContainsX)) && Old_x == New_x));
+            PexAssert.IsTrue(((New_x == Old_x && (!(New_hsContainsX))) && ((((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && (((New_hsCount == Old_x &&  Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(Old_hsContainsX))))));
         }
 
         [PexMethod]
@@ -78,7 +78,7 @@ namespace HashSet.Test
             AssumePrecondition.IsTrue(true);
 
             int Old_hsCount = hs.Count;
-            int Old_Ret = 2;
+            
 
             int New_Ret = hs.Count;
 
@@ -86,11 +86,10 @@ namespace HashSet.Test
 
             PexObserve.ValueForViewing("$old_hs_Count", Old_hsCount);
             PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
-            PexObserve.ValueForViewing("$Old_ret", Old_Ret);
+            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
 
-            PexAssert.IsTrue((New_hsCount == Old_hsCount && New_Ret == Old_hsCount && Old_hsCount == New_hsCount && Old_hsCount == New_Ret && New_hsCount == New_Ret));
-
+            PexAssert.IsTrue((New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount));
         }
 
         [PexMethod]
@@ -100,9 +99,8 @@ namespace HashSet.Test
 
             int Old_hsCount = hs.Count;
             int Old_x = x;
-            bool Old_Ret = PexChoose.Value<bool>("default_Ret");
             bool Old_hsContainsX = hs.Contains(x);
-
+            //bool Old_Ret = PexChoose.Value<bool>("old_ret");
             bool New_Ret = hs.Contains(x);
 
             int New_hsCount = hs.Count;
@@ -113,13 +111,12 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
             PexObserve.ValueForViewing("$old_x", Old_x);
             PexObserve.ValueForViewing("$new_x", New_x);
-            PexObserve.ValueForViewing("$Old_ret", Old_Ret);
+            //PexObserve.ValueForViewing("$old_x", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
             PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
 
-
-            PexAssert.IsTrue((New_hsCount == Old_hsCount && New_x == Old_x && Old_hsCount == New_hsCount && Old_x == New_x));
+            PexAssert.IsTrue(((New_hsCount == Old_hsCount && New_x == Old_x) && ((((New_Ret && Old_hsContainsX) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && New_hsContainsX) || ((((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(New_hsContainsX))))));
 
         }
     }
