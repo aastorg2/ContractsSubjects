@@ -11,7 +11,7 @@ using PexAPIWrapper;
 
 namespace Stack.Test
 {
-    [PexClass,TestFixture]
+    [TestFixture,PexClass]
     public partial class StackContractTest
     {
         //[PexMethod(TestEmissionFilter= PexTestEmissionFilter.All)]
