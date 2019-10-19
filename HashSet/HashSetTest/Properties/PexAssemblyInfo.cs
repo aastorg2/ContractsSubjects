@@ -9,7 +9,7 @@ using Microsoft.Pex.Framework.Using;
 using HashSet.Utility;
 using Microsoft.Pex.Framework.Explorable;
 using Microsoft.Pex.Framework;
-
+using NUnit.Framework;
 using HashSet;
 
 
@@ -17,7 +17,7 @@ using HashSet;
 
 
 // Microsoft.Pex.Framework.Settings
-[assembly: PexAssemblySettings(TestFramework = "VisualStudioUnitTest")]
+[assembly: PexAssemblySettings(TestFramework = "NUnit")]
 
 // Microsoft.Pex.Framework.Instrumentation
 [assembly: PexAssemblyUnderTest("HashSet")]

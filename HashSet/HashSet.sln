@@ -12,6 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashSet", "HashSet\HashSet.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashSetTest", "HashSetTest\HashSetTest.csproj", "{93DD05E1-88E5-402D-925F-A071FDD157ED}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1C2DFD2D-C37C-4F8C-90C9-30E90FE5F97C}"
+	ProjectSection(SolutionItems) = preProject
+		..\.nuget\packages.config = ..\.nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = HashSet.vsmdi
