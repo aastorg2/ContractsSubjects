@@ -3,14 +3,15 @@ using System.Text;
 using Microsoft.Pex.Framework;
 using Microsoft.Pex.Framework.Settings;
 using Microsoft.Pex.Framework.Exceptions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+//using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using Stack;
 using Stack.Utility;
 using PexAPIWrapper;
 
 namespace Stack.Test
 {
-    [PexClass,TestClass]
+    [PexClass,TestFixture]
     public partial class StackContractTest
     {
         //[PexMethod(TestEmissionFilter= PexTestEmissionFilter.All)]
@@ -42,8 +43,8 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$new_s1_x", New_x);
             PexObserve.ValueForViewing("$Old_s1ContainsX", Old_s1ContainsX);
             PexObserve.ValueForViewing("$New_s1ContainsX", New_s1ContainsX);
-
-            PexAssert.IsTrue((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top));
+            
+            Assert.True((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top));
             
         }
 
@@ -70,7 +71,7 @@ namespace Stack.Test
             //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
 
-            PexAssert.IsTrue((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count));
+            Assert.True((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count));
         }
 
         [PexMethod]
@@ -94,7 +95,7 @@ namespace Stack.Test
             //PexObserve.ValueForViewing("$old_s1_ret", Old_Ret);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
 
-            PexAssert.IsTrue((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top));
+            Assert.True((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top));
         }
 
         [PexMethod]
@@ -119,7 +120,7 @@ namespace Stack.Test
             //PexObserve.ValueForViewing("$old_s1_ret", Old_Ret);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
 
-            PexAssert.IsTrue((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count));
+            Assert.True((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count));
         }
         [PexMethod]
         public void PUT_ContainsContract([PexAssumeUnderTest]Stack.Stack<int> s1, int x)
@@ -146,7 +147,7 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$old_s1_contains_x", Old_s1ContainsX);
             PexObserve.ValueForViewing("$new_s1_contains_x", New_s1ContainsX);
 
-            PexAssert.IsTrue(((New_s1Count == Old_s1Count && New_Top == Old_Top) && ((((New_Ret && Old_s1ContainsX) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX))))));
+            Assert.True(((New_s1Count == Old_s1Count && New_Top == Old_Top) && ((((New_Ret && Old_s1ContainsX) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX))))));
         }
 
     }

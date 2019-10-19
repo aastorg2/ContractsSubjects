@@ -17,7 +17,7 @@ using Stack;
 
 
 // Microsoft.Pex.Framework.Settings
-[assembly: PexAssemblySettings(TestFramework = "VisualStudioUnitTest")]
+[assembly: PexAssemblySettings(TestFramework = "NUnit")]
 
 // Microsoft.Pex.Framework.Instrumentation
 [assembly: PexAssemblyUnderTest("Stack")]
