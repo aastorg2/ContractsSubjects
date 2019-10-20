@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD11676C-3E18-442C-9EB6-BCF380D0C7F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Utility4QuickGraph3</RootNamespace>
+    <AssemblyName>Utility4QuickGraph3</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\EdgeList.cs" />
+    <Compile Include="Collections\IEdgeList.cs" />
+    <Compile Include="Collections\IVertexEdgeDictionary.cs" />
+    <Compile Include="Collections\VertexEdgeDictionary.cs" />
+    <Compile Include="Contracts\Collections\IEdgeListContract.cs" />
+    <Compile Include="Contracts\Collections\IVertexEdgeDictionaryContract.cs" />
+    <Compile Include="Contracts\IEdgeContract.cs" />
+    <Compile Include="Contracts\IEdgeListGraphContract.cs" />
+    <Compile Include="Contracts\IEdgeSetContract.cs" />
+    <Compile Include="Contracts\IGraphContract.cs" />
+    <Compile Include="Contracts\IImplicitUndirectedGraphContract.cs" />
+    <Compile Include="Contracts\IImplicitVertexSetContract.cs" />
+    <Compile Include="Contracts\IMutableEdgeListGraphContract.cs" />
+    <Compile Include="Contracts\IMutableGraphContract.cs" />
+    <Compile Include="Contracts\IMutableUndirectedGraphContract.cs" />
+    <Compile Include="Contracts\IMutableVertexAndEdgeSetContract.cs" />
+    <Compile Include="Contracts\IMutableVertexSetContract.cs" />
+    <Compile Include="Contracts\IUndirectedEdgeContract.cs" />
+    <Compile Include="Contracts\IUndirectedGraphContract.cs" />
+    <Compile Include="Contracts\IVertexSetContract.cs" />
+    <Compile Include="Edge.cs" />
+    <Compile Include="EdgeEventArgs.cs" />
+    <Compile Include="EdgeExtensions.cs" />
+    <Compile Include="EdgePredicate.cs" />
+    <Compile Include="GraphColor.cs" />
+    <Compile Include="HashCodeHelper.cs" />
+    <Compile Include="IEdge.cs" />
+    <Compile Include="IEdgeListGraph.cs" />
+    <Compile Include="IEdgeSet.cs" />
+    <Compile Include="IGraph.cs" />
+    <Compile Include="IImplicitUndirectedGraph.cs" />
+    <Compile Include="IImplicitVertexSet.cs" />
+    <Compile Include="IMutableEdgeListGraph.cs" />
+    <Compile Include="IMutableGraph.cs" />
+    <Compile Include="IMutableUndirectedGraph.cs" />
+    <Compile Include="IMutableVertexAndEdgeSet.cs" />
+    <Compile Include="IMutableVertexSet.cs" />
+    <Compile Include="IUndirectedEdge.cs" />
+    <Compile Include="IUndirectedGraph.cs" />
+    <Compile Include="IVertexSet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SEquatableEdge.cs" />
+    <Compile Include="SReversedEdge.cs" />
+    <Compile Include="VertexEventArgs.cs" />
+    <Compile Include="VertexPredicate.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
