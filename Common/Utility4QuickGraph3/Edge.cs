@@ -51,6 +51,35 @@ namespace Common.Utility4QuickGraph3
         {
             get { return this.target; }
         }
+        
+        /*Equality from EquatableEdge implementation*/
+        public bool Equals(Edge<TVertex> other)
+        {
+            /*Contract.Ensures(
+                Contract.Result<bool>() ==
+                (this.Source.Equals(other.Source) &&
+                this.Target.Equals(other.Target))
+                );*/
+
+            return
+                this.source.Equals(other.source) &&
+                this.target.Equals(other.target);
+        }
+
+        /// <summary>
+        /// Indicates whether this instance and a specified object are equal.
+        /// </summary>
+        /// <param name="obj">Another object to compare to.</param>
+        /// <returns>
+        /// true if <paramref name="obj"/> and this instance are the same type and represent the same value; otherwise, false.
+        /// </returns>
+        public override bool Equals(object obj)
+        {
+            return
+                obj is Edge<TVertex> &&
+                this.Equals((Edge<TVertex>)obj);
+        }
+
 
         /// <summary>
         /// Returns a <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
