@@ -44,10 +44,10 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$old_d_y", Old_y);
             PexObserve.ValueForViewing("$new_d_y", New_y);
 
-            PexObserve.ValueForViewing("$Old_dContainsValueX", Old_dContainsValueX);
-            PexObserve.ValueForViewing("$New_dContainsValueX", New_dContainsValueX);
-            PexObserve.ValueForViewing("$Old_dContainsKeyY", Old_dContainsKeyY);
-            PexObserve.ValueForViewing("$New_dContainsKeyY ", New_dContainsKeyY);
+            //PexObserve.ValueForViewing("$Old_dContainsValueX", Old_dContainsValueX);
+            //PexObserve.ValueForViewing("$New_dContainsValueX", New_dContainsValueX);
+            //PexObserve.ValueForViewing("$Old_dContainsKeyY", Old_dContainsKeyY);
+            //PexObserve.ValueForViewing("$New_dContainsKeyY ", New_dContainsKeyY);
 
             PexObserve.ValueForViewing("$old_d_contains_key_x", Old_dContainsKeyX);
             PexObserve.ValueForViewing("$new_d_contains_key_x", New_dContainsKeyX);
@@ -56,7 +56,7 @@ namespace Dictionary.Test
 
             NUnit.Framework.Assert.True(false);
         }
-/*
+
         [PexMethod]
         public void PUT_RemoveContract([PexAssumeUnderTest]Dictionary.Dictionary<int, int> d, int x)
         {
@@ -226,7 +226,7 @@ namespace Dictionary.Test
 
             PexAssert.IsTrue((New_dCount == Old_dCount && New_Ret == Old_dCount && New_Ret == New_dCount));
         }
-        */
+        
         /*[PexMethod]
         public void testFactorySize([PexAssumeUnderTest]Dictionary.Dictionary<int, int> d)
         {
