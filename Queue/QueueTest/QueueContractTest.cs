@@ -22,7 +22,7 @@ namespace Queue.Test
          * 
          * 
          */
-
+        
         //[PexMethod(TestEmissionFilter= PexTestEmissionFilter.All)]
         //[PexMethod(TestEmissionFilter= PexTestEmissionFilter.FailuresAndUniquePaths, MaxRuns=100)]
         // Adds to tail of queue
@@ -32,7 +32,9 @@ namespace Queue.Test
             AssumePrecondition.IsTrue(true);
             
             int Old_s1Count =  s1.Count;
-            int Old_Top = s1.Count > 0? s1.Peek() : PexChoose.Value<int>("old_top");
+            int Old_Top = s1.Count > 0 ? s1.Peek() :  PexChoose.Value<int>("old_top");
+            //int Old_Top = s1.Count > 0 ? s1.Peek() : x+1;
+
             //int Old_Top = PexChoose.Value<int>("old_top");
             int Old_x = x;
             bool Old_s1ContainsX = s1.Contains(x);
@@ -53,7 +55,7 @@ namespace Queue.Test
             PexObserve.ValueForViewing("$old_s1_contains_x", Old_s1ContainsX);
             PexObserve.ValueForViewing("$new_s1_contains_x", New_s1ContainsX);
 
-            Assert.True(((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_x == Old_x && New_s1Count != Old_s1Count) && (((New_Top == 0 && New_x == 0 && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count && New_Top == Old_Top && Old_x == Old_Top && Old_x == New_Top && New_x == New_Top) && New_x == Old_Top) || (((!(Old_s1ContainsX)) && Old_x != Old_Top && New_x != Old_Top) && (!(New_x == Old_Top))))));
+            Assert.True(((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_x == Old_x && New_s1Count != Old_s1Count) && (((New_Top == Old_Top && Old_x == Old_Top && Old_x == New_Top && New_x == New_Top) && New_x == Old_Top) || ((Old_x != Old_Top && New_x != Old_Top) && (!(New_x == Old_Top))))));
         }
 
         //remove from front of queue
@@ -72,7 +74,7 @@ namespace Queue.Test
             int New_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("old_ret"); 
             //int New_Top = s1.Count > 0 ? s1.Peek() : Old_Top - 2;
             int New_s1Count = s1.Count;
-            //bool New_s1ContainsNewRet = s1.Contains(New_Ret);
+            bool New_s1ContainsNewRet = s1.Contains(New_Ret);
 
             PexObserve.ValueForViewing("$Old_s1_Count", Old_s1Count);
             PexObserve.ValueForViewing("$New_s1_Count", New_s1Count);
@@ -80,8 +82,9 @@ namespace Queue.Test
             PexObserve.ValueForViewing("$new_s1_Peek", New_Top);
             //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
-            //PexObserve.ValueForViewing("$New_s1ContainsNewRet", New_s1ContainsNewRet);
-            Assert.True(false);
+            PexObserve.ValueForViewing("$New_s1ContainsNewRet", New_s1ContainsNewRet);
+
+            Assert.True(((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count) && ((true && New_s1ContainsNewRet) || ((New_Top != Old_Top && New_Ret != New_Top) && (!(New_s1ContainsNewRet))))));
         }
 
         [PexMethod]
@@ -89,7 +92,6 @@ namespace Queue.Test
         {
             AssumePrecondition.IsTrue(s1.Count > 0);
             int Old_s1Count = s1.Count;
-            //int Old_Ret = PexChoose.Value<int>("old_ret");
             int Old_Top = s1.Peek();
             
             /*Code */
@@ -97,14 +99,14 @@ namespace Queue.Test
 
             int New_s1Count = s1.Count;
             int New_Top = s1.Peek();
+            bool New_s1ContainsNewRet = s1.Contains(New_Ret);
 
             PexObserve.ValueForViewing("$old_s1_Count", Old_s1Count);
             PexObserve.ValueForViewing("$new_s1_Count", New_s1Count);
             PexObserve.ValueForViewing("$old_s1_Peek", Old_Top);
             PexObserve.ValueForViewing("$new_s1_Peek", New_Top);
-            //PexObserve.ValueForViewing("$old_s1_ret", Old_Ret);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
-            
+            PexObserve.ValueForViewing("$New_s1ContainsNewRet", New_s1ContainsNewRet);
 
             Assert.True((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top));
         }
@@ -143,7 +145,6 @@ namespace Queue.Test
             
             int Old_s1Count = s1.Count;
             int Old_Top = s1.Count > 0 ? s1.Peek() : undefinedTop;
-            //bool Old_Ret = PexChoose.Value<bool>("default_Ret");
             bool Old_s1ContainsX = s1.Contains(x);
             /*Code */
             bool New_Ret = s1.Contains(x);
@@ -156,7 +157,6 @@ namespace Queue.Test
             PexObserve.ValueForViewing("$new_s1_Count", New_s1Count);
             PexObserve.ValueForViewing("$old_s1_Peek", Old_Top);
             PexObserve.ValueForViewing("$new_s1_Peek", New_Top);
-            //PexObserve.ValueForViewing("$old_s1_ret", Old_Ret);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
             PexObserve.ValueForViewing("$old_s1_contains_x", Old_s1ContainsX);
             PexObserve.ValueForViewing("$new_s1_contains_x", New_s1ContainsX);
