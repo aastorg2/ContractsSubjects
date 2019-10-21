@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5E65E90E-D510-4B5A-89B0-679FD3FC5E66}"
 	ProjectSection(SolutionItems) = preProject
 		Local.testsettings = Local.testsettings
+		..\.nuget\packages.config = ..\.nuget\packages.config
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 		UndirectedGraph.vsmdi = UndirectedGraph.vsmdi
 	EndProjectSection
@@ -11,6 +12,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UndirectedGraph", "UndirectedGraph\UndirectedGraph.csproj", "{7D0C045A-4F86-45B5-B9FF-A4CE775F07CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UndirectedGraphTest", "UndirectedGraphTest\UndirectedGraphTest.csproj", "{93DD05E1-88E5-402D-925F-A071FDD157ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B4ED80A9-1E15-4901-9E57-9EF302863C76}"
+	ProjectSection(SolutionItems) = preProject
+		..\.nuget\packages.config = ..\.nuget\packages.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution

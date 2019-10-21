@@ -12,6 +12,18 @@ namespace UndirectedGraph.Test.UnitTest
     [TestClass]
     public class UndirectedGraphUnitTest
     {
+        [TestMethod]
+        public void TestEdgeCountAndVerticeCountAfterAdd()
+        {
+            var g = new UndirectedGraph<int, Edge<int>>(false);
+            g.AddVertex(1);
+            g.AddVertex(2);
+            g.AddEdge(new Edge<int>(1, 1));
+            g.AddEdge(new Edge<int>(2, 2));
+            g.AddEdge(new Edge<int>(1, 2));
+            bool ret = g.AddVertex(3);
+            Assert.IsTrue(g.EdgeCount == 3 && g.VertexCount == 3);
+        }
 
         [TestMethod]
         public void TestClearAdjacentEdgesNoExistingNode()

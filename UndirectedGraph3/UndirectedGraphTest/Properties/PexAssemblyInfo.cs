@@ -12,18 +12,21 @@ using Microsoft.Pex.Framework;
 //using PexReportParser;
 using UndirectedGraph;
 using Common.Utility4QuickGraph3;
+using System.Collections.Generic;
 
 
 //[assembly: PexReportParserExecution]
 
 
 // Microsoft.Pex.Framework.Settings
-[assembly: PexAssemblySettings(TestFramework = "VisualStudioUnitTest")]
+[assembly: PexAssemblySettings(TestFramework = "NUnit")]
 
 // Microsoft.Pex.Framework.Instrumentation
 [assembly: PexAssemblyUnderTest("UndirectedGraph")]
 [assembly: PexInstrumentAssembly("System.Core")]
 [assembly: PexInstrumentAssembly("Utility4QuickGraph3")]
+
+[assembly: PexInstrumentType(typeof(List<Edge<int>>))]
 
 [assembly: PexUseTypeAttribute(typeof(UndirectedGraphEqualityComparer))]
 
@@ -51,4 +54,5 @@ using Common.Utility4QuickGraph3;
 
 
 //[assembly: PexLinqPackage]
+
 

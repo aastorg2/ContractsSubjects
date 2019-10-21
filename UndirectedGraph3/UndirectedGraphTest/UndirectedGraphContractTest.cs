@@ -3,14 +3,15 @@ using System.Text;
 using Microsoft.Pex.Framework;
 using Microsoft.Pex.Framework.Settings;
 using Microsoft.Pex.Framework.Exceptions;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+//using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UndirectedGraph;
 using Common.Utility4QuickGraph3;
 using PexAPIWrapper;
+using NUnit.Framework;
 
 namespace UndirectedGraph.Test
 {
-    [TestClass, PexClass]
+    [TestFixture, PexClass]
     public partial class UndirectedGraphContractTest
     {
         [PexMethod]
@@ -58,7 +59,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_Ret", New_Ret);
 
-            PexAssert.IsTrue(false);
+            Assert.True(((New_ugContainsVertexX && New_ugEdgeCount == Old_ugEdgeCount && New_x == Old_x && (!(New_ugIsVerticesEmpty)) && New_ugVertexCount == 1 + Old_ugVertexCount && New_ugAdjacentDegree == 0 && (!(Old_ugContainsVertexX)) && (!(New_ugEdgeCount == New_ugVertexCount)) && (!(New_ugAdjacentDegree == New_ugVertexCount)) && New_Ret)|| (!New_Ret)));
         }
 
         [PexMethod]
@@ -106,7 +107,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
 
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -149,7 +150,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
             //PexObserve.ValueForViewing("$old_ug_allow_parallel_edges", Old_ugAllowParallelEdges);
             //PexObserve.ValueForViewing("$new_ug_allow_parallel_edges", New_ugAllowParallelEdges);
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -214,7 +215,7 @@ namespace UndirectedGraph.Test
             //PexObserve.ValueForViewing("$old_ug_allow_parallel_edges", Old_ugAllowParallelEdges);
             //PexObserve.ValueForViewing("$new_ug_allow_parallel_edges", New_ugAllowParallelEdges);
 
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -277,7 +278,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
             
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -333,7 +334,7 @@ namespace UndirectedGraph.Test
             //PexObserve.ValueForViewing("$old_ug_allow_parallel_edges", Old_ugAllowParallelEdges);
             //PexObserve.ValueForViewing("$new_ug_allow_parallel_edges", New_ugAllowParallelEdges);
 
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -368,7 +369,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$New_ugIsVerticesEmpty", New_ugIsVerticesEmpty);
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -404,7 +405,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$New_ugIsVerticesEmpty", New_ugIsVerticesEmpty);
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -453,7 +454,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
             
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -519,7 +520,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
 
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -585,7 +586,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
 
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -620,7 +621,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
 
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -654,7 +655,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
 
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -702,7 +703,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
 
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -749,7 +750,7 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
 
 
-            PexAssert.IsTrue(false);
+            Assert.True(false);
         }
 
     }
