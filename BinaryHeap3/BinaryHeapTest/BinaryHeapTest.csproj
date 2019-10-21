@@ -33,14 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BinaryHeap">
-      <HintPath>..\BinaryHeap\bin\Debug\BinaryHeap.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Pex.Framework, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft Moles\PublicAssemblies\Microsoft.Pex.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.Runners.2.6.4\tools\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="PexAPIWrapper">
       <HintPath>..\..\referenceAssemblies\PexAPIWrapper.dll</HintPath>
     </Reference>
@@ -63,7 +63,12 @@
     <Compile Include="Properties\PexAssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BinaryHeap\BinaryHeap.csproj">
+      <Project>{7D0C045A-4F86-45B5-B9FF-A4CE775F07CC}</Project>
+      <Name>BinaryHeap</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

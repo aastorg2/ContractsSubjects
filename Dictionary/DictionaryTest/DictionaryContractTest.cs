@@ -64,7 +64,6 @@ namespace Dictionary.Test
 
             int Old_dCount = d.Count;
             int Old_x = x;
-            //bool Old_Ret = PexChoose.Value<bool>("default_Ret");
             bool Old_dContainsKeyX = d.ContainsKey(x);
 
             bool New_Ret = d.Remove(x);
@@ -77,7 +76,6 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$new_d_Count", New_dCount);
             PexObserve.ValueForViewing("$old_d_x", Old_x);
             PexObserve.ValueForViewing("$new_d_x", New_x);
-            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_d_contains_key_x", Old_dContainsKeyX);
             PexObserve.ValueForViewing("$new_d_contains_key_x", New_dContainsKeyX);
@@ -92,7 +90,6 @@ namespace Dictionary.Test
 
             int Old_dCount = d.Count;
             int Old_x = x;
-            //int Old_Ret = 2;
             bool Old_dContainsKeyX = d.ContainsKey(x);
 
             int New_Ret = d[x];
@@ -105,7 +102,6 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$new_d_Count", New_dCount);
             PexObserve.ValueForViewing("$old_d_x", Old_x);
             PexObserve.ValueForViewing("$new_d_x", New_x);
-            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_d_contains_key_x", Old_dContainsKeyX);
             PexObserve.ValueForViewing("$new_d_contains_key_x", New_dContainsKeyX);

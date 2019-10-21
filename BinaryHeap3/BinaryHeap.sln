@@ -12,6 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryHeap", "BinaryHeap\Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryHeapTest", "BinaryHeapTest\BinaryHeapTest.csproj", "{93DD05E1-88E5-402D-925F-A071FDD157ED}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{631D7202-7E48-4FD3-92D1-01A9A10E1896}"
+	ProjectSection(SolutionItems) = preProject
+		..\.nuget\packages.config = ..\.nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = BinaryHeap.vsmdi
@@ -32,5 +37,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{631D7202-7E48-4FD3-92D1-01A9A10E1896} = {5E65E90E-D510-4B5A-89B0-679FD3FC5E66}
 	EndGlobalSection
 EndGlobal

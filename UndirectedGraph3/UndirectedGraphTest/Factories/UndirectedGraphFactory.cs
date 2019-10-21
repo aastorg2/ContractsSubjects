@@ -36,63 +36,65 @@ namespace UndirectedGraph.Test.Factories
                 g.AddVertex(ele);
             return g;
         }*/
-        
-        /*[PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
+
+        [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
         public static UndirectedGraph<int, Edge<int>> CreateGraphArrayOfNodesAndEdges([PexAssumeNotNull]int[] nodes,
             [PexAssumeNotNull] bool[] edges)
         {
             PexAssume.IsTrue(edges.Length == nodes.Length);
             PexAssume.AreDistinctValues(nodes);
+            PexAssume.TrueForAll(nodes, e => e <= 10 || e > 10);
             PexAssume.TrueForAll(nodes, e => e != 0);
-
             UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
             foreach (int ele in nodes)
             {
                 g.AddVertex(ele);
             }
-
             for (int i = 0; i < edges.Length; i++)
             {
                 int source = PexChoose.IndexValue("indexed value", nodes);
-                if (edges[i] == false)
+                PexObserve.ValueForViewing("CANED_SRC", source);
+                if (edges[source] == false)
+                {
                     g.AddEdge(new Edge<int>(nodes[source], nodes[i]));
-            }
+                    g.AddEdge(new Edge<int>(nodes[i], nodes[i]));
+
+                }
+                }
             return g;
-        }*/
+        }
 
 
-       /* Good one so far
-        * [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
-        public static UndirectedGraph<int, Edge<int>> CreateGraphArrayOfNodesAndEdges([PexAssumeNotNull]int[] nodes,
+       /* [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
+         public static UndirectedGraph<int, Edge<int>> CreateGraphArrayOfNodesAndEdges([PexAssumeNotNull]int[] nodes,
+             [PexAssumeNotNull] bool[] edges)
+         {
+             //PexAssume.IsTrue(edges.Length <= nodes.Length);
+             PexAssume.IsTrue(nodes.Length <= 2 || nodes.Length > 2);
+             PexAssume.IsTrue(edges.Length == nodes.Length);
+             PexAssume.AreDistinctValues(nodes);
+             PexAssume.TrueForAll(nodes, e => e != 0);
+             UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+             for (int ele = 0; ele < nodes.Length; ele++ )
+             {
+                 g.AddVertex(nodes[ele]);
+             }
+             for (int i = 0; i < nodes.Length; i++)
+             {
+                 //int canAdd = PexChoose.IndexValue("indexed value", edges);
+                 int canAdd = PexChoose.ValueFromRange("range", nodes.Length - i - 1, nodes.Length );
+                 if (edges[canAdd] == false)
+                     g.AddEdge(new Edge<int>(nodes[nodes.Length - i-1], nodes[canAdd]));
+             }
+             return g;
+         }*/
+
+       /* public static UndirectedGraph<int, Edge<int>> CreateGraphArrayOfNodesAndEdges([PexAssumeNotNull]int[] nodes,
             [PexAssumeNotNull] bool[] edges)
         {
             //PexAssume.IsTrue(edges.Length <= nodes.Length);
             PexAssume.IsTrue(nodes.Length <= 2 || nodes.Length > 2);
-            PexAssume.IsTrue(edges.Length == nodes.Length);
-            PexAssume.AreDistinctValues(nodes);
-            PexAssume.TrueForAll(nodes, e => e != 0);
-            UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
-            for (int ele = 0; ele < nodes.Length; ele++ )
-            {
-                g.AddVertex(nodes[ele]);
-            }
-
-            for (int i = 0; i < nodes.Length; i++)
-            {
-                //int canAdd = PexChoose.IndexValue("indexed value", edges);
-                int canAdd = PexChoose.ValueFromRange("range", nodes.Length - i - 1, nodes.Length );
-                if (edges[canAdd] == false)
-                    g.AddEdge(new Edge<int>(nodes[nodes.Length - i-1], nodes[canAdd]));
-            }
-            return g;
-        }*/
-
-        public static UndirectedGraph<int, Edge<int>> CreateGraphArrayOfNodesAndEdges([PexAssumeNotNull]int[] nodes,
-            [PexAssumeNotNull] bool[] edges)
-        {
-            //PexAssume.IsTrue(edges.Length <= nodes.Length);
-            PexAssume.IsTrue(nodes.Length <= 2 || nodes.Length > 2);
-            PexAssume.IsTrue (nodes.Length <= edges.Length);
+            PexAssume.IsTrue(nodes.Length <= edges.Length);
             PexAssume.AreDistinctValues(nodes);
             PexAssume.TrueForAll(nodes, e => e != 0);
             UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
@@ -105,13 +107,13 @@ namespace UndirectedGraph.Test.Factories
             {
                 //int canAdd = PexChoose.IndexValue("indexed value", edges);
                 int canAdd = PexChoose.ValueFromRange("range", 0, nodes.Length);
-                if (edges[i] == false && i< nodes.Length)
+                if (edges[i] == false && i < nodes.Length)
                     g.AddEdge(new Edge<int>(nodes[nodes.Length - i - 1], nodes[canAdd]));
             }
             return g;
-        }
+        }*/
 
-        [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
+      [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
         public static UndirectedGraph<int, Edge<int>> CreateGraphArrayOfNodesAndEdgesAssume([PexAssumeNotNull]int[] nodes,
             [PexAssumeNotNull] bool[] edges)
         {
@@ -119,6 +121,7 @@ namespace UndirectedGraph.Test.Factories
             PexAssume.IsTrue(nodes.Length <= 6 || nodes.Length > 6);
             PexAssume.IsTrue(edges.Length <= nodes.Length);
             PexAssume.AreDistinctValues(nodes);
+            PexAssume.TrueForAll(nodes, e => e <= 12 || e > 12);
             //PexAssume.TrueForAll(nodes, e => e != 0);
 
             UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
@@ -137,6 +140,36 @@ namespace UndirectedGraph.Test.Factories
             }
             return g;
         }
+      [PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
+      public static UndirectedGraph<int, Edge<int>> CreateGraphArrayOfNodesAndEdgesRetry([PexAssumeNotNull]int[] nodes,
+          [PexAssumeNotNull] bool[] edges)
+      {
+          //PexAssume.IsTrue(nodes.Length <= 7 || nodes.Length > 7);
+          PexAssume.IsTrue(nodes.Length <= 6 || nodes.Length > 6);
+          PexAssume.IsTrue(edges.Length <= nodes.Length);
+          PexAssume.TrueForAll(nodes, e => e <= 10 || e > 10);
+          PexAssume.AreDistinctValues(nodes);
+          //PexAssume.TrueForAll(nodes, e => e != 0);
+
+          UndirectedGraph<int, Edge<int>> g = new UndirectedGraph<int, Edge<int>>(false);
+          foreach (int ele in nodes)
+          {
+              g.AddVertex(ele);
+          }
+
+          int source = PexChoose.IndexValue("indexed value", nodes);
+          PexObserve.ValueForViewing("src", source);
+          for (int i = 0; i < edges.Length; i++)
+          {
+
+              if (edges[i] == false)
+              {
+                  g.AddEdge(new Edge<int>(nodes[source], nodes[i]));
+                  g.AddEdge(new Edge<int>(nodes[i], nodes[i]));
+              }
+          }
+          return g;
+      }
 
         //[PexFactoryMethod(typeof(UndirectedGraph.UndirectedGraph<int, Edge<int>>))]
         //public static UndirectedGraph<int, Edge<int>> CreateGraphByNumNodesConstantEdges(int num)

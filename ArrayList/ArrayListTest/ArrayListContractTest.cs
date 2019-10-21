@@ -32,7 +32,6 @@ namespace ArrayList.Test
 
             int Old_arrListCount = arrList.Count;
             int Old_x = x;
-            //int Old_Ret = PexChoose.VarrListue<int>("old_Ret");
             int Old_arrListIndexOfX = arrList.IndexOf(x);
             int Old_arrListLastIndexOfX = arrList.LastIndexOf(x);
             bool Old_arrListContainsX = arrList.Contains(x);
@@ -53,7 +52,6 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$new_arrList_IndexOf_x", New_arrListIndexOfX);
             PexObserve.ValueForViewing("$old_arrList_LastIndexOf_x", Old_arrListLastIndexOfX);
             PexObserve.ValueForViewing("$new_arrList_LastIndexOf_x", New_arrListLastIndexOfX);
-            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_arrList_contains_x", Old_arrListContainsX);
             PexObserve.ValueForViewing("$new_arrList_contains_x", New_arrListContainsX);
