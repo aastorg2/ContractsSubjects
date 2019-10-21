@@ -65,7 +65,7 @@ namespace UndirectedGraph.Test.Factories
             [PexAssumeNotNull] bool[] edges)
         {
             //PexAssume.IsTrue(nodes.Length <= 7 || nodes.Length > 7);
-            PexAssume.IsTrue(edges.Length <= 6 || nodes.Length > 6);
+            PexAssume.IsTrue(nodes.Length <= 6 || nodes.Length > 6);
             PexAssume.IsTrue(edges.Length <= nodes.Length);
             PexAssume.AreDistinctValues(nodes);
             //PexAssume.TrueForAll(nodes, e => e != 0);

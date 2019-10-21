@@ -50,8 +50,8 @@ namespace UndirectedGraph
 
         public UndirectedGraph(bool allowParallelEdges, EdgeEqualityComparer<TVertex, TEdge> edgeEqualityComparer, int vertexCapacity, IEqualityComparer<TVertex> vertexComparer)
         {
-            Contract.Requires(edgeEqualityComparer != null);
-            Contract.Requires(vertexComparer != null);
+            //Contract.Requires(edgeEqualityComparer != null);
+            //Contract.Requires(vertexComparer != null);
 
             this.allowParallelEdges = allowParallelEdges;
             this.edgeEqualityComparer = edgeEqualityComparer;
@@ -433,8 +433,8 @@ namespace UndirectedGraph
 
         private bool ContainsEdgeBetweenVertices(IEnumerable<TEdge> edges, TEdge edge)
         {
-            Contract.Requires(edges != null);
-            Contract.Requires(edge != null);
+            //Contract.Requires(edges != null);
+            //Contract.Requires(edge != null);
 
             var source = edge.Source;
             var target = edge.Target;

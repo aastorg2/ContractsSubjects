@@ -23,6 +23,7 @@ using Common.Utility4QuickGraph3;
 // Microsoft.Pex.Framework.Instrumentation
 [assembly: PexAssemblyUnderTest("UndirectedGraph")]
 [assembly: PexInstrumentAssembly("System.Core")]
+[assembly: PexInstrumentAssembly("Utility4QuickGraph3")]
 
 [assembly: PexUseTypeAttribute(typeof(UndirectedGraphEqualityComparer))]
 

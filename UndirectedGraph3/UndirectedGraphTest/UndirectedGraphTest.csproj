@@ -45,9 +45,6 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="UndirectedGraph">
-      <HintPath>..\UndirectedGraph\bin\Debug\UndirectedGraph.dll</HintPath>
-    </Reference>
     <Reference Include="Utility4QuickGraph3">
       <HintPath>..\..\Common\Utility4QuickGraph3\bin\Debug\Utility4QuickGraph3.dll</HintPath>
     </Reference>
@@ -64,7 +61,12 @@
     <Compile Include="UndirectedGraphContractTest.cs" />
     <Compile Include="UndirectedGraphUnitTest.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\UndirectedGraph\UndirectedGraph.csproj">
+      <Project>{7D0C045A-4F86-45B5-B9FF-A4CE775F07CC}</Project>
+      <Name>UndirectedGraph</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
