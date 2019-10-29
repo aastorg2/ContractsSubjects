@@ -55,7 +55,7 @@ namespace BinaryHeap.Test
 
             
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
         }
 
         [PexMethod]
@@ -90,7 +90,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_ret_key", New_Ret_Key);
             PexObserve.ValueForViewing("$new_ret_value", New_Ret_Value);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
         }
 
         [PexMethod]
@@ -124,7 +124,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_ret_key", New_Ret_Key);
             PexObserve.ValueForViewing("$new_ret_value", New_Ret_Value);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
         }
 
         [PexMethod]
@@ -163,7 +163,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_ret_key", New_Ret_Key);
             PexObserve.ValueForViewing("$new_ret_value", New_Ret_Value);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
         }
 
         [PexMethod]
@@ -198,7 +198,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_bh_value", New_value);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
         }
 
         [PexMethod]
@@ -243,7 +243,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_bh_value", New_value);
 
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
         }
 
         [PexMethod]
@@ -286,6 +286,8 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_bh_priority", New_prioirty);
             PexObserve.ValueForViewing("$old_bh_value", Old_value);
             PexObserve.ValueForViewing("$new_bh_value", New_value);
+
+            Assert.IsTrue(false);
         }
     }
 }
