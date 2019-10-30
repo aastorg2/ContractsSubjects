@@ -110,8 +110,8 @@ namespace BinaryHeap.Test
 
             int New_bhCount = bh.Count;
             int New_bhCapacity = bh.Capacity;
-            int New_bhMinimumKey = bh.Minimum().Key ;
-            int New_bhMinimumValue = bh.Minimum().Value ;
+            int New_bhMinimumKey = bh.Count > 0 ? bh.Minimum().Key : PexChoose.Value<int>("new_bhMinimumKey");
+            int New_bhMinimumValue = bh.Count > 0 ? bh.Minimum().Value : PexChoose.Value<int>("new_bhMinimumValue");
 
             PexObserve.ValueForViewing("$old_bh_count", Old_bhCount);
             PexObserve.ValueForViewing("$new_bh_count", New_bhCount);
