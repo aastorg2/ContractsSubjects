@@ -3,13 +3,14 @@ using System;
 using NetBigInteger;
 using Microsoft.Pex.Framework;
 using Microsoft.Pex.Framework.Validation;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+//using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Pex.Framework.Settings;
 using PexAPIWrapper;
+using NUnit.Framework;
 
 namespace NetBigInteger.Test
 {
-    [TestClass, PexClass]
+    [TestFixture, PexClass]
     public partial class NetBigIntegerContractTest
     {
         public static bool IsNull(NetBigInteger big)
@@ -40,7 +41,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi_sign_value", Old_nbiSignValue);
             PexObserve.ValueForViewing("$new_nbi_sign_value", New_nbiSignValue);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -75,7 +76,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
             
             return result;
         }
@@ -110,7 +111,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
             
             return result;
         }
@@ -133,7 +134,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi_sign_value", Old_nbiSignValue);
             PexObserve.ValueForViewing("$new_nbi_sign_value", New_nbiSignValue);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -161,7 +162,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_type_equal_test_class", Old_typeEqualTestClass);
             PexObserve.ValueForViewing("$new_type_equal_test_class", New_typeEqualTestClass);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -196,7 +197,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -250,7 +251,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_start_with_sign", Old_startWithSign);
             PexObserve.ValueForViewing("$new_start_with_sign", New_startWithSign);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -295,7 +296,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_radix", Old_radix);
             PexObserve.ValueForViewing("$new_radix", New_radix);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return target;
         }
@@ -318,7 +319,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_bytes_is_null", Old_bytesIsNull);
             PexObserve.ValueForViewing("$new_bytes_is_null", New_bytesIsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -353,7 +354,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_length", Old_length);
             PexObserve.ValueForViewing("$new_length", New_length);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -380,7 +381,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_sign", Old_sign);
             PexObserve.ValueForViewing("$new_sign", New_sign);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
             
             return result;
         }
@@ -409,7 +410,7 @@ namespace NetBigInteger.Test
             int New_length = length;
             int New_sign = sign;
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -444,7 +445,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
             
             return result;
         }
@@ -479,7 +480,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
             
             return result;
         }
@@ -506,7 +507,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_type_equal_test_class", Old_typeEqualTestClass);
             PexObserve.ValueForViewing("$new_type_equal_test_class", New_typeEqualTestClass);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -541,7 +542,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -564,7 +565,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi_sign_value", Old_nbiSignValue);
             PexObserve.ValueForViewing("$new_nbi_sign_value", New_nbiSignValue);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -587,7 +588,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi_sign_value", Old_nbiSignValue);
             PexObserve.ValueForViewing("$new_nbi_sign_value", New_nbiSignValue);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -610,7 +611,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi_sign_value", Old_nbiSignValue);
             PexObserve.ValueForViewing("$new_nbi_sign_value", New_nbiSignValue);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -645,7 +646,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -680,7 +681,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -715,7 +716,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -750,7 +751,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -801,7 +802,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_value_is_null", Old_valueIsNull);
             PexObserve.ValueForViewing("$new_value_is_null", New_valueIsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -836,7 +837,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -871,7 +872,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -894,7 +895,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi_sign_value", Old_nbiSignValue);
             PexObserve.ValueForViewing("$new_nbi_sign_value", New_nbiSignValue);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -917,7 +918,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi_sign_value", Old_nbiSignValue);
             PexObserve.ValueForViewing("$new_nbi_sign_value", New_nbiSignValue);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -952,7 +953,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }   
@@ -979,7 +980,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_n", Old_n);
             PexObserve.ValueForViewing("$new_n", New_n);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -1006,7 +1007,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_n", Old_n);
             PexObserve.ValueForViewing("$new_n", New_n);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -1029,7 +1030,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi_sign_value", Old_nbiSignValue);
             PexObserve.ValueForViewing("$new_nbi_sign_value", New_nbiSignValue);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -1064,7 +1065,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi2_is_null", Old_nbi2IsNull);
             PexObserve.ValueForViewing("$new_nbi2_is_null", New_nbi2IsNull);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -1091,7 +1092,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_n", Old_n);
             PexObserve.ValueForViewing("$new_n", New_n);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -1114,7 +1115,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi_sign_value", Old_nbiSignValue);
             PexObserve.ValueForViewing("$new_nbi_sign_value", New_nbiSignValue);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -1137,7 +1138,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi_sign_value", Old_nbiSignValue);
             PexObserve.ValueForViewing("$new_nbi_sign_value", New_nbiSignValue);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -1160,7 +1161,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_nbi_sign_value", Old_nbiSignValue);
             PexObserve.ValueForViewing("$new_nbi_sign_value", New_nbiSignValue);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -1187,7 +1188,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_radix", Old_radix);
             PexObserve.ValueForViewing("$new_radix", New_radix);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
@@ -1206,7 +1207,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$old_value", Old_value);
             PexObserve.ValueForViewing("$new_value", New_value);
 
-            PexAssert.IsTrue(false);
+            Assert.IsTrue(false);
 
             return result;
         }
