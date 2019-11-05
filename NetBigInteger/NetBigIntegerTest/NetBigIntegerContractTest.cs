@@ -84,7 +84,7 @@ namespace NetBigInteger.Test
         [PexMethod]
         public NetBigInteger PUT_AndContract([PexAssumeUnderTest]NetBigInteger nbi1, NetBigInteger nbi2)
         {
-            AssumePrecondition.IsTrue((NetBigIntegerContractTest.IsNull(nbi2) && (((!(nbi2.IntValue <= -1)) && ((nbi2.IntValue <= 0))))) || ((!(NetBigIntegerContractTest.IsNull(nbi2)))));
+            AssumePrecondition.IsTrue((NetBigIntegerContractTest.IsNull(nbi2) && (((!(nbi1.IntValue <= -1)) && ((nbi1.IntValue <= 0))))) || ((!(NetBigIntegerContractTest.IsNull(nbi2)))));
 
             int Old_nbi1IntValue = nbi1.IntValue;
             int Old_nbi1SignValue = nbi1.SignValue;
