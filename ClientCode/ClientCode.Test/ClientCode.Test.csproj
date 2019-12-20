@@ -165,6 +165,9 @@
     <Compile Include="Properties\PexAssemblyInfo.cs" />
     <Compile Include="StackClientTest.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Condition="$(MSBuildToolsPath) != ''" Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Condition="$(MSBuildToolsPath) == ''" Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

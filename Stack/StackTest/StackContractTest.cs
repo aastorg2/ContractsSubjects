@@ -44,7 +44,7 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$Old_s1ContainsX", Old_s1ContainsX);
             PexObserve.ValueForViewing("$New_s1ContainsX", New_s1ContainsX);
 
-            Assert.True(((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top) && (((Old_s1ContainsX && New_Top == Old_Top && Old_x == Old_Top) && New_x == Old_Top) || ((New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top) && (!(New_x == Old_Top))))));
+            Assert.True((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top));
         }
 
 

@@ -73,6 +73,9 @@
     <Compile Include="Properties\Properties\AssemblyInfo.cs.cs" />
     <Compile Include="NetBigIntegerContractTest.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Condition="$(MSBuildToolsPath) != ''" Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Condition="$(MSBuildToolsPath) == ''" Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
