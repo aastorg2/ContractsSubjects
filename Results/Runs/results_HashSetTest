@@ -1,0 +1,1078 @@
+Problem: HashSetTest
+
+PUT: PUT_AddContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_hsContainsX && New_x == Old_x && Old_x != New_hsCount && New_x != New_hsCount)
+
+unsimplified post:
+(New_hsContainsX && New_x == Old_x && Old_x != New_hsCount && New_x != New_hsCount)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_hsContainsX && New_x == Old_x)
+
+unsimplified post:
+(New_hsContainsX && New_x == Old_x)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=0 : (New_hsContainsX && New_x == Old_x)
+
+unsimplified post:
+(New_hsContainsX && New_x == Old_x)
+
+===== Final Result
+
+postcondition k == 0
+(New_hsContainsX && New_x == Old_x)
+rounds: 3
+
+simplified post k == 0
+((New_hsContainsX && New_x == Old_x))
+=====
+Case: k == 1
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=1 : (New_hsContainsX && New_x == Old_x && Old_x != New_hsCount && New_x != New_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount)
+
+root Left:  for k = 1 : (New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount)
+Houdini AlwaysTrue for k=0 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+
+root Right:  for k = 1 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+unsimplified post:
+((New_hsContainsX && New_x == Old_x && Old_x != New_hsCount && New_x != New_hsCount) && (((New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount) && Old_hsContainsX) || ((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (!(Old_hsContainsX)))))
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=1 : (New_hsContainsX && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left:  for k = 1 : (New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+Houdini AlwaysTrue for k=0 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+
+root Right:  for k = 1 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+unsimplified post:
+((New_hsContainsX && New_x == Old_x) && (((New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && Old_hsContainsX) || ((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (!(Old_hsContainsX)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=1 : (New_hsContainsX && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+root Left:  for k = 1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+Houdini AlwaysTrue for k=0 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+
+root Right:  for k = 1 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+unsimplified post:
+((New_hsContainsX && New_x == Old_x) && (((New_hsCount == Old_hsCount && (!(New_Ret))) && Old_hsContainsX) || ((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (!(Old_hsContainsX)))))
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=1 : (New_hsContainsX && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+root Left:  for k = 1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+Houdini AlwaysTrue for k=0 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+
+root Right:  for k = 1 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+unsimplified post:
+((New_hsContainsX && New_x == Old_x) && (((New_hsCount == Old_hsCount && (!(New_Ret))) && Old_hsContainsX) || ((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (!(Old_hsContainsX)))))
+
+===== Final Result
+
+postcondition k == 1
+((New_hsContainsX && New_x == Old_x) && (((New_hsCount == Old_hsCount && (!(New_Ret))) && Old_hsContainsX) || ((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (!(Old_hsContainsX)))))
+rounds: 4
+
+simplified post k == 1
+((New_hsContainsX && New_x == Old_x && New_hsCount == Old_hsCount && (!(New_Ret)) && Old_hsContainsX) || (New_hsContainsX && New_x == Old_x && New_Ret && New_hsCount == 1 + Old_hsCount && (!(Old_hsContainsX))))
+Not(k0 -> k1)? sat
+
+=====
+Case: k == 2
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=2 : (New_hsContainsX && New_x == Old_x && Old_x != New_hsCount && New_x != New_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : None
+
+root Left:  for k = 2 : (New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount)
+Houdini AlwaysTrue for k=1 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == Old_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == 1 && New_x == 0 && Old_x == Old_hsCount)
+
+root Right Left:  for k = 1 : (New_hsCount == 1 && New_x == 0 && Old_x == Old_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount)
+root Right:  for k = 2 : ((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((New_hsCount == 1 && New_x == 0 && Old_x == Old_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount) && (!(New_x == Old_hsCount)))))
+unsimplified post:
+((New_hsContainsX && New_x == Old_x && Old_x != New_hsCount && New_x != New_hsCount) && (((New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount) && Old_hsContainsX) || (((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((New_hsCount == 1 &&  New_x == 0 &&  Old_x == Old_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount) && (!(New_x == Old_hsCount))))) && (!(Old_hsContainsX)))))
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=2 : (New_hsContainsX && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : None
+
+root Left:  for k = 2 : (New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+Houdini AlwaysTrue for k=1 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == Old_hsCount
+
+Houdini AlwaysTrue for k=0 : (Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Left:  for k = 1 : (Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount)
+root Right:  for k = 2 : ((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount) && (!(New_x == Old_hsCount)))))
+unsimplified post:
+((New_hsContainsX && New_x == Old_x) && (((New_hsCount == Old_hsCount && (!(New_Ret)) && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && Old_hsContainsX) || (((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((Old_x == Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount) && (!(New_x == Old_hsCount))))) && (!(Old_hsContainsX)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=2 : (New_hsContainsX && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == 1 && New_x == 1 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount)
+
+root Left Left:  for k = 1 : (New_hsCount == 1 && New_x == 1 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Left:  for k = 2 : ((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_hsCount == 1 && New_x == 1 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+Houdini AlwaysTrue for k=1 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == Old_hsCount
+
+Houdini AlwaysTrue for k=0 : (Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Left:  for k = 1 : (Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount)
+root Right:  for k = 2 : ((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount) && (!(New_x == Old_hsCount)))))
+unsimplified post:
+((New_hsContainsX && New_x == Old_x) && ((((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_hsCount == 1 &&  New_x == 1 &&  Old_x == Old_hsCount &&  New_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((Old_x == Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount) && (!(New_x == Old_hsCount))))) && (!(Old_hsContainsX)))))
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=2 : (New_hsContainsX && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+
+root Left Left:  for k = 1 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Left:  for k = 2 : ((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+Houdini AlwaysTrue for k=1 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == Old_hsCount
+
+Houdini AlwaysTrue for k=0 : (Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Left:  for k = 1 : (Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount)
+root Right:  for k = 2 : ((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount) && (!(New_x == Old_hsCount)))))
+unsimplified post:
+((New_hsContainsX && New_x == Old_x) && ((((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((Old_x == Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount) && (!(New_x == Old_hsCount))))) && (!(Old_hsContainsX)))))
+
+#############
+Round: 5
+
+Houdini AlwaysTrue for k=2 : (New_hsContainsX && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+
+root Left Left:  for k = 1 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Left:  for k = 2 : ((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+Houdini AlwaysTrue for k=1 : (New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == Old_hsCount
+
+Houdini AlwaysTrue for k=0 : (Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Left:  for k = 1 : (Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount)
+root Right:  for k = 2 : ((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((Old_x == Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount) && (!(New_x == Old_hsCount)))))
+unsimplified post:
+((New_hsContainsX && New_x == Old_x) && ((((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((Old_x == Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount) && (!(New_x == Old_hsCount))))) && (!(Old_hsContainsX)))))
+
+===== Final Result
+
+postcondition k == 2
+((New_hsContainsX && New_x == Old_x) && ((((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((Old_x == Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount) && (!(New_x == Old_hsCount))))) && (!(Old_hsContainsX)))))
+rounds: 5
+
+simplified post k == 2
+((New_hsContainsX && New_x == Old_x && New_hsCount == Old_hsCount && (!(New_Ret)) && Old_hsContainsX) || (New_hsContainsX && New_x == Old_x && New_Ret && New_hsCount == 1 + Old_hsCount && (!(Old_hsContainsX))))
+Not(k0 -> k2)? sat
+
+Not(k1 -> k2)? unsat
+
+PUT: PUT_RemoveContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_x && (!(New_hsContainsX)))
+
+unsimplified post:
+(New_x == Old_x && (!(New_hsContainsX)))
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_x && (!(New_hsContainsX)))
+
+unsimplified post:
+(New_x == Old_x && (!(New_hsContainsX)))
+
+===== Final Result
+
+postcondition k == 0
+(New_x == Old_x && (!(New_hsContainsX)))
+rounds: 2
+
+simplified post k == 0
+((New_x == Old_x && (!(New_hsContainsX))))
+=====
+Case: k == 1
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=1 : (New_x == Old_x && (!(New_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_x == 0 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount)
+
+root Left:  for k = 1 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_x == 0 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount)
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+root Right:  for k = 1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+unsimplified post:
+((New_x == Old_x && (!(New_hsContainsX))) && (((New_Ret && New_hsCount == Old_hsCount - 1 && New_x == 0 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount) && Old_hsContainsX) || ((New_hsCount == Old_hsCount && (!(New_Ret))) && (!(Old_hsContainsX)))))
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=1 : (New_x == Old_x && (!(New_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount)
+
+root Left:  for k = 1 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount)
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+root Right:  for k = 1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+unsimplified post:
+((New_x == Old_x && (!(New_hsContainsX))) && (((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount) && Old_hsContainsX) || ((New_hsCount == Old_hsCount && (!(New_Ret))) && (!(Old_hsContainsX)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=1 : (New_x == Old_x && (!(New_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount)
+
+root Left:  for k = 1 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount)
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+root Right:  for k = 1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+unsimplified post:
+((New_x == Old_x && (!(New_hsContainsX))) && (((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && Old_hsContainsX) || ((New_hsCount == Old_hsCount && (!(New_Ret))) && (!(Old_hsContainsX)))))
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=1 : (New_x == Old_x && (!(New_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount)
+
+root Left:  for k = 1 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount)
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+root Right:  for k = 1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+unsimplified post:
+((New_x == Old_x && (!(New_hsContainsX))) && (((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && Old_hsContainsX) || ((New_hsCount == Old_hsCount && (!(New_Ret))) && (!(Old_hsContainsX)))))
+
+===== Final Result
+
+postcondition k == 1
+((New_x == Old_x && (!(New_hsContainsX))) && (((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && Old_hsContainsX) || ((New_hsCount == Old_hsCount && (!(New_Ret))) && (!(Old_hsContainsX)))))
+rounds: 4
+
+simplified post k == 1
+((New_x == Old_x && (!(New_hsContainsX)) && New_Ret && New_hsCount == -1 + Old_hsCount && Old_hsContainsX) || (New_x == Old_x && (!(New_hsContainsX)) && New_hsCount == Old_hsCount && (!(New_Ret)) && (!(Old_hsContainsX))))
+Not(k0 -> k1)? sat
+
+=====
+Case: k == 2
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=2 : (New_x == Old_x && (!(New_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_x == 0 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == 0 && Old_x == New_hsCount)
+
+root Left Left:  for k = 1 : (New_hsCount == 0 && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left Right:  for k = 1 : (Old_x != New_hsCount && New_x != New_hsCount)
+root Left:  for k = 2 : ((New_Ret && New_hsCount == Old_hsCount - 1 && New_x == 0 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount) && (((New_hsCount == 0 && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == 0 && New_x == 0 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount)
+
+root Right Left:  for k = 1 : (New_hsCount == 0 && New_x == 0 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Right:  for k = 2 : ((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_hsCount == 0 && New_x == 0 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+unsimplified post:
+((New_x == Old_x && (!(New_hsContainsX))) && ((((New_Ret && New_hsCount == Old_hsCount - 1 && New_x == 0 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount) && (((New_hsCount == 0 &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_hsCount == 0 &&  New_x == 0 &&  Old_x == Old_hsCount &&  New_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(Old_hsContainsX)))))
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=2 : (New_x == Old_x && (!(New_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == 0 && New_x == 0 && Old_x == New_hsCount)
+
+root Left Left:  for k = 1 : (New_hsCount == 0 && New_x == 0 && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left Right:  for k = 1 : (Old_x != New_hsCount && New_x != New_hsCount)
+root Left:  for k = 2 : ((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount) && (((New_hsCount == 0 && New_x == 0 && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+
+root Right Left:  for k = 1 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Right:  for k = 2 : ((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+unsimplified post:
+((New_x == Old_x && (!(New_hsContainsX))) && ((((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount && Old_x != Old_hsCount && New_x != Old_hsCount) && (((New_hsCount == 0 &&  New_x == 0 &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(Old_hsContainsX)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=2 : (New_x == Old_x && (!(New_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_x && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x == New_hsCount)
+
+root Left Left:  for k = 1 : (New_hsCount == Old_x && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left Right:  for k = 1 : (Old_x != New_hsCount && New_x != New_hsCount)
+root Left:  for k = 2 : ((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && (((New_hsCount == Old_x && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+
+root Right Left:  for k = 1 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Right:  for k = 2 : ((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+unsimplified post:
+((New_x == Old_x && (!(New_hsContainsX))) && ((((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && (((New_hsCount == Old_x &&  Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(Old_hsContainsX)))))
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=2 : (New_x == Old_x && (!(New_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : Old_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_x && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x == New_hsCount)
+
+root Left Left:  for k = 1 : (New_hsCount == Old_x && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left Right:  for k = 1 : (Old_x != New_hsCount && New_x != New_hsCount)
+root Left:  for k = 2 : ((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && (((New_hsCount == Old_x && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && (!(New_Ret)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+
+root Right Left:  for k = 1 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Right:  for k = 2 : ((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+unsimplified post:
+((New_x == Old_x && (!(New_hsContainsX))) && ((((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && (((New_hsCount == Old_x &&  Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(Old_hsContainsX)))))
+
+===== Final Result
+
+postcondition k == 2
+((New_x == Old_x && (!(New_hsContainsX))) && ((((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && (((New_hsCount == Old_x &&  Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(Old_hsContainsX)))))
+rounds: 4
+
+simplified post k == 2
+((New_x == Old_x && (!(New_hsContainsX)) && New_Ret && New_hsCount == -1 + Old_hsCount && Old_hsContainsX) || (New_x == Old_x && (!(New_hsContainsX)) && New_hsCount == Old_hsCount && (!(New_Ret)) && (!(Old_hsContainsX))))
+Not(k0 -> k2)? sat
+
+Not(k1 -> k2)? unsat
+
+PUT: PUT_CountContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+unsimplified post:
+(New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+unsimplified post:
+(New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+===== Final Result
+
+postcondition k == 0
+(New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+rounds: 2
+
+simplified post k == 0
+((New_Ret == Old_hsCount && New_Ret == New_hsCount))
+=====
+Case: k == 1
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+===== Final Result
+
+postcondition k == 1
+(New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+rounds: 2
+
+simplified post k == 1
+((New_Ret == Old_hsCount && New_Ret == New_hsCount))
+Not(k0 -> k1)? unsat
+
+=====
+Case: k == 2
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=2 : (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=2 : (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+===== Final Result
+
+postcondition k == 2
+(New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+rounds: 2
+
+simplified post k == 2
+((New_Ret == Old_hsCount && New_Ret == New_hsCount))
+Not(k0 -> k2)? unsat
+
+Not(k1 -> k2)? unsat
+
+PUT: PUT_ContainsContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+unsimplified post:
+(New_hsCount == Old_hsCount && New_x == Old_x)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+unsimplified post:
+(New_hsCount == Old_hsCount && New_x == Old_x)
+
+===== Final Result
+
+postcondition k == 0
+(New_hsCount == Old_hsCount && New_x == Old_x)
+rounds: 2
+
+simplified post k == 0
+((New_hsCount == Old_hsCount && New_x == Old_x))
+=====
+Case: k == 1
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && Old_hsContainsX && New_x == 0 && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left:  for k = 1 : (New_Ret && Old_hsContainsX && New_x == 0 && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+Houdini AlwaysTrue for k=0 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+
+root Right:  for k = 1 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+unsimplified post:
+((New_hsCount == Old_hsCount && New_x == Old_x) && (((New_Ret && Old_hsContainsX && New_x == 0 && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && New_hsContainsX) || (((!(New_Ret)) && (!(Old_hsContainsX))) && (!(New_hsContainsX)))))
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && Old_hsContainsX && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left:  for k = 1 : (New_Ret && Old_hsContainsX && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+Houdini AlwaysTrue for k=0 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+
+root Right:  for k = 1 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+unsimplified post:
+((New_hsCount == Old_hsCount && New_x == Old_x) && (((New_Ret && Old_hsContainsX && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && New_hsContainsX) || (((!(New_Ret)) && (!(Old_hsContainsX))) && (!(New_hsContainsX)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && Old_hsContainsX)
+
+root Left:  for k = 1 : (New_Ret && Old_hsContainsX)
+Houdini AlwaysTrue for k=0 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+
+root Right:  for k = 1 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+unsimplified post:
+((New_hsCount == Old_hsCount && New_x == Old_x) && (((New_Ret && Old_hsContainsX) && New_hsContainsX) || (((!(New_Ret)) && (!(Old_hsContainsX))) && (!(New_hsContainsX)))))
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=1 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_hsContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && Old_hsContainsX)
+
+root Left:  for k = 1 : (New_Ret && Old_hsContainsX)
+Houdini AlwaysTrue for k=0 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+
+root Right:  for k = 1 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+unsimplified post:
+((New_hsCount == Old_hsCount && New_x == Old_x) && (((New_Ret && Old_hsContainsX) && New_hsContainsX) || (((!(New_Ret)) && (!(Old_hsContainsX))) && (!(New_hsContainsX)))))
+
+===== Final Result
+
+postcondition k == 1
+((New_hsCount == Old_hsCount && New_x == Old_x) && (((New_Ret && Old_hsContainsX) && New_hsContainsX) || (((!(New_Ret)) && (!(Old_hsContainsX))) && (!(New_hsContainsX)))))
+rounds: 4
+
+simplified post k == 1
+((New_hsCount == Old_hsCount && New_x == Old_x && New_Ret && Old_hsContainsX && New_hsContainsX) || (New_hsCount == Old_hsCount && New_x == Old_x && (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX))))
+Not(k0 -> k1)? sat
+
+=====
+Case: k == 2
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=2 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && Old_hsContainsX && New_x == 0 && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : None
+
+root Left:  for k = 2 : (New_Ret && Old_hsContainsX && New_x == 0 && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+Houdini AlwaysTrue for k=1 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == 0 && New_x == 0 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount)
+
+root Right Left:  for k = 1 : (New_hsCount == 0 && New_x == 0 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (New_hsCount == 1 && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Right:  for k = 1 : (New_hsCount == 1 && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Right:  for k = 2 : (((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_hsCount == 0 && New_x == 0 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((New_hsCount == 1 && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+unsimplified post:
+((New_hsCount == Old_hsCount && New_x == Old_x) && (((New_Ret && Old_hsContainsX && New_x == 0 && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && New_hsContainsX) || ((((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_hsCount == 0 &&  New_x == 0 &&  Old_x == Old_hsCount &&  New_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((New_hsCount == 1 &&  Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(New_hsContainsX)))))
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=2 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && Old_hsContainsX && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : None
+
+root Left:  for k = 2 : (New_Ret && Old_hsContainsX && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+Houdini AlwaysTrue for k=1 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+
+root Right Left:  for k = 1 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Right:  for k = 2 : (((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+unsimplified post:
+((New_hsCount == Old_hsCount && New_x == Old_x) && (((New_Ret && Old_hsContainsX && Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && New_hsContainsX) || ((((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(New_hsContainsX)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=2 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && Old_hsContainsX)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_hsCount == 1 && New_x == 1 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount)
+
+root Left Left:  for k = 1 : (New_hsCount == 1 && New_x == 1 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Left:  for k = 2 : ((New_Ret && Old_hsContainsX) && (((New_hsCount == 1 && New_x == 1 && Old_x == Old_hsCount && New_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+Houdini AlwaysTrue for k=1 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+
+root Right Left:  for k = 1 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Right:  for k = 2 : (((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+unsimplified post:
+((New_hsCount == Old_hsCount && New_x == Old_x) && ((((New_Ret && Old_hsContainsX) && (((New_hsCount == 1 &&  New_x == 1 &&  Old_x == Old_hsCount &&  New_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && New_hsContainsX) || ((((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(New_hsContainsX)))))
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=2 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && Old_hsContainsX)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+
+root Left Left:  for k = 1 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Left:  for k = 2 : ((New_Ret && Old_hsContainsX) && (((New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+Houdini AlwaysTrue for k=1 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+
+root Right Left:  for k = 1 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Right:  for k = 2 : (((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+unsimplified post:
+((New_hsCount == Old_hsCount && New_x == Old_x) && ((((New_Ret && Old_hsContainsX) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && New_hsContainsX) || ((((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(New_hsContainsX)))))
+
+#############
+Round: 5
+
+Houdini AlwaysTrue for k=2 : (New_hsCount == Old_hsCount && New_x == Old_x)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_hsContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && Old_hsContainsX)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+
+root Left Left:  for k = 1 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Left Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Left:  for k = 2 : ((New_Ret && Old_hsContainsX) && (((New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+Houdini AlwaysTrue for k=1 : ((!(New_Ret)) && (!(Old_hsContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == New_hsCount
+
+Houdini AlwaysTrue for k=0 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+
+root Right Left:  for k = 1 : (New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount)
+Houdini AlwaysTrue for k=0 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+
+root Right Right:  for k = 1 : (Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount)
+root Right:  for k = 2 : (((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount && Old_x == Old_hsCount && Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount && New_x != Old_hsCount && Old_x != New_hsCount && New_x != New_hsCount) && (!(New_x == New_hsCount)))))
+unsimplified post:
+((New_hsCount == Old_hsCount && New_x == Old_x) && ((((New_Ret && Old_hsContainsX) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && New_hsContainsX) || ((((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(New_hsContainsX)))))
+
+===== Final Result
+
+postcondition k == 2
+((New_hsCount == Old_hsCount && New_x == Old_x) && ((((New_Ret && Old_hsContainsX) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && New_hsContainsX) || ((((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(New_hsContainsX)))))
+rounds: 5
+
+simplified post k == 2
+((New_hsCount == Old_hsCount && New_x == Old_x && New_Ret && Old_hsContainsX && New_hsContainsX) || ((!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX)) && Old_x == Old_hsCount && Old_x == New_hsCount && New_x == New_hsCount) || (New_hsCount == Old_hsCount && New_x == Old_x && (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX)) && (!(New_x == New_hsCount))))
+Not(k0 -> k2)? sat
+
+Not(k1 -> k2)? unsat
+
