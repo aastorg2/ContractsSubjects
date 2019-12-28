@@ -1,0 +1,1395 @@
+Problem: StackTest
+
+PUT: PUT_PushContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count && Old_x == New_Top && New_x == New_Top)
+
+unsimplified post:
+(New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count && Old_x == New_Top && New_x == New_Top)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+unsimplified post:
+(New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=0 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+unsimplified post:
+(New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+===== Final Result
+
+postcondition k == 0
+(New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+rounds: 3
+
+simplified post k == 0
+((New_s1ContainsX && New_s1Count == 1 + Old_s1Count && Old_x == New_Top && New_x == New_Top))
+=====
+Case: k == 1
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=1 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count && Old_x == New_Top && New_x == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : Old_s1ContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Top == 0 && New_x == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && New_Top == Old_Top && Old_x == Old_Top && New_x == Old_Top)
+
+root Left:  for k = 1 : (New_Top == 0 && New_x == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && New_Top == Old_Top && Old_x == Old_Top && New_x == Old_Top)
+Houdini AlwaysTrue for k=0 : true
+
+root Right:  for k = 1 : true
+unsimplified post:
+((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count && Old_x == New_Top && New_x == New_Top) && (((New_Top == 0 && New_x == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && New_Top == Old_Top && Old_x == Old_Top && New_x == Old_Top) && Old_s1ContainsX) || (true && (!(Old_s1ContainsX)))))
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=1 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_x == Old_Top
+
+Houdini AlwaysTrue for k=0 : (New_Top == 0 && New_x == 0 && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count && New_Top == Old_Top && Old_x == Old_Top)
+
+root Left:  for k = 1 : (New_Top == 0 && New_x == 0 && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count && New_Top == Old_Top && Old_x == Old_Top)
+Houdini AlwaysTrue for k=0 : ((!(Old_s1ContainsX)) && New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top)
+
+root Right:  for k = 1 : ((!(Old_s1ContainsX)) && New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top)
+unsimplified post:
+((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top) && (((New_Top == 0 && New_x == 0 && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count && New_Top == Old_Top && Old_x == Old_Top) && New_x == Old_Top) || (((!(Old_s1ContainsX)) && New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top) && (!(New_x == Old_Top)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=1 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : Old_s1ContainsX
+
+Houdini AlwaysTrue for k=0 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count)
+
+root Left:  for k = 1 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count)
+Houdini AlwaysTrue for k=0 : true
+
+root Right:  for k = 1 : true
+unsimplified post:
+((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top) && (((Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count) && Old_s1ContainsX) || (true && (!(Old_s1ContainsX)))))
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=1 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : Old_s1ContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count)
+
+root Left:  for k = 1 : (New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count)
+Houdini AlwaysTrue for k=0 : true
+
+root Right:  for k = 1 : true
+unsimplified post:
+((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top) && (((New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count) && Old_s1ContainsX) || (true && (!(Old_s1ContainsX)))))
+
+#############
+Round: 5
+
+Houdini AlwaysTrue for k=1 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+#############
+Round: 6
+
+Houdini AlwaysTrue for k=1 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+===== Final Result
+
+postcondition k == 1
+(New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+rounds: 6
+
+simplified post k == 1
+((New_s1ContainsX && New_s1Count == 1 + Old_s1Count && Old_x == New_Top && New_x == New_Top))
+Not(k0 -> k1)? unsat
+
+=====
+Case: k == 2
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=2 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count && Old_x == New_Top && New_x == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : Old_s1ContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Top == 0 && New_x == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && New_Top == Old_Top && Old_x == Old_Top && New_x == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : None
+
+root Left:  for k = 2 : (New_Top == 0 && New_x == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && New_Top == Old_Top && Old_x == Old_Top && New_x == Old_Top)
+Houdini AlwaysTrue for k=1 : true
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == Old_Top
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == 1 && New_Top == 0 && New_x == 0 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_x == Old_s1Count && New_x == Old_s1Count && New_Top == Old_Top && Old_x == Old_Top)
+
+root Right Left:  for k = 1 : (New_s1Count == 1 && New_Top == 0 && New_x == 0 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_x == Old_s1Count && New_x == Old_s1Count && New_Top == Old_Top && Old_x == Old_Top)
+Houdini AlwaysTrue for k=0 : (New_Top == 1 && New_x == 1 && Old_Top != Old_s1Count && New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top)
+
+root Right Right:  for k = 1 : (New_Top == 1 && New_x == 1 && Old_Top != Old_s1Count && New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top)
+root Right:  for k = 2 : (true && (((New_s1Count == 1 && New_Top == 0 && New_x == 0 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_x == Old_s1Count && New_x == Old_s1Count && New_Top == Old_Top && Old_x == Old_Top) && New_x == Old_Top) || ((New_Top == 1 && New_x == 1 && Old_Top != Old_s1Count && New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top) && (!(New_x == Old_Top)))))
+unsimplified post:
+((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count && Old_x == New_Top && New_x == New_Top) && (((New_Top == 0 && New_x == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && New_Top == Old_Top && Old_x == Old_Top && New_x == Old_Top) && Old_s1ContainsX) || ((true && (((New_s1Count == 1 &&  New_Top == 0 &&  New_x == 0 &&  Old_Top == Old_s1Count &&  New_Top == Old_s1Count &&  Old_x == Old_s1Count &&  New_x == Old_s1Count &&  New_Top == Old_Top &&  Old_x == Old_Top) && New_x == Old_Top) || ((New_Top == 1 &&  New_x == 1 &&  Old_Top != Old_s1Count &&  New_Top != Old_Top &&  Old_x != Old_Top &&  New_x != Old_Top) && (!(New_x == Old_Top))))) && (!(Old_s1ContainsX)))))
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=2 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : Old_s1ContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_x == Old_Top
+
+Houdini AlwaysTrue for k=0 : (New_Top == Old_Top && Old_Top != Old_s1Count && Old_x == Old_Top)
+
+root Left Left:  for k = 1 : (New_Top == Old_Top && Old_Top != Old_s1Count && Old_x == Old_Top)
+Houdini AlwaysTrue for k=0 : (New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top)
+
+root Left Right:  for k = 1 : (New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top)
+root Left:  for k = 2 : ((New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count) && (((New_Top == Old_Top && Old_Top != Old_s1Count && Old_x == Old_Top) && New_x == Old_Top) || ((New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top) && (!(New_x == Old_Top)))))
+Houdini AlwaysTrue for k=1 : true
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_x == Old_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_Top == Old_s1Count && Old_x == Old_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count)
+
+root Right Left:  for k = 1 : (New_Top == Old_s1Count && Old_x == Old_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count)
+Houdini AlwaysTrue for k=0 : (New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && Old_Top != New_s1Count && New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top)
+
+root Right Right:  for k = 1 : (New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && Old_Top != New_s1Count && New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top)
+root Right:  for k = 2 : (true && (((New_Top == Old_s1Count && Old_x == Old_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count) && New_x == Old_s1Count) || ((New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && Old_Top != New_s1Count && New_Top != Old_Top && Old_x != Old_Top && New_x != Old_Top) && (!(New_x == Old_s1Count)))))
+unsimplified post:
+((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top) && ((((New_Top != Old_s1Count && Old_x != Old_s1Count && New_x != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count) && (((New_Top == Old_Top &&  Old_Top != Old_s1Count &&  Old_x == Old_Top) && New_x == Old_Top) || ((New_Top != Old_Top &&  Old_x != Old_Top &&  New_x != Old_Top) && (!(New_x == Old_Top))))) && Old_s1ContainsX) || ((true && (((New_Top == Old_s1Count &&  Old_x == Old_s1Count &&  New_Top != New_s1Count &&  Old_x != New_s1Count &&  New_x != New_s1Count) && New_x == Old_s1Count) || ((New_Top != Old_s1Count &&  Old_x != Old_s1Count &&  New_x != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != Old_Top &&  Old_x != Old_Top &&  New_x != Old_Top) && (!(New_x == Old_s1Count))))) && (!(Old_s1ContainsX)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=2 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=2 : (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+
+===== Final Result
+
+postcondition k == 2
+(New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_x == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && New_x == New_Top)
+rounds: 4
+
+simplified post k == 2
+((New_s1ContainsX && New_s1Count == 1 + Old_s1Count && Old_x == New_Top && New_x == New_Top))
+Not(k0 -> k2)? unsat
+
+Not(k1 -> k2)? unsat
+
+PUT: PUT_PopContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count - 1 && New_Top == 0 && New_Ret == 0 && New_s1Count != Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+unsimplified post:
+(New_s1Count == Old_s1Count - 1 && New_Top == 0 && New_Ret == 0 && New_s1Count != Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+unsimplified post:
+(New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+unsimplified post:
+(New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+===== Final Result
+
+postcondition k == 0
+(New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+rounds: 3
+
+simplified post k == 0
+((New_s1Count == -1 + Old_s1Count && New_Ret == Old_Top))
+=====
+Case: k == 1
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count - 1 && New_Top == 0 && New_Ret == 0 && New_s1Count != Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count - 1 && New_Top == 0 && New_Ret == 0 && New_s1Count != Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_Ret == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count)
+
+root Left:  for k = 1 : (New_s1Count == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (New_Top == 0 && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Ret != New_s1Count)
+
+root Right:  for k = 1 : (New_Top == 0 && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Ret != New_s1Count)
+unsimplified post:
+((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count) && (((New_s1Count == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count) && New_Ret == New_s1Count) || ((New_Top == 0 && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Ret != New_s1Count) && (!(New_Ret == New_s1Count)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_Ret == New_Top
+
+Houdini AlwaysTrue for k=0 : (New_Top == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top)
+
+root Left:  for k = 1 : (New_Top == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top)
+Houdini AlwaysTrue for k=0 : (New_Top != Old_Top && New_Ret != New_Top)
+
+root Right:  for k = 1 : (New_Top != Old_Top && New_Ret != New_Top)
+unsimplified post:
+((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count) && (((New_Top == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top) && New_Ret == New_Top) || ((New_Top != Old_Top && New_Ret != New_Top) && (!(New_Ret == New_Top)))))
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_Ret == New_Top
+
+Houdini AlwaysTrue for k=0 : (New_Top == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count)
+
+root Left:  for k = 1 : (New_Top == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count)
+Houdini AlwaysTrue for k=0 : (New_Top != Old_Top && New_Ret != New_Top)
+
+root Right:  for k = 1 : (New_Top != Old_Top && New_Ret != New_Top)
+unsimplified post:
+((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count) && (((New_Top == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count) && New_Ret == New_Top) || ((New_Top != Old_Top && New_Ret != New_Top) && (!(New_Ret == New_Top)))))
+
+#############
+Round: 5
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+#############
+Round: 6
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+===== Final Result
+
+postcondition k == 1
+(New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+rounds: 6
+
+simplified post k == 1
+((New_s1Count == -1 + Old_s1Count && New_Ret == Old_Top))
+Not(k0 -> k1)? unsat
+
+=====
+Case: k == 2
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count - 1 && New_Top == 0 && New_Ret == 0 && New_s1Count != Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count - 1 && New_Top == 0 && New_Ret == 0 && New_s1Count != Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_Ret == New_s1Count
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_Ret == New_Top
+
+Houdini AlwaysTrue for k=0 : (New_Top == 0 && New_Top != Old_s1Count && New_Top == New_s1Count && New_Top == Old_Top)
+
+root Left Left:  for k = 1 : (New_Top == 0 && New_Top != Old_s1Count && New_Top == New_s1Count && New_Top == Old_Top)
+Houdini AlwaysTrue for k=0 : (New_Top == 1 && New_Top == Old_s1Count && New_Top != New_s1Count && New_Top != Old_Top && New_Ret != New_Top)
+
+root Left Right:  for k = 1 : (New_Top == 1 && New_Top == Old_s1Count && New_Top != New_s1Count && New_Top != Old_Top && New_Ret != New_Top)
+root Left:  for k = 2 : ((New_s1Count == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count) && (((New_Top == 0 && New_Top != Old_s1Count && New_Top == New_s1Count && New_Top == Old_Top) && New_Ret == New_Top) || ((New_Top == 1 && New_Top == Old_s1Count && New_Top != New_s1Count && New_Top != Old_Top && New_Ret != New_Top) && (!(New_Ret == New_Top)))))
+Houdini AlwaysTrue for k=1 : (New_Top == 0 && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Ret != New_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_Ret == New_Top
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == 1 && New_Ret == 0 && Old_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top != New_s1Count && New_Top == Old_Top)
+
+root Right Left:  for k = 1 : (New_s1Count == 1 && New_Ret == 0 && Old_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top != New_s1Count && New_Top == Old_Top)
+Houdini AlwaysTrue for k=0 : (New_s1Count == 0 && New_Ret == 1 && Old_Top == Old_s1Count && New_Ret == Old_s1Count && New_Top == New_s1Count && New_Top != Old_Top && New_Ret != New_Top)
+
+root Right Right:  for k = 1 : (New_s1Count == 0 && New_Ret == 1 && Old_Top == Old_s1Count && New_Ret == Old_s1Count && New_Top == New_s1Count && New_Top != Old_Top && New_Ret != New_Top)
+root Right:  for k = 2 : ((New_Top == 0 && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Ret != New_s1Count) && (((New_s1Count == 1 && New_Ret == 0 && Old_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top != New_s1Count && New_Top == Old_Top) && New_Ret == New_Top) || ((New_s1Count == 0 && New_Ret == 1 && Old_Top == Old_s1Count && New_Ret == Old_s1Count && New_Top == New_s1Count && New_Top != Old_Top && New_Ret != New_Top) && (!(New_Ret == New_Top)))))
+unsimplified post:
+((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count) && ((((New_s1Count == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count) && (((New_Top == 0 &&  New_Top != Old_s1Count &&  New_Top == New_s1Count &&  New_Top == Old_Top) && New_Ret == New_Top) || ((New_Top == 1 &&  New_Top == Old_s1Count &&  New_Top != New_s1Count &&  New_Top != Old_Top &&  New_Ret != New_Top) && (!(New_Ret == New_Top))))) && New_Ret == New_s1Count) || (((New_Top == 0 && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Ret != New_s1Count) && (((New_s1Count == 1 &&  New_Ret == 0 &&  Old_Top != Old_s1Count &&  New_Ret != Old_s1Count &&  New_Top != New_s1Count &&  New_Top == Old_Top) && New_Ret == New_Top) || ((New_s1Count == 0 &&  New_Ret == 1 &&  Old_Top == Old_s1Count &&  New_Ret == Old_s1Count &&  New_Top == New_s1Count &&  New_Top != Old_Top &&  New_Ret != New_Top) && (!(New_Ret == New_Top))))) && (!(New_Ret == New_s1Count)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_Ret == New_Top
+
+Houdini AlwaysTrue for k=1 : (New_Top == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : None
+
+root Left:  for k = 2 : (New_Top == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top)
+Houdini AlwaysTrue for k=1 : (New_Top != Old_Top && New_Ret != New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_Ret == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_Top && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count && New_Top != New_s1Count)
+
+root Right Left:  for k = 1 : (New_s1Count == Old_Top && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count && New_Top != New_s1Count)
+Houdini AlwaysTrue for k=0 : (Old_Top != New_s1Count && New_Ret != New_s1Count)
+
+root Right Right:  for k = 1 : (Old_Top != New_s1Count && New_Ret != New_s1Count)
+root Right:  for k = 2 : ((New_Top != Old_Top && New_Ret != New_Top) && (((New_s1Count == Old_Top && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count && New_Top != New_s1Count) && New_Ret == New_s1Count) || ((Old_Top != New_s1Count && New_Ret != New_s1Count) && (!(New_Ret == New_s1Count)))))
+unsimplified post:
+((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count) && (((New_Top == 0 && New_Ret == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && New_Top == Old_Top) && New_Ret == New_Top) || (((New_Top != Old_Top && New_Ret != New_Top) && (((New_s1Count == Old_Top &&  Old_Top != Old_s1Count &&  New_Ret != Old_s1Count &&  Old_Top == New_s1Count &&  New_Top != New_s1Count) && New_Ret == New_s1Count) || ((Old_Top != New_s1Count &&  New_Ret != New_s1Count) && (!(New_Ret == New_s1Count))))) && (!(New_Ret == New_Top)))))
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_Ret == New_Top
+
+Houdini AlwaysTrue for k=1 : (New_Top == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_Ret == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == 0 && New_Top == 0 && New_Ret == 0 && Old_Top == New_s1Count && New_Top == New_s1Count)
+
+root Left Left:  for k = 1 : (New_s1Count == 0 && New_Top == 0 && New_Ret == 0 && Old_Top == New_s1Count && New_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count)
+
+root Left Right:  for k = 1 : (Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count)
+root Left:  for k = 2 : ((New_Top == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count) && (((New_s1Count == 0 && New_Top == 0 && New_Ret == 0 && Old_Top == New_s1Count && New_Top == New_s1Count) && New_Ret == New_s1Count) || ((Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count) && (!(New_Ret == New_s1Count)))))
+Houdini AlwaysTrue for k=1 : (New_Top != Old_Top && New_Ret != New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_Ret == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_Top && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count && New_Top != New_s1Count)
+
+root Right Left:  for k = 1 : (New_s1Count == Old_Top && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count && New_Top != New_s1Count)
+Houdini AlwaysTrue for k=0 : (Old_Top != New_s1Count && New_Ret != New_s1Count)
+
+root Right Right:  for k = 1 : (Old_Top != New_s1Count && New_Ret != New_s1Count)
+root Right:  for k = 2 : ((New_Top != Old_Top && New_Ret != New_Top) && (((New_s1Count == Old_Top && Old_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top == New_s1Count && New_Top != New_s1Count) && New_Ret == New_s1Count) || ((Old_Top != New_s1Count && New_Ret != New_s1Count) && (!(New_Ret == New_s1Count)))))
+unsimplified post:
+((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count) && ((((New_Top == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count) && (((New_s1Count == 0 &&  New_Top == 0 &&  New_Ret == 0 &&  Old_Top == New_s1Count &&  New_Top == New_s1Count) && New_Ret == New_s1Count) || ((Old_Top != New_s1Count &&  New_Top != New_s1Count &&  New_Ret != New_s1Count) && (!(New_Ret == New_s1Count))))) && New_Ret == New_Top) || (((New_Top != Old_Top && New_Ret != New_Top) && (((New_s1Count == Old_Top &&  Old_Top != Old_s1Count &&  New_Ret != Old_s1Count &&  Old_Top == New_s1Count &&  New_Top != New_s1Count) && New_Ret == New_s1Count) || ((Old_Top != New_s1Count &&  New_Ret != New_s1Count) && (!(New_Ret == New_s1Count))))) && (!(New_Ret == New_Top)))))
+
+#############
+Round: 5
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+#############
+Round: 6
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+===== Final Result
+
+postcondition k == 2
+(New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+rounds: 6
+
+simplified post k == 2
+((New_s1Count == -1 + Old_s1Count && New_Ret == Old_Top))
+Not(k0 -> k2)? unsat
+
+Not(k1 -> k2)? unsat
+
+PUT: PUT_PeekContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == 1 && New_Top == 0 && New_Ret == 0 && New_s1Count == Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+unsimplified post:
+(New_s1Count == 1 && New_Top == 0 && New_Ret == 0 && New_s1Count == Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Ret == New_Top)
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Ret == New_Top)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+===== Final Result
+
+postcondition k == 0
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+rounds: 4
+
+simplified post k == 0
+((New_s1Count == Old_s1Count && New_Ret == Old_Top && New_Ret == New_Top))
+=====
+Case: k == 1
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == 1 && New_Top == 0 && New_Ret == 0 && New_s1Count == Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1Count == 1 && New_Top == 0 && New_Ret == 0 && New_s1Count == Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Ret == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Ret == New_Top)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+===== Final Result
+
+postcondition k == 1
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+rounds: 4
+
+simplified post k == 1
+((New_s1Count == Old_s1Count && New_Ret == Old_Top && New_Ret == New_Top))
+Not(k0 -> k1)? unsat
+
+=====
+Case: k == 2
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == 1 && New_Top == 0 && New_Ret == 0 && New_s1Count == Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1Count == 1 && New_Top == 0 && New_Ret == 0 && New_s1Count == Old_s1Count && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Ret == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && Old_Top != Old_s1Count && New_Top != Old_s1Count && New_Ret != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && New_Ret != New_s1Count && New_Ret == New_Top)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+===== Final Result
+
+postcondition k == 2
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+rounds: 4
+
+simplified post k == 2
+((New_s1Count == Old_s1Count && New_Ret == Old_Top && New_Ret == New_Top))
+Not(k0 -> k2)? unsat
+
+Not(k1 -> k2)? unsat
+
+PUT: PUT_CountContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count && New_Top == 0 && New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Top == Old_Top)
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == 0 && New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Top == Old_Top)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+===== Final Result
+
+postcondition k == 0
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+rounds: 3
+
+simplified post k == 0
+((New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count))
+=====
+Case: k == 1
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count && New_Top == 0 && New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == 0 && New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Top == Old_Top)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+===== Final Result
+
+postcondition k == 1
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+rounds: 3
+
+simplified post k == 1
+((New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count))
+Not(k0 -> k1)? unsat
+
+=====
+Case: k == 2
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == 0 && New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == 0 && New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Top == Old_Top)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : None
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+===== Final Result
+
+postcondition k == 2
+(New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+rounds: 3
+
+simplified post k == 2
+((New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count))
+Not(k0 -> k2)? unsat
+
+Not(k1 -> k2)? unsat
+
+PUT: PUT_ContainsContract
+
+=====
+Case: k == 0
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count && New_Top == 0 && New_Top == Old_Top)
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == 0 && New_Top == Old_Top)
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+unsimplified post:
+(New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+===== Final Result
+
+postcondition k == 0
+(New_s1Count == Old_s1Count && New_Top == Old_Top)
+rounds: 3
+
+simplified post k == 0
+((New_s1Count == Old_s1Count && New_Top == Old_Top))
+=====
+Case: k == 1
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count && New_Top == 0 && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_s1ContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && Old_s1ContainsX && New_s1Count == 1 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Left:  for k = 1 : (New_Ret && Old_s1ContainsX && New_s1Count == 1 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+Houdini AlwaysTrue for k=0 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+
+root Right:  for k = 1 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+unsimplified post:
+((New_s1Count == Old_s1Count && New_Top == 0 && New_Top == Old_Top) && (((New_Ret && Old_s1ContainsX && New_s1Count == 1 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && New_s1ContainsX) || (((!(New_Ret)) && (!(Old_s1ContainsX))) && (!(New_s1ContainsX)))))
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_s1ContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && Old_s1ContainsX && New_Top == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Left:  for k = 1 : (New_Ret && Old_s1ContainsX && New_Top == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+Houdini AlwaysTrue for k=0 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+
+root Right:  for k = 1 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+unsimplified post:
+((New_s1Count == Old_s1Count && New_Top == Old_Top) && (((New_Ret && Old_s1ContainsX && New_Top == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && New_s1ContainsX) || (((!(New_Ret)) && (!(Old_s1ContainsX))) && (!(New_s1ContainsX)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_s1ContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && Old_s1ContainsX)
+
+root Left:  for k = 1 : (New_Ret && Old_s1ContainsX)
+Houdini AlwaysTrue for k=0 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+
+root Right:  for k = 1 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+unsimplified post:
+((New_s1Count == Old_s1Count && New_Top == Old_Top) && (((New_Ret && Old_s1ContainsX) && New_s1ContainsX) || (((!(New_Ret)) && (!(Old_s1ContainsX))) && (!(New_s1ContainsX)))))
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=1 : (New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 1 : New_s1ContainsX
+
+Houdini AlwaysTrue for k=0 : (New_Ret && Old_s1ContainsX)
+
+root Left:  for k = 1 : (New_Ret && Old_s1ContainsX)
+Houdini AlwaysTrue for k=0 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+
+root Right:  for k = 1 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+unsimplified post:
+((New_s1Count == Old_s1Count && New_Top == Old_Top) && (((New_Ret && Old_s1ContainsX) && New_s1ContainsX) || (((!(New_Ret)) && (!(Old_s1ContainsX))) && (!(New_s1ContainsX)))))
+
+===== Final Result
+
+postcondition k == 1
+((New_s1Count == Old_s1Count && New_Top == Old_Top) && (((New_Ret && Old_s1ContainsX) && New_s1ContainsX) || (((!(New_Ret)) && (!(Old_s1ContainsX))) && (!(New_s1ContainsX)))))
+rounds: 4
+
+simplified post k == 1
+((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret && Old_s1ContainsX && New_s1ContainsX) || (New_s1Count == Old_s1Count && New_Top == Old_Top && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX))))
+Not(k0 -> k1)? sat
+
+=====
+Case: k == 2
+
+#############
+Round: 1
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == 0 && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_s1ContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && Old_s1ContainsX && New_s1Count == 1 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : None
+
+root Left:  for k = 2 : (New_Ret && Old_s1ContainsX && New_s1Count == 1 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+Houdini AlwaysTrue for k=1 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_Top == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == 0 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count)
+
+root Right Left:  for k = 1 : (New_s1Count == 0 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (New_s1Count == 1 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Right Right:  for k = 1 : (New_s1Count == 1 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+root Right:  for k = 2 : (((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_s1Count == 0 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count) && New_Top == New_s1Count) || ((New_s1Count == 1 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && (!(New_Top == New_s1Count)))))
+unsimplified post:
+((New_s1Count == Old_s1Count && New_Top == 0 && New_Top == Old_Top) && (((New_Ret && Old_s1ContainsX && New_s1Count == 1 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_s1Count == 0 &&  Old_Top == Old_s1Count &&  New_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((New_s1Count == 1 &&  Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX)))))
+
+#############
+Round: 2
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_s1ContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && Old_s1ContainsX && New_Top == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : None
+
+root Left:  for k = 2 : (New_Ret && Old_s1ContainsX && New_Top == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+Houdini AlwaysTrue for k=1 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_Top == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == 0 && New_Top == 0 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count)
+
+root Right Left:  for k = 1 : (New_s1Count == 0 && New_Top == 0 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Right Right:  for k = 1 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+root Right:  for k = 2 : (((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_s1Count == 0 && New_Top == 0 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && (!(New_Top == New_s1Count)))))
+unsimplified post:
+((New_s1Count == Old_s1Count && New_Top == Old_Top) && (((New_Ret && Old_s1ContainsX && New_Top == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_s1Count == 0 &&  New_Top == 0 &&  Old_Top == Old_s1Count &&  New_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX)))))
+
+#############
+Round: 3
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_s1ContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && Old_s1ContainsX)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_Top == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == 1 && New_Top == 1 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count)
+
+root Left Left:  for k = 1 : (New_s1Count == 1 && New_Top == 1 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (New_Top == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Left Right:  for k = 1 : (New_Top == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+root Left:  for k = 2 : ((New_Ret && Old_s1ContainsX) && (((New_s1Count == 1 && New_Top == 1 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count) && New_Top == New_s1Count) || ((New_Top == 0 && Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && (!(New_Top == New_s1Count)))))
+Houdini AlwaysTrue for k=1 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_Top == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+
+root Right Left:  for k = 1 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Right Right:  for k = 1 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+root Right:  for k = 2 : (((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && (!(New_Top == New_s1Count)))))
+unsimplified post:
+((New_s1Count == Old_s1Count && New_Top == Old_Top) && ((((New_Ret && Old_s1ContainsX) && (((New_s1Count == 1 &&  New_Top == 1 &&  Old_Top == Old_s1Count &&  New_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((New_Top == 0 &&  Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX)))))
+
+#############
+Round: 4
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_s1ContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && Old_s1ContainsX)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_Top == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_s1Count == 1 && New_Top == 1 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count)
+
+root Left Left:  for k = 1 : (New_s1Count == 1 && New_Top == 1 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Left Right:  for k = 1 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+root Left:  for k = 2 : ((New_Ret && Old_s1ContainsX) && (((New_s1Count == 1 && New_Top == 1 && Old_Top == Old_s1Count && New_Top == Old_s1Count && Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && (!(New_Top == New_s1Count)))))
+Houdini AlwaysTrue for k=1 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_Top == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+
+root Right Left:  for k = 1 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Right Right:  for k = 1 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+root Right:  for k = 2 : (((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && (!(New_Top == New_s1Count)))))
+unsimplified post:
+((New_s1Count == Old_s1Count && New_Top == Old_Top) && ((((New_Ret && Old_s1ContainsX) && (((New_s1Count == 1 &&  New_Top == 1 &&  Old_Top == Old_s1Count &&  New_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX)))))
+
+#############
+Round: 5
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_s1ContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && Old_s1ContainsX)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_Top == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+
+root Left Left:  for k = 1 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Left Right:  for k = 1 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+root Left:  for k = 2 : ((New_Ret && Old_s1ContainsX) && (((New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && (!(New_Top == New_s1Count)))))
+Houdini AlwaysTrue for k=1 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_Top == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+
+root Right Left:  for k = 1 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Right Right:  for k = 1 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+root Right:  for k = 2 : (((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && (!(New_Top == New_s1Count)))))
+unsimplified post:
+((New_s1Count == Old_s1Count && New_Top == Old_Top) && ((((New_Ret && Old_s1ContainsX) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX)))))
+
+#############
+Round: 6
+
+Houdini AlwaysTrue for k=2 : (New_s1Count == Old_s1Count && New_Top == Old_Top)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root for k = 2 : New_s1ContainsX
+
+Houdini AlwaysTrue for k=1 : (New_Ret && Old_s1ContainsX)
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Left for k = 1 : New_Top == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+
+root Left Left:  for k = 1 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Left Right:  for k = 1 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+root Left:  for k = 2 : ((New_Ret && Old_s1ContainsX) && (((New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && (!(New_Top == New_s1Count)))))
+Houdini AlwaysTrue for k=1 : ((!(New_Ret)) && (!(Old_s1ContainsX)))
+
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+houdini Called with 0 feature vectors
+Predicate: root Right for k = 1 : New_Top == New_s1Count
+
+Houdini AlwaysTrue for k=0 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+
+root Right Left:  for k = 1 : (New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count)
+Houdini AlwaysTrue for k=0 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+
+root Right Right:  for k = 1 : (Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count)
+root Right:  for k = 2 : (((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count && Old_Top == Old_s1Count && Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count) && (!(New_Top == New_s1Count)))))
+unsimplified post:
+((New_s1Count == Old_s1Count && New_Top == Old_Top) && ((((New_Ret && Old_s1ContainsX) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX)))))
+
+===== Final Result
+
+postcondition k == 2
+((New_s1Count == Old_s1Count && New_Top == Old_Top) && ((((New_Ret && Old_s1ContainsX) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX)))))
+rounds: 6
+
+simplified post k == 2
+((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret && Old_s1ContainsX && New_s1ContainsX) || ((!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX)) && Old_Top == Old_s1Count && Old_Top == New_s1Count && New_Top == New_s1Count) || (New_s1Count == Old_s1Count && New_Top == Old_Top && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX)) && (!(New_Top == New_s1Count))))
+Not(k0 -> k2)? sat
+
+Not(k1 -> k2)? unsat
+
