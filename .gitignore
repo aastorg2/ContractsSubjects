@@ -381,7 +381,7 @@ log
 ########################## Other ##########################
 z3/
 *.ps1
-*.txt
+# *.txt
 information
 example.yaml
 #### binaries
