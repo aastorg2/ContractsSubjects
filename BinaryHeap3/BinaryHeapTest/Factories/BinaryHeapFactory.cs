@@ -43,7 +43,7 @@ namespace BinaryHeap.Test.Factories
             return bh;
         }
 
-        [PexFactoryMethod(typeof(BinaryHeap.BinaryHeap<int, int>))]
+        /*[PexFactoryMethod(typeof(BinaryHeap.BinaryHeap<int, int>))]
         public static BinaryHeap<int, int> CreateBinaryHeapConstants(int num, int capacity)
         {
             PexAssume.IsTrue(num > 0 && num < 20);
@@ -55,7 +55,7 @@ namespace BinaryHeap.Test.Factories
                 bh.Add(num - i, num - i + 1);
             }
             return bh;
-        }
+        }*/
 
         [PexFactoryMethod(typeof(BinaryHeap.BinaryHeap<int, int>))]
         public static BinaryHeap<int, int> CreateBinaryHeapPexChoose(int num, int capacity)
