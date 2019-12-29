@@ -39,7 +39,7 @@
       <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft Moles\PublicAssemblies\Microsoft.Pex.Framework.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.Runners.2.6.4\tools\nunit.framework.dll</HintPath>
+      <HintPath>..\packages\NUnit.Runners.2.6.4\tools\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="PexAPIWrapper">
       <HintPath>..\..\referenceAssemblies\PexAPIWrapper.dll</HintPath>
@@ -59,9 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryHeapContractTest.cs" />
-    <Compile Include="BinaryHeapContractTest.PUT_AddContract.g.cs">
-      <DependentUpon>BinaryHeapContractTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Factories\BinaryHeapFactory.cs" />
     <Compile Include="Properties\PexAssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

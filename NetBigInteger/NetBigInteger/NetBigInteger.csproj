@@ -49,9 +49,8 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PexAPIWrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Common\PexAPIWrapper\bin\Debug\PexAPIWrapper.dll</HintPath>
+    <Reference Include="PexAPIWrapper">
+      <HintPath>..\..\referenceAssemblies\PexAPIWrapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
