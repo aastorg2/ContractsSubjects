@@ -38,7 +38,7 @@
       <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft Moles\PublicAssemblies\Microsoft.Pex.Framework.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.Runners.2.6.4\tools\nunit.framework.dll</HintPath>
+      <HintPath>..\packages\NUnit.Runners.2.6.4\tools\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="PexAPIWrapper">
       <HintPath>..\..\referenceAssemblies\PexAPIWrapper.dll</HintPath>
