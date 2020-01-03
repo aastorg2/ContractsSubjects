@@ -1,0 +1,211 @@
+Problem: HashSetTest
+
+---------------------
+PUT_AddContract
+
+Disjunctive (PexObserve): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): True
+
+=====
+k == 0
+
+learned postcondition: (New_hsContainsX && New_x == Old_x)
+
+simplified postcondition: ((New_hsContainsX && New_x == Old_x))
+
+predicates: None
+
+Any: reject
+
+L: reject
+
+SubL: Pass
+
+=====
+k == 1
+
+learned postcondition: ((New_hsContainsX && New_x == Old_x) && (((New_hsCount == Old_hsCount && (!(New_Ret))) && Old_hsContainsX) || ((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (!(Old_hsContainsX)))))
+
+simplified postcondition: ((New_hsContainsX && New_x == Old_x && New_hsCount == Old_hsCount && (!(New_Ret)) && Old_hsContainsX) || (New_hsContainsX && New_x == Old_x && New_Ret && New_hsCount == 1 + Old_hsCount && (!(Old_hsContainsX))))
+
+predicates: Old_hsContainsX
+
+Any: Pass
+
+L: Pass
+
+SubL: Pass
+
+=====
+k == 2
+
+learned postcondition: ((New_hsContainsX && New_x == Old_x) && ((((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_Ret && New_hsCount == Old_hsCount + 1 && New_hsCount != Old_hsCount) && (((Old_x == Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && New_x == Old_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount) && (!(New_x == Old_hsCount))))) && (!(Old_hsContainsX)))))
+
+simplified postcondition: ((New_hsContainsX && New_x == Old_x && New_hsCount == Old_hsCount && (!(New_Ret)) && Old_hsContainsX) || (New_hsContainsX && New_x == Old_x && New_Ret && New_hsCount == 1 + Old_hsCount && (!(Old_hsContainsX))))
+
+predicates: Old_hsContainsX
+
+Any: Pass
+
+L: Pass
+
+SubL: Pass
+
+---------------------
+PUT_RemoveContract
+
+Disjunctive (PexObserve): True
+Disjunctive (Alternate Semantics): ?
+Disjunctive (Truly): ?
+
+=====
+k == 0
+
+learned postcondition: (New_x == Old_x && (!(New_hsContainsX)))
+
+simplified postcondition: ((New_x == Old_x && (!(New_hsContainsX))))
+
+predicates: None
+
+Any: reject
+
+L: reject
+
+SubL: Pass
+
+=====
+k == 1
+
+learned postcondition: ((New_x == Old_x && (!(New_hsContainsX))) && (((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && Old_hsContainsX) || ((New_hsCount == Old_hsCount && (!(New_Ret))) && (!(Old_hsContainsX)))))
+
+simplified postcondition: ((New_x == Old_x && (!(New_hsContainsX)) && New_Ret && New_hsCount == -1 + Old_hsCount && Old_hsContainsX) || (New_x == Old_x && (!(New_hsContainsX)) && New_hsCount == Old_hsCount && (!(New_Ret)) && (!(Old_hsContainsX))))
+
+predicates: Old_hsContainsX
+
+Any: Pass
+
+L: Pass
+
+SubL: Pass
+
+=====
+k == 2
+
+learned postcondition: ((New_x == Old_x && (!(New_hsContainsX))) && ((((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && (((New_hsCount == Old_x &&  Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(Old_hsContainsX)))))
+
+simplified postcondition: ((New_x == Old_x && (!(New_hsContainsX)) && New_Ret && New_hsCount == -1 + Old_hsCount && Old_hsContainsX) || (New_x == Old_x && (!(New_hsContainsX)) && New_hsCount == Old_hsCount && (!(New_Ret)) && (!(Old_hsContainsX))))
+
+predicates: Old_hsContainsX
+
+Any: Pass
+
+L: Pass
+
+SubL: Pass
+
+---------------------
+PUT_CountContract
+
+Disjunctive (PexObserve): False
+Disjunctive (Alternate Semantics): False
+Disjunctive (Truly): False
+
+=====
+k == 0
+
+learned postcondition: (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+simplified postcondition: ((New_Ret == Old_hsCount && New_Ret == New_hsCount))
+
+predicates: None
+
+Any: Pass
+
+L: Pass
+
+SubL: Pass
+
+=====
+k == 1
+
+learned postcondition: (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+simplified postcondition: ((New_Ret == Old_hsCount && New_Ret == New_hsCount))
+
+predicates: None
+
+Any: True
+
+L: Pass
+
+SubL: Pass
+
+=====
+k == 2
+
+learned postcondition: (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount)
+
+simplified postcondition: ((New_Ret == Old_hsCount && New_Ret == New_hsCount))
+
+predicates: None
+
+Any: Pass
+
+L: Pass
+
+SubL: Pass
+
+---------------------
+PUT_ContainsContract
+
+Disjunctive (PexObserve): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): True
+
+=====
+k == 0
+
+learned postcondition: (New_hsCount == Old_hsCount && New_x == Old_x)
+
+simplified postcondition: ((New_hsCount == Old_hsCount && New_x == Old_x))
+
+predicates: None
+
+Any: reject
+
+L: reject
+
+SubL: Pass
+
+=====
+k == 1
+
+learned postcondition: ((New_hsCount == Old_hsCount && New_x == Old_x) && (((New_Ret && Old_hsContainsX) && New_hsContainsX) || (((!(New_Ret)) && (!(Old_hsContainsX))) && (!(New_hsContainsX)))))
+
+simplified postcondition: ((New_hsCount == Old_hsCount && New_x == Old_x && New_Ret && Old_hsContainsX && New_hsContainsX) || (New_hsCount == Old_hsCount && New_x == Old_x && (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX))))
+
+predicates: New_hsContainsX
+
+Any: reject
+
+L: reject
+
+SubL: Pass
+
+=====
+k == 2
+
+learned postcondition: ((New_hsCount == Old_hsCount && New_x == Old_x) && ((((New_Ret && Old_hsContainsX) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && New_hsContainsX) || ((((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(New_hsContainsX)))))
+
+simplified postcondition: ((New_hsCount == Old_hsCount && New_x == Old_x && New_Ret && Old_hsContainsX && New_hsContainsX) || ((!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX)) && Old_x == Old_hsCount && Old_x == New_hsCount && New_x == New_hsCount) || (New_hsCount == Old_hsCount && New_x == Old_x && (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX)) && (!(New_x == New_hsCount))))
+
+predicates: New_hsContainsX
+
+Any: Pass
+
+L: Pass
+
+SubL: Pass
+
+---------------------
