@@ -387,3 +387,4 @@ example.yaml
 #### binaries
 *.dll
 *.exe
+*.g.cs
