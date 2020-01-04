@@ -220,6 +220,7 @@ namespace NetBigInteger.Test
         {
             ulong temp;
 
+            int Old_strLength = str.Length;
             bool Old_isNullOrEmpty = string.IsNullOrEmpty(str);
             bool Old_isNullOrWhiteSpace = string.IsNullOrWhiteSpace(str);
             bool Old_tryParse = ulong.TryParse(str, out temp) ? ulong.TryParse(str, out temp) : false;
@@ -231,6 +232,7 @@ namespace NetBigInteger.Test
 
             NetBigInteger result = new NetBigInteger(str);
 
+            int New_strLength = str.Length;
             bool New_isNullOrEmpty = string.IsNullOrEmpty(str);
             bool New_isNullOrWhiteSpace = string.IsNullOrWhiteSpace(str);
             bool New_tryParse = ulong.TryParse(str, out temp) ? ulong.TryParse(str, out temp) : false;
@@ -238,6 +240,8 @@ namespace NetBigInteger.Test
             bool New_isNotBegZero = str != null ? startsWithNonZeroSequence(str) : false;
             bool New_startWithSign = str != null ? str.StartsWith("+") | str.StartsWith("-") : false;
 
+            PexObserve.ValueForViewing("$old_str_length", Old_strLength);
+            PexObserve.ValueForViewing("$new_str_length", New_strLength);
             PexObserve.ValueForViewing("$old_is_null_or_empty", Old_isNullOrEmpty);
             PexObserve.ValueForViewing("$new_is_null_or_empty", New_isNullOrEmpty);
             PexObserve.ValueForViewing("$old_is_null_or_whitespace", Old_isNullOrWhiteSpace);
