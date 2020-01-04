@@ -220,7 +220,7 @@ namespace NetBigInteger.Test
         {
             ulong temp;
 
-            int Old_strLength = str.Length;
+            int Old_strLength = str != null ? str.Length : PexChoose.Value<int>("old_str_length");
             bool Old_isNullOrEmpty = string.IsNullOrEmpty(str);
             bool Old_isNullOrWhiteSpace = string.IsNullOrWhiteSpace(str);
             bool Old_tryParse = ulong.TryParse(str, out temp) ? ulong.TryParse(str, out temp) : false;
@@ -232,7 +232,7 @@ namespace NetBigInteger.Test
 
             NetBigInteger result = new NetBigInteger(str);
 
-            int New_strLength = str.Length;
+            int New_strLength = str != null ? str.Length : PexChoose.Value<int>("new_str_length");
             bool New_isNullOrEmpty = string.IsNullOrEmpty(str);
             bool New_isNullOrWhiteSpace = string.IsNullOrWhiteSpace(str);
             bool New_tryParse = ulong.TryParse(str, out temp) ? ulong.TryParse(str, out temp) : false;
