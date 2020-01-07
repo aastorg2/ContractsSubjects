@@ -791,7 +791,7 @@ namespace NetBigInteger.Test
             bool Old_exponentIsNull = NetBigIntegerContractTest.IsNull(exponent);
             bool Old_valueIsNull = NetBigIntegerContractTest.IsNull(value);
 
-            AssumePrecondition.IsTrue(((!(Old_valueSignValue <= 0)) && ((Old_exponentIsNull && ((Old_valueIntValue == Old_valueSignValue))) || ((!(Old_exponentIsNull))))));
+            AssumePrecondition.IsTrue(!Old_valueIsNull && ((!(Old_valueSignValue <= 0)) && ((Old_exponentIsNull && ((Old_valueIntValue == Old_valueSignValue))) || ((!(Old_exponentIsNull))))));
 
             NetBigInteger result = nbi.ModPow(exponent, value);
 
