@@ -7,7 +7,8 @@ Disjunctive (PexObserve): False
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
-Notes: The is exist a disjunction that be expressed with alternate Semantics: allTrue && (Old_s1ContainsX ||!(New_x == Old_Top))
+Notes: 
+The is exist a disjunction that be expressed with alternate Semantics: allTrue && (Old_s1ContainsX ||!(New_x == Old_Top))
 
 =====
 k == 0
@@ -61,7 +62,8 @@ Disjunctive (PexObserve): False
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
-Notes: The is exist a disjunction that can be expressed with alternate Semantics: allTrue && (New_ContainsNewRet ||!(New_Ret == New_Top)))
+Notes: 
+The is exist a disjunction that can be expressed with alternate Semantics: allTrue && (New_ContainsNewRet ||!(New_Ret == New_Top)))
 
 =====
 k == 0
@@ -173,20 +175,25 @@ SubL: Pass
 ---------------------
 PUT_CountContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
-Note: The Any, L and Subl entries new to be re-evaluated because proper postcondition to be learned using strickly PexObserve Semantics
+Notes: 
+The Any, L and Subl entries new to be re-evaluated because proper postcondition to be learned using strickly PexObserve Semantics
 is ((New_Ret == Old_s1Count && New_Ret == New_s1Count)) with excludes New_Top == Old_Top in the current post.
-((New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count))
-Ahamd you can confirm this.
+((New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)) --> tighter postcondition.
 
-I am not sure but all the An, L and Subl entries would go to false
+** discuss with professors **
 
-For k1 and k2, I think disjunction shouldn't normally be learned, but is in the case when New_Ret == Old_s1Count. This contract should be conjunctive
-For example, calling count on a stack that contains only the integer 1. A better condition would be (New_ContainsNewRet && (Old_s1Count > 1))
-Same opinion for k2 formula
+For k == 1, the post condition overfits this case. The formula is best in sub logic but because we cannot expres Count > 1,
+then algorithm chooses the stronger predicate, containsNewRet, which implies there is at least one element. However, it is too
+strick as it also requires that such element is the return value for count.
+
+for k ==2, although, a good attempt. It suffers from overfitting and inexpressiveness of logic. 
+Thus, it further splits in uninmformitive/unintersting predicates for k=2 depth. k=1 depth is same as above. 
+Nevertheless, it is a refinement on k =1 because it does add new information by further split formula from depth k =1.
+
 
 =====
 k == 0
@@ -227,7 +234,7 @@ simplified postcondition: ((New_Ret == Old_s1Count && New_Ret == New_s1Count && 
 
 predicates: New_ContainsNewRet
 
-Any: Pass
+Any: reject
 
 L: Pass
 
@@ -250,10 +257,15 @@ Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
-Note: The condition learned here is not accurate. It is tighter than what PexObserve actually learns. ((New_s1Count == Old_s1Count)) instead of ((New_s1Count == Old_s1Count && New_Top == Old_Top))
-For k1 it learns a syntaxtically different but semantically equivalent formula. ((New_s1Count == Old_s1Count && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX))) || (New_s1Count == Old_s1Count && New_Ret && Old_s1ContainsX && New_Top == Old_Top && New_s1ContainsX)) instead of ((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret && Old_s1ContainsX && New_s1ContainsX) || (New_s1Count == Old_s1Count && New_Top == Old_Top && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX))))
-The most refined post is also learned at k1 instead of k2
+Notes:
 
+for k == 0: Any, L, and Subl, should be reject because a tighter post can be learned ((New_s1Count == Old_s1Count) && Old_Top == New_Top)
+Reason for flaw: PexChoose Semantics.
+
+for k == 1: this is fine and correct. Notice though that the predicate New_Top == Old_Top is moved from the always true 
+to the conditional part of the formula. This is also due to PexChoose semantics.
+
+for k==2: this is same as k == 1 
 =====
 k == 0
 
