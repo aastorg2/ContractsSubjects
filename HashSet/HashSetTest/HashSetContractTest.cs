@@ -23,7 +23,8 @@ namespace HashSet.Test
 
             //code
             bool New_Ret = hs.Add(x);
-
+            
+             
             int New_hsCount = hs.Count;
             int New_x = x;
             bool New_hsContainsX = hs.Contains(x);
@@ -76,12 +77,15 @@ namespace HashSet.Test
             
 
             int New_Ret = hs.Count;
-
+            
+            //code
             int New_hsCount = hs.Count;
+            //bool New_ContainsNewRet = hs.Contains(New_hsCount); 
 
             PexObserve.ValueForViewing("$old_hs_Count", Old_hsCount);
             PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
+            //PexObserve.ValueForViewing("$new_containsNewRet", New_ContainsNewRet);
 
             Assert.True((New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount));
         }
@@ -94,6 +98,7 @@ namespace HashSet.Test
             int Old_hsCount = hs.Count;
             int Old_x = x;
             bool Old_hsContainsX = hs.Contains(x);
+            //code
             bool New_Ret = hs.Contains(x);
 
             int New_hsCount = hs.Count;
