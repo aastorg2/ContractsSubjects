@@ -9,6 +9,7 @@ Disjunctive (Truly): True
 
 notes:
 In agreement
+
 =====
 k == 0
 
@@ -60,6 +61,9 @@ PUT_RemoveContract
 Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): ?
 Disjunctive (Truly): ?
+
+notes:
+In agreement
 
 =====
 k == 0
