@@ -184,51 +184,64 @@ Ahamd you can confirm this.
 
 I am not sure but all the An, L and Subl entries would go to false
 
+For k1 and k2, I think disjunction shouldn't normally be learned, but is in the case when New_Ret == Old_s1Count. This contract should be conjunctive
+For example, calling count on a stack that contains only the integer 1. A better condition would be (New_ContainsNewRet && (Old_s1Count > 1))
+Same opinion for k2 formula
+
 =====
 k == 0
 
-learned postcondition: (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+learned postcondition: (New_s1Count == Old_s1Count && New_Ret == Old_s1Count && New_Ret == New_s1Count)
 
-simplified postcondition: ((New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count))
+simplified postcondition: ((New_Ret == Old_s1Count && New_Ret == New_s1Count))
 
 predicates: None
 
-Any: Pass
+Any: reject
 
-L: Pass
+L: reject
 
-SubL: Pass
+SubL: reject
 
 =====
 k == 1
 
-learned postcondition: (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+learned postcondition: ((New_s1Count == Old_s1Count && New_Ret == Old_s1Count && New_Ret == New_s1Count) && (((New_Top == Old_Top) && New_ContainsNewRet) || (true && (!(New_ContainsNewRet)))))
 
-simplified postcondition: ((New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count))
+simplified postcondition: ((New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Top == Old_Top) || (New_Ret == Old_s1Count && New_Ret == New_s1Count && (!(New_ContainsNewRet))))
 
-predicates: None
+predicates: New_ContainsNewRet
 
-Any: Pass
+Any: reject
 
-L: Pass
+L: reject
 
 SubL: Pass
 
 =====
 k == 2
 
-learned postcondition: (New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+learned postcondition: ((New_s1Count == Old_s1Count && New_Ret == Old_s1Count && New_Ret == New_s1Count) && ((((New_Top == Old_Top) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count &&  New_Top == New_s1Count &&  New_Ret == Old_Top) && New_Ret == New_Top) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count &&  New_Ret != Old_Top &&  New_Ret != New_Top) && (!(New_Ret == New_Top))))) && New_ContainsNewRet) || ((true && (((New_s1Count == 0 &&  New_Ret == 0 &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Ret == Old_Top) || ((Old_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Ret != Old_Top) && (!(New_Ret == Old_Top))))) && (!(New_ContainsNewRet)))))
 
-simplified postcondition: ((New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count))
+simplified postcondition: ((New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Top == Old_Top && New_ContainsNewRet) || (New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Ret == 0 && (!(New_ContainsNewRet))) || (New_Ret == Old_s1Count && New_Ret == New_s1Count && (!(New_Ret == Old_Top)) && (!(New_ContainsNewRet))))
 
-predicates: None
-
+predicates: New_ContainsNewRet
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 151.08302569389343
+
+learn time: 61.227513551712036
+
+Samples: 27
+
+k0 -> k2: False
+
+k1 -> k2: False
 
 ---------------------
 PUT_ContainsContract
@@ -237,44 +250,37 @@ Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
+Note: The condition learned here is not accurate. It is tighter than what PexObserve actually learns. ((New_s1Count == Old_s1Count)) instead of ((New_s1Count == Old_s1Count && New_Top == Old_Top))
+For k1 it learns a syntaxtically different but semantically equivalent formula. ((New_s1Count == Old_s1Count && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX))) || (New_s1Count == Old_s1Count && New_Ret && Old_s1ContainsX && New_Top == Old_Top && New_s1ContainsX)) instead of ((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret && Old_s1ContainsX && New_s1ContainsX) || (New_s1Count == Old_s1Count && New_Top == Old_Top && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX))))
+The most refined post is also learned at k1 instead of k2
+
 =====
 k == 0
 
-learned postcondition: (New_s1Count == Old_s1Count && New_Top == Old_Top)
+learned postcondition: (New_s1Count == Old_s1Count)
 
-simplified postcondition: ((New_s1Count == Old_s1Count && New_Top == Old_Top))
+simplified postcondition: ((New_s1Count == Old_s1Count))
 
 predicates: None
-
 
 Any: reject
 
 L: reject
 
-SubL: Pass
+SubL: reject
+
+pex time: 51.30953407287598
+
+learn time: 2.5732429027557373
+
+Samples: 10
 
 =====
 k == 1
 
-learned postcondition: ((New_s1Count == Old_s1Count && New_Top == Old_Top) && (((New_Ret && Old_s1ContainsX) && New_s1ContainsX) || (((!(New_Ret)) && (!(Old_s1ContainsX))) && (!(New_s1ContainsX)))))
+learned postcondition: ((New_s1Count == Old_s1Count) && (((New_Ret && Old_s1ContainsX && New_Top == Old_Top) && New_s1ContainsX) || (((!(New_Ret)) && (!(Old_s1ContainsX))) && (!(New_s1ContainsX)))))
 
-simplified postcondition: ((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret && Old_s1ContainsX && New_s1ContainsX) || (New_s1Count == Old_s1Count && New_Top == Old_Top && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX))))
-
-predicates: New_s1ContainsX
-
-
-Any: reject
-
-L: reject
-
-SubL: Pass
-
-=====
-k == 2
-
-learned postcondition: ((New_s1Count == Old_s1Count && New_Top == Old_Top) && ((((New_Ret && Old_s1ContainsX) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX)))))
-
-simplified postcondition: ((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret && Old_s1ContainsX && New_s1ContainsX) || ((!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX)) && Old_Top == Old_s1Count && Old_Top == New_s1Count && New_Top == New_s1Count) || (New_s1Count == Old_s1Count && New_Top == Old_Top && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX)) && (!(New_Top == New_s1Count))))
+simplified postcondition: ((New_s1Count == Old_s1Count && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX))) || (New_s1Count == Old_s1Count && New_Ret && Old_s1ContainsX && New_Top == Old_Top && New_s1ContainsX))
 
 predicates: New_s1ContainsX
 
@@ -284,4 +290,37 @@ L: Pass
 
 SubL: Pass
 
----------------------
+pex time: 65.84815168380737
+
+learn time: 15.691133737564087
+
+Samples: 15
+
+k0 -> k1: False
+
+k1 -> k0: False
+
+=====
+k == 2
+
+learned postcondition: ((New_s1Count == Old_s1Count) && ((((New_Ret && Old_s1ContainsX && New_Top == Old_Top) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count) && New_Top == New_s1Count) || ((New_Top != Old_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX)))))
+
+simplified postcondition: ((New_s1Count == Old_s1Count && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX))) || (New_s1Count == Old_s1Count && New_Ret && Old_s1ContainsX && New_Top == Old_Top && New_s1ContainsX))
+
+predicates: New_s1ContainsX
+
+Any: Pass
+
+L: Pass
+
+SubL: Pass
+
+pex time: 90.13938546180725
+
+learn time: 59.37993359565735
+
+Samples: 34
+
+k0 -> k2: Fasle
+
+k1 -> k2: True
