@@ -782,8 +782,6 @@ namespace NetBigInteger.Test
             NetBigInteger value
         )
         {
-            AssumePrecondition.IsTrue(true);
-
             int Old_nbiIntValue = nbi.IntValue;
             int Old_nbiSignValue = nbi.SignValue;
             int Old_exponentIntValue = !NetBigIntegerContractTest.IsNull(exponent) ? exponent.IntValue : PexChoose.Value<int>("old_exponent_int_value");
@@ -792,6 +790,8 @@ namespace NetBigInteger.Test
             int Old_valueSignValue = !NetBigIntegerContractTest.IsNull(value) ? value.SignValue : PexChoose.Value<int>("old_value_sign_value");
             bool Old_exponentIsNull = NetBigIntegerContractTest.IsNull(exponent);
             bool Old_valueIsNull = NetBigIntegerContractTest.IsNull(value);
+
+            AssumePrecondition.IsTrue(!Old_valueIsNull && ((!(Old_valueSignValue <= 0)) && ((Old_exponentIsNull && ((Old_valueIntValue == Old_valueSignValue))) || ((!(Old_exponentIsNull))))));
 
             NetBigInteger result = nbi.ModPow(exponent, value);
 
@@ -829,13 +829,13 @@ namespace NetBigInteger.Test
         [PexMethod]
         public NetBigInteger PUT_ModulusContract([PexAssumeUnderTest]NetBigInteger nbi1, NetBigInteger nbi2)
         {
-            AssumePrecondition.IsTrue(true);
-
             int Old_nbi1IntValue = nbi1.IntValue;
             int Old_nbi1SignValue = nbi1.SignValue;
             int Old_nbi2IntValue = !NetBigIntegerContractTest.IsNull(nbi2) ? nbi2.IntValue : PexChoose.Value<int>("old_nbi2_int_value");
             int Old_nbi2SignValue = !NetBigIntegerContractTest.IsNull(nbi2) ? nbi2.SignValue : PexChoose.Value<int>("old_nbi2_sign_value");
             bool Old_nbi2IsNull = NetBigIntegerContractTest.IsNull(nbi2);
+
+            AssumePrecondition.IsTrue(((!(Old_nbi2SignValue <= 0))));
 
             NetBigInteger result = nbi1.Modulus(nbi2);
 
@@ -864,13 +864,13 @@ namespace NetBigInteger.Test
         [PexMethod]
         public NetBigInteger PUT_MultiplyContract([PexAssumeUnderTest]NetBigInteger nbi1, NetBigInteger nbi2)
         {
-            AssumePrecondition.IsTrue(true);
-
             int Old_nbi1IntValue = nbi1.IntValue;
             int Old_nbi1SignValue = nbi1.SignValue;
             int Old_nbi2IntValue = !NetBigIntegerContractTest.IsNull(nbi2) ? nbi2.IntValue : PexChoose.Value<int>("old_nbi2_int_value");
             int Old_nbi2SignValue = !NetBigIntegerContractTest.IsNull(nbi2) ? nbi2.SignValue : PexChoose.Value<int>("old_nbi2_sign_value");
             bool Old_nbi2IsNull = NetBigIntegerContractTest.IsNull(nbi2);
+
+            AssumePrecondition.IsTrue((Old_nbi2IsNull && (((!(Old_nbi1IntValue <= -1)) && ((Old_nbi1IntValue <= 0))))) || ((!(Old_nbi2IsNull))));
 
             NetBigInteger result = nbi1.Multiply(nbi2);
 
@@ -945,13 +945,13 @@ namespace NetBigInteger.Test
         [PexMethod]
         public NetBigInteger PUT_RemainderContract([PexAssumeUnderTest]NetBigInteger nbi1, NetBigInteger nbi2)
         {
-            AssumePrecondition.IsTrue(true);
-
             int Old_nbi1IntValue = nbi1.IntValue;
             int Old_nbi1SignValue = nbi1.SignValue;
             int Old_nbi2IntValue = !NetBigIntegerContractTest.IsNull(nbi2) ? nbi2.IntValue : PexChoose.Value<int>("old_nbi2_int_value");
             int Old_nbi2SignValue = !NetBigIntegerContractTest.IsNull(nbi2) ? nbi2.SignValue : PexChoose.Value<int>("old_nbi2_sign_value");
             bool Old_nbi2IsNull = NetBigIntegerContractTest.IsNull(nbi2);
+
+            AssumePrecondition.IsTrue(((!(Old_nbi2IsNull)) && ((Old_nbi2IntValue == Old_nbi2SignValue && ((Old_nbi2IntValue <= -1) || ((!(Old_nbi2IntValue <= -1)) && (((!(Old_nbi2IntValue <= 0))))))) || ((!(Old_nbi2IntValue == Old_nbi2SignValue))))));
 
             NetBigInteger result = nbi1.Remainder(nbi2);
 
@@ -1057,13 +1057,13 @@ namespace NetBigInteger.Test
         [PexMethod]
         public NetBigInteger PUT_SubtractContract([PexAssumeUnderTest]NetBigInteger nbi1, NetBigInteger nbi2)
         {
-            AssumePrecondition.IsTrue(true);
-
             int Old_nbi1IntValue = nbi1.IntValue;
             int Old_nbi1SignValue = nbi1.SignValue;
             int Old_nbi2IntValue = !NetBigIntegerContractTest.IsNull(nbi2) ? nbi2.IntValue : PexChoose.Value<int>("old_nbi2_int_value");
             int Old_nbi2SignValue = !NetBigIntegerContractTest.IsNull(nbi2) ? nbi2.SignValue : PexChoose.Value<int>("old_nbi2_sign_value");
             bool Old_nbi2IsNull = NetBigIntegerContractTest.IsNull(nbi2);
+
+            AssumePrecondition.IsTrue(!Old_nbi2IsNull);
 
             NetBigInteger result = nbi1.Subtract(nbi2);
 
@@ -1092,11 +1092,11 @@ namespace NetBigInteger.Test
         [PexMethod]
         public bool PUT_TestBitContract([PexAssumeUnderTest]NetBigInteger nbi, int n)
         {
-            AssumePrecondition.IsTrue(true);
-
             int Old_nbiIntValue = nbi.IntValue;
             int Old_nbiSignValue = nbi.SignValue;
             int Old_n = n;
+
+            AssumePrecondition.IsTrue(((!(n <= -1))));
 
             bool result = nbi.TestBit(n);
 
@@ -1188,11 +1188,11 @@ namespace NetBigInteger.Test
         [PexMethod]
         public string PUT_ToString02Contract([PexAssumeUnderTest]NetBigInteger nbi, int radix)
         {
-            AssumePrecondition.IsTrue(true);
-
             int Old_nbiIntValue = nbi.IntValue;
             int Old_nbiSignValue = nbi.SignValue;
             int Old_radix = radix;
+
+            AssumePrecondition.IsTrue((Old_radix <= 16 && (((!(Old_radix <= 1)) && ((Old_radix <= 2) || ((!(Old_radix <= 2)) && (((!(Old_radix <= 9)) && ((Old_radix <= 10) || ((!(Old_radix <= 10)) && (((!(Old_radix <= 15))))))))))))));
 
             string result = nbi.ToString();
 
