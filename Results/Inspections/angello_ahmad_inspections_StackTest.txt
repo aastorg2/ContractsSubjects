@@ -115,6 +115,15 @@ Disjunctive (PexObserve): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
+Note: This case is labeled fined, so this note is not about correctness. 
+However running this case with the updated feature: bool New_ContainsNewRet = s1.Contains(New_Ret);
+produces what I believe to be a syntaxtically different but semantically equivalent postcondition:
+
+alternate: ((New_ContainsNewRet && New_s1Count == Old_s1Count && New_Ret == Old_Top && New_Ret == New_Top))
+PexChoose: ((New_s1Count == Old_s1Count && New_Ret == Old_Top && New_Ret == New_Top))
+
+reason: New_Ret == New_Top implies New_ContainsNewRet
+
 =====
 k == 0
 
