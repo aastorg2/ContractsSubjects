@@ -118,6 +118,9 @@ Disjunctive (PexObserve): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
+notes:
+
+TBD after re-runs
 =====
 k == 0
 
