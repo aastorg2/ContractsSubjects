@@ -110,7 +110,7 @@ namespace Dictionary.Test
             //PexObserve.ValueForViewing("$old_d_contains_key_x", New_ContainsKeyNewRet);
             //PexObserve.ValueForViewing("$new_d_contains_key_x", New_ContainsValueNewRet);
 
-            PexAssert.IsTrue((Old_dContainsKeyX && New_dContainsKeyX && New_dCount == Old_dCount && New_x == Old_x));
+            Assert.True((Old_dContainsKeyX && New_dContainsKeyX && New_dCount == Old_dCount && New_x == Old_x));
         }
 
         [PexMethod]
