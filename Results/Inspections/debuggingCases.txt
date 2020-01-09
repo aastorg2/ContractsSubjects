@@ -1,0 +1,88 @@
+Stack:
+
+Count:
+
+((New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Top == Old_Top && New_ContainsNewRet) 
+|| (New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Ret == 0 && (!(New_ContainsNewRet))) 
+|| (New_Ret == Old_s1Count && New_Ret == New_s1Count && (!(New_Ret == Old_Top)) && (!(New_ContainsNewRet))))
+
+((New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Top == Old_Top && Count > 0) 
+|| (New_Ret == Old_s1Count && New_Ret == New_s1Count && New_Ret == 0 && (!(Count > 0))) 
+|| (New_Ret == Old_s1Count && New_Ret == New_s1Count && (!(New_Ret == Old_Top)) && (!(Count > 0))))
+
+
+Contains:
+
+((New_s1Count == Old_s1Count && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX))) 
+|| (New_s1Count == Old_s1Count && New_Ret && Old_s1ContainsX && New_Top == Old_Top && New_s1ContainsX))
+
+
+HashSet:
+Add:
+k =1
+((New_hsContainsX && New_x == Old_x && New_hsCount == Old_hsCount && (!(New_Ret)) && Old_hsContainsX) 
+|| (New_hsContainsX && New_x == Old_x && New_Ret && New_hsCount == 1 + Old_hsCount && (!(Old_hsContainsX))))
+
+Remove:
+k =1
+((New_x == Old_x && (!(New_hsContainsX)) && New_Ret && New_hsCount == -1 + Old_hsCount && Old_hsContainsX) 
+|| (New_x == Old_x && (!(New_hsContainsX)) && New_hsCount == Old_hsCount && (!(New_Ret)) && (!(Old_hsContainsX))))
+
+Contains:
+ k==1
+
+ learned:
+            alwaystrue                                         postPost                        f
+ ((New_hsCount == Old_hsCount && New_x == Old_x) && ( ((New_Ret && Old_hsContainsX) && New_hsContainsX) 
+                negPost                                !f
+ || (((!(New_Ret)) && (!(Old_hsContainsX))) && (!(New_hsContainsX)))))
+
+
+
+simplified postcondition: 
+((New_hsCount == Old_hsCount && New_x == Old_x && New_Ret && Old_hsContainsX && New_hsContainsX) || 
+(New_hsCount == Old_hsCount && New_x == Old_x && (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX))))
+ 
+
+ k ==2
+
+
+learned: Cnf formula ( || ) && ( || ) && ( p)  && (...  || ...)
+                 RootalwaysTrue                                  LeftAlwaysTrue
+    ( (New_hsCount == Old_hsCount && New_x == Old_x) && (( ((New_Ret && Old_hsContainsX) && (((New_x == Old_hsCount &&  Old_x ==
+            leftposPost                             Leftf                              LeftnegPost
+    Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != 
+                                                    Rigthf                         f  
+    New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && New_hsContainsX) 
+|| 
+    ((((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == 
+    
+    New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == 
+                                !f
+    New_hsCount))))) && (!(New_hsContainsX)))))
+                    clause
+cnf: A&& b && C && (D || E)
+            term               term
+dnf:     A&& b && C && D || A&& b && C && E
+
+simplified: dnf formula ( && ) || (&& ) || (p)
+
+simplification mechanishm dropped the alwaysTrue part from the second term in the formula
+
+k2
+(
+    (New_hsCount == Old_hsCount && New_x == Old_x && New_Ret && Old_hsContainsX && New_hsContainsX) 
+|| 
+( (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX)) && 
+Old_x == Old_hsCount && Old_x == New_hsCount && New_x == New_hsCount) 
+|| 
+(New_hsCount == Old_hsCount && New_x == Old_x && (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX)) 
+&& (!(New_x == New_hsCount))))
+
+
+
+k1 
+((New_hsCount == Old_hsCount && New_x == Old_x && New_Ret && Old_hsContainsX && New_hsContainsX) || 
+(New_hsCount == Old_hsCount && New_x == Old_x && (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX))))
+
+fix--> list of alwaysTrues

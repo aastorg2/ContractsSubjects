@@ -119,7 +119,7 @@ Disjunctive (Truly): False
 
 notes:
 
-
+In agreement
 =====
 k == 0
 
@@ -171,6 +171,14 @@ PUT_ContainsContract
 Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
+
+doubt: 
+Unclear if k2 is truly a refinement on k1. Unsure how to categorize the correctness because k1 seems to be the most refined
+and concise. The infor added by k2 is implied by some parts of k1.
+
+notes:
+In agreement but i believe  that k1 is already the most perfect postcondition. Currently k2 is labeled as correct instead of k1
+because it includes k1 and some additional information. 
 
 =====
 k == 0
