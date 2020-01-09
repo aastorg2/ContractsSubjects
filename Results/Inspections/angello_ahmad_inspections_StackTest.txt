@@ -3,7 +3,7 @@ Problem: StackTest
 ---------------------
 PUT_PushContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -58,7 +58,7 @@ SubL: reject
 ---------------------
 PUT_PopContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -113,7 +113,7 @@ SubL: reject
 ---------------------
 PUT_PeekContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
@@ -175,12 +175,12 @@ SubL: Pass
 ---------------------
 PUT_CountContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
 Notes: 
-The Any, L and Subl entries new to be re-evaluated because proper postcondition to be learned using strickly PexObserve Semantics
+The Any, L and Subl entries new to be re-evaluated because proper postcondition to be learned using strickly PexChoose Semantics
 is ((New_Ret == Old_s1Count && New_Ret == New_s1Count)) with excludes New_Top == Old_Top in the current post.
 ((New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count)) --> tighter postcondition.
 
@@ -210,6 +210,14 @@ L: reject
 
 SubL: reject
 
+SubL: reject
+
+pex time: 74.46192598342896
+
+learn time: 4.122227907180786
+
+Samples: 9
+
 =====
 k == 1
 
@@ -224,6 +232,16 @@ Any: reject
 L: reject
 
 SubL: Pass
+
+pex time: 106.25021266937256
+
+learn time: 22.74586844444275
+
+Samples: 17
+
+k0 -> k1: False
+
+k1 -> k0: False
 
 =====
 k == 2
@@ -253,7 +271,7 @@ k1 -> k2: False
 ---------------------
 PUT_ContainsContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -333,6 +351,6 @@ learn time: 59.37993359565735
 
 Samples: 34
 
-k0 -> k2: Fasle
+k0 -> k2: False
 
 k1 -> k2: True

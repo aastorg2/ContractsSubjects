@@ -58,16 +58,15 @@ RESULTS
 =======""")
     print(f"Total Contracts: {numContracts}")
     print(f"Number of truly disjunctive contracts: {truly}")
-    print(f"Number of disjunctive contracts found using PexChoose: {pex}/{truly}")
-    print(f"Number of disjunctive contracts found using Alternate Semantics: {alternate}/{truly}")
-    print(f"Number of contracts found when disjunctive (PexChoose): {pex}")
-    print(f"Number of contracts found when conjunctive (PexChoose): {len(conjunctiveContracts)}")
+    print(f"Number of correct disjunctive contracts found using PexChoose: {pex}/{truly}")
+    print(f"Number of correct disjunctive contracts found using Alternate Semantics: {alternate}/{truly}")
+    print(f"Number of correct conjunctive contracts found (PexChoose): {len(conjunctiveContracts)}")
     # print(f"Ratio of most disjunctive formulas found using PexChoose to total disjunctives found: {numRefined}:{truly}")
-    print(f"Disjunctive contracts found with PexChoose:")
+    print(f"Correct disjunctive contracts found with PexChoose:")
     for contract in contracts:
         if not contracts[contract] and contract not in conjunctiveContracts:
             print(f"\t{contract}")
-    print(f"Disjunctive contracts missed with PexChoose:")
+    print(f"Correct disjunctive contracts missed with PexChoose:")
     for contract in contracts:
         if contracts[contract]:
             print(f"\t{contract}")
@@ -75,7 +74,7 @@ RESULTS
     # for contract in contracts:
     #     if not contracts[contract]:
     #         print(f"\t{contract}")
-    print(f"Conjunctive contracts found with PexChoose:")
+    print(f"Correct conjunctive contracts found with PexChoose:")
     for contract in conjunctiveContracts:
             print(f"\t{contract}")
 
