@@ -176,7 +176,6 @@ Disjunctive (Truly): True
 notes:
 
 In agreement
-
 =====
 k == 0
 
@@ -229,6 +228,13 @@ Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
+concern:
+see hashSet New_dContainsKeyX
+
+notes:
+
+In agreement; see HashSet contains.
+
 =====
 k == 0
 
@@ -252,9 +258,9 @@ learned postcondition: ((New_dCount == Old_dCount && New_x == Old_x) && (((New_R
 simplified postcondition: ((New_dCount == Old_dCount && New_x == Old_x && New_Ret && Old_dContainsKeyX && New_dContainsKeyX) || (New_dCount == Old_dCount && New_x == Old_x && (!(New_Ret)) && (!(Old_dContainsKeyX)) && (!(New_dContainsKeyX))))
 
 predicates: New_dContainsKeyX
-Any: reject
+Any: Pass
 
-L: reject
+L: Pass
 
 SubL: Pass
 
