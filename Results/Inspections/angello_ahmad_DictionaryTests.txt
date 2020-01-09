@@ -62,6 +62,10 @@ Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
+notes:
+
+In agreement
+
 =====
 k == 0
 
