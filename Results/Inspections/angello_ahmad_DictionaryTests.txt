@@ -230,7 +230,7 @@ Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
 concern:
-see hashSet New_dContainsKeyX
+see hashSet Contains
 
 notes:
 
