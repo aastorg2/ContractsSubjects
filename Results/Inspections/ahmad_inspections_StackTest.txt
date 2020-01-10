@@ -219,7 +219,7 @@ simplified postcondition: ((New_Ret == Old_s1Count && New_Ret == New_s1Count && 
 
 predicates: New_ContainsNewRet
 
-Any: Pass
+Any: reject
 
 L: Pass
 
@@ -309,6 +309,6 @@ learn time: 59.37993359565735
 
 Samples: 34
 
-k0 -> k2: Fasle
+k0 -> k2: False
 
 k1 -> k2: True

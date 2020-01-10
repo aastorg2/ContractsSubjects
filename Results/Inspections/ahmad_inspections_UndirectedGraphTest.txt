@@ -3,7 +3,7 @@ Problem: UndirectedGraphTest
 ---------------------
 PUT_AddVertexContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -55,7 +55,7 @@ SubL: Pass
 ---------------------
 PUT_RemoveVertexContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -107,7 +107,7 @@ SubL: Pass
 ---------------------
 PUT_ClearAdjacentEdgesContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -159,7 +159,7 @@ SubL: Pass
 ---------------------
 PUT_ContainsEdgeContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -211,7 +211,7 @@ SubL: Pass
 ---------------------
 PUT_ContainsEdgeIntContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -263,7 +263,7 @@ SubL: Pass
 ---------------------
 PUT_AdjacentEdgeContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -315,7 +315,7 @@ SubL: Pass
 ---------------------
 PUT_IsVerticesEmptyContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -367,7 +367,7 @@ SubL: Pass
 ---------------------
 PUT_VertexCountContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -419,7 +419,7 @@ SubL: Pass
 ---------------------
 PUT_ContainsVertexContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -471,7 +471,7 @@ SubL: Pass
 ---------------------
 PUT_AddEdgeContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -523,7 +523,7 @@ SubL: Pass
 ---------------------
 PUT_RemoveEdgeContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -575,7 +575,7 @@ SubL: Pass
 ---------------------
 PUT_IsEdgesEmptyContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -627,7 +627,7 @@ SubL: Pass
 ---------------------
 PUT_EdgeCountContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -679,7 +679,7 @@ SubL: Pass
 ---------------------
 PUT_AdjacentDegreeContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -731,7 +731,7 @@ SubL: Pass
 ---------------------
 PUT_IsAdjacentEdgesEmptyContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 

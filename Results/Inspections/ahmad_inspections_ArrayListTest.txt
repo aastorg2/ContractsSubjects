@@ -3,7 +3,7 @@ Problem: ArrayListTest
 ---------------------
 PUT_AddContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -55,7 +55,7 @@ SubL: Pass
 ---------------------
 PUT_RemoveContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -107,7 +107,7 @@ SubL: Pass
 ---------------------
 PUT_InsertContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -161,7 +161,7 @@ SubL: Pass
 ---------------------
 PUT_SetContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -213,7 +213,7 @@ SubL: Pass
 ---------------------
 PUT_GetContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
@@ -265,7 +265,7 @@ SubL: Pass
 ---------------------
 PUT_ContainsContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -317,7 +317,7 @@ SubL: Pass
 ---------------------
 PUT_IndexOfContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -369,7 +369,7 @@ SubL: Pass
 ---------------------
 PUT_LastIndexOfContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -421,7 +421,7 @@ SubL: Pass
 ---------------------
 PUT_CountContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 

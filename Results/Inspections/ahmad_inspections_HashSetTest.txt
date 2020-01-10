@@ -3,7 +3,7 @@ Problem: HashSetTest
 ---------------------
 PUT_AddContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -55,9 +55,9 @@ SubL: Pass
 ---------------------
 PUT_RemoveContract
 
-Disjunctive (PexObserve): True
-Disjunctive (Alternate Semantics): ?
-Disjunctive (Truly): ?
+Disjunctive (PexChoose): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): True
 
 =====
 k == 0
@@ -107,7 +107,7 @@ SubL: Pass
 ---------------------
 PUT_CountContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
@@ -159,7 +159,7 @@ SubL: Pass
 ---------------------
 PUT_ContainsContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -187,9 +187,9 @@ simplified postcondition: ((New_hsCount == Old_hsCount && New_x == Old_x && New_
 
 predicates: New_hsContainsX
 
-Any: reject
+Any: Pass
 
-L: reject
+L: Pass
 
 SubL: Pass
 

@@ -18,10 +18,6 @@ def ChangeInspection(files):
 
     updatedInspection = open(files[0], 'w')
     for lineIndex in range(0, len(newLines)):
-        if "Notes:" in newLines[lineIndex]:
-            while not "=====" in newLines[lineIndex]:
-                lineIndex += 1
-            lineIndex -= 1
         updatedInspection.write(newLines[lineIndex])
     updatedInspection.close()
 

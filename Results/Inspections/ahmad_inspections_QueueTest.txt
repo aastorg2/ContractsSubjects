@@ -3,7 +3,7 @@ Problem: QueueTest
 ---------------------
 PUT_EnqueueContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -55,7 +55,7 @@ SubL: Pass
 ---------------------
 PUT_DequeueContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
@@ -107,7 +107,7 @@ SubL: Pass
 ---------------------
 PUT_PeekContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
@@ -159,7 +159,7 @@ SubL: Pass
 ---------------------
 PUT_CountContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
@@ -211,7 +211,7 @@ SubL: Pass
 ---------------------
 PUT_ContainsContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
