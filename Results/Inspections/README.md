@@ -64,13 +64,13 @@
 >> ```
 > The working dircetory would now contain:
 >> - inspected_results_StackTest.txt
->> - results_StackTest.txt
-> Whose contents would contain one or more contracts like this:
+>> - results_StackTest.txt <br>
+> Whose contents would contain one or more contracts like this: <br>
 >> PUT_PushContract
 >>
->> Disjunctive (PexChoose):
->> Disjunctive (Alternate Semantics):
->> Disjunctive (Truly):
+>> Disjunctive (PexChoose): <br>
+>> Disjunctive (Alternate Semantics): <br>
+>> Disjunctive (Truly): <br>
 >>
 >> ---
 >> k == 0
@@ -85,11 +85,11 @@
 >> 
 >> predicate left: None
 >> 
->> Any: reject
+>> Any:
 >>
->> L: reject
+>> L:
 >>
->> SubL: Pass
+>> SubL:
 >>
 >> pex time: 188.06009721755981
 >>
@@ -110,11 +110,11 @@
 >>
 >> predicate left: None
 >>
->> Any: reject
+>> Any:
 >>
->> L: reject
+>> L:
 >>
->> SubL: reject
+>> SubL:
 >>
 >> pex time: 290.4679591655731
 >>
