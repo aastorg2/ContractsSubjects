@@ -70,8 +70,8 @@ namespace Queue.Test
             /*code*/
             int New_Ret = s1.Dequeue();
 
-            int New_Top = s1.Count > 0 ? s1.Peek() : Old_Top--; 
-            //int New_Top = s1.Count > 0 ? s1.Peek() : Old_Top - 1;
+            int New_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("new_top"); 
+            //int New_Top = s1.Count > 0 ? s1.Peek() : Old_Top--;
             int New_s1Count = s1.Count;
             bool New_s1ContainsNewRet = s1.Contains(New_Ret);
 
