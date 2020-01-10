@@ -4,14 +4,16 @@ def AnalyzeInspections(fileName):
     disjuncs = 0
     numRefined = 0
     numContracts = 0
-    pex = 0
     alternate = 0
     truly = 0
-    contracts = {}
+    disjunctiveContracts = []
     conjunctiveContracts = []
+    missedDisjunctiveContracts = []
+    missedConjunctiveContracts = []
     disjuncForPex = False
     disjuncForAlt = False
     trulyDisjunc = False
+    passedk0 = False
     contract = ""
     inspection = open(fileName, 'r')
     lines = inspection.readlines()
@@ -19,37 +21,33 @@ def AnalyzeInspections(fileName):
     for lineIndex in range(0, len(lines)):
         if "Contract" in lines[lineIndex]:
             contract = lines[lineIndex].replace("\n", "")
-            contracts[contract] = False
             numContracts += 1
         if "Disjunctive (PexChoose): True" in lines[lineIndex]:
             disjuncForPex = True
-            pex += 1
         if "Disjunctive (PexChoose): False" in lines[lineIndex]:
             disjuncForPex = False
         if "Disjunctive (Alternate Semantics): True" in lines[lineIndex]:
             disjuncForAlt = True
             alternate += 1
         if "Disjunctive (Alternate Semantics): False" in lines[lineIndex]:
-            disjuncForAlt = False
+                disjuncForAlt = False
         if "Disjunctive (Truly): True" in lines[lineIndex]:
             trulyDisjunc = True
             truly += 1
-            contracts[contract] = not disjuncForPex and disjuncForAlt
-        elif "Disjunctive (Truly): False" in lines[lineIndex]:
+        if "Disjunctive (Truly): False" in lines[lineIndex]:
             trulyDisjunc = False
-            conjunctiveContracts.append(contract)
-        # if "k == 0" in lines[lineIndex]:
-        #     passed = False
-        #     if "Any: Pass" in lines[lineIndex + 8]: # find a better solution
-        #         passed = True
-        #         numRefined += 1
-        # if not passed and "k == 1" in lines[lineIndex]:
-        #     if "Any: Pass" in lines[lineIndex + 8]:
-        #         passed = True
-        #         numRefined += 1
+        if "k == 0" in lines[lineIndex] and "Any: Pass" in lines[lineIndex + 12]: # find a better solution for this
+            passedk0 = True
         if "k == 2" in lines[lineIndex]:
-            if trulyDisjunc and "Any: Pass" in lines[lineIndex + 8]: # find a better solution for this
-                numRefined += 1
+            if disjuncForPex and trulyDisjunc and "Any: Pass" in lines[lineIndex + 12]:
+                disjunctiveContracts.append(contract)
+            elif not disjuncForPex and not trulyDisjunc:
+                if passedk0:
+                    conjunctiveContracts.append(contract)
+            elif disjuncForPex and not trulyDisjunc:
+                missedConjunctiveContracts.append(contract)
+            elif not disjuncForPex and trulyDisjunc:
+                missedDisjunctiveContracts.append(contract)
             while not "simplified postcondition:" in lines[lineIndex]:
                 lineIndex += 1
             disjuncs += lines[lineIndex].count("||")
@@ -58,25 +56,22 @@ RESULTS
 =======""")
     print(f"Total Contracts: {numContracts}")
     print(f"Number of truly disjunctive contracts: {truly}")
-    print(f"Number of correct disjunctive contracts found using PexChoose: {pex}/{truly}")
+    print(f"Number of correct disjunctive contracts found using PexChoose: {len(disjunctiveContracts)}/{truly}")
     print(f"Number of correct disjunctive contracts found using Alternate Semantics: {alternate}/{truly}")
-    print(f"Number of correct conjunctive contracts found (PexChoose): {len(conjunctiveContracts)}")
+    print(f"Number of truly conjunctive contracts found (PexChoose): {len(conjunctiveContracts)}/{abs(numContracts - truly)}")
     # print(f"Ratio of most disjunctive formulas found using PexChoose to total disjunctives found: {numRefined}:{truly}")
     print(f"Correct disjunctive contracts found with PexChoose:")
-    for contract in contracts:
-        if not contracts[contract] and contract not in conjunctiveContracts:
-            print(f"\t{contract}")
+    for contract in disjunctiveContracts:
+        print(f"\t{contract}")
     print(f"Correct disjunctive contracts missed with PexChoose:")
-    for contract in contracts:
-        if contracts[contract]:
-            print(f"\t{contract}")
-    # print(f"Disjunctive contracts found with PexChoose:")
-    # for contract in contracts:
-    #     if not contracts[contract]:
-    #         print(f"\t{contract}")
-    print(f"Correct conjunctive contracts found with PexChoose:")
+    for contract in missedDisjunctiveContracts:
+        print(f"\t{contract}")
+    print(f"correct Conjunctive contracts found with PexChoose:")
     for contract in conjunctiveContracts:
-            print(f"\t{contract}")
+        print(f"\t{contract}")
+    print(f"Correct conjunctive contracts missed with PexChoose:")
+    for contract in missedConjunctiveContracts:
+        print(f"\t{contract}")
 
 
 if __name__ == "__main__":
