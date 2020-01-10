@@ -114,13 +114,14 @@ SubL: Pass
 ---------------------
 PUT_GetContract
 
-Disjunctive (PexObserve): False
-Disjunctive (Alternate Semantics): False
-Disjunctive (Truly): False
+Disjunctive (PexObserve): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): True
 
 notes:
 
-TBD after re-runs
+Given runs with update features, Get is now a disjunctive case and k=1,k=2 produce the best such disjunctive formula/concept.
+
 =====
 k == 0
 
@@ -130,9 +131,9 @@ simplified postcondition: ((Old_dContainsKeyX && New_dContainsKeyX && New_dCount
 
 predicates: None
 
-Any: Pass
+Any: reject
 
-L: Pass
+L: reject
 
 SubL: Pass
 
