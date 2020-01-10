@@ -70,7 +70,7 @@ namespace Queue.Test
             /*code*/
             int New_Ret = s1.Dequeue();
             
-            //Old_ret = New_ret;
+            
             //int New_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("old_ret"); 
             int New_Top = s1.Count > 0 ? s1.Peek() : Old_Top - 2;
             int New_s1Count = s1.Count;
@@ -80,7 +80,6 @@ namespace Queue.Test
             PexObserve.ValueForViewing("$New_s1_Count", New_s1Count);
             PexObserve.ValueForViewing("$Old_s1_Peek", Old_Top);
             PexObserve.ValueForViewing("$new_s1_Peek", New_Top);
-            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$New_s1ContainsNewRet", New_s1ContainsNewRet);
 
