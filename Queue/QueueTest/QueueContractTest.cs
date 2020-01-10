@@ -32,8 +32,10 @@ namespace Queue.Test
             AssumePrecondition.IsTrue(true);
             
             int Old_s1Count =  s1.Count;
+
             int Old_Top = s1.Count > 0 ? s1.Peek() :  PexChoose.Value<int>("old_top");
             //int Old_Top = s1.Count > 0 ? s1.Peek() : x+1;
+
             int Old_x = x;
             bool Old_s1ContainsX = s1.Contains(x);
 
@@ -69,8 +71,8 @@ namespace Queue.Test
             int New_Ret = s1.Dequeue();
             
             //Old_ret = New_ret;
-            int New_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("old_ret"); 
-            //int New_Top = s1.Count > 0 ? s1.Peek() : Old_Top - 2;
+            //int New_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("old_ret"); 
+            int New_Top = s1.Count > 0 ? s1.Peek() : Old_Top - 2;
             int New_s1Count = s1.Count;
             bool New_s1ContainsNewRet = s1.Contains(New_Ret);
 
