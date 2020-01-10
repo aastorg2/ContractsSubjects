@@ -54,7 +54,7 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$old_d_contains_value_y", Old_dContainsValueY);
             PexObserve.ValueForViewing("$new_d_contains_value_y", New_dContainsValueY);
 
-            Assert.True(false);
+            Assert.True(((New_dContainsKeyX && New_dContainsValueY && New_dCount == Old_dCount + 1 && New_x == Old_x && New_y == Old_y && (!(Old_dContainsKeyX)) && New_dCount != Old_dCount) && ((((Old_x != Old_dCount && New_x != Old_dCount && Old_y != Old_dCount && New_y != Old_dCount) && (((New_y == Old_x &&  Old_y == Old_x &&  Old_y == New_x) && New_y == New_x) || ((Old_y != Old_x &&  New_y != Old_x &&  Old_y != New_x &&  New_y != New_x) && (!(New_y == New_x))))) && Old_dContainsValueY) || ((true && (((New_dCount == 1 &&  New_y == Old_x &&  Old_y == Old_x &&  Old_y == New_x) && New_y == New_x) || ((Old_y != Old_x &&  New_y != Old_x &&  Old_y != New_x &&  New_y != New_x) && (!(New_y == New_x))))) && (!(Old_dContainsValueY))))));
         }
 
         [PexMethod]
@@ -239,6 +239,28 @@ namespace Dictionary.Test
                 Assert.True(false);
             return ret;
 
+        }
+        
+        [PexMethod] // !New_x == New_dCount !New_y == New_dCoun
+        public void testKeyNotSameAsCountAfterAdding([PexAssumeUnderTest]Dictionary.Dictionary<int, int> d, int x, int y)
+        {
+            PexAssume.IsTrue(!d.ContainsKey(x));
+            bool hit = true;
+            d.Add(x, y);
+            if (x == d.Count)
+                hit = false;
+            PexAssert.IsTrue(hit);
+        }
+
+        [PexMethod] // !New_x == New_dCount !New_y == New_dCoun
+        public void testValueNotSameAsCountAfterAdding([PexAssumeUnderTest]Dictionary.Dictionary<int, int> d, int x, int y)
+        {
+            PexAssume.IsTrue(!d.ContainsKey(x));
+            bool hit = true;
+            d.Add(x, y);
+            if (y == d.Count)
+                hit = false;
+            PexAssert.IsTrue(hit);
         }*/
     }
 }
