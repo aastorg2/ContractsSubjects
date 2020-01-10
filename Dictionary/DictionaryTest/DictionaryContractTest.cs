@@ -204,16 +204,16 @@ namespace Dictionary.Test
             AssumePrecondition.IsTrue(true);
 
             int Old_dCount = d.Count;
-            //int Old_Ret = 2;
 
             int New_Ret = d.Count;
-
+            
             int New_dCount = d.Count;
+            //bool New_ContainsNewRet = d.ContainsKey(New_Ret);
 
             PexObserve.ValueForViewing("$old_d_Count", Old_dCount);
             PexObserve.ValueForViewing("$new_d_Count", New_dCount);
-            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
+            //PexObserve.ValueForViewing("newRetKey", New_ContainsNewRet);
 
             PexAssert.IsTrue((New_dCount == Old_dCount && New_Ret == Old_dCount && New_Ret == New_dCount));
         }
