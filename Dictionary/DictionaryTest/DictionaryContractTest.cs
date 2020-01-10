@@ -54,7 +54,7 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$old_d_contains_value_y", Old_dContainsValueY);
             PexObserve.ValueForViewing("$new_d_contains_value_y", New_dContainsValueY);
 
-            NUnit.Framework.Assert.True(false);
+            Assert.True(false);
         }
 
         [PexMethod]
