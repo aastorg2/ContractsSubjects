@@ -122,7 +122,8 @@ namespace Queue.Test
             int New_Ret = s1.Count;
 
             int New_s1Count = s1.Count;
-            int New_Top = Old_Top; // consult about this decision later
+            int New_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("new_top");
+            //int New_Top = Old_Top; // alternate semantics
 
             PexObserve.ValueForViewing("$old_s1_Count", Old_s1Count);
             PexObserve.ValueForViewing("$new_s1_Count", New_s1Count);
