@@ -80,12 +80,12 @@ namespace HashSet.Test
             
             //code
             int New_hsCount = hs.Count;
-            //bool New_ContainsNewRet = hs.Contains(New_hsCount); 
+            bool New_ContainsNewRet = hs.Contains(New_hsCount); 
 
             PexObserve.ValueForViewing("$old_hs_Count", Old_hsCount);
             PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
-            //PexObserve.ValueForViewing("$new_containsNewRet", New_ContainsNewRet);
+            PexObserve.ValueForViewing("$new_containsNewRet", New_ContainsNewRet);
 
             Assert.True((New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount));
         }
@@ -113,10 +113,7 @@ namespace HashSet.Test
             PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
             PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
 
-            Assert.True(((New_hsCount == Old_hsCount && New_x == Old_x && New_Ret && Old_hsContainsX && New_hsContainsX) 
-                || ((!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX)) && Old_x == Old_hsCount && Old_x == New_hsCount && New_x == New_hsCount) 
-                || (New_hsCount == Old_hsCount && New_x == Old_x && (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX)) && (!(New_x == New_hsCount))))
-);
+            Assert.True(((New_hsCount == Old_hsCount && New_x == Old_x) && ((((New_Ret && Old_hsContainsX) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && New_hsContainsX) || ((((!(New_Ret)) && (!(Old_hsContainsX))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(New_hsContainsX))))));
         }
     }
 }

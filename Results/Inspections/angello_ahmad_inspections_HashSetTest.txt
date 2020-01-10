@@ -17,13 +17,23 @@ learned postcondition: (New_hsContainsX && New_x == Old_x)
 
 simplified postcondition: ((New_hsContainsX && New_x == Old_x))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: reject
 
 L: reject
 
 SubL: Pass
+
+pex time: 395.76312708854675
+
+learn time: 4.695513486862183
+
+Samples: 20
 
 =====
 k == 1
@@ -32,13 +42,27 @@ learned postcondition: ((New_hsContainsX && New_x == Old_x) && (((New_hsCount ==
 
 simplified postcondition: ((New_hsContainsX && New_x == Old_x && New_hsCount == Old_hsCount && (!(New_Ret)) && Old_hsContainsX) || (New_hsContainsX && New_x == Old_x && New_Ret && New_hsCount == 1 + Old_hsCount && (!(Old_hsContainsX))))
 
-predicates: Old_hsContainsX
+predicate: Old_hsContainsX
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 536.7289140224457
+
+learn time: 34.092687368392944
+
+Samples: 28
+
+k0 -> k1: False
+
+k1 -> k0: False
 
 =====
 k == 2
@@ -47,13 +71,27 @@ learned postcondition: ((New_hsContainsX && New_x == Old_x) && ((((New_hsCount =
 
 simplified postcondition: ((New_hsContainsX && New_x == Old_x && New_hsCount == Old_hsCount && (!(New_Ret)) && Old_hsContainsX) || (New_hsContainsX && New_x == Old_x && New_Ret && New_hsCount == 1 + Old_hsCount && (!(Old_hsContainsX))))
 
-predicates: Old_hsContainsX
+predicate: Old_hsContainsX
+
+predicate right: New_x == Old_hsCount
+
+predicate left: New_x == New_hsCount
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 653.1923246383667
+
+learn time: 90.37014365196228
+
+Samples: 45
+
+k0 -> k2: False
+
+k1 -> k2: True
 
 ---------------------
 PUT_RemoveContract
@@ -72,13 +110,23 @@ learned postcondition: (New_x == Old_x && (!(New_hsContainsX)))
 
 simplified postcondition: ((New_x == Old_x && (!(New_hsContainsX))))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: reject
 
 L: reject
 
 SubL: Pass
+
+pex time: 259.8228557109833
+
+learn time: 2.000598430633545
+
+Samples: 16
 
 =====
 k == 1
@@ -87,28 +135,56 @@ learned postcondition: ((New_x == Old_x && (!(New_hsContainsX))) && (((New_Ret &
 
 simplified postcondition: ((New_x == Old_x && (!(New_hsContainsX)) && New_Ret && New_hsCount == -1 + Old_hsCount && Old_hsContainsX) || (New_x == Old_x && (!(New_hsContainsX)) && New_hsCount == Old_hsCount && (!(New_Ret)) && (!(Old_hsContainsX))))
 
-predicates: Old_hsContainsX
+predicate: Old_hsContainsX
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 522.3859205245972
+
+learn time: 30.852478981018066
+
+Samples: 34
+
+k0 -> k1: False
+
+k1 -> k0: False
 
 =====
 k == 2
 
 learned postcondition: ((New_x == Old_x && (!(New_hsContainsX))) && ((((New_Ret && New_hsCount == Old_hsCount - 1 && New_hsCount != Old_hsCount) && (((New_hsCount == Old_x &&  Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && Old_hsContainsX) || (((New_hsCount == Old_hsCount && (!(New_Ret))) && (((New_x == Old_hsCount &&  Old_x == Old_hsCount &&  Old_x == New_hsCount) && New_x == New_hsCount) || ((Old_x != Old_hsCount &&  New_x != Old_hsCount &&  Old_x != New_hsCount &&  New_x != New_hsCount) && (!(New_x == New_hsCount))))) && (!(Old_hsContainsX)))))
 
-simplified postcondition: ((New_x == Old_x && (!(New_hsContainsX)) && New_Ret && New_hsCount == -1 + Old_hsCount && Old_hsContainsX) || (New_x == Old_x && (!(New_hsContainsX)) && New_hsCount == Old_hsCount && (!(New_Ret)) && (!(Old_hsContainsX))))
+simplified postcondition: ((New_x == Old_x && (!(New_hsContainsX)) && New_hsCount == Old_hsCount && (!(New_Ret)) && (!(Old_hsContainsX))) || (New_x == Old_x && (!(New_hsContainsX)) && New_Ret && New_hsCount == -1 + Old_hsCount && Old_hsContainsX))
 
-predicates: Old_hsContainsX
+predicate: Old_hsContainsX
+
+predicate right: New_x == New_hsCount
+
+predicate left: New_x == New_hsCount
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 518.9649395942688
+
+learn time: 60.42358922958374
+
+Samples: 44
+
+k0 -> k2: False
+
+k1 -> k2: True
 
 ---------------------
 PUT_CountContract
@@ -127,13 +203,23 @@ learned postcondition: (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && 
 
 simplified postcondition: ((New_Ret == Old_hsCount && New_Ret == New_hsCount))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 257.0468940734863
+
+learn time: 1.4032461643218994
+
+Samples: 16
 
 =====
 k == 1
@@ -142,13 +228,27 @@ learned postcondition: (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && 
 
 simplified postcondition: ((New_Ret == Old_hsCount && New_Ret == New_hsCount))
 
-predicates: None
+predicate: None
 
-Any: True
+predicate right: None
+
+predicate left: None
+
+Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 252.73772716522217
+
+learn time: 1.8954246044158936
+
+Samples: 16
+
+k0 -> k1: True
+
+k1 -> k0: True
 
 =====
 k == 2
@@ -157,13 +257,27 @@ learned postcondition: (New_hsCount == Old_hsCount && New_Ret == Old_hsCount && 
 
 simplified postcondition: ((New_Ret == Old_hsCount && New_Ret == New_hsCount))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 252.87639808654785
+
+learn time: 1.9394981861114502
+
+Samples: 16
+
+k0 -> k2: True
+
+k1 -> k2: True
 
 ---------------------
 PUT_ContainsContract
@@ -186,13 +300,23 @@ learned postcondition: (New_hsCount == Old_hsCount && New_x == Old_x)
 
 simplified postcondition: ((New_hsCount == Old_hsCount && New_x == Old_x))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: reject
 
 L: reject
 
 SubL: Pass
+
+pex time: 285.36495995521545
+
+learn time: 1.6376957893371582
+
+Samples: 10
 
 =====
 k == 1
@@ -201,13 +325,27 @@ learned postcondition: ((New_hsCount == Old_hsCount && New_x == Old_x) && (((New
 
 simplified postcondition: ((New_hsCount == Old_hsCount && New_x == Old_x && New_Ret && Old_hsContainsX && New_hsContainsX) || (New_hsCount == Old_hsCount && New_x == Old_x && (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX))))
 
-predicates: New_hsContainsX
+predicate: New_hsContainsX
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 516.6635901927948
+
+learn time: 23.849465370178223
+
+Samples: 21
+
+k0 -> k1: False
+
+k1 -> k0: False
 
 =====
 k == 2
@@ -216,7 +354,11 @@ learned postcondition: ((New_hsCount == Old_hsCount && New_x == Old_x) && ((((Ne
 
 simplified postcondition: ((New_hsCount == Old_hsCount && New_x == Old_x && New_Ret && Old_hsContainsX && New_hsContainsX) || ((!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX)) && Old_x == Old_hsCount && Old_x == New_hsCount && New_x == New_hsCount) || (New_hsCount == Old_hsCount && New_x == Old_x && (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX)) && (!(New_x == New_hsCount))))
 
-predicates: New_hsContainsX
+predicate: New_hsContainsX
+
+predicate right: New_x == New_hsCount
+
+predicate left: New_x == New_hsCount
 
 Any: Pass
 
@@ -224,4 +366,12 @@ L: Pass
 
 SubL: Pass
 
----------------------
+pex time: 649.2319815158844
+
+learn time: 76.42956018447876
+
+Samples: 37
+
+k0 -> k2: False
+
+k1 -> k2: True
