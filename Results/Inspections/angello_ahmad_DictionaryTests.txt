@@ -287,6 +287,13 @@ Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
+concern:
+see hashSet Contains
+
+notes:
+
+In agreement; see HashSet contains.
+
 =====
 k == 0
 
@@ -311,11 +318,11 @@ simplified postcondition: ((New_dCount == Old_dCount && New_y == Old_y && New_Re
 
 predicates: New_dContainsValueY
 
-Any: reject
+Any: pass
 
-L: reject
+L: pass
 
-SubL: Pass
+SubL: pass
 
 =====
 k == 2
