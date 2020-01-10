@@ -342,10 +342,15 @@ SubL: Pass
 ---------------------
 PUT_CountContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
+Notes: 
+
+This is a similar to Stack Count where the ideal post is cojunctive but disjunctive formulas overfit the test generator.
+Unlike Stack count, this problem is strickly a test generator problem and not expressiveness. The formula should have not split.
+Technically this is a missed conjuctive case
 =====
 k == 0
 
@@ -370,9 +375,9 @@ simplified postcondition: ((New_Ret == Old_dCount && New_Ret == New_dCount))
 
 predicates: None
 
-Any: Pass
+Any: reject
 
-L: Pass
+L: reject
 
 SubL: Pass
 
@@ -385,9 +390,9 @@ simplified postcondition: ((New_Ret == Old_dCount && New_Ret == New_dCount))
 
 predicates: None
 
-Any: Pass
+Any: reject
 
-L: Pass
+L: reject
 
 SubL: Pass
 
