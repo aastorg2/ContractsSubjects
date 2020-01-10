@@ -179,7 +179,6 @@ namespace Dictionary.Test
 
             int Old_dCount = d.Count;
             int Old_y = y;
-            //bool Old_Ret = PexChoose.Value<bool>("default_Ret");
             bool Old_dContainsValueY = d.ContainsValue(y);
 
             bool New_Ret = d.ContainsValue(y);
@@ -192,7 +191,6 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$new_d_Count", New_dCount);
             PexObserve.ValueForViewing("$old_d_y", Old_y);
             PexObserve.ValueForViewing("$new_d_y", New_y);
-            //PexObserve.ValueForViewing("$Old_ret", Old_Ret);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$old_d_contains_value_y", Old_dContainsValueY);
             PexObserve.ValueForViewing("$new_d_contains_value_y", New_dContainsValueY);
@@ -200,11 +198,6 @@ namespace Dictionary.Test
             PexAssert.IsTrue(((New_dCount == Old_dCount && New_y == Old_y) && ((((New_Ret && Old_dContainsValueY) && (((New_y == Old_dCount &&  Old_y == Old_dCount &&  Old_y == New_dCount) && New_y == New_dCount) || ((Old_y != Old_dCount &&  New_y != Old_dCount &&  Old_y != New_dCount &&  New_y != New_dCount) && (!(New_y == New_dCount))))) && New_dContainsValueY) || ((((!(New_Ret)) && (!(Old_dContainsValueY))) && (((New_y == Old_dCount &&  Old_y == Old_dCount &&  Old_y == New_dCount) && New_y == New_dCount) || ((Old_y != Old_dCount &&  New_y != Old_dCount &&  Old_y != New_dCount &&  New_y != New_dCount) && (!(New_y == New_dCount))))) && (!(New_dContainsValueY))))));
         }
         
-        
-
-        
-
-
         [PexMethod]
         public void PUT_CountContract([PexAssumeUnderTest]Dictionary.Dictionary<int, int> d)
         {
