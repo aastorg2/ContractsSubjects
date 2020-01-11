@@ -3,7 +3,7 @@ Problem: DictionaryTest
 ---------------------
 PUT_AddContract
 
-Disjunctive (PexChoose): False
+Disjunctive (PexObserve): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
@@ -17,13 +17,23 @@ learned postcondition: (New_dContainsKeyX && New_dContainsValueY && New_dCount =
 
 simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_dCount == 1 + Old_dCount && New_x == Old_x && New_y == Old_y && (!(Old_dContainsKeyX))))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 372.9709949493408
+
+learn time: 6.680593013763428
+
+Samples: 27
 
 =====
 k == 1
@@ -32,13 +42,27 @@ learned postcondition: (New_dContainsKeyX && New_dContainsValueY && New_dCount =
 
 simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_dCount == 1 + Old_dCount && New_x == Old_x && New_y == Old_y && (!(Old_dContainsKeyX))))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 994.8731248378754
+
+learn time: 153.39497184753418
+
+Samples: 84
+
+k0 -> k1: True
+
+k1 -> k0: True
 
 =====
 k == 2
@@ -47,7 +71,11 @@ learned postcondition: (New_dContainsKeyX && New_dContainsValueY && New_dCount =
 
 simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_dCount == 1 + Old_dCount && New_x == Old_x && New_y == Old_y && (!(Old_dContainsKeyX))))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
@@ -55,10 +83,20 @@ L: Pass
 
 SubL: Pass
 
+pex time: 745.9411079883575
+
+learn time: 157.8335897922516
+
+Samples: 73
+
+k0 -> k2: True
+
+k1 -> k2: True
+
 ---------------------
 PUT_RemoveContract
 
-Disjunctive (PexChoose): True
+Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -73,7 +111,11 @@ learned postcondition: (New_x == Old_x && (!(New_dContainsKeyX)))
 
 simplified postcondition: ((New_x == Old_x && (!(New_dContainsKeyX))))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: reject
 
@@ -81,29 +123,53 @@ L: reject
 
 SubL: Pass
 
+pex time: 253.3647096157074
+
+learn time: 1.6206657886505127
+
+Samples: 16
+
 =====
 k == 1
 
 learned postcondition: ((New_x == Old_x && (!(New_dContainsKeyX))) && (((New_Ret && New_dCount == Old_dCount - 1 && New_dCount != Old_dCount) && Old_dContainsKeyX) || ((New_dCount == Old_dCount && (!(New_Ret))) && (!(Old_dContainsKeyX)))))
 
-simplified postcondition: ((New_x == Old_x && (!(New_dContainsKeyX)) && New_Ret && New_dCount == -1 + Old_dCount && Old_dContainsKeyX) || (New_x == Old_x && (!(New_dContainsKeyX)) && New_dCount == Old_dCount && (!(New_Ret)) && (!(Old_dContainsKeyX))))
+simplified postcondition: ((New_x == Old_x && (!(New_dContainsKeyX)) && New_dCount == Old_dCount && (!(New_Ret)) && (!(Old_dContainsKeyX))) || (New_x == Old_x && (!(New_dContainsKeyX)) && New_Ret && New_dCount == -1 + Old_dCount && Old_dContainsKeyX))
 
-predicates: Old_dContainsKeyX
+predicate: Old_dContainsKeyX
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 389.66824293136597
+
+learn time: 14.252562284469604
+
+Samples: 25
+
+k0 -> k1: False
+
+k1 -> k0: False
 
 =====
 k == 2
 
 learned postcondition: ((New_x == Old_x && (!(New_dContainsKeyX))) && ((((New_Ret && New_dCount == Old_dCount - 1 && New_dCount != Old_dCount) && (((New_dCount == Old_x &&  Old_x != Old_dCount &&  New_x != Old_dCount &&  Old_x == New_dCount) && New_x == New_dCount) || ((Old_x != New_dCount &&  New_x != New_dCount) && (!(New_x == New_dCount))))) && Old_dContainsKeyX) || (((New_dCount == Old_dCount && (!(New_Ret))) && (((New_x == Old_dCount &&  Old_x == Old_dCount &&  Old_x == New_dCount) && New_x == New_dCount) || ((Old_x != Old_dCount &&  New_x != Old_dCount &&  Old_x != New_dCount &&  New_x != New_dCount) && (!(New_x == New_dCount))))) && (!(Old_dContainsKeyX)))))
 
-simplified postcondition: ((New_x == Old_x && (!(New_dContainsKeyX)) && New_Ret && New_dCount == -1 + Old_dCount && Old_dContainsKeyX) || (New_x == Old_x && (!(New_dContainsKeyX)) && New_dCount == Old_dCount && (!(New_Ret)) && (!(Old_dContainsKeyX))))
+simplified postcondition: ((New_x == Old_x && (!(New_dContainsKeyX)) && New_dCount == Old_dCount && (!(New_Ret)) && (!(Old_dContainsKeyX))) || (New_x == Old_x && (!(New_dContainsKeyX)) && New_Ret && New_dCount == -1 + Old_dCount && Old_dContainsKeyX))
 
-predicates: Old_dContainsKeyX
+predicate: Old_dContainsKeyX
+
+predicate right: New_x == New_dCount
+
+predicate left: New_x == New_dCount
 
 Any: Pass
 
@@ -111,10 +177,20 @@ L: Pass
 
 SubL: Pass
 
+pex time: 506.8862409591675
+
+learn time: 51.735727071762085
+
+Samples: 41
+
+k0 -> k2: False
+
+k1 -> k2: True
+
 ---------------------
 PUT_GetContract
 
-Disjunctive (PexChoose): True
+Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -125,11 +201,15 @@ Given runs with update features, Get is now a disjunctive case and k=1,k=2 produ
 =====
 k == 0
 
-learned postcondition: (Old_dContainsKeyX && New_dContainsKeyX && New_dCount == Old_dCount && New_x == Old_x)
+learned postcondition: (Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && New_dCount == Old_dCount && New_x == Old_x)
 
-simplified postcondition: ((Old_dContainsKeyX && New_dContainsKeyX && New_dCount == Old_dCount && New_x == Old_x))
+simplified postcondition: ((Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && New_dCount == Old_dCount && New_x == Old_x))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: reject
 
@@ -137,29 +217,53 @@ L: reject
 
 SubL: Pass
 
+pex time: 380.9152817726135
+
+learn time: 5.634929656982422
+
+Samples: 21
+
 =====
 k == 1
 
-learned postcondition: (Old_dContainsKeyX && New_dContainsKeyX && New_dCount == Old_dCount && New_x == Old_x)
+learned postcondition: ((Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && New_dCount == Old_dCount && New_x == Old_x) && (((New_ContainsKeyNewRet && New_Ret == Old_x) && New_Ret == New_x) || ((New_Ret != Old_x && New_Ret != New_x) && (!(New_Ret == New_x)))))
 
-simplified postcondition: ((Old_dContainsKeyX && New_dContainsKeyX && New_dCount == Old_dCount && New_x == Old_x))
+simplified postcondition: ((Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && New_dCount == Old_dCount && New_x == Old_x && New_ContainsKeyNewRet) || (Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && New_dCount == Old_dCount && New_x == Old_x && (!(New_Ret == New_x))))
 
-predicates: None
+predicate: New_Ret == New_x
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 518.1495442390442
+
+learn time: 34.25933909416199
+
+Samples: 27
+
+k0 -> k1: False
+
+k1 -> k0: False
 
 =====
 k == 2
 
-learned postcondition: (Old_dContainsKeyX && New_dContainsKeyX && New_dCount == Old_dCount && New_x == Old_x)
+learned postcondition: ((Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && New_dCount == Old_dCount && New_x == Old_x) && ((((New_ContainsKeyNewRet && New_Ret == Old_x) && (((New_x == Old_dCount &&  New_Ret == Old_dCount &&  Old_x == Old_dCount &&  Old_x == New_dCount &&  New_x == New_dCount) && New_Ret == New_dCount) || ((Old_x != Old_dCount &&  New_x != Old_dCount &&  New_Ret != Old_dCount &&  Old_x != New_dCount &&  New_x != New_dCount &&  New_Ret != New_dCount) && (!(New_Ret == New_dCount))))) && New_Ret == New_x) || (((New_Ret != Old_x && New_Ret != New_x) && (((New_Ret == Old_dCount &&  Old_x != Old_dCount &&  New_x != Old_dCount &&  Old_x != New_dCount &&  New_x != New_dCount) && New_Ret == New_dCount) || ((New_Ret != Old_dCount &&  New_Ret != New_dCount) && (!(New_Ret == New_dCount))))) && (!(New_Ret == New_x)))))
 
-simplified postcondition: ((Old_dContainsKeyX && New_dContainsKeyX && New_dCount == Old_dCount && New_x == Old_x))
+simplified postcondition: ((Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && New_dCount == Old_dCount && New_x == Old_x && New_ContainsKeyNewRet) || (Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && New_dCount == Old_dCount && New_x == Old_x && (!(New_Ret == New_x))))
 
-predicates: None
+predicate: New_Ret == New_x
+
+predicate right: New_Ret == New_dCount
+
+predicate left: New_Ret == New_dCount
 
 Any: Pass
 
@@ -167,30 +271,53 @@ L: Pass
 
 SubL: Pass
 
+pex time: 508.8864514827728
+
+learn time: 74.7110345363617
+
+Samples: 36
+
+k0 -> k2: False
+
+k1 -> k2: True
+
 ---------------------
 PUT_SetContract
 
-Disjunctive (PexChoose): True
+Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
 notes:
 
 In agreement
+
+k2 is not a refinement of k1, even though syntactically it may seem that way
+
 =====
 k == 0
 
-learned postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y))
+learned postcondition: (New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y)
 
 simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: reject
 
 L: reject
 
 SubL: Pass
+
+pex time: 399.42787981033325
+
+learn time: 8.879139184951782
+
+Samples: 29
 
 =====
 k == 1
@@ -199,22 +326,40 @@ learned postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_x == Ol
 
 simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y && New_dCount == Old_dCount && Old_dContainsKeyX) || (New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y && New_dCount == 1 + Old_dCount && (!(Old_dContainsKeyX))))
 
-predicates: Old_dContainsKeyX
+predicate: Old_dContainsKeyX
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 895.919510602951
+
+learn time: 434.91605615615845
+
+Samples: 98
+
+k0 -> k2: False
+
+k1 -> k2: True
 
 =====
 k == 2
 
-learned postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y) && ((((New_dCount == Old_dCount) && (((New_y == Old_x &&  Old_y == Old_x &&  Old_y == New_x) && New_y == New_x) || ((Old_y != Old_x &&  New_y != Old_x &&  Old_y != New_x &&  New_y != New_x) && (!(New_y == New_x))))) && Old_dContainsKeyX) || (((New_dCount == Old_dCount + 1 && New_dCount != Old_dCount) && (((Old_y == Old_dCount &&  Old_y != New_dCount &&  New_y != New_dCount) && New_y == Old_dCount) || ((Old_y != Old_dCount &&  New_y != Old_dCount) && (!(New_y == Old_dCount))))) && (!(Old_dContainsKeyX)))))
+learned postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y) && ((((New_dCount == Old_dCount) && (((New_y == Old_x &&  Old_y == Old_x &&  Old_y == New_x) && New_y == New_x) || ((Old_y != Old_x &&  New_y != Old_x &&  Old_y != New_x &&  New_y != New_x) && (!(New_y == New_x))))) && Old_dContainsKeyX) || (((New_dCount == Old_dCount + 1 && New_dCount != Old_dCount) && (((New_y == Old_x &&  Old_y == Old_x &&  Old_y == New_x) && New_y == New_x) || ((Old_y != Old_x &&  New_y != Old_x &&  Old_y != New_x &&  New_y != New_x) && (!(New_y == New_x))))) && (!(Old_dContainsKeyX)))))
 
-simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y && New_dCount == Old_dCount && Old_dContainsKeyX) || (New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y && New_dCount == 1 + Old_dCount && (!(Old_dContainsKeyX))))
+simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y && New_dCount == Old_dCount && Old_dContainsKeyX) || (New_dContainsKeyX && New_dContainsValueY && New_dCount == 1 + Old_dCount && (!(Old_dContainsKeyX)) && Old_y == Old_x && Old_y == New_x && New_y == New_x) || (New_dContainsKeyX && New_dContainsValueY && New_x == Old_x && New_y == Old_y && New_dCount == 1 + Old_dCount && (!(Old_dContainsKeyX)) && (!(New_y == New_x))))
 
-predicates: Old_dContainsKeyX
+predicate: Old_dContainsKeyX
+
+predicate right: New_y == New_x
+
+predicate left: New_y == New_x
 
 Any: Pass
 
@@ -222,10 +367,20 @@ L: Pass
 
 SubL: Pass
 
+pex time: 895.919510602951
+
+learn time: 434.91605615615845
+
+Samples: 98
+
+k0 -> k2: False
+
+k1 -> k2: True
+
 ---------------------
 PUT_ContainsKeyContract
 
-Disjunctive (PexChoose): True
+Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -234,7 +389,7 @@ see hashSet Contains
 
 notes:
 
-In agreement; see HashSet contains.
+In agreement; see HashSet contains(k2 is not a refinment of k1 but syntactically it look different).
 
 =====
 k == 0
@@ -243,13 +398,23 @@ learned postcondition: (New_dCount == Old_dCount && New_x == Old_x)
 
 simplified postcondition: ((New_dCount == Old_dCount && New_x == Old_x))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: reject
 
 L: reject
 
 SubL: Pass
+
+pex time: 254.58684086799622
+
+learn time: 1.4022696018218994
+
+Samples: 10
 
 =====
 k == 1
@@ -258,12 +423,27 @@ learned postcondition: ((New_dCount == Old_dCount && New_x == Old_x) && (((New_R
 
 simplified postcondition: ((New_dCount == Old_dCount && New_x == Old_x && New_Ret && Old_dContainsKeyX && New_dContainsKeyX) || (New_dCount == Old_dCount && New_x == Old_x && (!(New_Ret)) && (!(Old_dContainsKeyX)) && (!(New_dContainsKeyX))))
 
-predicates: New_dContainsKeyX
+predicate: New_dContainsKeyX
+
+predicate right: None
+
+predicate left: None
+
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 536.392068862915
+
+learn time: 22.47699284553528
+
+Samples: 23
+
+k0 -> k1: False
+
+k1 -> k0: False
 
 =====
 k == 2
@@ -272,7 +452,11 @@ learned postcondition: ((New_dCount == Old_dCount && New_x == Old_x) && ((((New_
 
 simplified postcondition: ((New_dCount == Old_dCount && New_x == Old_x && New_Ret && Old_dContainsKeyX && New_dContainsKeyX) || ((!(New_Ret)) && (!(Old_dContainsKeyX)) && (!(New_dContainsKeyX)) && Old_x == Old_dCount && Old_x == New_dCount && New_x == New_dCount) || (New_dCount == Old_dCount && New_x == Old_x && (!(New_Ret)) && (!(Old_dContainsKeyX)) && (!(New_dContainsKeyX)) && (!(New_x == New_dCount))))
 
-predicates: New_dContainsKeyX
+predicate: New_dContainsKeyX
+
+predicate right: New_x == New_dCount
+
+predicate left: New_x == New_dCount
 
 Any: Pass
 
@@ -280,10 +464,20 @@ L: Pass
 
 SubL: Pass
 
+pex time: 641.4583024978638
+
+learn time: 65.74289131164551
+
+Samples: 37
+
+k0 -> k2: False
+
+k1 -> k2: True
+
 ---------------------
 PUT_ContainsValueContract
 
-Disjunctive (PexChoose): True
+Disjunctive (PexObserve): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -292,7 +486,7 @@ see hashSet Contains
 
 notes:
 
-In agreement; see HashSet contains.
+In agreement; see HashSet contains (k2 is not a refiment of k1) 
 
 =====
 k == 0
@@ -301,13 +495,23 @@ learned postcondition: (New_dCount == Old_dCount && New_y == Old_y)
 
 simplified postcondition: ((New_dCount == Old_dCount && New_y == Old_y))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: reject
 
 L: reject
 
 SubL: Pass
+
+pex time: 181.57561135292053
+
+learn time: 1.5618236064910889
+
+Samples: 8
 
 =====
 k == 1
@@ -316,13 +520,27 @@ learned postcondition: ((New_dCount == Old_dCount && New_y == Old_y) && (((New_R
 
 simplified postcondition: ((New_dCount == Old_dCount && New_y == Old_y && New_Ret && Old_dContainsValueY && New_dContainsValueY) || (New_dCount == Old_dCount && New_y == Old_y && (!(New_Ret)) && (!(Old_dContainsValueY)) && (!(New_dContainsValueY))))
 
-predicates: New_dContainsValueY
+predicate: New_dContainsValueY
+
+predicate right: None
+
+predicate left: None
 
 Any: pass
 
 L: pass
 
 SubL: pass
+
+pex time: 327.80089688301086
+
+learn time: 17.555994987487793
+
+Samples: 14
+
+k0 -> k1: False
+
+k1 -> k0: False
 
 =====
 k == 2
@@ -331,7 +549,11 @@ learned postcondition: ((New_dCount == Old_dCount && New_y == Old_y) && ((((New_
 
 simplified postcondition: ((New_dCount == Old_dCount && New_y == Old_y && New_Ret && Old_dContainsValueY && New_dContainsValueY) || ((!(New_Ret)) && (!(Old_dContainsValueY)) && (!(New_dContainsValueY)) && Old_y == Old_dCount && Old_y == New_dCount && New_y == New_dCount) || (New_dCount == Old_dCount && New_y == Old_y && (!(New_Ret)) && (!(Old_dContainsValueY)) && (!(New_dContainsValueY)) && (!(New_y == New_dCount))))
 
-predicates: New_dContainsValueY
+predicate: New_dContainsValueY
+
+predicate right: New_y == New_dCount
+
+predicate left: New_y == New_dCount
 
 Any: Pass
 
@@ -339,18 +561,27 @@ L: Pass
 
 SubL: Pass
 
+pex time: 510.90206360816956
+
+learn time: 60.59385108947754
+
+Samples: 32
+
+k0 -> k2: False
+
+k1 -> k2: True
+
 ---------------------
 PUT_CountContract
 
-Disjunctive (PexChoose): False
+Disjunctive (PexObserve): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
 Notes: 
 
-This is a similar to Stack Count where the ideal post is cojunctive but disjunctive formulas overfit the test generator.
-Unlike Stack count, this problem is strickly a test generator problem and not expressiveness. The formula should have not split.
-Technically this is a missed conjuctive case
+Updated labeling. This is conjunctive postcondition and all k produce such post.
+
 =====
 k == 0
 
@@ -358,13 +589,23 @@ learned postcondition: (New_dCount == Old_dCount && New_Ret == Old_dCount && New
 
 simplified postcondition: ((New_Ret == Old_dCount && New_Ret == New_dCount))
 
-predicates: None
+predicate: None
+
+predicate right: None
+
+predicate left: None
 
 Any: Pass
 
 L: Pass
 
 SubL: Pass
+
+pex time: 263.4273669719696
+
+learn time: 1.2855634689331055
+
+Samples: 14
 
 =====
 k == 1
@@ -373,13 +614,27 @@ learned postcondition: (New_dCount == Old_dCount && New_Ret == Old_dCount && New
 
 simplified postcondition: ((New_Ret == Old_dCount && New_Ret == New_dCount))
 
-predicates: None
+predicate: None
 
-Any: reject
+predicate right: None
 
-L: reject
+predicate left: None
+
+Any: Pass
+
+L: Pass
 
 SubL: Pass
+
+pex time: 517.0802583694458
+
+learn time: 11.882835149765015
+
+Samples: 31
+
+k0 -> k1: True
+
+k1 -> k0: True
 
 =====
 k == 2
@@ -388,12 +643,24 @@ learned postcondition: (New_dCount == Old_dCount && New_Ret == Old_dCount && New
 
 simplified postcondition: ((New_Ret == Old_dCount && New_Ret == New_dCount))
 
-predicates: None
+predicate: None
 
-Any: reject
+predicate right: None
 
-L: reject
+predicate left: None
+
+Any: Pass
+
+L: Pass
 
 SubL: Pass
 
----------------------
+pex time: 530.8795187473297
+
+learn time: 18.093244075775146
+
+Samples: 30
+
+k0 -> k2: True
+
+k1 -> k2: True
