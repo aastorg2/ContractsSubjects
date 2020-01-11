@@ -134,7 +134,7 @@ namespace Queue.Test
             PexObserve.ValueForViewing("$new_containsNewRet", New_ContainsNewRet);
 
 
-            Assert.True(((New_s1Count == Old_s1Count && New_Ret == Old_s1Count && New_Ret == New_s1Count) && ((((New_Top == Old_Top) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count &&  New_Top == New_s1Count &&  New_Ret == Old_Top) && New_Ret == New_Top) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count &&  New_Ret != Old_Top &&  New_Ret != New_Top) && (!(New_Ret == New_Top))))) && New_ContainsNewRet) || ((true && (((New_s1Count == 0 &&  New_Ret == 0 &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Ret == Old_Top) || ((Old_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Ret != Old_Top) && (!(New_Ret == Old_Top))))) && (!(New_ContainsNewRet))))));
+            Assert.True((New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_s1Count && New_Ret == New_s1Count));
         }
         [PexMethod]
         public void PUT_ContainsContract([PexAssumeUnderTest]Queue.Queue<int> s1, int x)
@@ -164,7 +164,7 @@ namespace Queue.Test
             PexObserve.ValueForViewing("$old_s1_contains_x", Old_s1ContainsX);
             PexObserve.ValueForViewing("$new_s1_contains_x", New_s1ContainsX);
 
-            Assert.True(((New_s1Count == Old_s1Count) && ((((New_Ret && Old_s1ContainsX && New_Top == Old_Top) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count) && New_Top == New_s1Count) || ((New_Top != Old_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX))))));
+            Assert.True(((New_s1Count == Old_s1Count && New_Top == Old_Top) && ((((New_Ret && Old_s1ContainsX) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && New_s1ContainsX) || ((((!(New_Ret)) && (!(Old_s1ContainsX))) && (((New_Top == Old_s1Count &&  Old_Top == Old_s1Count &&  Old_Top == New_s1Count) && New_Top == New_s1Count) || ((Old_Top != Old_s1Count &&  New_Top != Old_s1Count &&  Old_Top != New_s1Count &&  New_Top != New_s1Count) && (!(New_Top == New_s1Count))))) && (!(New_s1ContainsX))))));
         }
 
     }
