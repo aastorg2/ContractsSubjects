@@ -288,7 +288,7 @@ Disjunctive (Truly): True
 
 concern: 
 k2 is not a refinement; the reason it appear to be a refinement is because the current implementation of the algorithm does not consider ancestors
-alwaysTrue parts of the formula when doing the implication check.  
+alwaysTrue parts of the formula when doing the implication check.  This is a case where an incremental solver would help(i think).
 
 notes:
 k2 is not a refinement on k1 so k1 is perfect. Implication k1 => k2 is valid.

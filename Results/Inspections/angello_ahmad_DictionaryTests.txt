@@ -234,7 +234,7 @@ see hashSet Contains
 
 notes:
 
-In agreement; see HashSet contains.
+In agreement; see HashSet contains(k2 is not a refinment of k1 but syntactically it look different).
 
 =====
 k == 0
@@ -292,7 +292,7 @@ see hashSet Contains
 
 notes:
 
-In agreement; see HashSet contains.
+In agreement; see HashSet contains (k2 is not a refiment of k1) 
 
 =====
 k == 0
@@ -342,15 +342,13 @@ SubL: Pass
 ---------------------
 PUT_CountContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexObserve): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
 Notes: 
 
-This is a similar to Stack Count where the ideal post is cojunctive but disjunctive formulas overfit the test generator.
-Unlike Stack count, this problem is strickly a test generator problem and not expressiveness. The formula should have not split.
-Technically this is a missed conjuctive case
+Updated labeling. This is conjunctive postcondition and all k produce such post.
 =====
 k == 0
 
@@ -375,9 +373,9 @@ simplified postcondition: ((New_Ret == Old_dCount && New_Ret == New_dCount))
 
 predicates: None
 
-Any: reject
+Any: Pass
 
-L: reject
+L: Pass
 
 SubL: Pass
 
@@ -390,9 +388,9 @@ simplified postcondition: ((New_Ret == Old_dCount && New_Ret == New_dCount))
 
 predicates: None
 
-Any: reject
+Any: Pass
 
-L: reject
+L: Pass
 
 SubL: Pass
 

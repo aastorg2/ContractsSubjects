@@ -86,3 +86,17 @@ k1
 (New_hsCount == Old_hsCount && New_x == Old_x && (!(New_Ret)) && (!(Old_hsContainsX)) && (!(New_hsContainsX))))
 
 fix--> list of alwaysTrues
+
+
+Queue:
+
+Enqueue
+
+learned postcondition: k == 1
+
+((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_x == Old_x && New_s1Count != Old_s1Count) 
+&& (((New_Top == Old_Top && Old_x == Old_Top && Old_x == New_Top && New_x == New_Top) && New_x == Old_Top) 
+|| 
+((Old_x != Old_Top && New_x != Old_Top) && (!(New_x == Old_Top)))))
+
+
