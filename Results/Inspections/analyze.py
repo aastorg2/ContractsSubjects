@@ -22,28 +22,31 @@ def AnalyzeInspections(fileName):
         if "Contract" in lines[lineIndex]:
             contract = lines[lineIndex].replace("\n", "")
             numContracts += 1
-        if "Disjunctive (PexChoose): True" in lines[lineIndex]:
-            disjuncForPex = True
-        if "Disjunctive (PexChoose): False" in lines[lineIndex]:
-            disjuncForPex = False
-        if "Disjunctive (Alternate Semantics): True" in lines[lineIndex]:
-            disjuncForAlt = True
-            alternate += 1
-        if "Disjunctive (Alternate Semantics): False" in lines[lineIndex]:
+        if "Disjunctive (PexChoose)" in lines[lineIndex]:
+            if "True" in lines[lineIndex]:
+                disjuncForPex = True
+            else:
+                disjuncForPex = False
+            print(contract)
+            print(disjuncForPex)
+            print(lines[lineIndex])
+        if "Disjunctive (Alternate Semantics)" in lines[lineIndex]:
+            if "True" in lines[lineIndex]:
+                disjuncForAlt = True
+                alternate += 1
+            else:
                 disjuncForAlt = False
-        if "Disjunctive (Truly): True" in lines[lineIndex]:
-            trulyDisjunc = True
-            truly += 1
-        if "Disjunctive (Truly): False" in lines[lineIndex]:
-            trulyDisjunc = False
-        if "k == 0" in lines[lineIndex] and "Any: Pass" in lines[lineIndex + 12]: # find a better solution for this
-            passedk0 = True
+        if "Disjunctive (Truly)" in lines[lineIndex]:
+            if "True" in lines[lineIndex]:
+                trulyDisjunc = True
+                truly += 1
+            else:
+                trulyDisjunc = False
         if "k == 2" in lines[lineIndex]:
-            if disjuncForPex and trulyDisjunc and "Any: Pass" in lines[lineIndex + 12]:
+            if disjuncForPex and trulyDisjunc:
                 disjunctiveContracts.append(contract)
             elif not disjuncForPex and not trulyDisjunc:
-                if passedk0:
-                    conjunctiveContracts.append(contract)
+                conjunctiveContracts.append(contract)
             elif disjuncForPex and not trulyDisjunc:
                 missedConjunctiveContracts.append(contract)
             elif not disjuncForPex and trulyDisjunc:
