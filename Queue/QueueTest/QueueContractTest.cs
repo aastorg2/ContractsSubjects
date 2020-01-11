@@ -55,7 +55,7 @@ namespace Queue.Test
             PexObserve.ValueForViewing("$old_s1_contains_x", Old_s1ContainsX);
             PexObserve.ValueForViewing("$new_s1_contains_x", New_s1ContainsX);
 
-            Assert.True((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_x == Old_x && New_s1Count != Old_s1Count && New_Top != Old_s1Count && Old_Top != New_s1Count && New_Top != New_s1Count && Old_x != New_s1Count && New_x != New_s1Count));
+            Assert.True(((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_x == Old_x && New_s1Count != Old_s1Count) && ((((New_Top == Old_Top) && (((New_s1Count == Old_x &&  Old_x != Old_s1Count &&  New_x != Old_s1Count &&  Old_x == New_s1Count) && New_x == New_s1Count) || ((Old_x != New_s1Count &&  New_x != New_s1Count) && (!(New_x == New_s1Count))))) && Old_s1ContainsX) || (((Old_x != Old_Top && New_x != Old_Top) && (((New_s1Count == 1 &&  New_Top == Old_x &&  New_Top != Old_Top &&  Old_x == New_Top) && New_x == New_Top) || ((New_Top == Old_Top &&  Old_x != New_Top &&  New_x != New_Top) && (!(New_x == New_Top))))) && (!(Old_s1ContainsX))))));
         }
 
         //remove from front of queue
@@ -82,7 +82,7 @@ namespace Queue.Test
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$New_s1ContainsNewRet", New_s1ContainsNewRet);
 
-            Assert.True((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count));
+            Assert.True(((New_s1Count == Old_s1Count - 1 && New_s1Count != Old_s1Count) && ((((New_Ret == Old_Top) && (((New_s1Count == Old_Top &&  Old_Top != Old_s1Count &&  New_Ret != Old_s1Count &&  Old_Top == New_s1Count) && New_Ret == New_s1Count) || ((Old_Top != New_s1Count &&  New_Ret != New_s1Count) && (!(New_Ret == New_s1Count))))) && New_s1ContainsNewRet) || (((New_Ret != New_Top) && (((New_Top != Old_Top) && New_Ret == Old_Top) || ((New_s1Count == 0 &&  New_Top == Old_Top &&  New_Ret != Old_Top) && (!(New_Ret == Old_Top))))) && (!(New_s1ContainsNewRet))))));
         }
 
         [PexMethod]

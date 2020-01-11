@@ -27,9 +27,6 @@ def AnalyzeInspections(fileName):
                 disjuncForPex = True
             else:
                 disjuncForPex = False
-            print(contract)
-            print(disjuncForPex)
-            print(lines[lineIndex])
         if "Disjunctive (Alternate Semantics)" in lines[lineIndex]:
             if "True" in lines[lineIndex]:
                 disjuncForAlt = True
