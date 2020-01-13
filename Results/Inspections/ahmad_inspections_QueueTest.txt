@@ -359,7 +359,7 @@ predicate right: New_Ret == Old_Top
 
 predicate left: New_Ret == New_Top
 
-Any: reject
+Any: pass
 
 L: pass
 

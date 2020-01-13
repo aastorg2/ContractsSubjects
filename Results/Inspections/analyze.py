@@ -3,7 +3,6 @@
 def AnalyzeInspections(fileName):
     import re
 
-    disjuncs = 0
     numContracts = 0
     alternate = 0
     truly = 0
@@ -12,7 +11,6 @@ def AnalyzeInspections(fileName):
     missedDisjunctiveContracts = []
     missedConjunctiveContracts = []
     disjuncForPex = False
-    trulyDisjunc = False
     contract = ""
     inspection = open(fileName, 'r')
     lines = inspection.readlines()
@@ -24,13 +22,6 @@ def AnalyzeInspections(fileName):
         if "Disjunctive (PexChoose)" in lines[lineIndex]:
             if "True" in lines[lineIndex]:
                 disjuncForPex = True
-                idxCopy = lineIndex
-                while idxCopy < len(lines) and not "k == 2" in lines[idxCopy]:
-                    idxCopy += 1
-                while idxCopy < len(lines) and not "Any" in lines[idxCopy]:
-                    idxCopy += 1
-                if len(re.findall("[r|R]eject", lines[idxCopy])) > 0:
-                    missedConjunctiveContracts.append(contract)
             else:
                 disjuncForPex = False
         if "Disjunctive (Alternate Semantics)" in lines[lineIndex]:
@@ -38,26 +29,52 @@ def AnalyzeInspections(fileName):
                 alternate += 1
         if "Disjunctive (Truly)" in lines[lineIndex]:
             if "True" in lines[lineIndex]:
-                trulyDisjunc = True
-                idxCopy = lineIndex
                 truly += 1
                 if disjuncForPex:
+                    idxCopy = lineIndex
                     while idxCopy < len(lines) and not "k == 2" in lines[idxCopy]:
                         idxCopy += 1
                     while idxCopy < len(lines) and not "Any" in lines[idxCopy]:
                         idxCopy += 1
                     if len(re.findall("[p|P]ass", lines[idxCopy])) > 0:
                         disjunctiveContracts.append(contract)
+                    else:
+                        missedDisjunctiveContracts.append(contract)
+                else:
+                    idxCopy = lineIndex
+                    while idxCopy < len(lines) and not "k == 2" in lines[idxCopy]:
+                        idxCopy += 1
+                    while idxCopy < len(lines) and not "Any" in lines[idxCopy]:
+                        idxCopy += 1
+                    if len(re.findall("[r|R]eject", lines[idxCopy])) > 0:
+                        missedDisjunctiveContracts.append(contract)
+                    else:
+                        pprint(f"MISLABELED {contract}")
+                        print("k == 2")
+                        print(lines[idxCopy])
             else:
-                trulyDisjunc = False
-        if "k == 2" in lines[lineIndex]:
-            if not disjuncForPex and not trulyDisjunc:
-                conjunctiveContracts.append(contract)
-            elif not disjuncForPex and trulyDisjunc:
-                missedDisjunctiveContracts.append(contract)
-            while not "simplified postcondition:" in lines[lineIndex]:
-                lineIndex += 1
-            disjuncs += lines[lineIndex].count("||")
+                if disjuncForPex:
+                    idxCopy = lineIndex
+                    while idxCopy < len(lines) and not "k == 2" in lines[idxCopy]:
+                        idxCopy += 1
+                    while idxCopy < len(lines) and not "Any" in lines[idxCopy]:
+                        idxCopy += 1
+                    if len(re.findall("[p|P]ass", lines[idxCopy])) > 0:
+                        missedConjunctiveContracts.append(contract)
+                    else:
+                        print(f"MISLABELED {contract}")
+                        print("k == 2")
+                        print(lines[idxCopy])
+                else:
+                    idxCopy = lineIndex
+                    while idxCopy < len(lines) and not "k == 0" in lines[idxCopy]:
+                        idxCopy += 1
+                    while idxCopy < len(lines) and not "Any" in lines[idxCopy]:
+                        idxCopy += 1
+                    if len(re.findall("[p|P]ass", lines[idxCopy])) > 0:
+                        conjunctiveContracts.append(contract)
+                    else:
+                        missedConjunctiveContracts.append(contract)
     print("""=======
 RESULTS
 =======""")
