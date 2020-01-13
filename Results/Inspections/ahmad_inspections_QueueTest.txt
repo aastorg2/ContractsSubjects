@@ -3,7 +3,7 @@ Problem: QueueTest
 ---------------------
 PUT_EnqueueContract
 
-Disjunctive (PexChoose): False
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
