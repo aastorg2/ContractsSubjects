@@ -282,7 +282,7 @@ k1 -> k2: False
 ---------------------
 PUT_SetContract
 
-Disjunctive (PexChoose): True
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 

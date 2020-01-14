@@ -1,8 +1,8 @@
 
 
 def AnalyzeInspections(fileName):
-    disjuncs = 0
-    numRefined = 0
+    import re
+
     numContracts = 0
     alternate = 0
     truly = 0
@@ -11,9 +11,6 @@ def AnalyzeInspections(fileName):
     missedDisjunctiveContracts = []
     missedConjunctiveContracts = []
     disjuncForPex = False
-    disjuncForAlt = False
-    trulyDisjunc = False
-    passedk0 = False
     contract = ""
     inspection = open(fileName, 'r')
     lines = inspection.readlines()
@@ -22,35 +19,62 @@ def AnalyzeInspections(fileName):
         if "Contract" in lines[lineIndex]:
             contract = lines[lineIndex].replace("\n", "")
             numContracts += 1
-        if "Disjunctive (PexChoose): True" in lines[lineIndex]:
-            disjuncForPex = True
-        if "Disjunctive (PexChoose): False" in lines[lineIndex]:
-            disjuncForPex = False
-        if "Disjunctive (Alternate Semantics): True" in lines[lineIndex]:
-            disjuncForAlt = True
-            alternate += 1
-        if "Disjunctive (Alternate Semantics): False" in lines[lineIndex]:
-                disjuncForAlt = False
-        if "Disjunctive (Truly): True" in lines[lineIndex]:
-            trulyDisjunc = True
-            truly += 1
-        if "Disjunctive (Truly): False" in lines[lineIndex]:
-            trulyDisjunc = False
-        if "k == 0" in lines[lineIndex] and "Any: Pass" in lines[lineIndex + 12]: # find a better solution for this
-            passedk0 = True
-        if "k == 2" in lines[lineIndex]:
-            if disjuncForPex and trulyDisjunc and "Any: Pass" in lines[lineIndex + 12]:
-                disjunctiveContracts.append(contract)
-            elif not disjuncForPex and not trulyDisjunc:
-                if passedk0:
-                    conjunctiveContracts.append(contract)
-            elif disjuncForPex and not trulyDisjunc:
-                missedConjunctiveContracts.append(contract)
-            elif not disjuncForPex and trulyDisjunc:
-                missedDisjunctiveContracts.append(contract)
-            while not "simplified postcondition:" in lines[lineIndex]:
-                lineIndex += 1
-            disjuncs += lines[lineIndex].count("||")
+        if "Disjunctive (PexChoose)" in lines[lineIndex]:
+            if "True" in lines[lineIndex]:
+                disjuncForPex = True
+            else:
+                disjuncForPex = False
+        if "Disjunctive (Alternate Semantics)" in lines[lineIndex]:
+            if "True" in lines[lineIndex]:
+                alternate += 1
+        if "Disjunctive (Truly)" in lines[lineIndex]:
+            if "True" in lines[lineIndex]:
+                truly += 1
+                if disjuncForPex:
+                    idxCopy = lineIndex
+                    while idxCopy < len(lines) and not "k == 2" in lines[idxCopy]:
+                        idxCopy += 1
+                    while idxCopy < len(lines) and not "Any" in lines[idxCopy]:
+                        idxCopy += 1
+                    if len(re.findall("[p|P]ass", lines[idxCopy])) > 0:
+                        disjunctiveContracts.append(contract)
+                    else:
+                        missedDisjunctiveContracts.append(contract)
+                else:
+                    idxCopy = lineIndex
+                    while idxCopy < len(lines) and not "k == 2" in lines[idxCopy]:
+                        idxCopy += 1
+                    while idxCopy < len(lines) and not "Any" in lines[idxCopy]:
+                        idxCopy += 1
+                    if len(re.findall("[r|R]eject", lines[idxCopy])) > 0:
+                        missedDisjunctiveContracts.append(contract)
+                    else:
+                        pprint(f"MISLABELED {contract}")
+                        print("k == 2")
+                        print(lines[idxCopy])
+            else:
+                if disjuncForPex:
+                    idxCopy = lineIndex
+                    while idxCopy < len(lines) and not "k == 2" in lines[idxCopy]:
+                        idxCopy += 1
+                    while idxCopy < len(lines) and not "Any" in lines[idxCopy]:
+                        idxCopy += 1
+                    if len(re.findall("[p|P]ass", lines[idxCopy])) > 0:
+                        missedConjunctiveContracts.append(contract)
+                    else:
+                        print(f"MISLABELED {contract}")
+                        print("k == 2")
+                        print(lines[idxCopy])
+                else:
+                    idxCopy = lineIndex
+                    while idxCopy < len(lines) and not "k == 0" in lines[idxCopy]:
+                        idxCopy += 1
+                    while idxCopy < len(lines) and not "Any" in lines[idxCopy]:
+                        idxCopy += 1
+                    if len(re.findall("[p|P]ass", lines[idxCopy])) > 0:
+                        conjunctiveContracts.append(contract)
+                    else:
+                        missedConjunctiveContracts.append(contract)
     print("""=======
 RESULTS
 =======""")

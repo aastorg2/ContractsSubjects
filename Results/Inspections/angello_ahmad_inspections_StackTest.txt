@@ -77,6 +77,12 @@ predicate right: None
 
 predicate left: None
 
+Any: reject
+
+L: reject
+
+SubL: reject
+
 pex time: 227.7580122947693
 
 learn time: 124.54550075531006

@@ -3,7 +3,7 @@ Problem: DictionaryTest
 ---------------------
 PUT_AddContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
@@ -96,7 +96,7 @@ k1 -> k2: True
 ---------------------
 PUT_RemoveContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -190,7 +190,7 @@ k1 -> k2: True
 ---------------------
 PUT_GetContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -284,7 +284,7 @@ k1 -> k2: True
 ---------------------
 PUT_SetContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -380,7 +380,7 @@ k1 -> k2: True
 ---------------------
 PUT_ContainsKeyContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -477,7 +477,7 @@ k1 -> k2: True
 ---------------------
 PUT_ContainsValueContract
 
-Disjunctive (PexObserve): True
+Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
@@ -574,7 +574,7 @@ k1 -> k2: True
 ---------------------
 PUT_CountContract
 
-Disjunctive (PexObserve): False
+Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
 
