@@ -175,7 +175,8 @@ namespace UndirectedGraph.Test
             //bool Old_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool Old_ugContainsVertexSource = true; // due to precondition;
             bool Old_ugContainsVertexTarget = true; //same reason
-            
+            bool Old_ugContainsEdge = ug.ContainsEdge(source,target); // ahamd: add PexObserves below
+
             //bool Old_ugIsAdjacentEdgesEmptySource = ug.IsAdjacentEdgesEmpty(source); // always defined due to precondition
             //bool Old_ugIsAdjacentEdgesEmptyTarget = ug.IsAdjacentEdgesEmpty(target); // same reason
             //bool Old_ugIsEdgesEmpty = ug.IsEdgesEmpty;
@@ -194,6 +195,8 @@ namespace UndirectedGraph.Test
             int New_target = target;
             bool New_ugContainsVertexSource = ug.ContainsVertex(source);
             bool New_ugContainsVertexTarget = ug.ContainsVertex(target);
+            bool New_ugContainsEdge = ug.ContainsEdge(source, target); // ahamd: add PexObserves below
+            
             //bool New_ugIsAdjacentEdgesEmptySource = ug.IsAdjacentEdgesEmpty(source); // same as above
             //bool New_ugIsAdjacentEdgesEmptyTarget = ug.IsAdjacentEdgesEmpty(target); //same as above
             //bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
@@ -247,7 +250,7 @@ namespace UndirectedGraph.Test
             bool Old_ugContainsVertexTarget = ug.ContainsVertex(target);
             //bool Old_ugIsAdjacentEdgesEmptySource = ug.IsAdjacentEdgesEmpty(source);
             //bool Old_ugIsAdjacentEdgesEmptyTarget = ug.ContainsVertex(target) ? ug.IsAdjacentEdgesEmpty(target) : PexChoose.Value<bool>("old_ugIsAdjacentEdgesEmptyTarget");
-            //bool Old_ugIsAdjacentEdgesEmptyTarget = false; // alt semantics
+            //bool Old_ugIsAdjacentEdgesEmptyTarget = ug.ContainsVertex(target) ? ug.IsAdjacentEdgesEmpty(target) : true; // alt semantics
             //bool Old_ugIsEdgesEmpty = ug.IsEdgesEmpty;
             //bool Old_ugIsVerticiesEmpty = ug.IsVerticesEmpty;
 
@@ -265,7 +268,7 @@ namespace UndirectedGraph.Test
             bool New_ugContainsVertexTarget = ug.ContainsVertex(target);
             //bool New_ugIsAdjacentEdgesEmptySource = ug.IsAdjacentEdgesEmpty(source);
             //bool New_ugIsAdjacentEdgesEmptyTarget = ug.ContainsVertex(target) ? ug.IsAdjacentEdgesEmpty(target) : PexChoose.Value<bool>("new_ugIsAdjacentEdgesEmptyTarget");
-            //bool New_ugIsAdjacentEdgesEmptyTarget = false; // alt semantics
+            //bool New_ugIsAdjacentEdgesEmptyTarget = true; // alt semantics
             //bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
             //bool New_ugIsVerticiesEmpty = ug.IsVerticesEmpty;
 
