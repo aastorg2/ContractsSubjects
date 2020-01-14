@@ -47,7 +47,7 @@ namespace UndirectedGraph
 
         public void AddVertex(TVertex v) //yes
         {
-            GraphContracts.AssumeNotInVertexSet(this, v, "v");
+            //GraphContracts.AssumeNotInVertexSet(this, v, "v");
             /* NotpAssume.IsTrue(this.adjacentEdges.ContainsKey(v)); */
             this.adjacentEdges.Add(v, new List<TEdge>());
         }
@@ -76,8 +76,8 @@ namespace UndirectedGraph
         #region IMutableIncidenceGraph<Vertex,Edge> Members
         public int RemoveAdjacentEdgeIf(TVertex v, EdgePredicate<TVertex, TEdge> predicate)
         {
-            GraphContracts.AssumeInVertexSet(this, v, "v");
-            GraphContracts.AssumeNotNull(predicate, "predicate");
+            //GraphContracts.AssumeInVertexSet(this, v, "v");
+            //GraphContracts.AssumeNotNull(predicate, "predicate");
 
             IList<TEdge> outEdges = this.adjacentEdges[v];
             List<TEdge> edges = new List<TEdge>(outEdges.Count);
@@ -157,7 +157,7 @@ namespace UndirectedGraph
 
         public bool ContainsVertex(TVertex vertex) //yes
         {
-            GraphContracts.AssumeNotNull(vertex, "vertex");
+            //GraphContracts.AssumeNotNull(vertex, "vertex");
             return this.adjacentEdges.ContainsKey(vertex);
         }
         #endregion
@@ -184,7 +184,7 @@ namespace UndirectedGraph
 
         public void AddEdgeRange(IEnumerable<TEdge> edges)//yes
         {
-            GraphContracts.AssumeNotNull(edges, "edges");
+            //GraphContracts.AssumeNotNull(edges, "edges");
             foreach (var edge in edges)
                 this.AddEdge(edge);
         }
@@ -199,7 +199,7 @@ namespace UndirectedGraph
 
         public bool RemoveEdge(TEdge edge)//yes
         {
-            GraphContracts.AssumeInVertexSet(this, edge, "edge");
+            //GraphContracts.AssumeInVertexSet(this, edge, "edge");
             /* NotpAssume.IsTrue(this.adjacentEdges.ContainsKey(edge.Source)); */
             this.adjacentEdges[edge.Source].Remove(edge);
             /* NotpAssume.IsTrue(this.adjacentEdges.ContainsKey(edge.Target)); */
@@ -224,7 +224,7 @@ namespace UndirectedGraph
 
         public int RemoveEdgeIf(EdgePredicate<TVertex, TEdge> predicate)
         {
-            GraphContracts.AssumeNotNull(predicate, "predicate");
+            //GraphContracts.AssumeNotNull(predicate, "predicate");
 
             List<TEdge> edges = new List<TEdge>();
             foreach (var edge in this.Edges)
@@ -237,7 +237,7 @@ namespace UndirectedGraph
 
         public int RemoveEdges(IEnumerable<TEdge> edges) //yes
         {
-            GraphContracts.AssumeNotNull(edges, "edges");
+            //GraphContracts.AssumeNotNull(edges, "edges");
 
             int count = 0;
             foreach (var edge in edges)
