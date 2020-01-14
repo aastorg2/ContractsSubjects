@@ -26,7 +26,6 @@ namespace UndirectedGraph.Test
             int Old_ugAdjacentDegree =  PexChoose.Value<int>("old_ugAdjacentDegree"); // ternary not neccessary because conditon is negation of precondition:
             //int Old_ugAdjacentDegree = -1;
             int Old_x = x;
-            //bool Old_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool Old_ugContainsVertexX = ug.ContainsVertex(x);
             bool Old_ugIsAdjacentEdgesEmpty = PexChoose.Value<bool>("Old_ugIsAdjacentEdgesEmpty"); // same as above
             //bool Old_ugIsAdjacentEdgesEmpty = true;
@@ -40,7 +39,6 @@ namespace UndirectedGraph.Test
             int New_ugEdgeCount = ug.EdgeCount;
             int New_ugAdjacentDegree = ug.AdjacentDegree(x);
             int New_x = x;
-            //bool New_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool New_ugContainsVertexX = ug.ContainsVertex(x);
             bool New_ugIsAdjacentEdgesEmpty = ug.IsAdjacentEdgesEmpty(x); // always defined after call to add
             bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
