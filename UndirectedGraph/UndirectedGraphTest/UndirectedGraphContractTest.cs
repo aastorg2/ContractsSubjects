@@ -89,7 +89,7 @@ namespace UndirectedGraph.Test
             int New_x = x;
             bool New_ugContainsVertexX = ug.ContainsVertex(x);
             //bool New_ugIsAdjacentEdgesEmpty = PexChoose.Value<bool>("New_ugIsAdjacentEdgesEmpty");
-            //bool New_ugIsAdjacentEdgesEmpty = false; // alt semantics
+            //bool New_ugIsAdjacentEdgesEmpty = true; // alt semantics
             //bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
             //bool New_ugIsVerticiesEmpty = ug.IsVerticesEmpty;
 
