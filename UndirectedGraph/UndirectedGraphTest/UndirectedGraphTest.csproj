@@ -45,9 +45,6 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="UndirectedGraph">
-      <HintPath>..\UndirectedGraph\bin\Debug\UndirectedGraph.dll</HintPath>
-    </Reference>
     <Reference Include="Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Common\Utility\bin\Debug\Utility.dll</HintPath>
@@ -67,6 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UndirectedGraph\UndirectedGraph.csproj">
+      <Project>{7D0C045A-4F86-45B5-B9FF-A4CE775F07CC}</Project>
+      <Name>UndirectedGraph</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

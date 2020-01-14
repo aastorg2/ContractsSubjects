@@ -54,14 +54,14 @@ namespace UndirectedGraph
 
         public bool RemoveVertex(TVertex v)//yes
         {
-            GraphContracts.AssumeNotNull(v, "v");
+            //GraphContracts.AssumeNotNull(v, "v");
             this.ClearAdjacentEdges(v);
             return this.adjacentEdges.Remove(v);
         }
 
         public int RemoveVertexIf(VertexPredicate<TVertex> pred)
         {
-            GraphContracts.AssumeNotNull(pred, "pred");
+            //GraphContracts.AssumeNotNull(pred, "pred");
             List<TVertex> vertices = new List<TVertex>();
             foreach (var v in this.Vertices)
                 if (pred(v))
@@ -91,7 +91,7 @@ namespace UndirectedGraph
 
         public void ClearAdjacentEdges(TVertex v)//yes
         {
-            GraphContracts.AssumeInVertexSet(this, v, "v");
+            //GraphContracts.AssumeInVertexSet(this, v, "v");
             List<TEdge> edges = this.adjacentEdges[v];
             this.edgeCount -= edges.Count;
             foreach (var edge in edges)
@@ -166,7 +166,7 @@ namespace UndirectedGraph
 
         public bool AddEdge(TEdge edge)//yes
         {
-            GraphContracts.AssumeInVertexSet(this, edge, "edge");
+            //GraphContracts.AssumeInVertexSet(this, edge, "edge");
 
             if (!this.AllowParallelEdges)
             {
@@ -281,7 +281,7 @@ namespace UndirectedGraph
 
         public bool ContainsEdge(TEdge edge) //yes
         {
-            GraphContracts.AssumeInVertexSet(this, edge, "edge");
+            //GraphContracts.AssumeInVertexSet(this, edge, "edge");
             foreach (var e in this.Edges)
                 if (e.Equals(edge))
                     return true;
@@ -293,19 +293,19 @@ namespace UndirectedGraph
 
         public IEnumerable<TEdge> AdjacentEdges(TVertex v) //yes
         {
-            GraphContracts.AssumeInVertexSet(this, v, "v");
+            //GraphContracts.AssumeInVertexSet(this, v, "v");
             return this.adjacentEdges[v];
         }
 
         public int AdjacentDegree(TVertex v) //yes
         {
-            GraphContracts.AssumeInVertexSet(this, v, "v");
+            //GraphContracts.AssumeInVertexSet(this, v, "v");
             return this.adjacentEdges[v].Count;
         }
 
         public bool IsAdjacentEdgesEmpty(TVertex v) //yes
         {
-            GraphContracts.AssumeInVertexSet(this, v, "v");
+            //GraphContracts.AssumeInVertexSet(this, v, "v");
             return this.adjacentEdges[v].Count == 0;
         }
 
