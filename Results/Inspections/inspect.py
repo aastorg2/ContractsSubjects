@@ -29,7 +29,7 @@ def PrepareInspections(fileName, subject):
     lines = initInspection.readlines()
     initInspection.close()
     fileName = fileName.replace("..\\Runs\\", "")     # will have to fix this 
-    newFileName = "ahmad_inspected_" + fileName             # change this to whatever you wish
+    newFileName = "inspected_" + fileName             # change this to whatever you wish
     readyInspection = open(newFileName, 'w')          # <- possibly done later?
     header = lines[0]
     subject[SUBJECT] = header
