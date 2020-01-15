@@ -42,20 +42,11 @@
 > The inspection file will be generated in the working directory with "inspected" appened to the front of the run file name.
 > #### Flags
 >> * `--pex`, `-p`: Use this flag to input the run file done under PexChoose semantics
->> * `--alternate`, `-A`: Use this flag to input the run file done under alternate semantics (if used, must also use --pex flag)
->> * `--agreemnet`, `-a`: Use this flag to over-write an inspection file with another inspection file
 > ##### EXAMPLE USESAGEs:
 >> ```sh
 >> $ python.exe inspect.py --pex `pex_run_file_you_wish_to_inspect.txt`
 >> ```
 >> ---
->> ```sh
->> $ python.exe inspect.py --pex `pex_run_file_you_wish_to_inspect.txt` --alternate `alternate_run_file_you_wish_to_inspect.txt`
->> ```
->> ---
->> ```sh
->> $ python.exe inspect.py --agreement `inspection_file_to_overwirte.txt` `inspection_file_to_write_from.txt`
->> ```
 > In a direcotry that contains:
 >> - results_StackTest.txt
 > and you were to run the inspect script with just the pex flag...
