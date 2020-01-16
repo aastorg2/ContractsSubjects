@@ -12,7 +12,7 @@ using PexAPIWrapper;
 namespace ArrayList.Test
 {
     [TestFixture, PexClass]
-    public class ArrayListContractTest
+    public partial class ArrayListContractTest
     {
         // Add x to the end of arraylist
         // PostCondition:
@@ -170,7 +170,7 @@ namespace ArrayList.Test
         [PexMethod]
         public void PUT_SetContract([PexAssumeUnderTest]ArrayList arrList, int x, int index)
         {
-            AssumePrecondition.IsTrue(index < arrList.Count && index >= 0);
+            AssumePrecondition.IsTrue(index >= 0 && index < arrList.Count);
 
             int Old_arrListCount = arrList.Count;
             int Old_x = x;
@@ -201,7 +201,9 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$old_arrList_contains_x", Old_arrListContainsX);
             PexObserve.ValueForViewing("$new_arrList_contains_x", New_arrListContainsX);
 
-            Assert.True(((New_arrListContainsX && New_arrListCount == Old_arrListCount && New_x == Old_x && New_index == Old_index && Old_index != Old_arrListCount && New_index != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_index != New_arrListCount && New_index != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount) && ((((New_arrListIndexOfX == Old_index && New_arrListLastIndexOfX == Old_index && New_arrListIndexOfX == New_index && New_arrListLastIndexOfX == New_index && Old_arrListLastIndexOfX ==                   Old_arrListIndexOfX) && (((New_x == Old_arrListCount &&  Old_x == Old_arrListCount &&  Old_x == New_arrListCount &&  Old_index != Old_x &&  New_index != Old_x &&  Old_arrListIndexOfX != Old_x &&  New_arrListIndexOfX != Old_x &&  Old_arrListLastIndexOfX != Old_x &&  New_arrListLastIndexOfX != Old_x &&  Old_index != New_x &&  New_index != New_x &&  Old_arrListIndexOfX != New_x &&  New_arrListIndexOfX != New_x &&  Old_arrListLastIndexOfX != New_x &&  New_arrListLastIndexOfX != New_x) && New_x == New_arrListCount) || ((Old_x != Old_arrListCount &&  New_x != Old_arrListCount &&  Old_x != New_arrListCount &&  New_x != New_arrListCount) && (!(New_x == New_arrListCount))))) && New_arrListLastIndexOfX == New_arrListIndexOfX) || (((Old_arrListContainsX && New_arrListLastIndexOfX !=                   New_arrListIndexOfX) && (((New_index == 0 &&  New_arrListIndexOfX == 0 &&  New_arrListLastIndexOfX == Old_arrListLastIndexOfX &&  Old_arrListIndexOfX == Old_index &&  New_arrListIndexOfX == Old_index &&  Old_arrListLastIndexOfX != Old_index &&  New_arrListLastIndexOfX != Old_index &&  New_arrListIndexOfX == New_index &&  Old_arrListLastIndexOfX != New_index &&  New_arrListLastIndexOfX != New_index &&  New_arrListIndexOfX == Old_arrListIndexOfX &&  Old_arrListLastIndexOfX != Old_arrListIndexOfX &&  New_arrListLastIndexOfX != Old_arrListIndexOfX &&  Old_arrListLastIndexOfX != New_arrListIndexOfX) && Old_arrListIndexOfX == New_index) || ((Old_arrListIndexOfX != Old_index &&  Old_arrListIndexOfX != New_index) && (!(Old_arrListIndexOfX == New_index))))) && (!(New_arrListLastIndexOfX ==               New_arrListIndexOfX))))));
+            Assert.True(((New_arrListContainsX && New_arrListCount == Old_arrListCount && New_x == Old_x && New_index == Old_index && New_arrListIndexOfX == 0 && (!(New_index == New_arrListCount)) 
+                && (!(Old_arrListIndexOfX == New_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(Old_arrListLastIndexOfX == New_arrListCount)) 
+                && (!(New_arrListLastIndexOfX == New_arrListCount)))));
         }
 
         [PexMethod]

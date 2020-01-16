@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ExtendedReflection, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Pex.Framework, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft Moles\PublicAssemblies\Microsoft.Pex.Framework.dll</HintPath>
@@ -59,6 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayListContractTest.cs" />
+    <Compile Include="ArrayListContractTest.PUT_SetContract.g.cs">
+      <DependentUpon>ArrayListContractTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Factories\ArrayListFactory.cs" />
     <Compile Include="Properties\PexAssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
