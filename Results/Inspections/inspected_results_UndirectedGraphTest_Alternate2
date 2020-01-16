@@ -1,0 +1,91 @@
+Problem: UndirectedGraphTest
+
+---------------------
+PUT_ContainsVertexContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && New_x == Old_x)
+
+simplified postcondition: ((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && New_x == Old_x))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 508.26351022720337
+
+learn time: 35.051629066467285
+
+Samples: 41
+
+======
+k == 1
+
+learned postcondition: ((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && New_x == Old_x) && (((Old_ugIsAdjacentEdgesEmpty && New_ugIsAdjacentEdgesEmpty && New_x == Old_ugEdgeCount && Old_ugAdjacentDegree != Old_ugVertexCount && New_ugAdjacentDegree != Old_ugVertexCount && Old_ugAdjacentDegree != New_ugVertexCount && New_ugAdjacentDegree != New_ugVertexCount && Old_x == Old_ugEdgeCount && Old_x == New_ugEdgeCount) && New_x == New_ugEdgeCount) || ((Old_x != Old_ugEdgeCount && New_x != Old_ugEdgeCount && Old_x != New_ugEdgeCount && New_x != New_ugEdgeCount) && (!(New_x == New_ugEdgeCount)))))
+
+simplified postcondition: ((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && New_x == Old_x && (!(New_x == New_ugEdgeCount))) || (New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && New_x == Old_x && Old_ugIsAdjacentEdgesEmpty && New_ugIsAdjacentEdgesEmpty && (!(New_ugAdjacentDegree == New_ugVertexCount))))
+
+predicate: New_x == New_ugEdgeCount
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 509.67975974082947
+
+learn time: 220.37533950805664
+
+Samples: 48
+
+k0 -> k1: False
+
+k1 -> k0: False
+
+======
+k == 2
+
+learned postcondition: ((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && New_x == Old_x) && ((((New_Ret && Old_ugContainsVertexX && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty))) && (((Old_ugIsAdjacentEdgesEmpty &&  New_ugIsAdjacentEdgesEmpty &&  Old_ugIsEdgesEmpty &&  New_ugIsEdgesEmpty &&  New_ugEdgeCount == 0 &&  New_ugAdjacentDegree == 0 &&  New_x == 0 &&  Old_ugEdgeCount != Old_ugVertexCount &&  New_ugEdgeCount != Old_ugVertexCount &&  Old_ugAdjacentDegree != Old_ugVertexCount &&  New_ugAdjacentDegree != Old_ugVertexCount &&  Old_x != Old_ugVertexCount &&  New_x != Old_ugVertexCount &&  Old_ugEdgeCount != New_ugVertexCount &&  New_ugEdgeCount != New_ugVertexCount &&  Old_ugAdjacentDegree != New_ugVertexCount &&  New_ugAdjacentDegree != New_ugVertexCount &&  Old_x != New_ugVertexCount &&  New_x != New_ugVertexCount &&  Old_ugAdjacentDegree == Old_ugEdgeCount &&  New_ugAdjacentDegree == Old_ugEdgeCount &&  Old_x == Old_ugEdgeCount &&  New_x == Old_ugEdgeCount &&  Old_ugAdjacentDegree == New_ugEdgeCount &&  New_ugAdjacentDegree == New_ugEdgeCount &&  Old_x == New_ugEdgeCount &&  Old_x == Old_ugAdjacentDegree &&  New_x == Old_ugAdjacentDegree &&  Old_x == New_ugAdjacentDegree &&  New_x == New_ugAdjacentDegree) && New_x == New_ugEdgeCount) || ((Old_x != Old_ugEdgeCount &&  New_x != Old_ugEdgeCount &&  Old_x != New_ugEdgeCount &&  New_x != New_ugEdgeCount) && (!(New_x == New_ugEdgeCount))))) && New_ugContainsVertexX) || (((Old_ugIsAdjacentEdgesEmpty && New_ugIsAdjacentEdgesEmpty && (!(New_Ret)) && (!(Old_ugContainsVertexX)) && Old_ugAdjacentDegree != Old_ugVertexCount && New_ugAdjacentDegree != Old_ugVertexCount && Old_ugAdjacentDegree != New_ugVertexCount && New_ugAdjacentDegree != New_ugVertexCount && Old_ugAdjacentDegree != Old_ugEdgeCount && New_ugAdjacentDegree != Old_ugEdgeCount && Old_ugAdjacentDegree != New_ugEdgeCount && New_ugAdjacentDegree != New_ugEdgeCount) && (((New_x == Old_ugVertexCount &&  Old_x == Old_ugVertexCount &&  Old_x == New_ugVertexCount &&  Old_x != Old_ugAdjacentDegree &&  New_x != Old_ugAdjacentDegree &&  Old_x != New_ugAdjacentDegree &&  New_x != New_ugAdjacentDegree) && New_x == New_ugVertexCount) || ((Old_x != Old_ugVertexCount &&  New_x != Old_ugVertexCount &&  Old_x != New_ugVertexCount &&  New_x != New_ugVertexCount) && (!(New_x == New_ugVertexCount))))) && (!(New_ugContainsVertexX)))))
+
+simplified postcondition: ((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && New_x == Old_x && New_Ret && Old_ugContainsVertexX && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_x == New_ugEdgeCount)) && New_ugContainsVertexX) || (New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && New_x == Old_x && New_Ret && Old_ugContainsVertexX && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugIsAdjacentEdgesEmpty && New_ugContainsVertexX && New_ugIsAdjacentEdgesEmpty && Old_ugIsEdgesEmpty && New_ugIsEdgesEmpty && New_x == 0 && (!(New_x == New_ugVertexCount)) && New_x == New_ugAdjacentDegree) || (New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && New_x == Old_x && Old_ugIsAdjacentEdgesEmpty && New_ugIsAdjacentEdgesEmpty && (!(New_Ret)) && (!(Old_ugContainsVertexX)) && (!(New_ugAdjacentDegree == New_ugVertexCount)) && (!(New_ugAdjacentDegree == New_ugEdgeCount)) && (!(New_ugContainsVertexX))))
+
+predicate: New_ugContainsVertexX
+
+predicate right: New_x == New_ugVertexCount
+
+predicate left: New_x == New_ugEdgeCount
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 895.7893903255463
+
+learn time: 1468.303100347519
+
+Samples: 95
+
+k0 -> k2: False
+
+k1 -> k2: False
