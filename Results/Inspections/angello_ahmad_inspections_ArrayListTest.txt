@@ -101,7 +101,11 @@ Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
 Notes:
-Need help
+Need help;
+
+(1) this case was not labeled correctly due to bug in code.
+(2) It initially split on  New_arrListLastIndexOfX == Old_arrListIndexOfX which is not a good separators. arraylist containing x exist when New_arrListLastIndexOfX == Old_arrListIndexOfX is true or false. 
+(3) WIth bug fix, the predicate chosen to split is ContainsX and consequences are correct.
 
 ======
 k == 0
@@ -141,9 +145,9 @@ predicate right: None
 
 predicate left: None
 
-Any: reject
+Any: pass
 
-L: reject
+L: pass
 
 SubL: pass
 
