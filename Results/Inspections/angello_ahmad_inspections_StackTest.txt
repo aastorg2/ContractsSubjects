@@ -378,7 +378,7 @@ predicate left: New_Ret == New_Top
 
 Any: reject
 
-L: Pass
+L: reject
 
 SubL: Pass
 
