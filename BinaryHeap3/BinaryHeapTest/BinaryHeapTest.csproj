@@ -65,6 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryHeapContractTest.cs" />
+    <Compile Include="BinaryHeapContractTest.PUT_UpdateContract.g.cs">
+      <DependentUpon>BinaryHeapContractTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="BinaryHeapTest.cs" />
     <Compile Include="Factories\BinaryHeapFactory.cs" />
     <Compile Include="Properties\PexAssemblyInfo.cs" />

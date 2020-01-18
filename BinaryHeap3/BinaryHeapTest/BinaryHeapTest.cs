@@ -102,6 +102,19 @@ namespace BinaryHeapTest
         }
 
         [TestMethod()]
+        public void sameValue()
+        {
+            BinaryHeap<int, int> target = new BinaryHeap<int, int>();
+
+            target.Add(0, 1);
+            target.Add(0, 1);
+            
+            //Assert.IsTrue(target. == 2);
+
+        }
+
+
+        [TestMethod()]
         public void ordering()
         {
             BinaryHeap<int, int> target = new BinaryHeap<int, int>();
