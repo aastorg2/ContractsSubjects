@@ -9,7 +9,8 @@ Disjunctive (Truly): True
 
 notes:
 
-This case that we missed because PexChoose loses precision.
+This case that we missed because PexChoose loses precision and cannot express ideal splitting condition, s1Count > 0.
+
 
 ======
 k == 0
