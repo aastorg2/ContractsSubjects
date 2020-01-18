@@ -291,7 +291,7 @@ Disjunctive (Truly): False
 
 notes:
 
-same as stack count where Disjunctive tried to capture conjunctive conject. 
+same as stack count where Disjunctive tried to capture conjunctive conject. This case also suffers from expressiveness issues.
 
 ======
 k == 0
@@ -362,7 +362,7 @@ predicate left: New_Ret == New_Top
 
 Any: reject
 
-L: pass
+L: reject
 
 SubL: pass
 
