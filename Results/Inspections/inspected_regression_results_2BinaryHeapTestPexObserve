@@ -1,0 +1,95 @@
+Problem: BinaryHeapTest
+
+---------------------
+PUT_AddContract
+
+Disjunctive (PexChoose): Conjunctive
+Disjunctive (Alternate Semantics): Conjunctive
+Disjunctive (Truly): Disjunctive
+
+notes:
+We cannot learn disjunctive concept because our logic cannot express key < MinimunKey
+Issue: expressivity
+
+======
+k == 0
+
+learned postcondition: (New_bhCount == Old_bhCount + 1 && New_key == Old_key && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount)
+
+simplified postcondition: ((New_bhCount == 1 + Old_bhCount && New_key == Old_key && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: reject
+
+L: pass
+
+SubL: pass
+
+pex time: 75.48978352546692
+
+learn time: 20.026397943496704
+
+Samples: 27
+
+======
+k == 1
+
+learned postcondition: (New_bhCount == Old_bhCount + 1 && New_key == Old_key && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount)
+
+simplified postcondition: ((New_bhCount == 1 + Old_bhCount && New_key == Old_key && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: reject
+
+L: pass
+
+SubL: pass
+
+pex time: 74.13810992240906
+
+learn time: 128.1330325603485
+
+Samples: 27
+
+k0 -> k1: True
+
+k1 -> k0: True
+
+======
+k == 2
+
+learned postcondition: (New_bhCount == Old_bhCount + 1 && New_key == Old_key && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount)
+
+simplified postcondition: ((New_bhCount == 1 + Old_bhCount && New_key == Old_key && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: reject
+
+L: pass
+
+SubL: pass
+
+pex time: 74.42954993247986
+
+learn time: 130.9394130706787
+
+Samples: 27
+
+k0 -> k2: True
+
+k1 -> k2: True
