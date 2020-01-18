@@ -21,10 +21,10 @@ namespace BinaryHeap.Test
 
             int Old_bhCount = bh.Count;
             //int Old_bhCapacity = bh.Capacity;
-            int Old_bhMinimumKey = bh.Count > 0 ? bh.Minimum().Key : PexChoose.Value<int>("old_bhMinimumKey");
-            int Old_bhMinimumValue = bh.Count > 0 ? bh.Minimum().Value : PexChoose.Value<int>("old_bhMinimumValue");
-            //int Old_bhMinimumKey = bh.Count > 0 ? bh.Minimum().Key : 0 - (key--); //PexChoose.Value<int>("old_bhMinimumKey");
-            //int Old_bhMinimumValue = bh.Count > 0 ? bh.Minimum().Value : 0 - (value--); //PexChoose.Value<int>("old_bhMinimumValue");
+            //int Old_bhMinimumKey = bh.Count > 0 ? bh.Minimum().Key : PexChoose.Value<int>("old_bhMinimumKey");
+            //int Old_bhMinimumValue = bh.Count > 0 ? bh.Minimum().Value : PexChoose.Value<int>("old_bhMinimumValue");
+            int Old_bhMinimumKey = bh.Count > 0 ? bh.Minimum().Key : key + 1; //PexChoose.Value<int>("old_bhMinimumKey");
+            int Old_bhMinimumValue = bh.Count > 0 ? bh.Minimum().Value : value + 1; //PexChoose.Value<int>("old_bhMinimumValue");
             
             int Old_bhIndexOfValue = bh.IndexOf(value);
             int Old_key = key;
@@ -56,9 +56,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$old_bh_minimum_value", Old_bhMinimumValue);
             PexObserve.ValueForViewing("$new_bh_minimum_value", New_bhMinimumValue);
 
-            Assert.True(((New_bhCount == Old_bhCount + 1 && New_key == Old_key && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount) && (((New_bhIndexOfValue == 0 && New_bhMinimumKey == Old_value && New_bhMinimumValue == Old_value && Old_bhMinimumKey != New_bhCount && Old_bhMinimumValue != New_bhCount && New_bhMinimumKey == New_value && New_bhMinimumValue == New_value) && New_bhMinimumValue == New_bhMinimumKey) || ((Old_value != Old_key && New_value != Old_key && New_bhMinimumValue != Old_key && Old_value != New_key && New_value != New_key && New_bhMinimumValue != New_key && New_bhMinimumKey != Old_value && New_bhMinimumKey != New_value && New_bhMinimumValue != New_bhMinimumKey) && (!(New_bhMinimumValue == New_bhMinimumKey))))));
-
-            //Assert.True((New_bhCount == Old_bhCount + 1 && New_key == Old_key && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount));
+            Assert.True((New_bhCount == Old_bhCount + 1 && New_key == Old_key && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount));
         }
 
         [PexMethod]
