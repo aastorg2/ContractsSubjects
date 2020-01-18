@@ -100,24 +100,23 @@ namespace BinaryHeap.Test
             AssumePrecondition.IsTrue(bh.Count > 0);
 
             int Old_bhCount = bh.Count;
-            int Old_bhCapacity = bh.Capacity;
             int Old_bhMinimumKey =  bh.Minimum().Key;
             int Old_bhMinimumValue = bh.Minimum().Value;
 
             //code
             var rm = bh.RemoveMinimum();
+
             int New_Ret_Key = rm.Key;
             int New_Ret_Value = rm.Value;
 
             int New_bhCount = bh.Count;
-            int New_bhCapacity = bh.Capacity;
             int New_bhMinimumKey = bh.Count > 0 ? bh.Minimum().Key : PexChoose.Value<int>("new_bhMinimumKey");
+            //int New_bhMinimumKey = bh.Count > 0 ? bh.Minimum().Key : Old_bhMinimumKey -1 ;
             int New_bhMinimumValue = bh.Count > 0 ? bh.Minimum().Value : PexChoose.Value<int>("new_bhMinimumValue");
+            //int New_bhMinimumValue = bh.Count > 0 ? bh.Minimum().Value : Old_bhMinimumValue -1;
 
             PexObserve.ValueForViewing("$old_bh_count", Old_bhCount);
             PexObserve.ValueForViewing("$new_bh_count", New_bhCount);
-            PexObserve.ValueForViewing("$old_bh_capacity", Old_bhCapacity);
-            PexObserve.ValueForViewing("$new_bh_capacity", New_bhCapacity);
             PexObserve.ValueForViewing("$old_bh_minimum_key", Old_bhMinimumKey);
             PexObserve.ValueForViewing("$new_bh_minimum_key", New_bhMinimumKey);
             PexObserve.ValueForViewing("$old_bh_minimum_value", Old_bhMinimumValue);

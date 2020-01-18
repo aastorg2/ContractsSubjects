@@ -100,5 +100,52 @@ namespace BinaryHeapTest
         {
             MinimumTestHelper<GenericParameterHelper, GenericParameterHelper>();
         }
+
+        [TestMethod()]
+        public void ordering()
+        {
+            BinaryHeap<int, int> target = new BinaryHeap<int, int>();
+
+            target.Add(0, 1);
+            target.Add(1, 2);
+            target.Add(1, 3);
+            Assert.IsTrue(target.IndexOf(3) == 2);
+
+        }
+
+        [TestMethod()]
+        public void removeAtTest()
+        {
+            BinaryHeap<int, int> target = new BinaryHeap<int, int>();
+            target.Add(1, 3);
+            target.Add(1, 2);
+            Assert.IsTrue(target.IndexOf(2) == 0);
+
+            target.Add(0, 1);
+
+            Assert.IsTrue(target.Minimum().Key == 0 );
+            Assert.IsTrue(target.RemoveAt(2).Value == 2 );
+            Assert.IsTrue(target.RemoveAt(0).Value == 1);
+            
+
+
+        }
+
+        [TestMethod()]
+        public void minimunTest()
+        {
+            BinaryHeap<int, int> target = new BinaryHeap<int, int>();
+            target.Add(0, 3);
+            
+            target.Add(0, 2);
+            Assert.IsTrue(target.Minimum().Value == 2);
+            
+            target.Add(0, 1);
+
+            Assert.IsTrue(target.Minimum().Value == 1);
+            
+
+        }
+
     }
 }
