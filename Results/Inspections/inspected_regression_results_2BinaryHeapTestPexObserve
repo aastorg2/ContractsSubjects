@@ -3,9 +3,9 @@ Problem: BinaryHeapTest
 ---------------------
 PUT_AddContract
 
-Disjunctive (PexChoose): Conjunctive
-Disjunctive (Alternate Semantics): Conjunctive
-Disjunctive (Truly): Disjunctive
+Disjunctive (PexChoose): False
+Disjunctive (Alternate Semantics): False
+Disjunctive (Truly): True
 
 notes:
 We cannot learn disjunctive concept because our logic cannot express key < MinimunKey
@@ -91,5 +91,568 @@ learn time: 130.9394130706787
 Samples: 27
 
 k0 -> k2: True
+
+k1 -> k2: True
+
+---------------------
+PUT_MinimumContract
+
+Disjunctive (PexChoose): False
+Disjunctive (Alternate Semantics): False
+Disjunctive (Truly): False
+
+Notes:
+This contract is truly conjunctive because this would only behave differntly if the heap was empty, however, the preconddtion states that the heap will never be empty when this method is called; therefore making this conditoin always resolve to true
+
+======
+k == 0
+
+learned postcondition: (New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_Ret_Key == New_bhMinimumKey && New_Ret_Value == New_bhMinimumValue)
+
+simplified postcondition: ((New_bhCount == Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumKey == New_bhMinimumKey && Old_bhMinimumValue == New_bhMinimumValue))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 66.81683993339539
+
+learn time: 12.487601280212402
+
+Samples: 19
+
+======
+k == 1
+
+learned postcondition: (New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_Ret_Key == New_bhMinimumKey && New_Ret_Value == New_bhMinimumValue)
+
+simplified postcondition: ((New_bhCount == Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumKey == New_bhMinimumKey && Old_bhMinimumValue == New_bhMinimumValue))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 63.713722467422485
+
+learn time: 45.54464340209961
+
+Samples: 19
+
+k0 -> k1: True
+
+k1 -> k0: True
+
+======
+k == 2
+
+learned postcondition: (New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_Ret_Key == New_bhMinimumKey && New_Ret_Value == New_bhMinimumValue)
+
+simplified postcondition: ((New_bhCount == Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumKey == New_bhMinimumKey && Old_bhMinimumValue == New_bhMinimumValue))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 63.94143891334534
+
+learn time: 46.14060091972351
+
+Samples: 19
+
+k0 -> k2: True
+
+k1 -> k2: True
+
+---------------------
+PUT_RemoveMinimumContract
+
+Disjunctive (PexChoose): False
+Disjunctive (Alternate Semantics): False
+Disjunctive (Truly): False
+
+Notes:
+The precondition states that the heap will be non-emtpy, so since this contract behaves the same way for every non-empty heap, there is nothing to condition on 
+
+======
+k == 0
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_bhCount != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 455.5650107860565
+
+learn time: 20.492186546325684
+
+Samples: 45
+
+======
+k == 1
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_bhCount != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 492.34227299690247
+
+learn time: 88.62797594070435
+
+Samples: 46
+
+k0 -> k1: True
+
+k1 -> k0: True
+
+======
+k == 2
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_bhCount != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 445.99621844291687
+
+learn time: 86.38697171211243
+
+Samples: 45
+
+k0 -> k2: True
+
+k1 -> k2: True
+
+---------------------
+PUT_RemoveAtContract
+
+Disjunctive (PexChoose): False
+Disjunctive (Alternate Semantics): False
+Disjunctive (Truly): True
+
+notes:
+We cannot learn disjunctive concept because our logic cannot express the conditional argument check done on the index within the definition
+Issue: expressivity
+
+This should be disjunctive because the minimum does not change when you remove don't remove the root.
+
+======
+k == 0
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_index == Old_index && New_bhCount != Old_bhCount && Old_index != Old_bhCount && New_index != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_index == Old_index && (!(New_index == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: reject
+
+L: pass
+
+SubL: pass
+
+pex time: 357.35913348197937
+
+learn time: 21.675025463104248
+
+Samples: 43
+
+======
+k == 1
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_index == Old_index && New_bhCount != Old_bhCount && Old_index != Old_bhCount && New_index != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_index == Old_index && (!(New_index == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: reject
+
+L: pass
+
+SubL: pass
+
+pex time: 354.6045603752136
+
+learn time: 133.9157154560089
+
+Samples: 43
+
+k0 -> k1: True
+
+k1 -> k0: True
+
+======
+k == 2
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_index == Old_index && New_bhCount != Old_bhCount && Old_index != Old_bhCount && New_index != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_index == Old_index && (!(New_index == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: reject
+
+L: pass
+
+SubL: pass
+
+pex time: 365.69061255455017
+
+learn time: 134.76459670066833
+
+Samples: 45
+
+k0 -> k2: True
+
+k1 -> k2: True
+
+---------------------
+PUT_IndexOfContract
+
+Disjunctive (PexChoose): False
+Disjunctive (Alternate Semantics): False
+Disjunctive (Truly): True
+
+notes:
+We cannot learn disjunctive concept because our logic cannot express an equality check between heap entries.
+Issue: expressivity
+
+This should be disjunctive because this method will either return -1, or an integer >= 0 depeding on if it finds an enrty with that value
+
+======
+k == 0
+
+learned postcondition: (New_bhCount == Old_bhCount && New_value == Old_value && New_Ret != Old_bhCount && New_Ret != New_bhCount)
+
+simplified postcondition: ((New_bhCount == Old_bhCount && New_value == Old_value && (!(New_Ret == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: reject
+
+L: pass
+
+SubL: pass
+
+pex time: 58.441256284713745
+
+learn time: 12.777822971343994
+
+Samples: 23
+
+======
+k == 1
+
+learned postcondition: (New_bhCount == Old_bhCount && New_value == Old_value && New_Ret != Old_bhCount && New_Ret != New_bhCount)
+
+simplified postcondition: ((New_bhCount == Old_bhCount && New_value == Old_value && (!(New_Ret == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: reject
+
+L: pass
+
+SubL: pass
+
+pex time: 59.841957330703735
+
+learn time: 63.13315463066101
+
+Samples: 23
+
+k0 -> k1: True
+
+k1 -> k0: True
+
+======
+k == 2
+
+learned postcondition: (New_bhCount == Old_bhCount && New_value == Old_value && New_Ret != Old_bhCount && New_Ret != New_bhCount)
+
+simplified postcondition: ((New_bhCount == Old_bhCount && New_value == Old_value && (!(New_Ret == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: reject
+
+L: pass
+
+SubL: pass
+
+pex time: 60.54770851135254
+
+learn time: 63.767457246780396
+
+Samples: 23
+
+k0 -> k2: True
+
+k1 -> k2: True
+
+---------------------
+PUT_UpdateContract
+
+Disjunctive (PexChoose): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): True
+
+This contract is truly disjunctive because it behaves differntly if there is no key with the value we are looking for. Our logic is able to express this and splits on New_bhCount == Old_bhCount
+
+======
+k == 0
+
+learned postcondition: (New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount)
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: reject
+
+L: reject
+
+SubL: pass
+
+pex time: 378.3778986930847
+
+learn time: 36.83349132537842
+
+Samples: 44
+
+======
+k == 1
+
+learned postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount) && (((New_bhIndexOfValue != Old_bhCount) && New_bhCount == Old_bhCount) || ((New_bhCount == Old_bhCount + 1 && New_bhCount != Old_bhCount && New_bhIndexOfValue != Old_bhIndexOfValue) && (!(New_bhCount == Old_bhCount)))))
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(New_bhIndexOfValue == Old_bhCount)) && New_bhCount == Old_bhCount) || (New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount)) && New_bhCount == 1 + Old_bhCount && (!(New_bhIndexOfValue == Old_bhIndexOfValue))))
+
+predicate: New_bhCount == Old_bhCount
+
+predicate right: None
+
+predicate left: None
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 444.6979167461395
+
+learn time: 594.0252528190613
+
+Samples: 74
+
+k0 -> k1: False
+
+k1 -> k0: False
+
+======
+k == 2
+
+learned postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount) && (((New_bhIndexOfValue != Old_bhCount) && New_bhCount == Old_bhCount) || ((New_bhCount == Old_bhCount + 1 && New_bhCount != Old_bhCount && New_bhIndexOfValue != Old_bhIndexOfValue) && (!(New_bhCount == Old_bhCount)))))
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(New_bhIndexOfValue == Old_bhCount)) && New_bhCount == Old_bhCount) || (New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount)) && New_bhCount == 1 + Old_bhCount && (!(New_bhIndexOfValue == Old_bhIndexOfValue))))
+
+predicate: New_bhCount == Old_bhCount
+
+predicate right: None
+
+predicate left: None
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 469.25471901893616
+
+learn time: 1341.9894309043884
+
+Samples: 76
+
+k0 -> k2: False
+
+k1 -> k2: True
+
+---------------------
+PUT_MinimumUpdateContract
+
+Disjunctive (PexChoose): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): True
+
+Notes:
+This is disjunctive because it will not update a minimum that doesn't the correct value or if there is no minimum that has a smaller key  
+
+======
+k == 0
+
+learned postcondition: (New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount)
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any: reject
+
+L: reject
+
+SubL: pass
+
+pex time: 381.7640383243561
+
+learn time: 55.92842173576355
+
+Samples: 61
+
+======
+k == 1
+
+learned postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount) && (((Newd_bhIndexOfValue != Old_bhCount) && New_bhCount == Old_bhCount) || ((New_bhCount == Old_bhCount + 1 && New_bhCount != Old_bhCount && Newd_bhIndexOfValue != Old_bhIndexOfValue) && (!(New_bhCount == Old_bhCount)))))
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Newd_bhIndexOfValue == Old_bhCount)) && New_bhCount == Old_bhCount) || (New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount)) && New_bhCount == 1 + Old_bhCount && (!(Newd_bhIndexOfValue == Old_bhIndexOfValue))))
+
+predicate: New_bhCount == Old_bhCount
+
+predicate right: None
+
+predicate left: None
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 613.8593018054962
+
+learn time: 1138.8163259029388
+
+Samples: 108
+
+k0 -> k1: False
+
+k1 -> k0: False
+
+======
+k == 2
+
+learned postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount) && (((Newd_bhIndexOfValue != Old_bhCount) && New_bhCount == Old_bhCount) || ((New_bhCount == Old_bhCount + 1 && New_bhCount != Old_bhCount && Newd_bhIndexOfValue != Old_bhIndexOfValue) && (!(New_bhCount == Old_bhCount)))))
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Newd_bhIndexOfValue == Old_bhCount)) && New_bhCount == Old_bhCount) || (New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount)) && New_bhCount == 1 + Old_bhCount && (!(Newd_bhIndexOfValue == Old_bhIndexOfValue))))
+
+predicate: New_bhCount == Old_bhCount
+
+predicate right: None
+
+predicate left: None
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 617.1128029823303
+
+learn time: 2079.0719816684723
+
+Samples: 105
+
+k0 -> k2: False
 
 k1 -> k2: True
