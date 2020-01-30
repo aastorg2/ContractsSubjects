@@ -60,9 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayListContractTest.cs" />
-    <Compile Include="ArrayListContractTest.PUT_SetContract.g.cs">
-      <DependentUpon>ArrayListContractTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Factories\ArrayListFactory.cs" />
     <Compile Include="Properties\PexAssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
