@@ -46,14 +46,8 @@
       <CopyLocal>False</CopyLocal>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
     <Reference Include="Microsoft.Pex.Linq">
       <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="NetBigInteger">
-      <HintPath>..\NetBigInteger\bin\Windows\Debug\NetBigInteger.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.Runners.2.6.4\tools\nunit.framework.dll</HintPath>
@@ -75,6 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetBigInteger\NetBigInteger.csproj">
+      <Project>{AE483C29-042E-4226-BA52-D247CE7676DA}</Project>
+      <Name>NetBigInteger</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Condition="$(MSBuildToolsPath) != ''" Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Condition="$(MSBuildToolsPath) == ''" Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
