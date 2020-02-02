@@ -9,9 +9,10 @@ using Microsoft.Pex.Framework.Using;
 using NetBigInteger;
 using System.Text;
 using System;
-
+using NUnit.Framework;
 // Microsoft.Pex.Framework.Settings
 [assembly: PexAssemblySettings(TestFramework = "NUnit")]
+//[assembly: PexAssemblySettings(TestFramework = "VisualStudioUnitTest")]
 
 // Microsoft.Pex.Framework.Instrumentation
 [assembly: PexAssemblyUnderTest("NetBigInteger")]

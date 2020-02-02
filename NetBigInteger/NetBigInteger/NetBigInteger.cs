@@ -264,7 +264,8 @@ namespace NetBigInteger
 		{
 			if (length == 0)
 				throw new FormatException("Zero length BigInteger");
-			if ((sbyte)bytes[offset] < 0)
+            sbyte signByte = (sbyte)bytes[offset];
+            if (signByte < 0)
 			{
 				m_sign = -1;
 
@@ -274,6 +275,7 @@ namespace NetBigInteger
 				// strip leading sign bytes
 				for (iBval = offset; iBval < end && ((sbyte)bytes[iBval] == -1); iBval++)
 				{
+                    
 				}
 
 				if (iBval >= end)
@@ -293,7 +295,7 @@ namespace NetBigInteger
 
 					Debug.Assert(iBval == end);
 
-					while (inverse[--index] == byte.MaxValue)
+					while (/*index > 0 &&*/ inverse[--index] == byte.MaxValue)
 					{
 						inverse[index] = byte.MinValue;
 					}
@@ -329,7 +331,7 @@ namespace NetBigInteger
 			{
 				return ZeroMagnitude;
 			}
-
+            Console.WriteLine("here: "+ (end - firstSignificant + 3));
 			int nInts = (end - firstSignificant + 3) / BytesPerInt;
 			int bCount = (end - firstSignificant) % BytesPerInt;
 			if (bCount == 0)

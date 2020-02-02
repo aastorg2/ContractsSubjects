@@ -63,7 +63,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\NetBigIntegerFactory.cs" />
-    <Compile Include="Properties\PexAssemblyInfo.cs" />
+    <Compile Include="NetBigIntegerContractTest.PUT_Constructor02Contract.g.cs">
+      <DependentUpon>NetBigIntegerContractTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetBigIntegerContractTest.PUT_ConstructorContract.g.cs">
+      <DependentUpon>NetBigIntegerContractTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetBigIntegerContractTest.PUT_ModInverseContract.g.cs">
+      <DependentUpon>NetBigIntegerContractTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Properties\PexAssemblyInfo.cs" />
     <Compile Include="Properties\Properties\AssemblyInfo.cs.cs" />
     <Compile Include="NetBigIntegerContractTest.cs" />
   </ItemGroup>
