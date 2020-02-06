@@ -1,0 +1,8 @@
+﻿
+solution: .\Stack.sln
+
+testAssemblies:
+    - .\StackTest\bin\Debug\StackTest.dll
+
+projectFilters:
+    - Stack

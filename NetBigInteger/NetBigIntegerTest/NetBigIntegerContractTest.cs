@@ -49,8 +49,7 @@ namespace NetBigInteger.Test
             PexObserve.ValueForViewing("$newResultIntValue", New_resultIntValue);
             PexObserve.ValueForViewing("$newResultSignValue", New_resultSignValue);
 
-            Assert.IsTrue((New_nbiIntValue == Old_nbiIntValue && New_nbiSignValue == Old_nbiSignValue) && (Old_nbiSignValue != -1 || (New_resultSignValue == 1 && Old_nbiIntValue == -New_resultIntValue) ) 
-                && (Old_nbiSignValue != 0 || (New_resultSignValue == 0 && New_resultIntValue == Old_nbiIntValue) ) );
+            Assert.True((New_nbiIntValue == Old_nbiIntValue && New_nbiSignValue == Old_nbiSignValue));
 
             return result;
         }
