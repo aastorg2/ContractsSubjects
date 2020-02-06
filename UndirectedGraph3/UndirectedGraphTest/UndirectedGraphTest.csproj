@@ -62,9 +62,6 @@
     <Compile Include="Properties\PexAssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UndirectedGraphContractTest.cs" />
-    <Compile Include="UndirectedGraphContractTest.PUT_RemoveEdgeContract.g.cs">
-      <DependentUpon>UndirectedGraphContractTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="UndirectedGraphUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -113,6 +113,17 @@ namespace BinaryHeapTest
 
         }
 
+        [TestMethod()]
+        public void updateTest()
+        {
+            BinaryHeap<int, int> target = new BinaryHeap<int, int>();
+
+            target.Add(0, 0);
+            target.Update(1, 0);
+            Assert.IsTrue(target.IndexOf(1) == 0);
+
+            //target.Update(1, 1);
+        }
 
         [TestMethod()]
         public void ordering()
