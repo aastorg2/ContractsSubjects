@@ -174,7 +174,6 @@ namespace ArrayList.Test
             arrList[index] = x;
 
             int New_arrListCount = arrList.Count;
-            int New_x = x;
             int New_arrListIndexOfX = arrList.IndexOf(x);
             int New_arrListLastIndexOfX = arrList.LastIndexOf(x);
             bool New_arrListContainsX = arrList.Contains(x);
@@ -182,7 +181,6 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$old_arrList_Count", Old_arrListCount);
             PexObserve.ValueForViewing("$new_arrList_Count", New_arrListCount);
             PexObserve.ValueForViewing("$old_arrList_x", Old_x);
-            PexObserve.ValueForViewing("$new_arrList_x", New_x);
             PexObserve.ValueForViewing("$old_arrList_index", Old_index);
             PexObserve.ValueForViewing("$old_arrList_IndexOf_x", Old_arrListIndexOfX);
             PexObserve.ValueForViewing("$new_arrList_IndexOf_x", New_arrListIndexOfX);
