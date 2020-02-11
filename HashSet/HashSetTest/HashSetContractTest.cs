@@ -69,21 +69,21 @@ namespace HashSet.Test
         {
             AssumePrecondition.IsTrue(true);
 
-            int Old_hsCount = hs.Count;
+            //int Old_hsCount = hs.Count;
             
 
             int New_Ret = hs.Count;
             
             //code
-            int New_hsCount = hs.Count;
-            bool New_ContainsNewRet = hs.Contains(New_hsCount); 
+            //int New_hsCount = hs.Count;
+            bool New_ContainsNewRet = hs.Contains(New_Ret); 
 
-            PexObserve.ValueForViewing("$old_hs_Count", Old_hsCount);
-            PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
+            //PexObserve.ValueForViewing("$old_hs_Count", Old_hsCount);
+            //PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$new_containsNewRet", New_ContainsNewRet);
 
-            Assert.True((New_hsCount == Old_hsCount && New_Ret == Old_hsCount && New_Ret == New_hsCount));
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -93,19 +93,19 @@ namespace HashSet.Test
 
             int Old_hsCount = hs.Count;
             int Old_x = x;
-            bool Old_hsContainsX = hs.Contains(x);
+            //bool Old_hsContainsX = hs.Contains(x);
             //code
             bool New_Ret = hs.Contains(x);
 
             int New_hsCount = hs.Count;
-            bool New_hsContainsX = hs.Contains(x);
+            //bool New_hsContainsX = hs.Contains(x);
 
             PexObserve.ValueForViewing("$old_hs_Count", Old_hsCount);
             PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
             PexObserve.ValueForViewing("$old_x", Old_x);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
-            PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
-            PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
+            //PexObserve.ValueForViewing("$old_hs_contains_x", Old_hsContainsX);
+            //PexObserve.ValueForViewing("$new_hs_contains_x", New_hsContainsX);
 
             Assert.True(false);
         }
