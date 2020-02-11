@@ -376,7 +376,7 @@ namespace UndirectedGraph.Test
             int Old_ugVertexCount = ug.VertexCount; // opportunity to synthesie ug.VertexCount > 0 -> !New_Ret
             int Old_ugEdgeCount = ug.EdgeCount;
             //bool Old_ugAllowParallelEdges = ug.AllowParallelEdges;
-            bool Old_ugIsVerticesEmpty = ug.IsVerticesEmpty;
+            //bool Old_ugIsVerticesEmpty = ug.IsVerticesEmpty;
             bool Old_ugIsEdgesEmpty = ug.IsEdgesEmpty;
 
             //code
@@ -385,7 +385,7 @@ namespace UndirectedGraph.Test
             int New_ugVertexCount = ug.VertexCount;
             int New_ugEdgeCount = ug.EdgeCount;
             //bool New_ugAllowParallelEdges = ug.AllowParallelEdges;
-            bool New_ugIsVerticesEmpty = ug.IsVerticesEmpty;
+            //bool New_ugIsVerticesEmpty = ug.IsVerticesEmpty;
             bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
 
 
@@ -396,8 +396,8 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$new_ret", New_Ret);
             //PexObserve.ValueForViewing("$old_ug_allow_parallel_edges", Old_ugAllowParallelEdges);
             //PexObserve.ValueForViewing("$new_ug_allow_parallel_edges", New_ugAllowParallelEdges);
-            PexObserve.ValueForViewing("$Old_ugIsVerticesEmpty", Old_ugIsVerticesEmpty);
-            PexObserve.ValueForViewing("$New_ugIsVerticesEmpty", New_ugIsVerticesEmpty);
+            //PexObserve.ValueForViewing("$Old_ugIsVerticesEmpty", Old_ugIsVerticesEmpty);
+            //PexObserve.ValueForViewing("$New_ugIsVerticesEmpty", New_ugIsVerticesEmpty);
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
             Assert.True(false);
@@ -408,7 +408,7 @@ namespace UndirectedGraph.Test
         {
             AssumePrecondition.IsTrue(true);
 
-            int Old_ugVertexCount = ug.VertexCount;
+            //int Old_ugVertexCount = ug.VertexCount;
             int Old_ugEdgeCount = ug.EdgeCount;
             //bool Old_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool Old_ugIsVerticesEmpty = ug.IsVerticesEmpty;
@@ -417,14 +417,14 @@ namespace UndirectedGraph.Test
             //code
             int New_Ret = ug.VertexCount;
 
-            int New_ugVertexCount = ug.VertexCount;
+            //int New_ugVertexCount = ug.VertexCount;
             int New_ugEdgeCount = ug.EdgeCount;
             //bool New_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool New_ugIsVerticesEmpty = ug.IsVerticesEmpty;
             bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
 
-            PexObserve.ValueForViewing("$old_ug_vertex_count", Old_ugVertexCount);
-            PexObserve.ValueForViewing("$new_ug_vertex_count", New_ugVertexCount);
+            //PexObserve.ValueForViewing("$old_ug_vertex_count", Old_ugVertexCount);
+            //PexObserve.ValueForViewing("$new_ug_vertex_count", New_ugVertexCount);
             PexObserve.ValueForViewing("$old_ug_edge_count", Old_ugEdgeCount);
             PexObserve.ValueForViewing("$new_ug_edge_count", New_ugEdgeCount);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
@@ -436,7 +436,8 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$New_ugIsVerticesEmpty", New_ugIsVerticesEmpty);
             PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
             PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
-            Assert.True(((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_Ret == Old_ugVertexCount && New_Ret == New_ugVertexCount) && (((Old_ugIsEdgesEmpty && New_ugEdgeCount == 0) && New_ugIsEdgesEmpty) || (((!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty))) && (!(New_ugIsEdgesEmpty))))));
+
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -452,7 +453,7 @@ namespace UndirectedGraph.Test
             //bool Old_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool Old_ugIsAdjacentEdgesEmpty = ug.ContainsVertex(x) ? ug.IsAdjacentEdgesEmpty(x) : PexChoose.Value<bool>("Old_ugIsAdjacentEdgesEmpty"); // same as above
             //bool Old_ugIsAdjacentEdgesEmpty = ug.ContainsVertex(x) ? ug.IsAdjacentEdgesEmpty(x) : true;
-            bool Old_ugContainsVertexX = ug.ContainsVertex(x);
+            //bool Old_ugContainsVertexX = ug.ContainsVertex(x);
             bool Old_ugIsVerticesEmpty = ug.IsVerticesEmpty;
             bool Old_ugIsEdgesEmpty = ug.IsEdgesEmpty;
 
@@ -466,7 +467,7 @@ namespace UndirectedGraph.Test
             //bool New_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool New_ugIsAdjacentEdgesEmpty = ug.ContainsVertex(x) ? ug.IsAdjacentEdgesEmpty(x) : PexChoose.Value<bool>("new_ugIsAdjacentEdgesEmpty"); // same as above
             //bool New_ugIsAdjacentEdgesEmpty = ug.ContainsVertex(x) ? ug.IsAdjacentEdgesEmpty(x) : true;
-            bool New_ugContainsVertexX = ug.ContainsVertex(x);
+            //bool New_ugContainsVertexX = ug.ContainsVertex(x);
             bool New_ugIsVerticesEmpty = ug.IsVerticesEmpty;
             bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
 
@@ -478,8 +479,8 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$new_ug_adjacent_degree", New_ugAdjacentDegree);
             PexObserve.ValueForViewing("$old_ug_x", Old_x);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
-            PexObserve.ValueForViewing("$old_ug_contains_x", Old_ugContainsVertexX);
-            PexObserve.ValueForViewing("$new_ug_contains_x", New_ugContainsVertexX);
+            //PexObserve.ValueForViewing("$old_ug_contains_x", Old_ugContainsVertexX);
+            //PexObserve.ValueForViewing("$new_ug_contains_x", New_ugContainsVertexX);
             //PexObserve.ValueForViewing("$old_ug_allow_parallel_edges", Old_ugAllowParallelEdges);
             //PexObserve.ValueForViewing("$new_ug_allow_parallel_edges", New_ugAllowParallelEdges);
             PexObserve.ValueForViewing("$old_ug_is_adjacent_edges_empty", Old_ugIsAdjacentEdgesEmpty);
@@ -639,7 +640,7 @@ namespace UndirectedGraph.Test
             int Old_ugEdgeCount = ug.EdgeCount;
             //bool Old_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool Old_ugIsVerticesEmpty = ug.IsVerticesEmpty;
-            bool Old_ugIsEdgesEmpty = ug.IsEdgesEmpty;
+            //bool Old_ugIsEdgesEmpty = ug.IsEdgesEmpty;
             //code
             bool New_Ret = ug.IsEdgesEmpty;
 
@@ -647,7 +648,7 @@ namespace UndirectedGraph.Test
             int New_ugEdgeCount = ug.EdgeCount;
             //bool New_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool New_ugIsVerticesEmpty = ug.IsVerticesEmpty;
-            bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
+            //bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
 
             PexObserve.ValueForViewing("$old_ug_vertex_count", Old_ugVertexCount);
             PexObserve.ValueForViewing("$new_ug_vertex_count", New_ugVertexCount);
@@ -659,8 +660,8 @@ namespace UndirectedGraph.Test
 
             PexObserve.ValueForViewing("$Old_ugIsVerticesEmpty", Old_ugIsVerticesEmpty);
             PexObserve.ValueForViewing("$New_ugIsVerticesEmpty", New_ugIsVerticesEmpty);
-            PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
-            PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
+            //PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
+            //PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
 
             Assert.True(false);
         }
@@ -671,7 +672,7 @@ namespace UndirectedGraph.Test
             AssumePrecondition.IsTrue(true);
 
             int Old_ugVertexCount = ug.VertexCount;
-            int Old_ugEdgeCount = ug.EdgeCount;
+            //int Old_ugEdgeCount = ug.EdgeCount;
             //bool Old_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool Old_ugIsVerticesEmpty = ug.IsVerticesEmpty;
             bool Old_ugIsEdgesEmpty = ug.IsEdgesEmpty;
@@ -679,15 +680,15 @@ namespace UndirectedGraph.Test
             int New_Ret = ug.EdgeCount;
 
             int New_ugVertexCount = ug.VertexCount;
-            int New_ugEdgeCount = ug.EdgeCount;
+            //int New_ugEdgeCount = ug.EdgeCount;
             //bool New_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool New_ugIsVerticesEmpty = ug.IsVerticesEmpty;
             bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
 
             PexObserve.ValueForViewing("$old_ug_vertex_count", Old_ugVertexCount);
             PexObserve.ValueForViewing("$new_ug_vertex_count", New_ugVertexCount);
-            PexObserve.ValueForViewing("$old_ug_edge_count", Old_ugEdgeCount);
-            PexObserve.ValueForViewing("$new_ug_edge_count", New_ugEdgeCount);
+            //PexObserve.ValueForViewing("$old_ug_edge_count", Old_ugEdgeCount);
+            //PexObserve.ValueForViewing("$new_ug_edge_count", New_ugEdgeCount);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
             //PexObserve.ValueForViewing("$old_ug_allow_parallel_edges", Old_ugAllowParallelEdges);
             //PexObserve.ValueForViewing("$new_ug_allow_parallel_edges", New_ugAllowParallelEdges);
@@ -706,7 +707,7 @@ namespace UndirectedGraph.Test
 
             int Old_ugVertexCount = ug.VertexCount;
             int Old_ugEdgeCount = ug.EdgeCount;
-            int Old_ugAdjacentDegree = ug.AdjacentDegree(x);
+            //int Old_ugAdjacentDegree = ug.AdjacentDegree(x);
             int Old_x = x;
             //bool Old_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool Old_ugContainsVertexX = ug.ContainsVertex(x);
@@ -719,7 +720,7 @@ namespace UndirectedGraph.Test
 
             int New_ugVertexCount = ug.VertexCount;
             int New_ugEdgeCount = ug.EdgeCount;
-            int New_ugAdjacentDegree = ug.AdjacentDegree(x);
+            //int New_ugAdjacentDegree = ug.AdjacentDegree(x);
 
             //bool New_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool New_ugContainsVertexX = ug.ContainsVertex(x);
@@ -731,8 +732,8 @@ namespace UndirectedGraph.Test
             PexObserve.ValueForViewing("$new_ug_vertex_count", New_ugVertexCount);
             PexObserve.ValueForViewing("$old_ug_edge_count", Old_ugEdgeCount);
             PexObserve.ValueForViewing("$new_ug_edge_count", New_ugEdgeCount);
-            PexObserve.ValueForViewing("$old_ug_adjacent_degree", Old_ugAdjacentDegree);
-            PexObserve.ValueForViewing("$new_ug_adjacent_degree", New_ugAdjacentDegree);
+            //PexObserve.ValueForViewing("$old_ug_adjacent_degree", Old_ugAdjacentDegree);
+            //PexObserve.ValueForViewing("$new_ug_adjacent_degree", New_ugAdjacentDegree);
             PexObserve.ValueForViewing("$old_ug_x", Old_x);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
             PexObserve.ValueForViewing("$old_ug_contains_x", Old_ugContainsVertexX);
@@ -761,7 +762,7 @@ namespace UndirectedGraph.Test
             //bool Old_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool Old_ugContainsVertexX = ug.ContainsVertex(x);
             bool Old_ugIsVerticesEmpty = ug.IsVerticesEmpty;
-            bool Old_ugIsEdgesEmpty = ug.IsEdgesEmpty;
+            //bool Old_ugIsEdgesEmpty = ug.IsEdgesEmpty;
             //code
             bool New_Ret = ug.IsAdjacentEdgesEmpty(x);
 
@@ -771,7 +772,7 @@ namespace UndirectedGraph.Test
             //bool New_ugAllowParallelEdges = ug.AllowParallelEdges;
             bool New_ugContainsVertexX = ug.ContainsVertex(x);
             bool New_ugIsVerticesEmpty = ug.IsVerticesEmpty;
-            bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
+            //bool New_ugIsEdgesEmpty = ug.IsEdgesEmpty;
 
             PexObserve.ValueForViewing("$old_ug_vertex_count", Old_ugVertexCount);
             PexObserve.ValueForViewing("$new_ug_vertex_count", New_ugVertexCount);
@@ -787,8 +788,8 @@ namespace UndirectedGraph.Test
             //PexObserve.ValueForViewing("$new_ug_allow_parallel_edges", New_ugAllowParallelEdges);
             PexObserve.ValueForViewing("$Old_ugIsVerticesEmpty", Old_ugIsVerticesEmpty);
             PexObserve.ValueForViewing("$New_ugIsVerticesEmpty", New_ugIsVerticesEmpty);
-            PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
-            PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
+            //PexObserve.ValueForViewing("$Olds_IsEdgesEmpty", Old_ugIsEdgesEmpty);
+            //PexObserve.ValueForViewing("$New_IsEdgesEmpty", New_ugIsEdgesEmpty);
 
 
             Assert.True(false);
