@@ -42,7 +42,7 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$Old_s1ContainsX", Old_s1ContainsX);
             PexObserve.ValueForViewing("$New_s1ContainsX", New_s1ContainsX);
 
-            Assert.True((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top));
+            Assert.True(((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top && Old_x <= New_Top && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= Old_s1Count && 1 <= New_s1Count && 0 < New_s1Count && 0 <= New_s1Count && -1 < New_s1Count && -1 <= New_s1Count) && (((1 <= Old_s1Count && 0 < Old_s1Count && 1 < New_s1Count) && Old_s1ContainsX) || (true && (!(Old_s1ContainsX))))));
         }
 
 
@@ -69,7 +69,7 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$New_ContainsNewRet", New_ContainsNewRet);
 
-            Assert.True((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count));
+            Assert.True(((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count && New_s1Count < Old_s1Count && New_s1Count <= Old_s1Count && New_Ret <= Old_Top && 1 <= Old_s1Count && 0 < Old_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= Old_s1Count && 0 <= New_s1Count && -1 < New_s1Count && -1 <= New_s1Count) && (((1 < Old_s1Count && 1 <= New_s1Count && 0 < New_s1Count) && New_ContainsNewRet) || (true && (!(New_ContainsNewRet))))));
         }
 
         [PexMethod]
@@ -91,7 +91,7 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$new_ret", New_Ret);
             PexObserve.ValueForViewing("$New_ContainsNewRet", New_ContainsNewRet);
 
-            Assert.True(false);
+            Assert.True((New_ContainsNewRet && New_s1Count == Old_s1Count && New_s1Count <= Old_s1Count && 1 <= Old_s1Count && 0 < Old_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= Old_s1Count && 1 <= New_s1Count && 0 < New_s1Count && 0 <= New_s1Count && -1 < New_s1Count && -1 <= New_s1Count));
         }
 
         [PexMethod]
@@ -107,15 +107,15 @@ namespace Stack.Test
 
             int New_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("new_top");
             //int New_Top = Old_Top; // consult about this decision later
-            bool New_ContainsNewRet = s1.Contains(New_Ret);
+            //bool New_ContainsNewRet = s1.Contains(New_Ret);
 
             PexObserve.ValueForViewing("$old_s1_Peek", Old_Top);
             PexObserve.ValueForViewing("$new_s1_Peek", New_Top);
             //PexObserve.ValueForViewing("$old_s1_ret", Old_Ret);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
-            PexObserve.ValueForViewing("$New_ContainsNewRet", New_ContainsNewRet);
+            //PexObserve.ValueForViewing("$New_ContainsNewRet", New_ContainsNewRet);
 
-            Assert.True((((New_Top == Old_Top) && New_ContainsNewRet) || (true && (!(New_ContainsNewRet)))));
+            Assert.True(((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (((New_Ret <= Old_Top && New_Ret <= New_Top && 0 <= Old_Top && -1 < Old_Top && -1 <= Old_Top && 0 <= New_Top && -1 < New_Top && -1 <= New_Top) && New_Ret == Old_Top) || ((New_Top == Old_Top && New_Ret != Old_Top && New_Ret != New_Top && New_Top <= Old_Top) && (!(New_Ret == Old_Top))))));
 
         }
         [PexMethod]
@@ -140,7 +140,7 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$new_s1_Peek", New_Top);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
 
-            Assert.True(false);
+            Assert.True(((New_s1Count == Old_s1Count && New_s1Count <= Old_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= Old_s1Count && 0 <= New_s1Count && -1 < New_s1Count && -1 <= New_s1Count) && (((New_Top == Old_Top && New_Top <= Old_Top && 1 <= Old_s1Count && 0 < Old_s1Count && 1 <= New_s1Count && 0 < New_s1Count) && New_Ret) || (true && (!(New_Ret))))));
         }
 
     }
