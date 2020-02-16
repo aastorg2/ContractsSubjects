@@ -28,9 +28,10 @@ def PrepareInspections(fileName, subject):
     initInspection = open(fileName, 'r')
     lines = initInspection.readlines()
     initInspection.close()
-    fileName = fileName.replace("..\\Runs\\", "")     # will have to fix this 
-    newFileName = "inspected_" + fileName             # change this to whatever you wish
-    readyInspection = open(newFileName, 'w')          # <- possibly done later?
+    spliceIndex = fileName.index("results")
+    fileName = fileName[spliceIndex:]
+    newFileName = "inspected_" + fileName
+    readyInspection = open(newFileName, 'w')
     header = lines[0]
     subject[SUBJECT] = header
     readyInspection.write(header)
@@ -145,26 +146,11 @@ if __name__ == "__main__":
     import argparse, sys
     parser = argparse.ArgumentParser()                                               
 
-    parser.add_argument("--pex", "-P", type=str, required=False)
-    parser.add_argument("--alternate", "-A", type=str, required=False)
-    parser.add_argument("--agreement", "-a", type=str, required=False, nargs=argparse.ONE_OR_MORE)
+    parser.add_argument("--file", "-f", type=str, required=False)
     args = parser.parse_args()
 
-    agree = args.agreement
-    pexResults = args.pex
-    alternateResults = args.alternate
-    if not agree == None:
-        if len(agree) < 2:
-            print("Must input both inspection files (file to be modified first)")
-            sys.exit(-1)
-        ChangeInspection(agree)
-    if pexResults == None:
+    results = args.file
+    if results == None:
         sys.exit(-1)
-    pexSubject = {} # Will be filled with contracts after method call
-    PrepareInspections(pexResults, pexSubject)
-    if not alternateResults == None:
-        if pexResults == None:
-            sys.exit(-1)
-        alternateSubject = {}
-        PrepareInspections(alternateResults, alternateSubject)
-        CompleteInspections(pexResults, pexSubject, alternateSubject)
+    subject = {} # Will be filled with contracts after method call
+    PrepareInspections(results, subject)
