@@ -11,30 +11,24 @@ class Contract:
     def __str__(self):
         return self.disjunctivity + self.cases
 
-def ChangeInspection(files):
-    agreement = open(files[1], 'r')
-    newLines = agreement.readlines()
-    agreement.close()
+def getPath(file):
+    import os
+    return os.path.abspath(file)
 
-    updatedInspection = open(files[0], 'w')
-    for lineIndex in range(0, len(newLines)):
-        updatedInspection.write(newLines[lineIndex])
-    updatedInspection.close()
-
-
-def PrepareInspections(fileName, subject):
+def Inspect(fileName, contracts, ovveride):
     import re
-
-    initInspection = open(fileName, 'r')
+    path = getPath(fileName)
+    initInspection = open(path, 'r')
     lines = initInspection.readlines()
     initInspection.close()
-    spliceIndex = fileName.index("results")
-    fileName = fileName[spliceIndex:]
-    newFileName = "inspected_" + fileName
-    readyInspection = open(newFileName, 'w')
     header = lines[0]
-    subject[SUBJECT] = header
-    readyInspection.write(header)
+    if not ovveride:
+        spliceIndex = fileName.index("results")
+        fileName = fileName[spliceIndex:]
+        newFileName = "CurrentInspections\inspected_" + fileName
+        readyInspection = open(newFileName, 'w')
+        readyInspection.write(header)
+    contracts[SUBJECT] = header
     predicate = "None"
     predicateRight = "None"
     predicateLeft = "None"
@@ -43,8 +37,9 @@ def PrepareInspections(fileName, subject):
         line = ""
         if "PUT: " in lines[lineIndex]:
             splitIndex = lines[lineIndex].index(":") + 1
-            contract = lines[lineIndex][splitIndex:].lstrip()
+            contract = lines[lineIndex][splitIndex:].lstrip().replace("\n", "")
             currentContract = Contract(contract)
+            
             line = f"""
 ---------------------
 {contract}
@@ -108,49 +103,53 @@ SubL:
         if "Samples" in lines[lineIndex]:
             line = f"\n{lines[lineIndex]}"
             currentContract.cases += line
-        if len(re.findall("Not[(]k[0-2] -> k[0-2][)][?]", lines[lineIndex])) > 0:
-            valid = "False"
-            if "unsat" in lines[lineIndex]:
-                valid = "True"
-            start = lines[lineIndex].rindex("(") + 1
-            end = lines[lineIndex].rindex(")")
-            line = f"""
-{lines[lineIndex][start:end]}: {valid}
-"""
-            currentContract.cases += line
-            if "k2" in line:
-                subject[currentContract.name] = currentContract
+            contracts[currentContract.name] = currentContract
+#         if len(re.findall("Not[(]k[0-2] -> k[0-2][)][?]", lines[lineIndex])) > 0:
+#             valid = "False"
+#             if "unsat" in lines[lineIndex]:
+#                 valid = "True"
+#             start = lines[lineIndex].rindex("(") + 1
+#             end = lines[lineIndex].rindex(")")
+#             line = f"""
+# {lines[lineIndex][start:end]}: {valid}
+# """
+#             currentContract.cases += line
+#             if "k2" in line:
+#                 contracts[currentContract.name] = currentContract
 
-        readyInspection.write(line)
-    readyInspection.close()
+        if not ovveride: readyInspection.write(line)
+    if not ovveride: readyInspection.close()
 
-def CompleteInspections(fileName, pexSubject, alternateSubject):
-    fileName = fileName.replace("..\\Runs\\", "")
-    biggerSubject = pexSubject if len(pexSubject) >= len(alternateSubject) else alternateSubject
-    smallerSubject = alternateSubject if len(alternateSubject) <= len(pexSubject) else pexSubject
-    for contract in smallerSubject:
+def OverrideInspections(fileName, oldSubject, newSubject):
+    spliceIndex = fileName.index("results")
+    fileName = fileName[spliceIndex:]
+    newFileName = "CurrentInspections\inspected_" + fileName
+    for contract in newSubject:
         if contract is SUBJECT:
             continue
-        if contract in biggerSubject:
-            smallerContractDisjuncCount = smallerSubject[contract].bestRefine.count("||")  # If another contract is added this conditional will not work
-            biggerContractDisjuncCount = biggerSubject[contract].bestRefine.count("||") # so find a adiffernt solution after this implement
-            if (smallerContractDisjuncCount > biggerContractDisjuncCount):
-                biggerSubject[contract] = smallerSubject[contract]
-    newFileName = "ahmad_inspected_" + fileName
+        elif contract in oldSubject:
+            oldSubject[contract] = newSubject[contract]
     readyInspection = open(newFileName, 'w')
-    for contract in biggerSubject:
-        readyInspection.write(biggerSubject[contract].__str__())
+    for contract in oldSubject:
+        readyInspection.write(oldSubject[contract].__str__())    
     readyInspection.close()
 
 if __name__ == "__main__":
     import argparse, sys
     parser = argparse.ArgumentParser()                                               
 
-    parser.add_argument("--file", "-f", type=str, required=False)
+    parser.add_argument("--mode", "-m", type=str, required=True)
+    parser.add_argument("--regression-results", "-r", type=str, required=True)
+    parser.add_argument("--old-regression-results", "-o", type=str, required=False)
     args = parser.parse_args()
 
-    results = args.file
-    if results == None:
-        sys.exit(-1)
-    subject = {} # Will be filled with contracts after method call
-    PrepareInspections(results, subject)
+    mode = args.mode
+    regressionResults = args.regression_results
+    oldRegressionResults = args.old_regression_results
+    contracts = {}
+    if mode == "New" or mode == "Override":
+        Inspect(regressionResults, contracts, False)
+    if mode == "Override" and not oldRegressionResults is None:
+        oldContracts = {}
+        Inspect(oldRegressionResults, oldContracts, True)
+        OverrideInspections(oldRegressionResults, oldContracts, contracts)
