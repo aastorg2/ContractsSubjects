@@ -1,0 +1,91 @@
+Problem: ArrayListTest
+
+---------------------
+PUT_RemoveContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):  
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_arrListCount ==    Old_arrListCount - Old_arrListIndexOfX - 1 && New_x == Old_x && New_arrListLastIndexOfX ==    Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount)
+
+simplified postcondition: ((New_arrListCount ==       -1 + Old_arrListCount + -1*Old_arrListIndexOfX && New_x == Old_x && New_arrListLastIndexOfX ==       -1 + Old_arrListLastIndexOfX + -1*Old_arrListIndexOfX && (!(Old_arrListIndexOfX == Old_arrListCount)) && (!(New_arrListIndexOfX == Old_arrListCount)) && (!(New_arrListLastIndexOfX == Old_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 46.18679356575012
+
+learn time: 6.122028112411499
+
+Samples: 14
+
+======
+k == 1
+
+learned postcondition: ((New_x == Old_x && New_arrListLastIndexOfX ==        Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount) && (((New_arrListCount == Old_arrListCount - 1 && New_arrListCount != Old_arrListCount && Old_arrListLastIndexOfX !=               New_arrListIndexOfX && New_arrListLastIndexOfX !=               Old_arrListLastIndexOfX) && Old_arrListContainsX) || ((New_arrListCount == Old_arrListCount && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX ==               Old_arrListIndexOfX && (!(New_arrListContainsX)) && Old_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && Old_arrListLastIndexOfX ==               Old_arrListIndexOfX && Old_arrListLastIndexOfX ==               New_arrListIndexOfX && New_arrListLastIndexOfX ==               New_arrListIndexOfX && New_arrListLastIndexOfX ==               Old_arrListLastIndexOfX) && (!(Old_arrListContainsX)))))
+
+simplified postcondition: ((New_x == Old_x && New_arrListLastIndexOfX ==       -1 + Old_arrListLastIndexOfX + -1*Old_arrListIndexOfX && (!(Old_arrListIndexOfX == Old_arrListCount)) && (!(New_arrListIndexOfX == Old_arrListCount)) && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && (!(New_arrListLastIndexOfX == Old_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount)) && New_arrListCount == -1 + Old_arrListCount && (!(Old_arrListLastIndexOfX == New_arrListIndexOfX)) && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListContainsX) || (New_x == Old_x && New_arrListLastIndexOfX ==       -1 + Old_arrListLastIndexOfX + -1*Old_arrListIndexOfX && (!(New_arrListLastIndexOfX == New_arrListCount)) && New_arrListCount == Old_arrListCount && (!(New_arrListContainsX)) && Old_arrListLastIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == New_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && (!(Old_arrListContainsX))))
+
+predicate: Old_arrListContainsX
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 105.39097499847412
+
+learn time: 64.00743627548218
+
+Samples: 22
+
+k0 -> k1: False
+
+k1 -> k0: False
+
+======
+k == 2
+
+learned postcondition: ((New_x == Old_x && New_arrListLastIndexOfX ==        Old_arrListLastIndexOfX - Old_arrListIndexOfX - 1 && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount) && (((New_arrListCount == Old_arrListCount - 1 && New_arrListCount != Old_arrListCount && Old_arrListLastIndexOfX !=               New_arrListIndexOfX && New_arrListLastIndexOfX !=               Old_arrListLastIndexOfX) && Old_arrListContainsX) || ((New_arrListCount == Old_arrListCount && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX ==               Old_arrListIndexOfX && (!(New_arrListContainsX)) && Old_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && Old_arrListLastIndexOfX ==               Old_arrListIndexOfX && Old_arrListLastIndexOfX ==               New_arrListIndexOfX && New_arrListLastIndexOfX ==               New_arrListIndexOfX && New_arrListLastIndexOfX ==               Old_arrListLastIndexOfX) && (!(Old_arrListContainsX)))))
+
+simplified postcondition: ((New_x == Old_x && New_arrListLastIndexOfX ==       -1 + Old_arrListLastIndexOfX + -1*Old_arrListIndexOfX && (!(Old_arrListIndexOfX == Old_arrListCount)) && (!(New_arrListIndexOfX == Old_arrListCount)) && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && (!(New_arrListLastIndexOfX == Old_arrListCount)) && (!(New_arrListIndexOfX == New_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount)) && New_arrListCount == -1 + Old_arrListCount && (!(Old_arrListLastIndexOfX == New_arrListIndexOfX)) && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListContainsX) || (New_x == Old_x && New_arrListLastIndexOfX ==       -1 + Old_arrListLastIndexOfX + -1*Old_arrListIndexOfX && (!(New_arrListLastIndexOfX == New_arrListCount)) && New_arrListCount == Old_arrListCount && (!(New_arrListContainsX)) && Old_arrListLastIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == New_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && (!(Old_arrListContainsX))))
+
+predicate: Old_arrListContainsX
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 126.17678761482239
+
+learn time: 108.38629341125488
+
+Samples: 22
+
+k0 -> k2: False
+
+k1 -> k2: True
