@@ -15,6 +15,95 @@ def getPath(file):
     import os
     return os.path.abspath(file)
 
+def NewInspect(fileName, contracts, ovveride):
+    import re
+    path = getPath(fileName)
+    initInspection = open(path, 'r')
+    lines = initInspection.readlines()
+    initInspection.close()
+    header = lines[0]
+    if not ovveride:
+        spliceIndex = fileName.index("results")
+        fileName = fileName[spliceIndex:]
+        newFileName = "CurrentInspections\inspected_" + fileName
+        readyInspection = open(newFileName, 'w')
+        readyInspection.write(header)
+    contracts[SUBJECT] = header
+    predicate = "None"
+    predicateRight = "None"
+    predicateLeft = "None"
+    currentContract = None
+    resultSeen = False
+    predicates = []
+    for lineIndex in range(1, len(lines)):
+        line = ""
+        if "PUT: " in lines[lineIndex]:
+            splitIndex = lines[lineIndex].index(":") + 1
+            contract = lines[lineIndex][splitIndex:].lstrip().replace("\n", "")
+            currentContract = Contract(contract)
+            
+            line = f"""
+---------------------
+{contract}
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+"""
+            currentContract.disjunctivity = line
+        if "Final Tree ====" in lines[lineIndex]:
+            predicates = []
+            while lineIndex < len(lines) and not "===== Final Result" in lines[lineIndex]:
+                if "Round" in lines[lineIndex]:
+                    predicate = "None"
+                    predicateRight = "None"
+                    predicateLeft = "None"
+                if "Predicate" in lines[lineIndex]:
+                    predicates.append(lines[lineIndex])
+                lineIndex += 1
+    
+        #currentContract.cases += line
+        if "postcondition" in lines[lineIndex]:
+            line = f"""
+learned postcondition: {lines[lineIndex + 1]}"""
+            currentContract.cases += line
+        if "simplified post" in lines[lineIndex]:
+            predicateStrings = "\n".join(predicates)
+            line = f"""
+simplified postcondition: {lines[lineIndex + 1]}
+{predicateStrings}
+Any:
+
+L:
+
+SubL:
+"""     
+            currentContract.cases += line
+        if "pex time:" in lines[lineIndex]:
+            line = f"\n{lines[lineIndex]}"
+            currentContract.cases += line
+        if "learn time:" in lines[lineIndex]:
+            line = f"\n{lines[lineIndex]}"
+            currentContract.cases += line
+        if "Samples" in lines[lineIndex]:
+            line = f"\n{lines[lineIndex]}"
+            currentContract.cases += line
+            contracts[currentContract.name] = currentContract
+#         if len(re.findall("Not[(]k[0-2] -> k[0-2][)][?]", lines[lineIndex])) > 0:
+#             valid = "False"
+#             if "unsat" in lines[lineIndex]:
+#                 valid = "True"
+#             start = lines[lineIndex].rindex("(") + 1
+#             end = lines[lineIndex].rindex(")")
+#             line = f"""
+# {lines[lineIndex][start:end]}: {valid}
+# """
+#             currentContract.cases += line
+#             if "k2" in line:
+#                 contracts[currentContract.name] = currentContract
+
+        if not ovveride: readyInspection.write(line)
+    if not ovveride: readyInspection.close()
+
 def Inspect(fileName, contracts, ovveride):
     import re
     path = getPath(fileName)
@@ -135,7 +224,7 @@ def OverrideInspections(fileName, oldSubject, newSubject):
     readyInspection.close()
 
 if __name__ == "__main__":
-    import argparse, sys
+    import argparse
     parser = argparse.ArgumentParser()                                               
 
     parser.add_argument("--mode", "-m", type=str, required=True)
@@ -148,8 +237,8 @@ if __name__ == "__main__":
     oldRegressionResults = args.old_regression_results
     contracts = {}
     if mode == "New" or mode == "Override":
-        Inspect(regressionResults, contracts, False)
+        NewInspect(regressionResults, contracts, False)
     if mode == "Override" and not oldRegressionResults is None:
         oldContracts = {}
-        Inspect(oldRegressionResults, oldContracts, True)
+        NewInspect(oldRegressionResults, oldContracts, True)
         OverrideInspections(oldRegressionResults, oldContracts, contracts)

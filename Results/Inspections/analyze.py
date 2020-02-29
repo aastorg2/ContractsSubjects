@@ -39,7 +39,14 @@ def AnalyzeInspections(fileName):
                     if len(re.findall("[p|P]ass", lines[idxCopy])) > 0:
                         disjunctiveContracts.append(contract)
                     else:
-                        missedDisjunctiveContracts.append(contract)
+                        while idxCopy < len(lines) and not "k == 2" in lines[idxCopy]:
+                            idxCopy += 1
+                        while idxCopy < len(lines) and not "Any" in lines[idxCopy]:
+                            idxCopy += 1
+                        if len(re.findall("[p|P]ass", lines[idxCopy])) > 0:
+                            disjunctiveContracts.append(contract)
+                        else:
+                            missedDisjunctiveContracts.append(contract)
                 else:
                     idxCopy = lineIndex
                     while idxCopy < len(lines) and not "k == 2" in lines[idxCopy]:
