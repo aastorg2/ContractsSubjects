@@ -1,0 +1,33 @@
+Problem: StackTest
+
+---------------------
+PUT_PeekContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+learned postcondition: ((New_ContainsNewRet && New_s1Count == Old_s1Count && New_s1Count <= Old_s1Count && Old_s1Count <= New_s1Count && 1 <= Old_s1Count && 0 < Old_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= Old_s1Count && 1 <= New_s1Count && 0 < New_s1Count && 0 <= New_s1Count && -1 < New_s1Count && -1 <= New_s1Count) && (((!(New_Ret <= Old_s1Count)) ||   ((New_Ret <= Old_s1Count && New_Ret <= New_s1Count) && (((!(New_Ret != New_s1Count)) ||   ((New_Ret != Old_s1Count &&  New_Ret != New_s1Count &&  New_Ret < Old_s1Count &&  New_Ret < New_s1Count) &&  (((!(1 == New_Ret)) || ((1 == New_Ret &&   1 < Old_s1Count &&   1 < New_s1Count &&   1 <= New_Ret &&   0 < New_Ret &&   0 <= New_Ret &&   -1 < New_Ret &&   -1 <= New_Ret) &&  (((!(New_Ret ==               Old_s1Count)) ||  false) &&   (New_Ret ==               Old_s1Count ||  true)))) &&  (1 == New_Ret || true)))) && (New_Ret != New_s1Count ||   (New_Ret == Old_s1Count &&  New_Ret == New_s1Count &&  Old_s1Count <= New_Ret &&  New_s1Count <= New_Ret &&  1 <= New_Ret &&  0 < New_Ret &&  0 <= New_Ret &&  -1 < New_Ret &&  -1 <= New_Ret))))) && (New_Ret <= Old_s1Count ||   (New_Ret != Old_s1Count && New_Ret != New_s1Count && Old_s1Count < New_Ret && Old_s1Count <= New_Ret && New_s1Count < New_Ret && New_s1Count <= New_Ret && 1 < New_Ret && 1 <= New_Ret && 0 < New_Ret && 0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret))))
+
+simplified postcondition: ((New_ContainsNewRet && New_s1Count <= Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count >= 1))
+
+CNF simplified: ((New_s1Count == Old_s1Count && New_ContainsNewRet && New_s1Count >= 1))
+
+Predicate: root : New_Ret <= Old_s1Count
+
+Predicate: root Right : New_Ret != New_s1Count
+
+Predicate: root Right Right : 1 == New_Ret
+
+Predicate: root Right Right Right : New_Ret == Old_s1Count
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 125.34368777275085
+
+learn time: 171.80214619636536
+
+Samples: 21
