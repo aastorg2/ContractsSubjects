@@ -1,0 +1,33 @@
+Problem: StackTest
+
+---------------------
+PUT_PushContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 2
+
+learned postcondition: (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_Top == Old_x && New_s1Count != Old_s1Count && Old_x == New_Top)
+
+simplified postcondition: ((New_s1ContainsX && New_s1Count == 1 + Old_s1Count && Old_x == New_Top))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 160.99327635765076
+
+learn time: 38.60225296020508
+
+Samples: 37

@@ -1,0 +1,541 @@
+Problem: BinaryHeapTest
+
+---------------------
+PUT_AddContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_bhCount == Old_bhCount + 1 && New_key == Old_key && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount)
+
+simplified postcondition: ((New_bhCount == 1 + Old_bhCount && New_key == Old_key && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 113.1872045993805
+
+learn time: 24.125056505203247
+
+Samples: 26
+
+======
+k == 1
+
+learned postcondition: (New_bhCount == Old_bhCount + 1 && New_key == Old_key && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount)
+
+simplified postcondition: ((New_bhCount == 1 + Old_bhCount && New_key == Old_key && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 109.40414667129517
+
+learn time: 175.64317965507507
+
+Samples: 26
+
+k0 -> k1: True
+
+k1 -> k0: True
+
+======
+k == 2
+
+learned postcondition: (New_bhCount == Old_bhCount + 1 && New_key == Old_key && New_value == Old_value && New_bhCount != Old_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount)
+
+simplified postcondition: ((New_bhCount == 1 + Old_bhCount && New_key == Old_key && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 109.54603052139282
+
+learn time: 179.6545286178589
+
+Samples: 26
+
+k0 -> k2: True
+
+k1 -> k2: True
+
+---------------------
+PUT_RemoveMinimumContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_bhCount != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 363.08086252212524
+
+learn time: 12.326032400131226
+
+Samples: 36
+
+======
+k == 1
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_bhCount != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 359.8117690086365
+
+learn time: 51.890267848968506
+
+Samples: 35
+
+k0 -> k1: True
+
+k1 -> k0: True
+
+======
+k == 2
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_bhCount != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 336.97837710380554
+
+learn time: 52.34305024147034
+
+Samples: 34
+
+k0 -> k2: True
+
+k1 -> k2: True
+
+---------------------
+PUT_RemoveAtContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_index == Old_index && New_bhCount != Old_bhCount && Old_index != Old_bhCount && New_index != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_index == Old_index && (!(New_index == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 326.50835609436035
+
+learn time: 21.875782012939453
+
+Samples: 42
+
+======
+k == 1
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_index == Old_index && New_bhCount != Old_bhCount && Old_index != Old_bhCount && New_index != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_index == Old_index && (!(New_index == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 378.4954743385315
+
+learn time: 124.70139861106873
+
+Samples: 43
+
+k0 -> k1: True
+
+k1 -> k0: True
+
+======
+k == 2
+
+learned postcondition: (New_bhCount == Old_bhCount - 1 && New_index == Old_index && New_bhCount != Old_bhCount && Old_index != Old_bhCount && New_index != Old_bhCount)
+
+simplified postcondition: ((New_bhCount == -1 + Old_bhCount && New_index == Old_index && (!(New_index == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 337.39825201034546
+
+learn time: 117.47107124328613
+
+Samples: 41
+
+k0 -> k2: True
+
+k1 -> k2: True
+
+---------------------
+PUT_IndexOfContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_value == Old_value && New_Ret != Old_bhCount && New_Ret != New_bhCount)
+
+simplified postcondition: ((New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_value == Old_value && (!(New_Ret == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 42.35751152038574
+
+learn time: 4.2566163539886475
+
+Samples: 13
+
+======
+k == 1
+
+learned postcondition: (New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_value == Old_value && New_Ret != Old_bhCount && New_Ret != New_bhCount)
+
+simplified postcondition: ((New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_value == Old_value && (!(New_Ret == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 39.92921042442322
+
+learn time: 26.56493902206421
+
+Samples: 13
+
+k0 -> k1: True
+
+k1 -> k0: True
+
+======
+k == 2
+
+learned postcondition: (New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_value == Old_value && New_Ret != Old_bhCount && New_Ret != New_bhCount)
+
+simplified postcondition: ((New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_value == Old_value && (!(New_Ret == Old_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 44.75530505180359
+
+learn time: 28.341204404830933
+
+Samples: 13
+
+k0 -> k2: True
+
+k1 -> k2: True
+
+---------------------
+PUT_UpdateContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount)
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 376.379864692688
+
+learn time: 40.37501764297485
+
+Samples: 47
+
+======
+k == 1
+
+learned postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount) && (((New_bhIndexOfValue != Old_bhCount) && New_bhCount == Old_bhCount) || ((New_bhCount == Old_bhCount + 1 && New_bhCount != Old_bhCount && New_bhIndexOfValue != Old_bhIndexOfValue && Old_value != Old_bhMinimumValue && New_value != Old_bhMinimumValue) && (!(New_bhCount == Old_bhCount)))))
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(New_bhIndexOfValue == Old_bhCount)) && New_bhCount == Old_bhCount) || (New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount)) && New_bhCount == 1 + Old_bhCount && (!(New_bhIndexOfValue == Old_bhIndexOfValue)) && (!(New_value == Old_bhMinimumValue))))
+
+predicate: New_bhCount == Old_bhCount
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 472.6639292240143
+
+learn time: 628.4577958583832
+
+Samples: 76
+
+k0 -> k1: False
+
+k1 -> k0: False
+
+======
+k == 2
+
+learned postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && New_bhIndexOfValue != New_bhCount) && (((New_bhIndexOfValue != Old_bhCount) && New_bhCount == Old_bhCount) || ((New_bhCount == Old_bhCount + 1 && New_bhCount != Old_bhCount && New_bhIndexOfValue != Old_bhIndexOfValue && Old_value != Old_bhMinimumValue && New_value != Old_bhMinimumValue) && (!(New_bhCount == Old_bhCount)))))
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(New_bhIndexOfValue == Old_bhCount)) && New_bhCount == Old_bhCount) || (New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(New_bhIndexOfValue == New_bhCount)) && New_bhCount == 1 + Old_bhCount && (!(New_bhIndexOfValue == Old_bhIndexOfValue)) && (!(New_value == Old_bhMinimumValue))))
+
+predicate: New_bhCount == Old_bhCount
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 541.9161176681519
+
+learn time: 1179.582609653473
+
+Samples: 66
+
+k0 -> k2: False
+
+k1 -> k2: True
+
+---------------------
+PUT_MinimumUpdateContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount)
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount))))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 377.4864938259125
+
+learn time: 48.319807052612305
+
+Samples: 55
+
+======
+k == 1
+
+learned postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount) && (((Newd_bhIndexOfValue != Old_bhCount) && New_bhCount == Old_bhCount) || ((New_bhCount == Old_bhCount + 1 && New_bhCount != Old_bhCount && Newd_bhIndexOfValue != Old_bhIndexOfValue && Old_value != Old_bhMinimumValue && New_value != Old_bhMinimumValue) && (!(New_bhCount == Old_bhCount)))))
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Newd_bhIndexOfValue == Old_bhCount)) && New_bhCount == Old_bhCount) || (New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount)) && New_bhCount == 1 + Old_bhCount && (!(Newd_bhIndexOfValue == Old_bhIndexOfValue)) && (!(New_value == Old_bhMinimumValue))))
+
+predicate: New_bhCount == Old_bhCount
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 614.2143316268921
+
+learn time: 1128.9687128067017
+
+Samples: 106
+
+k0 -> k1: False
+
+k1 -> k0: False
+
+======
+k == 2
+
+learned postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue != New_bhCount) && (((Newd_bhIndexOfValue != Old_bhCount) && New_bhCount == Old_bhCount) || ((New_bhCount == Old_bhCount + 1 && New_bhCount != Old_bhCount && Newd_bhIndexOfValue != Old_bhIndexOfValue && Old_value != Old_bhMinimumValue && New_value != Old_bhMinimumValue) && (!(New_bhCount == Old_bhCount)))))
+
+simplified postcondition: ((New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Newd_bhIndexOfValue == Old_bhCount)) && New_bhCount == Old_bhCount) || (New_prioirty == Old_prioirty && New_value == Old_value && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(Old_bhIndexOfValue == New_bhCount)) && (!(Newd_bhIndexOfValue == New_bhCount)) && New_bhCount == 1 + Old_bhCount && (!(Newd_bhIndexOfValue == Old_bhIndexOfValue)) && (!(New_value == Old_bhMinimumValue))))
+
+predicate: New_bhCount == Old_bhCount
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 605.8082962036133
+
+learn time: 1967.7157728672028
+
+Samples: 96
+
+k0 -> k2: False
+
+k1 -> k2: True

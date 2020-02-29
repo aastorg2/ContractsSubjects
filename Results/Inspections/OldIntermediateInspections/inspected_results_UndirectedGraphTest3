@@ -1,0 +1,33 @@
+Problem: UndirectedGraphTest
+
+---------------------
+PUT_AddVertexContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 1
+
+learned postcondition: ((New_ugContainsVertexX && New_ugEdgeCount == Old_ugEdgeCount && New_x == Old_x && (!(New_ugIsVerticesEmpty))) && (((New_ugIsAdjacentEdgesEmpty && New_ugAdjacentDegree == 0 && New_ugAdjacentDegree != New_ugVertexCount) && Old_ugIsAdjacentEdgesEmpty) || (true && (!(Old_ugIsAdjacentEdgesEmpty)))))
+
+simplified postcondition: ((New_ugContainsVertexX && New_ugEdgeCount == Old_ugEdgeCount && New_x == Old_x && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsAdjacentEdgesEmpty))) || (New_ugContainsVertexX && New_ugEdgeCount == Old_ugEdgeCount && New_x == Old_x && (!(New_ugIsVerticesEmpty)) && New_ugIsAdjacentEdgesEmpty && New_ugAdjacentDegree == 0 && (!(0 == New_ugVertexCount))))
+
+predicate: Old_ugIsAdjacentEdgesEmpty
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 634.8511836528778
+
+learn time: 346.68133640289307
+
+Samples: 54

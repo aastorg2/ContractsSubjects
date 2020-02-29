@@ -1,0 +1,451 @@
+Problem: QueueTest
+
+---------------------
+PUT_EnqueueContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_x == Old_x && New_s1Count != Old_s1Count)
+
+simplified postcondition: ((New_s1ContainsX && New_s1Count == 1 + Old_s1Count && New_x == Old_x))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 153.6340868473053
+
+learn time: 5.760830402374268
+
+Samples: 19
+
+======
+k == 1
+
+learned postcondition: ((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_x == Old_x && New_s1Count != Old_s1Count) && (((New_Top == Old_Top) && Old_s1ContainsX) || (true && (!(Old_s1ContainsX)))))
+
+simplified postcondition: ((New_s1ContainsX && New_s1Count == 1 + Old_s1Count && New_x == Old_x && New_Top == Old_Top) || (New_s1ContainsX && New_s1Count == 1 + Old_s1Count && New_x == Old_x && (!(Old_s1ContainsX))))
+
+predicate: Old_s1ContainsX
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 290.73624563217163
+
+learn time: 97.61700868606567
+
+Samples: 61
+
+k0 -> k1: False
+
+k1 -> k0: False
+
+======
+k == 2
+
+learned postcondition: ((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_x == Old_x && New_s1Count != Old_s1Count) && (((New_Top == Old_Top) && Old_s1ContainsX) || (true && (!(Old_s1ContainsX)))))
+
+simplified postcondition: ((New_s1ContainsX && New_s1Count == 1 + Old_s1Count && New_x == Old_x && New_Top == Old_Top) || (New_s1ContainsX && New_s1Count == 1 + Old_s1Count && New_x == Old_x && (!(Old_s1ContainsX))))
+
+predicate: Old_s1ContainsX
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 291.4214344024658
+
+learn time: 144.89234352111816
+
+Samples: 61
+
+k0 -> k2: False
+
+k1 -> k2: True
+
+---------------------
+PUT_DequeueContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+simplified postcondition: ((New_s1Count == -1 + Old_s1Count && New_Ret == Old_Top))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 72.93485379219055
+
+learn time: 3.0606391429901123
+
+Samples: 21
+
+======
+k == 1
+
+learned postcondition: (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+simplified postcondition: ((New_s1Count == -1 + Old_s1Count && New_Ret == Old_Top))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 133.09365844726562
+
+learn time: 30.45755624771118
+
+Samples: 42
+
+k0 -> k1: True
+
+k1 -> k0: True
+
+======
+k == 2
+
+learned postcondition: (New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count)
+
+simplified postcondition: ((New_s1Count == -1 + Old_s1Count && New_Ret == Old_Top))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 134.50424575805664
+
+learn time: 38.67958331108093
+
+Samples: 42
+
+k0 -> k2: True
+
+k1 -> k2: True
+
+---------------------
+PUT_PeekContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_s1ContainsNewRet && New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+simplified postcondition: ((New_s1ContainsNewRet && New_s1Count == Old_s1Count && New_Ret == Old_Top && Old_Top == New_Top))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 50.36547613143921
+
+learn time: 2.9333980083465576
+
+Samples: 10
+
+======
+k == 1
+
+learned postcondition: (New_s1ContainsNewRet && New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+simplified postcondition: ((New_s1ContainsNewRet && New_s1Count == Old_s1Count && New_Ret == Old_Top && Old_Top == New_Top))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 49.62835121154785
+
+learn time: 4.705812454223633
+
+Samples: 10
+
+k0 -> k1: True
+
+k1 -> k0: True
+
+======
+k == 2
+
+learned postcondition: (New_s1ContainsNewRet && New_s1Count == Old_s1Count && New_Top == Old_Top && New_Ret == Old_Top && New_Ret == New_Top)
+
+simplified postcondition: ((New_s1ContainsNewRet && New_s1Count == Old_s1Count && New_Ret == Old_Top && Old_Top == New_Top))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 49.01275992393494
+
+learn time: 4.740562677383423
+
+Samples: 10
+
+k0 -> k2: True
+
+k1 -> k2: True
+
+---------------------
+PUT_CountContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_s1Count == Old_s1Count && New_Ret == Old_s1Count && New_Ret == New_s1Count)
+
+simplified postcondition: ((New_Ret == Old_s1Count && Old_s1Count == New_s1Count))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 119.86993765830994
+
+learn time: 3.1277084350585938
+
+Samples: 18
+
+======
+k == 1
+
+learned postcondition: ((New_s1Count == Old_s1Count && New_Ret == Old_s1Count && New_Ret == New_s1Count) && (((New_Top == Old_Top) && New_ContainsNewRet) || (true && (!(New_ContainsNewRet)))))
+
+simplified postcondition: ((New_Ret == Old_s1Count && Old_s1Count == New_s1Count && (!(New_ContainsNewRet))) || (New_Ret == Old_s1Count && Old_s1Count == New_s1Count && New_Top == Old_Top))
+
+predicate: New_ContainsNewRet
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 164.9998869895935
+
+learn time: 19.809561252593994
+
+Samples: 31
+
+k0 -> k1: False
+
+k1 -> k0: False
+
+======
+k == 2
+
+learned postcondition: ((New_s1Count == Old_s1Count && New_Ret == Old_s1Count && New_Ret == New_s1Count) && (((New_Top == Old_Top) && New_ContainsNewRet) || (true && (!(New_ContainsNewRet)))))
+
+simplified postcondition: ((New_Ret == Old_s1Count && Old_s1Count == New_s1Count && (!(New_ContainsNewRet))) || (New_Ret == Old_s1Count && Old_s1Count == New_s1Count && New_Top == Old_Top))
+
+predicate: New_ContainsNewRet
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 172.21360278129578
+
+learn time: 29.86158776283264
+
+Samples: 31
+
+k0 -> k2: False
+
+k1 -> k2: True
+
+---------------------
+PUT_ContainsContract
+
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+======
+k == 0
+
+learned postcondition: (New_s1Count == Old_s1Count)
+
+simplified postcondition: ((New_s1Count == Old_s1Count))
+
+predicate: None
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 49.52610898017883
+
+learn time: 2.103654384613037
+
+Samples: 17
+
+======
+k == 1
+
+learned postcondition: ((New_s1Count == Old_s1Count) && (((New_Ret && Old_s1ContainsX && New_Top == Old_Top) && New_s1ContainsX) || (((!(New_Ret)) && (!(Old_s1ContainsX))) && (!(New_s1ContainsX)))))
+
+simplified postcondition: ((New_s1Count == Old_s1Count && New_Ret && Old_s1ContainsX && New_Top == Old_Top && New_s1ContainsX) || (New_s1Count == Old_s1Count && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX))))
+
+predicate: New_s1ContainsX
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 77.66674470901489
+
+learn time: 22.410549640655518
+
+Samples: 30
+
+k0 -> k1: False
+
+k1 -> k0: False
+
+======
+k == 2
+
+learned postcondition: ((New_s1Count == Old_s1Count) && (((New_Ret && Old_s1ContainsX && New_Top == Old_Top) && New_s1ContainsX) || (((!(New_Ret)) && (!(Old_s1ContainsX))) && (!(New_s1ContainsX)))))
+
+simplified postcondition: ((New_s1Count == Old_s1Count && New_Ret && Old_s1ContainsX && New_Top == Old_Top && New_s1ContainsX) || (New_s1Count == Old_s1Count && (!(New_Ret)) && (!(Old_s1ContainsX)) && (!(New_s1ContainsX))))
+
+predicate: New_s1ContainsX
+
+predicate right: None
+
+predicate left: None
+
+Any:
+
+L:
+
+SubL:
+
+pex time: 82.62825798988342
+
+learn time: 38.370367765426636
+
+Samples: 30
+
+k0 -> k2: False
+
+k1 -> k2: True

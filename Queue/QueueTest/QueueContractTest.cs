@@ -56,7 +56,7 @@ namespace Queue.Test
             PexObserve.ValueForViewing("$new_s1_contains_x", New_s1ContainsX);
             //PexObserve.ValueForViewing("$Old_NotEmpty", Old_Empty);
             //PexObserve.ValueForViewing("$New_NotEmpty", New_Empty);
-            Assert.True(false);
+            Assert.True(((New_s1ContainsX && New_s1Count == Old_s1Count + 1 && New_s1Count != Old_s1Count) && (((New_Top == Old_Top) && Old_s1ContainsX) || (true && (!(Old_s1ContainsX))))));
         }
 
         //remove from front of queue
