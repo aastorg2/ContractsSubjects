@@ -1,0 +1,79 @@
+========== Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])
+
+Test generation statistics.
+276    : TRIED to create test ending with this member
+0      : FAILED TO CREATE: found no input arguments
+126    : FAILED TO CREATE: found inputs, but new test syntactially the same as an old test
+150    : SUCCEEDED in creating a new test
+
+Test execution statistics.
+150    : normal
+
+========== Stack.Test.StackContractTest constructor Void .ctor()
+
+Test generation statistics.
+256    : TRIED to create test ending with this member
+0      : FAILED TO CREATE: found no input arguments
+255    : FAILED TO CREATE: found inputs, but new test syntactially the same as an old test
+1      : SUCCEEDED in creating a new test
+
+Test execution statistics.
+1      : normal
+
+========== Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])
+
+Test generation statistics.
+255    : TRIED to create test ending with this member
+15     : FAILED TO CREATE: found no input arguments
+2      : FAILED TO CREATE: found inputs, but new test syntactially the same as an old test
+238    : SUCCEEDED in creating a new test
+
+Test execution statistics.
+238    : normal
+
+========== Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])
+
+Test generation statistics.
+254    : TRIED to create test ending with this member
+23     : FAILED TO CREATE: found no input arguments
+2      : FAILED TO CREATE: found inputs, but new test syntactially the same as an old test
+229    : SUCCEEDED in creating a new test
+
+Test execution statistics.
+222    : normal
+7      : Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+
+========== Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)
+
+Test generation statistics.
+252    : TRIED to create test ending with this member
+21     : FAILED TO CREATE: found no input arguments
+1      : FAILED TO CREATE: found inputs, but new test syntactially the same as an old test
+230    : SUCCEEDED in creating a new test
+
+Test execution statistics.
+230    : normal
+
+========== Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)
+
+Test generation statistics.
+248    : TRIED to create test ending with this member
+18     : FAILED TO CREATE: found no input arguments
+0      : FAILED TO CREATE: found inputs, but new test syntactially the same as an old test
+230    : SUCCEEDED in creating a new test
+
+Test execution statistics.
+230    : normal
+
+========== Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])
+
+Test generation statistics.
+247    : TRIED to create test ending with this member
+10     : FAILED TO CREATE: found no input arguments
+1      : FAILED TO CREATE: found inputs, but new test syntactially the same as an old test
+236    : SUCCEEDED in creating a new test
+
+Test execution statistics.
+3      : Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+233    : normal
+

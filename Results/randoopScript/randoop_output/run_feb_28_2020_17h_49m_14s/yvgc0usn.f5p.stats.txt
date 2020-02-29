@@ -1,0 +1,1788 @@
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#NoInputs
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#NoInputs
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#Microsoft.Pex.Framework.Exceptions.PexAssumeFailedException
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#Redundant
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_CountContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PopContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.Factories.StackFactory.Stack.Stack`1[System.Int32] Create(Int32[])#New#normal
+Stack.Test.StackContractTest.Void PUT_PeekContract(Stack.Stack`1[System.Int32])#New#normal
+Stack.Test.StackContractTest constructor Void .ctor()#Redundant
+Stack.Test.StackContractTest.Void PUT_ContainsContract(Stack.Stack`1[System.Int32], Int32)#New#normal
+Stack.Test.StackContractTest.Void PUT_PushContract(Stack.Stack`1[System.Int32], Int32)#New#normal
