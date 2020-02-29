@@ -48,6 +48,8 @@ def NewInspect(fileName, contracts, ovveride):
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+Analysis:
 """
             currentContract.disjunctivity = line
         if "Final Tree ====" in lines[lineIndex]:
