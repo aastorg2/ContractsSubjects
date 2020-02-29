@@ -11,7 +11,7 @@ using PexAPIWrapper;
 
 namespace Stack.Test
 {
-    [TestFixture,PexClass]
+    [PexClass]
     public partial class StackContractTest
     {
         //[PexMethod(TestEmissionFilter= PexTestEmissionFilter.All)]
@@ -69,7 +69,7 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$New_ret", New_Ret);
             PexObserve.ValueForViewing("$New_ContainsNewRet", New_ContainsNewRet);
 
-            Assert.True(((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count && New_s1Count < Old_s1Count && New_s1Count <= Old_s1Count && New_Ret <= Old_Top && 1 <= Old_s1Count && 0 < Old_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= Old_s1Count && 0 <= New_s1Count && -1 < New_s1Count && -1 <= New_s1Count) && (((1 < Old_s1Count && 1 <= New_s1Count && 0 < New_s1Count) && New_ContainsNewRet) || (true && (!(New_ContainsNewRet))))));
+            Assert.True((New_s1Count == Old_s1Count - 1 && New_Ret == Old_Top && New_s1Count != Old_s1Count));
         }
 
         [PexMethod]
@@ -91,7 +91,7 @@ namespace Stack.Test
             PexObserve.ValueForViewing("$new_ret", New_Ret);
             PexObserve.ValueForViewing("$New_ContainsNewRet", New_ContainsNewRet);
 
-            Assert.True((New_ContainsNewRet && New_s1Count == Old_s1Count && New_s1Count <= Old_s1Count && 1 <= Old_s1Count && 0 < Old_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= Old_s1Count && 1 <= New_s1Count && 0 < New_s1Count && 0 <= New_s1Count && -1 < New_s1Count && -1 <= New_s1Count));
+            Assert.True(((New_ContainsNewRet && New_s1Count <= Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count >= 1)));
         }
 
         [PexMethod]
