@@ -179,10 +179,8 @@ def FactorExpression(expression):
 def FormatExpression(expression):
     formattedExpression = "(("
     toInsert = expression.pop(0)
-    if len(toInsert) == 0:
-        print("BAD!!!!!") # something wrong with always true
-    formattedExpression += " && ".join(toInsert) + ") && (("
-    clauses = 0
+    formattedExpression = formattedExpression + " && ".join(toInsert) + ") && ((" if len(toInsert) > 0 else "("
+        
     for index in range(0, len(expression) - 1):
         toInsert = expression.pop(0)
         if len(toInsert) > 0:
@@ -205,10 +203,10 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--inspection", "-i", type=str, nargs=argparse.ONE_OR_MORE, required=True)
+    parser.add_argument("--inspection-file", "-i", type=str, nargs=argparse.ONE_OR_MORE, required=True)
     args = parser.parse_args()
 
-    inspection = args.inspection
+    inspection = args.inspection_file
 
     for fileName in inspection:
         path = os.path.abspath(fileName)
