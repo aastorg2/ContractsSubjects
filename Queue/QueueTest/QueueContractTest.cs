@@ -124,14 +124,14 @@ namespace Queue.Test
             //int New_s1Count = s1.Count;
             int New_Top = s1.Count > 0 ? s1.Peek() : PexChoose.Value<int>("new_top");
             //int New_Top = Old_Top; // alternate semantics
-            bool New_ContainsNewRet = s1.Contains(New_Ret);
+            //bool New_ContainsNewRet = s1.Contains(New_Ret);
 
             //PexObserve.ValueForViewing("$old_s1_Count", Old_s1Count);
             //PexObserve.ValueForViewing("$new_s1_Count", New_s1Count);
             PexObserve.ValueForViewing("$old_s1_Peek", Old_Top);
             PexObserve.ValueForViewing("$new_s1_Peek", New_Top);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
-            PexObserve.ValueForViewing("$new_containsNewRet", New_ContainsNewRet);
+            //PexObserve.ValueForViewing("$new_containsNewRet", New_ContainsNewRet);
 
             Assert.True(false);
         }
