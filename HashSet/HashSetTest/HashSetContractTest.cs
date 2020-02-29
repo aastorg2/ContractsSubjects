@@ -76,12 +76,12 @@ namespace HashSet.Test
             
             //code
             //int New_hsCount = hs.Count;
-            bool New_ContainsNewRet = hs.Contains(New_Ret); 
+            //bool New_ContainsNewRet = hs.Contains(New_Ret); 
 
             //PexObserve.ValueForViewing("$old_hs_Count", Old_hsCount);
             //PexObserve.ValueForViewing("$new_hs_Count", New_hsCount);
             PexObserve.ValueForViewing("$New_ret", New_Ret);
-            PexObserve.ValueForViewing("$new_containsNewRet", New_ContainsNewRet);
+            //PexObserve.ValueForViewing("$new_containsNewRet", New_ContainsNewRet);
 
             Assert.True(false);
         }
