@@ -179,7 +179,7 @@ def FactorExpression(expression):
 def FormatExpression(expression):
     formattedExpression = "(("
     toInsert = expression.pop(0)
-    formattedExpression = formattedExpression + " && ".join(toInsert) + ") && ((" if len(toInsert) > 0 else formattedExpression
+    formattedExpression = formattedExpression + " && ".join(toInsert) + ") && ((" if len(toInsert) > 0 else formattedExpression + '('
         
     for index in range(0, len(expression) - 1):
         toInsert = expression.pop(0)
