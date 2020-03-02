@@ -1,0 +1,312 @@
+Problem: HashSetTest
+
+PUT: PUT_AddContract
+
+Predicate root : Old_x < New_hsCount
+
+Predicate root : 1 < New_hsCount
+
+Predicate root Right : Old_x < New_hsCount
+
+Predicate root : 1 < New_hsCount
+
+Predicate root Right : Old_x < New_hsCount
+
+Predicate root : Old_x < New_hsCount
+
+Predicate root Right : 1 == New_hsCount
+
+Predicate root Right Right : 1 < New_hsCount
+
+Predicate root : Old_x < New_hsCount
+
+Predicate root Right : 1 == New_hsCount
+
+Predicate root Right Right : 1 < New_hsCount
+
+Final Tree ====
+Round: 1
+Predicate root : Old_x < New_hsCount
+
+Predicate root Right : 1 == New_hsCount
+
+Predicate root Right Right : 1 < New_hsCount
+
+Predicate root : Old_x == Old_hsCount
+
+Predicate root : Old_x != Old_hsCount
+
+Predicate root Right : Old_x == Old_hsCount
+
+Predicate root : Old_x != Old_hsCount
+
+Predicate root Right : Old_x == Old_hsCount
+
+Final Tree ====
+Round: 2
+Predicate root : Old_x != Old_hsCount
+
+Predicate root Right : Old_x == Old_hsCount
+
+Predicate root : New_hsCount < Old_x
+
+Predicate root : New_hsCount < Old_x
+
+Predicate root Right : 1 < New_hsCount
+
+Predicate root : New_hsCount < Old_x
+
+Predicate root Right : 1 < New_hsCount
+
+Predicate root : New_hsCount < Old_x
+
+Predicate root Right : 1 < New_hsCount
+
+Predicate root Right Right : 0 == Old_hsCount
+
+Predicate root : New_hsCount < Old_x
+
+Predicate root Right : 1 < New_hsCount
+
+Predicate root Right Right : 0 == Old_hsCount
+
+Final Tree ====
+Round: 3
+Predicate root : New_hsCount < Old_x
+
+Predicate root Right : 1 < New_hsCount
+
+Predicate root Right Right : 0 == Old_hsCount
+
+Predicate root : 1 <= Old_hsCount
+
+Predicate root : New_Ret
+
+Predicate root Right : 1 <= Old_hsCount
+
+Predicate root : New_Ret
+
+Predicate root Right : 1 <= Old_hsCount
+
+Predicate root : 1 <= Old_hsCount
+
+Predicate root Right : Old_hsContainsX
+
+Predicate root Right Right : New_Ret
+
+Predicate root : 1 <= Old_hsCount
+
+Predicate root Right : Old_hsContainsX
+
+Predicate root Right Right : New_Ret
+
+Final Tree ====
+Round: 4
+Predicate root : 1 <= Old_hsCount
+
+Predicate root Right : Old_hsContainsX
+
+Predicate root Right Right : New_Ret
+
+Predicate root : 1 <= Old_hsCount
+
+Predicate root : New_Ret
+
+Predicate root Right : 1 <= Old_hsCount
+
+Predicate root : New_Ret
+
+Predicate root Right : 1 <= Old_hsCount
+
+Predicate root : 1 <= Old_hsCount
+
+Predicate root Right : New_Ret
+
+Predicate root Right Right : 0 == Old_hsCount
+
+Predicate root : 1 <= Old_hsCount
+
+Predicate root Right : New_Ret
+
+Predicate root Right Right : 0 == Old_hsCount
+
+Final Tree ====
+Round: 5
+Predicate root : 1 <= Old_hsCount
+
+Predicate root Right : New_Ret
+
+Predicate root Right Right : 0 == Old_hsCount
+
+===== Final Result for PUT_AddContract
+
+postcondition: 
+((New_hsContainsX && Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 1 <= New_hsCount && 0 < New_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount) && (((!(1 <= Old_hsCount)) ||   ((1 <= Old_hsCount && 0 < Old_hsCount) && (((!(New_Ret)) ||   ((New_Ret &&  (!(Old_hsContainsX)) &&  New_hsCount != Old_hsCount &&  Old_hsCount < New_hsCount &&  1 < New_hsCount) &&  (((!(0 == Old_hsCount)) || false) &&  (0 == Old_hsCount || true)))) && (New_Ret ||   (Old_hsContainsX &&  (!(New_Ret)) &&  New_hsCount == Old_hsCount &&  New_hsCount <= Old_hsCount))))) && (1 <= Old_hsCount ||   (New_Ret && (!(Old_hsContainsX)) && New_hsCount != Old_hsCount && Old_hsCount < New_hsCount && 0 == Old_hsCount && 1 == New_hsCount))))
+rounds: 6
+
+simplified post: 
+((New_hsContainsX && (!(Old_hsContainsX)) && New_Ret && Old_hsCount == 0 && New_hsCount == 1) || (New_hsContainsX && (!(New_Ret)) && Old_hsContainsX && New_hsCount == Old_hsCount && Old_hsCount >= 1) || (New_hsContainsX && (!(Old_hsContainsX)) && New_Ret && (!(New_hsCount <= Old_hsCount)) && Old_hsCount >= 1) || (New_hsContainsX && (!(Old_hsContainsX)) && New_Ret && Old_hsCount == 0 && New_hsCount == 1))
+pex time: 795.6004459857941
+
+learn time: 766.9940631389618
+
+Samples: 44
+
+PUT: PUT_RemoveContract
+
+Predicate root : Old_hsCount <= New_hsCount
+
+Predicate root : 1 <= Old_hsCount
+
+Predicate root Right : Old_hsCount <= New_hsCount
+
+Predicate root : 1 <= Old_hsCount
+
+Predicate root Right : Old_hsCount <= New_hsCount
+
+Predicate root : Old_hsCount <= New_hsCount
+
+Predicate root Right : 1 <= Old_hsCount
+
+Predicate root Right Right : New_hsCount < Old_hsCount
+
+Predicate root : Old_hsCount <= New_hsCount
+
+Predicate root Right : 1 <= Old_hsCount
+
+Predicate root Right Right : New_hsCount < Old_hsCount
+
+Final Tree ====
+Round: 1
+Predicate root : Old_hsCount <= New_hsCount
+
+Predicate root Right : 1 <= Old_hsCount
+
+Predicate root Right Right : New_hsCount < Old_hsCount
+
+Predicate root : Not(Old_hsContainsX)
+
+Predicate root : Old_hsContainsX
+
+Predicate root Right : Not(Old_hsContainsX)
+
+Predicate root : Old_hsContainsX
+
+Predicate root Right : Not(Old_hsContainsX)
+
+Final Tree ====
+Round: 2
+Predicate root : Old_hsContainsX
+
+Predicate root Right : Not(Old_hsContainsX)
+
+===== Final Result for PUT_RemoveContract
+
+postcondition: 
+(((!(New_hsContainsX)) && New_hsCount <= Old_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount) && (((!(Old_hsContainsX)) ||   ((New_Ret && Old_hsContainsX && New_hsCount != Old_hsCount && New_hsCount < Old_hsCount && 1 <= Old_hsCount && 0 < Old_hsCount) && (((!((!(Old_hsContainsX)))) || false) && ((!(Old_hsContainsX)) || true)))) && (Old_hsContainsX ||   ((!(New_Ret)) && (!(Old_hsContainsX)) && New_hsCount == Old_hsCount && Old_hsCount <= New_hsCount))))
+rounds: 3
+
+simplified post: 
+(((!(New_hsContainsX)) && (!(Old_hsContainsX)) && (!(New_Ret)) && New_hsCount == Old_hsCount && Old_hsCount >= 0) || ((!(New_hsContainsX)) && New_Ret && Old_hsContainsX && (!(Old_hsCount <= New_hsCount)) && New_hsCount >= 0))
+pex time: 399.20328521728516
+
+learn time: 166.88138723373413
+
+Samples: 20
+
+PUT: PUT_ContainsContract
+
+Predicate root : New_Ret
+
+Predicate root : Not(New_Ret)
+
+Predicate root Right : New_Ret
+
+Predicate root : Not(New_Ret)
+
+Predicate root Right : New_Ret
+
+Final Tree ====
+Round: 1
+Predicate root : Not(New_Ret)
+
+Predicate root Right : New_Ret
+
+Predicate root : New_Ret
+
+Predicate root : New_Ret
+
+Predicate root Right : 0 == Old_hsCount
+
+Predicate root : New_Ret
+
+Predicate root Right : 0 == Old_hsCount
+
+Final Tree ====
+Round: 2
+Predicate root : New_Ret
+
+Predicate root Right : 0 == Old_hsCount
+
+Predicate root : New_Ret
+
+Predicate root : Not(New_Ret)
+
+Predicate root Right : New_Ret
+
+Predicate root : Not(New_Ret)
+
+Predicate root Right : New_Ret
+
+Final Tree ====
+Round: 3
+Predicate root : Not(New_Ret)
+
+Predicate root Right : New_Ret
+
+===== Final Result for PUT_ContainsContract
+
+postcondition: 
+((New_hsCount == Old_hsCount && New_hsCount <= Old_hsCount && Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount) && (((!((!(New_Ret)))) ||   (((!(New_Ret))) && (((!(New_Ret)) || false) && (New_Ret || true)))) && ((!(New_Ret)) ||   (New_Ret && 1 <= Old_hsCount && 0 < Old_hsCount && 1 <= New_hsCount && 0 < New_hsCount))))
+rounds: 4
+
+simplified post: 
+((New_hsCount <= Old_hsCount && Old_hsCount <= New_hsCount && (!(New_Ret)) && New_hsCount >= 0) || (New_hsCount <= Old_hsCount && Old_hsCount <= New_hsCount && New_hsCount >= 1))
+pex time: 512.8728868961334
+
+learn time: 95.72908186912537
+
+Samples: 22
+
+PUT: PUT_CountContract
+
+Predicate root : 1 <= New_Ret
+
+Predicate root : 1 <= New_Ret
+
+Predicate root Right : 0 == New_Ret
+
+Predicate root : 1 <= New_Ret
+
+Predicate root Right : 0 == New_Ret
+
+Final Tree ====
+Round: 1
+Predicate root : 1 <= New_Ret
+
+Predicate root Right : 0 == New_Ret
+
+===== Final Result for PUT_CountContract
+
+postcondition: 
+((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (((!(1 <= New_Ret)) ||   ((1 <= New_Ret && 0 < New_Ret) && (((!(0 == New_Ret)) || false) && (0 == New_Ret || true)))) && (1 <= New_Ret || (0 == New_Ret))))
+rounds: 2
+
+simplified post: 
+((New_Ret >= 1) || (New_Ret == 0))
+pex time: 253.52722024917603
+
+learn time: 0.7360339164733887
+
+Samples: 4
+

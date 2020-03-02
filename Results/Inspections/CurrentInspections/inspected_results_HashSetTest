@@ -1,0 +1,123 @@
+Problem: HashSetTest
+
+---------------------
+PUT_AddContract
+Disjunctive (PexChoose): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): True
+
+Analysis: We learn that Add will not create a new entry in the HashSet if value is already present in the array, otherwise, it will add the value regardless of wether or not the HashSet  was previously empty.
+
+learned postcondition: ((New_hsContainsX && Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 1 <= New_hsCount && 0 < New_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount) && (((!(1 <= Old_hsCount)) ||   ((1 <= Old_hsCount && 0 < Old_hsCount) && (((!(New_Ret)) ||   ((New_Ret &&  (!(Old_hsContainsX)) &&  New_hsCount != Old_hsCount &&  Old_hsCount < New_hsCount &&  1 < New_hsCount) &&  (((!(0 == Old_hsCount)) || false) &&  (0 == Old_hsCount || true)))) && (New_Ret ||   (Old_hsContainsX &&  (!(New_Ret)) &&  New_hsCount == Old_hsCount &&  New_hsCount <= Old_hsCount))))) && (1 <= Old_hsCount ||   (New_Ret && (!(Old_hsContainsX)) && New_hsCount != Old_hsCount && Old_hsCount < New_hsCount && 0 == Old_hsCount && 1 == New_hsCount))))
+
+simplified postcondition: ((New_hsContainsX && (!(Old_hsContainsX)) && New_Ret && Old_hsCount == 0 && New_hsCount == 1) || (New_hsContainsX && (!(New_Ret)) && Old_hsContainsX && New_hsCount == Old_hsCount && Old_hsCount >= 1) || (New_hsContainsX && (!(Old_hsContainsX)) && New_Ret && (!(New_hsCount <= Old_hsCount)) && Old_hsCount >= 1) || (New_hsContainsX && (!(Old_hsContainsX)) && New_Ret && Old_hsCount == 0 && New_hsCount == 1))
+
+CNF simplified: ((New_hsContainsX) && (((!(Old_hsContainsX)) && New_Ret && Old_hsCount == 0 && New_hsCount == 1) || ((!(New_Ret)) && Old_hsContainsX && New_hsCount == Old_hsCount && Old_hsCount >= 1) || ((!(Old_hsContainsX)) && New_Ret && (!(New_hsCount <= Old_hsCount)) && Old_hsCount >= 1) || ((!(Old_hsContainsX)) && New_Ret && Old_hsCount == 0 && New_hsCount == 1)))
+
+Predicate root : 1 <= Old_hsCount
+
+Predicate root Right : New_Ret
+
+Predicate root Right Right : 0 == Old_hsCount
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 795.6004459857941
+
+learn time: 766.9940631389618
+
+Samples: 44
+
+---------------------
+PUT_RemoveContract
+Disjunctive (PexChoose): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): True
+
+Analysis: We learn that contains will not change the state of the HashSet if the value is not present inside of it, otherwise, it will remove the value. There is no tighter concept.
+
+learned postcondition: (((!(New_hsContainsX)) && New_hsCount <= Old_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount) && (((!(Old_hsContainsX)) ||   ((New_Ret && Old_hsContainsX && New_hsCount != Old_hsCount && New_hsCount < Old_hsCount && 1 <= Old_hsCount && 0 < Old_hsCount) && (((!((!(Old_hsContainsX)))) || false) && ((!(Old_hsContainsX)) || true)))) && (Old_hsContainsX ||   ((!(New_Ret)) && (!(Old_hsContainsX)) && New_hsCount == Old_hsCount && Old_hsCount <= New_hsCount))))
+
+simplified postcondition: (((!(New_hsContainsX)) && (!(Old_hsContainsX)) && (!(New_Ret)) && New_hsCount == Old_hsCount && Old_hsCount >= 0) || ((!(New_hsContainsX)) && New_Ret && Old_hsContainsX && (!(Old_hsCount <= New_hsCount)) && New_hsCount >= 0))
+
+CNF simplified: (((!(New_hsContainsX))) && (((!(Old_hsContainsX)) && (!(New_Ret)) && New_hsCount == Old_hsCount && Old_hsCount >= 0) || (New_Ret && Old_hsContainsX && (!(Old_hsCount <= New_hsCount)) && New_hsCount >= 0)))
+
+Predicate root : Old_hsContainsX
+
+Predicate root Right : Not(Old_hsContainsX)
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 399.20328521728516
+
+learn time: 166.88138723373413
+
+Samples: 20
+
+---------------------
+PUT_ContainsContract
+Disjunctive (PexChoose): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): True
+
+Analysis: We learn that contains will not change the state of the HashSer and that the HashSet could be empty if the value is not in the HashSet, but cannot be empty otherwise. There is no tighter concept.
+
+learned postcondition: ((New_hsCount == Old_hsCount && New_hsCount <= Old_hsCount && Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount) && (((!((!(New_Ret)))) ||   (((!(New_Ret))) && (((!(New_Ret)) || false) && (New_Ret || true)))) && ((!(New_Ret)) ||   (New_Ret && 1 <= Old_hsCount && 0 < Old_hsCount && 1 <= New_hsCount && 0 < New_hsCount))))
+
+simplified postcondition: ((New_hsCount <= Old_hsCount && Old_hsCount <= New_hsCount && (!(New_Ret)) && New_hsCount >= 0) || (New_hsCount <= Old_hsCount && Old_hsCount <= New_hsCount && New_hsCount >= 1))
+
+CNF simplified: ((New_hsCount == Old_hsCount) && (((!(New_Ret)) && New_hsCount >= 0) || (New_hsCount >= 1)))
+
+Predicate root : Not(New_Ret)
+
+Predicate root Right : New_Ret
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 512.8728868961334
+
+learn time: 95.72908186912537
+
+Samples: 22
+
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly):Treu
+
+Analysis: We learn that count will return a non-negative integer. (New_Ret >= 0) Is a syntactically tighter formula that captures the same concept.
+
+learned postcondition: ((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (((!(1 <= New_Ret)) ||   ((1 <= New_Ret && 0 < New_Ret) && (((!(0 == New_Ret)) || false) && (0 == New_Ret || true)))) && (1 <= New_Ret || (0 == New_Ret))))
+
+simplified postcondition: ((New_Ret >= 1) || (New_Ret == 0))
+
+CNF simplified: (((New_Ret >= 1) || (New_Ret == 0)))
+
+Predicate root : 1 <= New_Ret
+
+Predicate root Right : 0 == New_Ret
+
+Any: pass
+
+L: pass
+
+SubL: pass
+
+pex time: 253.52722024917603
+
+learn time: 0.7360339164733887
+
+Samples: 4
