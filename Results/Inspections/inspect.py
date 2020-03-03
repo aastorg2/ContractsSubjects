@@ -76,12 +76,6 @@ learned postcondition: {lines[lineIndex + 1]}"""
             line = f"""
 simplified postcondition: {lines[lineIndex + 1]}
 {predicateStrings}
-Any:
-
-L:
-
-SubL:
-
 rounds: {rounds}
 """     
             currentContract.cases += line
