@@ -35,6 +35,7 @@ def NewInspect(fileName, contracts, ovveride):
     currentContract = None
     resultSeen = False
     predicates = []
+    rounds = ""
     for lineIndex in range(1, len(lines)):
         line = ""
         if "PUT: " in lines[lineIndex]:
@@ -59,6 +60,8 @@ Analysis:
                     predicate = "None"
                     predicateRight = "None"
                     predicateLeft = "None"
+                    splitIndex = lines[lineIndex].index(":") + 1
+                    rounds = lines[lineIndex][splitIndex:].strip().replace("\n", "")
                 if "Predicate" in lines[lineIndex]:
                     predicates.append(lines[lineIndex])
                 lineIndex += 1
@@ -78,6 +81,8 @@ Any:
 L:
 
 SubL:
+
+rounds: {rounds}
 """     
             currentContract.cases += line
         if "pex time:" in lines[lineIndex]:

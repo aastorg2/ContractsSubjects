@@ -386,6 +386,6 @@ z3/
 information
 example.yaml
 #### binaries
-*.dll
+# *.dll
 *.exe
 *.g.cs

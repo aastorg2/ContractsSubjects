@@ -11,6 +11,7 @@ import json
 import time
 import shutil
 import io
+import platform
 from lxml import etree
 
 def parseAllStats():
@@ -89,7 +90,8 @@ def getNumber(string):
 
 def parse(run):
     path = os.path.abspath(run)
-    allStatsPath = path + "/allstats.txt"
+    locationOfAllStats = "\\allstats.txt" if platform.system() is "Windows" else "/allstats.txt"
+    allStatsPath = path + locationOfAllStats
 
     allstats = open(allStatsPath, 'r')
     lines = allstats.readlines()

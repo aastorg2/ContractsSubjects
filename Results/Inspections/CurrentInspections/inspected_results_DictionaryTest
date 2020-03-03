@@ -24,6 +24,8 @@ L:
 
 SubL:
 
+rounds: 4
+
 pex time: 643.7470102310181
 
 learn time: 1863.7906286716461
@@ -56,6 +58,8 @@ L:
 
 SubL:
 
+rounds: 4
+
 pex time: 645.1781179904938
 
 learn time: 1467.2214848995209
@@ -85,6 +89,8 @@ Any:
 L:
 
 SubL:
+
+rounds: 5
 
 pex time: 761.076936006546
 
@@ -116,6 +122,8 @@ L:
 
 SubL:
 
+rounds: 3
+
 pex time: 501.9770109653473
 
 learn time: 1261.6410930156708
@@ -145,6 +153,8 @@ Any:
 L:
 
 SubL:
+
+rounds: 4
 
 pex time: 584.4295885562897
 
@@ -180,6 +190,8 @@ L:
 
 SubL:
 
+rounds: 5
+
 pex time: 466.82155203819275
 
 learn time: 7790.121767282486
@@ -209,6 +221,8 @@ Any:
 L:
 
 SubL:
+
+rounds: 1
 
 pex time: 106.14822006225586
 
