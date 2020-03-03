@@ -6,6 +6,8 @@ Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
+Label: Accept
+
 Analysis: We learn that if the value to be enqueued was in the Queue prior to this function call, the queue was non-empty and the front of the queue won't change after enqueing
 
 learned postcondition: ((New_s1ContainsX && 0 < New_s1Count && -1 < New_s1Count && -1 < Old_s1Count && 0 <= New_s1Count && 0 <= Old_s1Count && 1 <= New_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && Old_s1Count < New_s1Count && New_s1Count != Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count == Old_s1Count + 1) && (((!(Old_s1ContainsX)) ||   ((Old_s1ContainsX && 1 < New_s1Count && 0 < Old_s1Count && 1 <= Old_s1Count && New_Top == Old_Top && New_Top <= Old_Top && Old_Top <= New_Top) && (((!((!(Old_s1ContainsX)))) || false) && ((!(Old_s1ContainsX)) || true)))) && (Old_s1ContainsX || ((!(Old_s1ContainsX))))))
@@ -32,6 +34,8 @@ Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): True
 
+Label: Accept
+
 Analysis: We learn that if the value we deque is not in the queue after this function call, the queue's count will be non-negative.
 
 learned postcondition: ((0 < Old_s1Count && -1 < New_s1Count && -1 < Old_s1Count && 0 <= New_s1Count && 0 <= Old_s1Count && 1 <= Old_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && New_Ret <= Old_Top && Old_Top <= New_Ret && New_Ret == Old_Top && New_s1Count < Old_s1Count && New_s1Count != Old_s1Count && New_s1Count <= Old_s1Count && New_s1Count == Old_s1Count - 1) && (((!((!(New_s1ContainsNewRet)))) ||   (((!(New_s1ContainsNewRet))) && (((!(New_s1ContainsNewRet)) || false) && (New_s1ContainsNewRet || true)))) && ((!(New_s1ContainsNewRet)) ||   (New_s1ContainsNewRet && 1 < Old_s1Count && 0 < New_s1Count && 1 <= New_s1Count))))
@@ -57,6 +61,8 @@ PUT_PeekContract
 Disjunctive (PexChoose): False
 Disjunctive (Alternate Semantics): False
 Disjunctive (Truly): False
+
+Label: Accept
 
 Analysis: Analysis: We learn that peek does not change the state of the queue after being called and that the value returned is inside the queue
 
@@ -88,6 +94,8 @@ Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): False
 
+Label: Reject
+
 Analysis: Our language defines old_top as undefined as empty, a language giving a definition to top would be tighter
 
 learned postcondition: ((0 <= New_s1Count && -1 < New_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && New_s1Count <= Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count == Old_s1Count) && (((!((!(New_Ret)))) ||   (((!(New_Ret))) && (((!(New_Ret)) || false) && (New_Ret || true)))) && ((!(New_Ret)) ||   (New_Ret && 0 < New_s1Count && 0 < Old_s1Count && 1 <= New_s1Count && 1 <= Old_s1Count && New_Top <= Old_Top && Old_Top <= New_Top && New_Top == Old_Top))))
@@ -114,7 +122,9 @@ Disjunctive (PexChoose): True
 Disjunctive (Alternate Semantics): True
 Disjunctive (Truly): False
 
-Analysis: A tighter formula would be (Old_Top == NewTop && New_Ret >= 0)
+Label: Reject
+
+Analysis: A tighter formula would be (Old_Top == NewTop\ && New_Ret >= 0). 
 
 learned postcondition: ((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (((!(New_Top < Old_Top)) ||   ((New_Top != Old_Top && New_Top < Old_Top && New_Top <= Old_Top && 0 == New_Ret) && (((!(Old_Top <= New_Top)) || false) && (Old_Top <= New_Top || true)))) && (New_Top < Old_Top || (Old_Top <= New_Top))))
 
