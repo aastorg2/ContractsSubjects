@@ -379,7 +379,7 @@ log
 
 
 ########################## Other ##########################
-randoop_output/
+Results/randoop_output/
 z3/
 *.ps1
 # *.txt
