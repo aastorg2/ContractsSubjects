@@ -17,6 +17,7 @@ def parseAllStats():
     pathToRandoopOutput = os.path.abspath("randoop_output")
     runs = ["randoop_output/" + fileName for fileName in os.listdir(pathToRandoopOutput)]
     runs = sorted(runs, key=sortByTime)
+    runs = sorted(runs, key=sortByMonth)
     ##remove all runs except for most recent one
     ###don't forget to sort by month
     for fileName in range(0, len(runs) - 1):
@@ -24,6 +25,40 @@ def parseAllStats():
 
     run = ["randoop_output/" + fileName for fileName in os.listdir(pathToRandoopOutput)][0]
     parse(run)
+
+def sortByMonth(x):
+    words = [word for word in x.split("_") if isMonth(word)]
+    assert(len(words) == 1)
+    month = words[0]
+
+    if month in "january":
+        return 1
+    elif month in "febuary":
+        return 2
+    elif month in "march":
+        return 3
+    elif month in "april":
+        return 4
+    elif month in "may":
+        return 5
+    elif month in "june":
+        return 6
+    elif month in "july":
+        return 7
+    elif month in "august":
+        return 8
+    elif month in "september":
+        return 9
+    elif month in "october":
+        return 10
+    elif month in "november":
+        return 11
+    return 12
+    
+def isMonth(word):
+    months = "january febuary march april may june july august september october november december"
+    return word.lower() in months
+
 
 def sortByTime(x):
     ordinals = [word for word in x.split("_") if containsDigit(word)]
@@ -61,6 +96,7 @@ def parse(run):
     allstats.close()
 
     lineIndex = 0
+    totalTests = 0
     while lineIndex < len(lines):
         if "PUT_" in lines[lineIndex]:
             index_put = lines[lineIndex].index("PUT_")
@@ -79,6 +115,8 @@ def parse(run):
                 lineIndex += 1
             
             succeeded = [int(char) for char in lines[lineIndex].split() if char.isdigit()][0]
+
+            totalTests += succeeded
             
             print(f"\t+NUMBER OF TESTS GENERATED: {succeeded}")
             
@@ -91,9 +129,14 @@ def parse(run):
                 passes += [int(char) for char in lines[lineIndex].split() if char.isdigit()][0]
                 lineIndex += 1
 
+
+            print(f"\t+NUMBER OF PASSES: {passes}")
+            print(f"\t+NUMBER OF FAILURES: {succeeded - passes}")
             print(f"\t+TRULY SAFE: {succeeded == passes}", end="\n\n")
 
         lineIndex += 1
+
+    print(f"TOTAL NUMBER OF TESTS GENERATEAD: {totalTests}", end="\n\n")
 
 def runRandoop(randoop, problem):
     commandToRun = getRandoopRunCommand(randoop, problem)
