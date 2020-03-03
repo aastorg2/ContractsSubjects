@@ -1,0 +1,135 @@
+Problem: QueueTest
+
+---------------------
+PUT_EnqueueContract
+Disjunctive (PexChoose): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): True
+
+Analysis: We learn that if the value to be enqueued was in the Queue prior to this function call, the queue was non-empty and the front of the queue won't change after enqueing
+
+learned postcondition: ((New_s1ContainsX && 0 < New_s1Count && -1 < New_s1Count && -1 < Old_s1Count && 0 <= New_s1Count && 0 <= Old_s1Count && 1 <= New_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && Old_s1Count < New_s1Count && New_s1Count != Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count == Old_s1Count + 1) && (((!(Old_s1ContainsX)) ||   ((Old_s1ContainsX && 1 < New_s1Count && 0 < Old_s1Count && 1 <= Old_s1Count && New_Top == Old_Top && New_Top <= Old_Top && Old_Top <= New_Top) && (((!((!(Old_s1ContainsX)))) || false) && ((!(Old_s1ContainsX)) || true)))) && (Old_s1ContainsX || ((!(Old_s1ContainsX))))))
+
+simplified postcondition: ((New_s1ContainsX && New_s1Count == 1 + Old_s1Count && (!(Old_s1ContainsX)) && New_s1Count >= 1) || (New_s1ContainsX && New_s1Count == 1 + Old_s1Count && New_Top <= Old_Top && Old_Top <= New_Top && Old_s1Count >= 1))
+
+CNF simplified: ((New_s1ContainsX && New_s1Count == 1 + Old_s1Count) && (((!(Old_s1ContainsX)) && New_s1Count >= 1) || (New_Top == Old_Top && Old_s1Count >= 1)))
+
+Predicate root : Old_s1ContainsX
+
+Predicate root Right : Not(Old_s1ContainsX)
+
+rounds: 5
+
+pex time: 240.85186767578125
+
+learn time: 5263.253844261169
+
+Samples: 44
+
+---------------------
+PUT_DequeueContract
+Disjunctive (PexChoose): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): True
+
+Analysis: We learn that if the value we deque is not in the queue after this function call, the queue's count will be non-negative.
+
+learned postcondition: ((0 < Old_s1Count && -1 < New_s1Count && -1 < Old_s1Count && 0 <= New_s1Count && 0 <= Old_s1Count && 1 <= Old_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && New_Ret <= Old_Top && Old_Top <= New_Ret && New_Ret == Old_Top && New_s1Count < Old_s1Count && New_s1Count != Old_s1Count && New_s1Count <= Old_s1Count && New_s1Count == Old_s1Count - 1) && (((!((!(New_s1ContainsNewRet)))) ||   (((!(New_s1ContainsNewRet))) && (((!(New_s1ContainsNewRet)) || false) && (New_s1ContainsNewRet || true)))) && ((!(New_s1ContainsNewRet)) ||   (New_s1ContainsNewRet && 1 < Old_s1Count && 0 < New_s1Count && 1 <= New_s1Count))))
+
+simplified postcondition: ((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count && (!(New_s1ContainsNewRet)) && Old_s1Count >= 1) || (New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count && New_s1Count >= 1))
+
+CNF simplified: ((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count) && (((!(New_s1ContainsNewRet)) && Old_s1Count >= 1) || (New_s1Count >= 1)))
+
+Predicate root : Not(New_s1ContainsNewRet)
+
+Predicate root Right : New_s1ContainsNewRet
+
+rounds: 7
+
+pex time: 136.5532464981079
+
+learn time: 8198.481363773346
+
+Samples: 55
+
+---------------------
+PUT_PeekContract
+Disjunctive (PexChoose): False
+Disjunctive (Alternate Semantics): False
+Disjunctive (Truly): False
+
+Analysis: Analysis: We learn that peek does not change the state of the queue after being called and that the value returned is inside the queue
+
+learned postcondition: ((New_s1ContainsNewRet && 0 < New_s1Count && 0 < Old_s1Count && 1 <= New_s1Count && 0 <= New_s1Count && -1 < New_s1Count && 1 <= Old_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count <= Old_s1Count && New_s1Count == Old_s1Count) && (((!(New_Ret <= Old_s1Count)) ||   ((New_Ret <= New_s1Count && New_Ret <= Old_s1Count) && (((!(0 <= New_Ret)) ||   ((0 <= New_Ret &&  -1 < New_Ret &&  -1 <= New_Ret) &&  (((!(0 == New_Ret)) || ((0 == New_Ret &&   New_Ret <                                        New_s1Count &&   New_Ret <                                        Old_s1Count &&   New_Ret !=               New_s1Count &&   New_Ret !=               Old_s1Count) &&  (((!(1 == New_Ret)) ||  false) &&   (1 == New_Ret ||  true)))) &&  (0 == New_Ret || (0 < New_Ret &&  1 <= New_Ret))))) && (0 <= New_Ret ||   (New_Ret < New_s1Count &&  New_Ret < Old_s1Count &&  New_Ret != New_s1Count &&  New_Ret != Old_s1Count))))) && (New_Ret <= Old_s1Count ||   (1 < New_Ret && 0 < New_Ret && 1 <= New_Ret && 0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret && New_s1Count < New_Ret && Old_s1Count < New_Ret && New_Ret != New_s1Count && Old_s1Count <= New_Ret && New_Ret != Old_s1Count && New_s1Count <= New_Ret))))
+
+simplified postcondition: ((New_s1ContainsNewRet && New_s1Count == Old_s1Count && Old_s1Count >= 1))
+
+CNF simplified: ((New_s1ContainsNewRet && New_s1Count == Old_s1Count && Old_s1Count >= 1))
+
+Predicate root : New_Ret <= Old_s1Count
+
+Predicate root Right : 0 <= New_Ret
+
+Predicate root Right Right : 0 == New_Ret
+
+Predicate root Right Right Right : 1 == New_Ret
+
+rounds: 8
+
+pex time: 108.01071381568909
+
+learn time: 344.18944811820984
+
+Samples: 39
+
+---------------------
+PUT_ContainsContract
+Disjunctive (PexChoose): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): False
+
+Analysis: Our language defines old_top as undefined as empty, a language giving a definition to top would be tighter
+
+learned postcondition: ((0 <= New_s1Count && -1 < New_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && New_s1Count <= Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count == Old_s1Count) && (((!((!(New_Ret)))) ||   (((!(New_Ret))) && (((!(New_Ret)) || false) && (New_Ret || true)))) && ((!(New_Ret)) ||   (New_Ret && 0 < New_s1Count && 0 < Old_s1Count && 1 <= New_s1Count && 1 <= Old_s1Count && New_Top <= Old_Top && Old_Top <= New_Top && New_Top == Old_Top))))
+
+simplified postcondition: ((New_s1Count == Old_s1Count && (!(New_Ret)) && Old_s1Count >= 0) || (New_s1Count == Old_s1Count && New_Top == Old_Top && Old_s1Count >= 1))
+
+CNF simplified: ((New_s1Count == Old_s1Count) && (((!(New_Ret)) && Old_s1Count >= 0) || (New_Top == Old_Top && Old_s1Count >= 1)))
+
+Predicate root : Not(New_Ret)
+
+Predicate root Right : New_Ret
+
+rounds: 5
+
+pex time: 78.50773525238037
+
+learn time: 1006.9639852046967
+
+Samples: 31
+
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose): True
+Disjunctive (Alternate Semantics): True
+Disjunctive (Truly): False
+
+Analysis: A tighter formula would be (Old_Top == NewTop && New_Ret >= 0)
+
+learned postcondition: ((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (((!(New_Top < Old_Top)) ||   ((New_Top != Old_Top && New_Top < Old_Top && New_Top <= Old_Top && 0 == New_Ret) && (((!(Old_Top <= New_Top)) || false) && (Old_Top <= New_Top || true)))) && (New_Top < Old_Top || (Old_Top <= New_Top))))
+
+simplified postcondition: ((Old_Top <= New_Top && New_Ret >= 0) || (New_Ret == 0))
+
+CNF simplified: (((Old_Top <= New_Top && New_Ret >= 0) || (New_Ret == 0)))
+
+Predicate root : New_Top < Old_Top
+
+Predicate root Right : Old_Top <= New_Top
+
+rounds: 8
+
+pex time: 88.2282042503357
+
+learn time: 213.96838855743408
+
+Samples: 37
