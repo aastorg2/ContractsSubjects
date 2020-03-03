@@ -37,6 +37,9 @@ def NewInspect(fileName, contracts, ovveride):
     resultSeen = False
     predicates = []
     rounds = ""
+    total_rounds = 0
+    total_pextime = 0
+    total_learntime = 0
     for lineIndex in range(1, len(lines)):
         line = ""
         if "PUT: " in lines[lineIndex]:
@@ -68,6 +71,7 @@ Analysis:
                     #predicateLeft = "None"
                     splitIndex = lines[lineIndex].index(":") + 1
                     rounds = lines[lineIndex][splitIndex:].strip().replace("\n", "")
+                    total_rounds += int(rounds)
         #currentContract.cases += line
         if "postcondition" in lines[lineIndex]:
             line = f"""
@@ -82,9 +86,15 @@ rounds: {rounds}
 """     
             currentContract.cases += line
         if "pex time:" in lines[lineIndex]:
+            splitIndex = lines[lineIndex].index(":") + 1
+            pextime = lines[lineIndex][splitIndex:].strip().replace("\n", "")
+            total_pextime += float(pextime)
             line = f"\n{lines[lineIndex]}"
             currentContract.cases += line
         if "learn time:" in lines[lineIndex]:
+            splitIndex = lines[lineIndex].index(":") + 1
+            learntime = lines[lineIndex][splitIndex:].strip().replace("\n", "")
+            total_learntime += float(learntime)
             line = f"\n{lines[lineIndex]}"
             currentContract.cases += line
         if "Samples" in lines[lineIndex]:
@@ -105,6 +115,15 @@ rounds: {rounds}
 #                 contracts[currentContract.name] = currentContract
 
         if not ovveride: readyInspection.write(line)
+    line = f"""
+======================
+Average Rounds: {total_rounds / len(contracts)}
+
+Average Pex Time: {total_pextime / len(contracts)}
+
+Average Learn Time: {total_pextime / len(contracts)}
+"""
+    readyInspection.write(line)
     if not ovveride: readyInspection.close()
 
 def Inspect(fileName, contracts, ovveride):
