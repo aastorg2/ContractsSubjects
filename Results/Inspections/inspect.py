@@ -51,6 +51,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+Label:
+
 Analysis:
 """
             currentContract.disjunctivity = line
