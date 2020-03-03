@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5E65E90E-D510-4B5A-89B0-679FD3FC5E66}"
+	ProjectSection(SolutionItems) = preProject
+		Dictionary.vsmdi = Dictionary.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dictionary", "Dictionary\Dictionary.csproj", "{7D0C045A-4F86-45B5-B9FF-A4CE775F07CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryTest", "DictionaryTest\DictionaryTest.csproj", "{93DD05E1-88E5-402D-925F-A071FDD157ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{78F1BAF3-8A92-4F9A-81AC-1D04EBFAC16E}"
+	ProjectSection(SolutionItems) = preProject
+		..\.nuget\packages.config = ..\.nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Dictionary.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D0C045A-4F86-45B5-B9FF-A4CE775F07CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D0C045A-4F86-45B5-B9FF-A4CE775F07CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D0C045A-4F86-45B5-B9FF-A4CE775F07CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D0C045A-4F86-45B5-B9FF-A4CE775F07CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93DD05E1-88E5-402D-925F-A071FDD157ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93DD05E1-88E5-402D-925F-A071FDD157ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93DD05E1-88E5-402D-925F-A071FDD157ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93DD05E1-88E5-402D-925F-A071FDD157ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
