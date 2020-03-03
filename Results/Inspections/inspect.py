@@ -25,7 +25,8 @@ def NewInspect(fileName, contracts, ovveride):
     if not ovveride:
         spliceIndex = fileName.index("results")
         fileName = fileName[spliceIndex:]
-        newFileName = "CurrentInspections\inspected_" + fileName
+        #newFileName = "CurrentInspections\inspected_" + fileName
+        newFileName = "inspected_" + fileName
         readyInspection = open(newFileName, 'w')
         readyInspection.write(header)
     contracts[SUBJECT] = header
@@ -56,16 +57,15 @@ Analysis:
         if "Final Tree ====" in lines[lineIndex]:
             predicates = []
             while lineIndex < len(lines) and not "===== Final Result" in lines[lineIndex]:
-                if "Round" in lines[lineIndex]:
-                    predicate = "None"
-                    predicateRight = "None"
-                    predicateLeft = "None"
-                    splitIndex = lines[lineIndex].index(":") + 1
-                    rounds = lines[lineIndex][splitIndex:].strip().replace("\n", "")
                 if "Predicate" in lines[lineIndex]:
                     predicates.append(lines[lineIndex])
                 lineIndex += 1
-    
+        if "rounds" in lines[lineIndex]:
+                    #predicate = "None"
+                    #predicateRight = "None"
+                    #predicateLeft = "None"
+                    splitIndex = lines[lineIndex].index(":") + 1
+                    rounds = lines[lineIndex][splitIndex:].strip().replace("\n", "")
         #currentContract.cases += line
         if "postcondition" in lines[lineIndex]:
             line = f"""
