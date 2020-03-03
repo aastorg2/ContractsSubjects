@@ -100,7 +100,7 @@ def runRandoop(randoop, problem):
     output = runCommand(commandToRun)
 
 def getRandoopRunCommand(randoopExe, problem):
-        TIMELIMIT = "100"
+        TIMELIMIT = "120"
         pathToExecutable = os.path.abspath(randoopExe)
         pathToArgument = os.path.abspath(problem)
         runCommand = pathToExecutable + " " + pathToArgument + f" /noexplorer /timelimit:{TIMELIMIT}"
