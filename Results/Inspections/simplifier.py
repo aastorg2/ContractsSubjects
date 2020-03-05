@@ -11,6 +11,8 @@ class Predicate:
         self.leftOperand = ""
         self.rightOperand = ""
         self.operator = ""
+
+    # still needs work
     def canSimplifyToLessThan(self, other):
         assert(type(other) == type(self))
         self.deconstructExpression()

@@ -117,11 +117,11 @@ rounds: {rounds}
         if not ovveride: readyInspection.write(line)
     line = f"""
 ======================
-Average Rounds: {total_rounds / len(contracts)}
+Average Rounds: {total_rounds / (len(contracts) - 1)}
 
-Average Pex Time: {total_pextime / len(contracts)}
+Average Pex Time: {total_pextime / (len(contracts) - 1)}
 
-Average Learn Time: {total_pextime / len(contracts)}
+Average Learn Time: {total_learntime / (len(contracts) - 1)}
 """
     readyInspection.write(line)
     if not ovveride: readyInspection.close()
