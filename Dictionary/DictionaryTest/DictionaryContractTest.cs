@@ -50,7 +50,7 @@ namespace Dictionary.Test
             PexObserve.ValueForViewing("$old_d_contains_value_y", Old_dContainsValueY);
             PexObserve.ValueForViewing("$new_d_contains_value_y", New_dContainsValueY);
 
-            Assert.True(false);
+            Assert.True(((New_dContainsKeyX && New_dContainsValueY && New_dCount == 1 + Old_dCount && (!(Old_dContainsKeyX)) && (!(Old_dContainsValueY)) && New_dCount >= 1) || (New_dContainsKeyX && New_dContainsValueY && New_dCount == 1 + Old_dCount && (!(Old_dContainsKeyX)) && New_dCount >= 2)));
         }
 
         [PexMethod]
