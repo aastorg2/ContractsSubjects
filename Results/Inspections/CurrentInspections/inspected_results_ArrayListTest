@@ -6,29 +6,39 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+Label:
+
 Analysis:
 
-learned postcondition: ((New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_arrListLastIndexOfX == Old_arrListCount && New_Ret == Old_arrListCount && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_Ret != New_arrListCount && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_Ret != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX && New_Ret != Old_arrListLastIndexOfX && New_Ret == New_arrListLastIndexOfX && Old_arrListCount < New_arrListCount && Old_arrListCount <= New_arrListCount && Old_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX <= Old_arrListCount && New_arrListIndexOfX <= Old_arrListCount && Old_arrListLastIndexOfX < Old_arrListCount && Old_arrListLastIndexOfX <= Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListCount <= New_arrListLastIndexOfX && New_Ret <= Old_arrListCount && Old_arrListCount <= New_Ret && Old_arrListIndexOfX < New_arrListCount && Old_arrListIndexOfX <= New_arrListCount && New_arrListIndexOfX < New_arrListCount && New_arrListIndexOfX <= New_arrListCount && Old_arrListLastIndexOfX < New_arrListCount && Old_arrListLastIndexOfX <= New_arrListCount && New_arrListLastIndexOfX < New_arrListCount && New_arrListLastIndexOfX <= New_arrListCount && New_Ret < New_arrListCount && New_Ret <= New_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX < New_arrListLastIndexOfX && Old_arrListIndexOfX <= New_arrListLastIndexOfX && Old_arrListIndexOfX < New_Ret && Old_arrListIndexOfX <= New_Ret && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX <= New_Ret && Old_arrListLastIndexOfX < New_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && Old_arrListLastIndexOfX < New_Ret && Old_arrListLastIndexOfX <= New_Ret && New_Ret <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= New_Ret && 0 <= Old_arrListCount && -1 < Old_arrListCount && -1 <= Old_arrListCount && 1 <= New_arrListCount && 0 < New_arrListCount && 0 <= New_arrListCount && -1 < New_arrListCount && -1 <= New_arrListCount && -1 <= Old_arrListIndexOfX && 0 <= New_arrListIndexOfX && -1 < New_arrListIndexOfX && -1 <= New_arrListIndexOfX && -1 <= Old_arrListLastIndexOfX && 0 <= New_arrListLastIndexOfX && -1 < New_arrListLastIndexOfX && -1 <= New_arrListLastIndexOfX && 0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (((!(Old_arrListCount <= New_arrListIndexOfX)) ||   (((!(Old_arrListContainsX)) && New_arrListIndexOfX == Old_arrListCount && New_arrListIndexOfX !=                   Old_arrListIndexOfX && Old_arrListLastIndexOfX ==                   Old_arrListIndexOfX && Old_arrListLastIndexOfX !=                   New_arrListIndexOfX && New_arrListLastIndexOfX ==                   New_arrListIndexOfX && New_Ret == New_arrListIndexOfX && Old_arrListCount <= New_arrListIndexOfX && Old_arrListIndexOfX < New_arrListIndexOfX && Old_arrListLastIndexOfX <=                   Old_arrListIndexOfX && Old_arrListLastIndexOfX <                   New_arrListIndexOfX && Old_arrListLastIndexOfX <=                   New_arrListIndexOfX && New_arrListLastIndexOfX <=                   New_arrListIndexOfX && New_Ret <= New_arrListIndexOfX && -1 == Old_arrListIndexOfX && -1 == Old_arrListLastIndexOfX) && (((!(New_arrListIndexOfX < New_Ret)) ||   false) && (New_arrListIndexOfX < New_Ret || true)))) && (Old_arrListCount <= New_arrListIndexOfX ||   (Old_arrListContainsX && New_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX !=               New_arrListIndexOfX && New_Ret != New_arrListIndexOfX && New_arrListIndexOfX < Old_arrListCount && New_arrListIndexOfX <= Old_arrListIndexOfX && New_arrListIndexOfX <=               Old_arrListLastIndexOfX && New_arrListIndexOfX < New_arrListLastIndexOfX && New_arrListIndexOfX < New_Ret && 1 <= Old_arrListCount && 0 < Old_arrListCount && 1 < New_arrListCount && 0 <= Old_arrListIndexOfX && -1 < Old_arrListIndexOfX && 0 <= Old_arrListLastIndexOfX && -1 < Old_arrListLastIndexOfX && 1 <= New_arrListLastIndexOfX && 0 < New_arrListLastIndexOfX && 1 <= New_Ret && 0 < New_Ret))))
+learned postcondition: (New_arrListContainsX && 0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret && 0 < New_arrListCount && 1 <= New_arrListCount && 0 <= New_arrListCount && 0 <= Old_arrListCount && -1 < New_arrListCount && -1 < Old_arrListCount && -1 <= New_arrListCount && -1 <= Old_arrListCount && 0 <= New_arrListIndexOfX && -1 < New_arrListIndexOfX && -1 <= Old_arrListIndexOfX && -1 <= New_arrListIndexOfX && New_Ret < New_arrListCount && New_Ret != New_arrListCount && New_Ret <= New_arrListCount && New_Ret <= Old_arrListCount && Old_arrListCount <= New_Ret && New_Ret == Old_arrListCount && 0 <= New_arrListLastIndexOfX && -1 < New_arrListLastIndexOfX && -1 <= Old_arrListLastIndexOfX && -1 <= New_arrListLastIndexOfX && Old_arrListIndexOfX < New_Ret && New_arrListIndexOfX <= New_Ret && New_Ret != Old_arrListIndexOfX && Old_arrListIndexOfX <= New_Ret && Old_arrListLastIndexOfX < New_Ret && New_Ret != Old_arrListLastIndexOfX && New_Ret <= New_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_Ret && New_arrListLastIndexOfX <= New_Ret && New_Ret == New_arrListLastIndexOfX && Old_arrListCount < New_arrListCount && Old_arrListCount <= New_arrListCount && New_arrListCount != Old_arrListCount && New_arrListIndexOfX < New_arrListCount && Old_arrListIndexOfX < New_arrListCount && Old_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX <= New_arrListCount && New_arrListIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListCount == Old_arrListCount + 1 && Old_arrListLastIndexOfX < New_arrListCount && New_arrListLastIndexOfX < New_arrListCount && Old_arrListLastIndexOfX < Old_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && Old_arrListCount <= New_arrListLastIndexOfX && Old_arrListLastIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX <= New_arrListCount && New_arrListLastIndexOfX <= New_arrListCount && Old_arrListLastIndexOfX <= Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX < New_arrListLastIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && Old_arrListLastIndexOfX < New_arrListLastIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX)
 
-simplified postcondition: ((New_arrListContainsX && New_arrListCount == 1 + Old_arrListCount && Old_arrListCount <= New_Ret && (!(New_arrListCount <= New_Ret)) && (!(New_Ret <= Old_arrListLastIndexOfX)) && New_Ret <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= New_Ret && Old_arrListContainsX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX == Old_arrListIndexOfX && Old_arrListIndexOfX >= 0) || (New_arrListContainsX && New_arrListCount == 1 + Old_arrListCount && (!(New_arrListCount <= New_arrListIndexOfX)) && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= New_arrListIndexOfX && (!(Old_arrListContainsX)) && Old_arrListCount <= New_arrListIndexOfX && New_Ret == New_arrListIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX == -1 && Old_arrListLastIndexOfX == -1))
+simplified postcondition: ((New_arrListContainsX && New_Ret == New_arrListLastIndexOfX && New_arrListCount == 1 + Old_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && Old_arrListCount <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
 
-CNF simplified: ((New_arrListContainsX && New_arrListCount == 1 + Old_arrListCount) && ((New_Ret == New_arrListLastIndexOfX && Old_arrListCount <= New_Ret && (!(New_arrListCount <= New_Ret)) && (!(New_Ret <= Old_arrListLastIndexOfX)) && Old_arrListContainsX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX == Old_arrListIndexOfX && Old_arrListIndexOfX >= 0) || (New_arrListIndexOfX == New_arrListLastIndexOfX && (!(New_arrListCount <= New_arrListIndexOfX)) && (!(Old_arrListContainsX)) && Old_arrListCount <= New_arrListIndexOfX && New_Ret == New_arrListIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX == -1 && Old_arrListLastIndexOfX == -1)))
+CNF simplified: ((Old_arrListCount == New_arrListLastIndexOfX && New_arrListContainsX && New_Ret == New_arrListLastIndexOfX && New_arrListCount == 1 + Old_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
 
-Predicate root : Old_arrListCount <= New_arrListIndexOfX
+Predicate root : 0 < New_Ret
 
-Predicate root Right : New_arrListIndexOfX < New_Ret
+Predicate root Right : Old_arrListContainsX
 
-Any:
+Predicate root Right Right : 0 < Old_arrListLastIndexOfX
 
-L:
+Predicate root Right Right Right : Old_arrListLastIndexOfX <= Old_arrListIndexOfX
 
-SubL:
+Predicate root Right Right Right Right : 1 == New_Ret
 
-pex time: 275.3321485519409
+Predicate: root for k = 2 : Old_arrListContainsX
 
-learn time: 14737.087834358215
+Predicate: root Left for k = 1 : None
 
-Samples: 36
+Predicate: root Right for k = 1 : None
+
+rounds: 7
+
+pex time: 226.96194124221802
+
+learn time: 37247.63583779335
+
+Samples: 58
 
 ---------------------
 PUT_RemoveContract
@@ -36,29 +46,31 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+Label:
+
 Analysis:
 
-learned postcondition: (Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_arrListCount <= Old_arrListCount && Old_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX <= Old_arrListCount && New_arrListIndexOfX < Old_arrListCount && New_arrListIndexOfX <= Old_arrListCount && Old_arrListLastIndexOfX < Old_arrListCount && Old_arrListLastIndexOfX <= Old_arrListCount && New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= New_arrListCount && New_arrListIndexOfX < New_arrListCount && New_arrListIndexOfX <= New_arrListCount && Old_arrListLastIndexOfX <= New_arrListCount && New_arrListLastIndexOfX < New_arrListCount && New_arrListLastIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && 0 <= Old_arrListCount && -1 < Old_arrListCount && -1 <= Old_arrListCount && 0 <= New_arrListCount && -1 < New_arrListCount && -1 <= New_arrListCount && -1 <= Old_arrListIndexOfX && -1 <= New_arrListIndexOfX && -1 <= Old_arrListLastIndexOfX && -1 <= New_arrListLastIndexOfX)
+learned postcondition: (0 <= New_arrListCount && 0 <= Old_arrListCount && -1 < New_arrListCount && -1 < Old_arrListCount && -1 <= New_arrListCount && -1 <= Old_arrListCount && -1 <= Old_arrListIndexOfX && -1 <= New_arrListIndexOfX && -1 <= Old_arrListLastIndexOfX && -1 <= New_arrListLastIndexOfX && New_arrListCount <= Old_arrListCount && New_arrListIndexOfX < New_arrListCount && New_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX <= New_arrListCount && New_arrListIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != Old_arrListCount && New_arrListLastIndexOfX < New_arrListCount && Old_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX <= New_arrListCount && New_arrListLastIndexOfX <= New_arrListCount && Old_arrListLastIndexOfX <= Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX)
 
-simplified postcondition: ((New_arrListCount <= Old_arrListCount && (!(Old_arrListCount <= Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListCount && (!(New_arrListCount <= New_arrListLastIndexOfX)) && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= -1))
+simplified postcondition: ((New_arrListCount <= Old_arrListCount && (!(New_arrListLastIndexOfX == New_arrListCount)) && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= -1))
 
-CNF simplified: ((New_arrListCount <= Old_arrListCount && (!(Old_arrListCount <= Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListCount && (!(New_arrListCount <= New_arrListLastIndexOfX)) && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= -1))
+CNF simplified: ((New_arrListCount <= Old_arrListCount && (!(New_arrListLastIndexOfX == New_arrListCount)) && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= -1))
 
-Predicate root : Not(New_arrListContainsX)
+Predicate root : 0 < Old_x
 
-Predicate root Right : New_arrListIndexOfX < Old_arrListLastIndexOfX
+Predicate root Right : Old_x < Old_arrListIndexOfX
 
-Predicate root Right Right : Old_arrListIndexOfX <= New_arrListIndexOfX
+Predicate: root for k = 2 : New_arrListContainsX
 
-Any:
+Predicate: root Left for k = 1 : None
 
-L:
+Predicate: root Right for k = 1 : None
 
-SubL:
+rounds: 6
 
-pex time: 279.4413409233093
+pex time: 349.937851190567
 
-learn time: 25418.007758140564
+learn time: 8860.0337164402
 
 Samples: 40
 
@@ -68,31 +80,71 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+Label:
+
 Analysis:
 
-learned postcondition: (New_arrListContainsX && New_arrListCount == Old_arrListCount + 1 && New_arrListCount != Old_arrListCount && Old_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_index != New_arrListCount && Old_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX && Old_arrListCount < New_arrListCount && Old_arrListCount <= New_arrListCount && Old_index <= Old_arrListCount && Old_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX <= Old_arrListCount && New_arrListIndexOfX <= Old_arrListCount && Old_arrListLastIndexOfX < Old_arrListCount && Old_arrListLastIndexOfX <= Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_index < New_arrListCount && Old_index <= New_arrListCount && Old_arrListIndexOfX < New_arrListCount && Old_arrListIndexOfX <= New_arrListCount && New_arrListIndexOfX < New_arrListCount && New_arrListIndexOfX <= New_arrListCount && Old_arrListLastIndexOfX < New_arrListCount && Old_arrListLastIndexOfX <= New_arrListCount && New_arrListLastIndexOfX < New_arrListCount && New_arrListLastIndexOfX <= New_arrListCount && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX < New_arrListLastIndexOfX && Old_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && Old_arrListLastIndexOfX < New_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && 0 <= Old_arrListCount && -1 < Old_arrListCount && -1 <= Old_arrListCount && 1 <= New_arrListCount && 0 < New_arrListCount && 0 <= New_arrListCount && -1 < New_arrListCount && -1 <= New_arrListCount && 0 <= Old_index && -1 < Old_index && -1 <= Old_index && -1 <= Old_arrListIndexOfX && 0 <= New_arrListIndexOfX && -1 < New_arrListIndexOfX && -1 <= New_arrListIndexOfX && -1 <= Old_arrListLastIndexOfX && 0 <= New_arrListLastIndexOfX && -1 < New_arrListLastIndexOfX && -1 <= New_arrListLastIndexOfX)
+learned postcondition: (New_arrListContainsX && 0 <= Old_index && -1 < Old_index && -1 <= Old_index && 0 < New_arrListCount && 1 <= New_arrListCount && 0 <= New_arrListCount && 0 <= Old_arrListCount && -1 < New_arrListCount && -1 < Old_arrListCount && -1 <= New_arrListCount && -1 <= Old_arrListCount && 0 <= New_arrListIndexOfX && -1 < New_arrListIndexOfX && -1 <= Old_arrListIndexOfX && -1 <= New_arrListIndexOfX && Old_index < New_arrListCount && 0 <= New_arrListLastIndexOfX && -1 < New_arrListLastIndexOfX && -1 <= Old_arrListLastIndexOfX && -1 <= New_arrListLastIndexOfX && Old_index != New_arrListCount && Old_index <= New_arrListCount && Old_index <= Old_arrListCount && New_arrListIndexOfX <= Old_index && Old_arrListCount < New_arrListCount && Old_arrListCount <= New_arrListCount && Old_index <= New_arrListLastIndexOfX && New_arrListCount != Old_arrListCount && New_arrListIndexOfX < New_arrListCount && Old_arrListIndexOfX < New_arrListCount && Old_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX <= New_arrListCount && New_arrListIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListCount == Old_arrListCount + 1 && Old_arrListLastIndexOfX < New_arrListCount && New_arrListLastIndexOfX < New_arrListCount && Old_arrListLastIndexOfX < Old_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX <= New_arrListCount && New_arrListLastIndexOfX <= New_arrListCount && Old_arrListLastIndexOfX <= Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX < New_arrListLastIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX != Old_arrListIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && Old_arrListLastIndexOfX < New_arrListLastIndexOfX && New_arrListLastIndexOfX != Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX)
 
-simplified postcondition: ((New_arrListContainsX && New_arrListCount == 1 + Old_arrListCount && (!(New_arrListCount <= New_arrListLastIndexOfX)) && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(New_arrListLastIndexOfX <=           Old_arrListLastIndexOfX)) && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= 0))
+simplified postcondition: ((New_arrListContainsX && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && New_arrListCount == 1 + Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
 
-CNF simplified: ((New_arrListContainsX && New_arrListCount == 1 + Old_arrListCount && (!(New_arrListCount <= New_arrListLastIndexOfX)) && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(New_arrListLastIndexOfX <=           Old_arrListLastIndexOfX)) && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= 0))
+CNF simplified: ((New_arrListContainsX && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && New_arrListCount == 1 + Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
 
-Predicate root : Not(Old_arrListContainsX)
+Predicate root : 0 == Old_x
 
-Predicate root Right : 1 <= Old_arrListCount
+Predicate root Right : Old_arrListContainsX
 
-Predicate root Right Right : Old_index <= Old_arrListIndexOfX
+Predicate root Right Right : Old_arrListIndexOfX < Old_x
 
-Any:
+Predicate: root for k = 2 : Old_arrListContainsX
 
-L:
+Predicate: root Left for k = 1 : None
 
-SubL:
+Predicate: root Right for k = 1 : None
 
-pex time: 169.50458073616028
+rounds: 4
 
-learn time: 91441.93662405014
+pex time: 160.61078119277954
 
-Samples: 31
+learn time: 6364.744467496872
+
+Samples: 34
+
+---------------------
+PUT_SetContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+learned postcondition: (New_arrListContainsX && 0 <= Old_index && -1 < Old_index && -1 <= Old_index && 0 < New_arrListCount && 0 < Old_arrListCount && 1 <= New_arrListCount && 1 <= Old_arrListCount && 0 <= New_arrListCount && 0 <= Old_arrListCount && -1 < New_arrListCount && -1 < Old_arrListCount && -1 <= New_arrListCount && -1 <= Old_arrListCount && 0 <= New_arrListIndexOfX && -1 < New_arrListIndexOfX && -1 <= Old_arrListIndexOfX && -1 <= New_arrListIndexOfX && Old_index < New_arrListCount && Old_index < Old_arrListCount && 0 <= New_arrListLastIndexOfX && -1 < New_arrListLastIndexOfX && -1 <= Old_arrListLastIndexOfX && -1 <= New_arrListLastIndexOfX && Old_index != New_arrListCount && Old_index != Old_arrListCount && Old_index <= New_arrListCount && Old_index <= Old_arrListCount && New_arrListIndexOfX <= Old_index && New_arrListCount <= Old_arrListCount && New_arrListCount == Old_arrListCount && Old_arrListCount <= New_arrListCount && Old_index <= New_arrListLastIndexOfX && New_arrListIndexOfX < New_arrListCount && New_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX < New_arrListCount && Old_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX <= New_arrListCount && New_arrListIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX < New_arrListCount && New_arrListLastIndexOfX < New_arrListCount && Old_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX < Old_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX <= New_arrListCount && New_arrListLastIndexOfX <= New_arrListCount && Old_arrListLastIndexOfX <= Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX)
+
+simplified postcondition: ((New_arrListContainsX && New_arrListIndexOfX <= Old_index && New_arrListCount == Old_arrListCount && Old_index <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
+
+CNF simplified: ((New_arrListContainsX && New_arrListIndexOfX <= Old_index && New_arrListCount == Old_arrListCount && Old_index <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
+
+Predicate root : Old_x < New_arrListCount
+
+Predicate root Right : -1 < Old_x
+
+Predicate root Right Right : Old_arrListCount <= Old_x
+
+Predicate: root for k = 2 : Old_arrListContainsX
+
+Predicate: root Left for k = 1 : None
+
+Predicate: root Right for k = 1 : None
+
+rounds: 5
+
+pex time: 145.54987978935242
+
+learn time: 6486.924461603165
+
+Samples: 36
 
 ---------------------
 PUT_GetContract
@@ -100,26 +152,145 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+Label:
+
 Analysis:
 
-learned postcondition: ((New_containsNewRet && New_arrListCount == Old_arrListCount && Old_index != Old_arrListCount && Old_index != New_arrListCount && New_arrListCount <= Old_arrListCount && Old_arrListCount <= New_arrListCount && Old_index < Old_arrListCount && Old_index <= Old_arrListCount && Old_index < New_arrListCount && Old_index <= New_arrListCount && 1 <= Old_arrListCount && 0 < Old_arrListCount && 0 <= Old_arrListCount && -1 < Old_arrListCount && -1 <= Old_arrListCount && 1 <= New_arrListCount && 0 < New_arrListCount && 0 <= New_arrListCount && -1 < New_arrListCount && -1 <= New_arrListCount && 0 <= Old_index && -1 < Old_index && -1 <= Old_index) && (((!(New_Ret != Old_arrListCount)) ||   ((New_Ret != Old_arrListCount && New_Ret != New_arrListCount) && (((!(New_Ret == Old_arrListCount)) ||   false) && (New_Ret == Old_arrListCount || true)))) && (New_Ret != Old_arrListCount ||   (New_Ret == Old_arrListCount && New_Ret == New_arrListCount && New_Ret != Old_index && New_Ret <= Old_arrListCount && Old_arrListCount <= New_Ret && New_Ret <= New_arrListCount && New_arrListCount <= New_Ret && Old_index < New_Ret && Old_index <= New_Ret && 1 <= New_Ret && 0 < New_Ret && 0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret))))
+learned postcondition: ((New_containsNewRet && 0 <= Old_index && -1 < Old_index && -1 <= Old_index && 0 < New_arrListCount && 0 < Old_arrListCount && 1 <= New_arrListCount && 0 <= New_arrListCount && 1 <= Old_arrListCount && -1 < New_arrListCount && 0 <= Old_arrListCount && -1 < Old_arrListCount && -1 <= New_arrListCount && -1 <= Old_arrListCount && Old_index < New_arrListCount && Old_index < Old_arrListCount && Old_index <= New_arrListCount && Old_index != New_arrListCount && Old_index <= Old_arrListCount && Old_index != Old_arrListCount && Old_arrListCount <= New_arrListCount && New_arrListCount <= Old_arrListCount && New_arrListCount == Old_arrListCount) && (((!(New_Ret != New_arrListCount)) ||   ((New_Ret != New_arrListCount && New_Ret != Old_arrListCount) && (((!(Old_arrListCount <= New_Ret)) ||   ((1 < New_Ret &&  0 < New_Ret &&  0 <= New_Ret &&  -1 < New_Ret &&  1 <= New_Ret &&  -1 <= New_Ret &&  Old_index < New_Ret &&  New_Ret != Old_index &&  Old_index <= New_Ret &&  New_arrListCount < New_Ret &&  Old_arrListCount < New_Ret &&  New_arrListCount <= New_Ret &&  Old_arrListCount <= New_Ret) &&  (((!(New_Ret <=                                     Old_arrListCount)) || false) &&  (New_Ret <= Old_arrListCount || true)))) && (Old_arrListCount <= New_Ret ||   (New_Ret < New_arrListCount &&  New_Ret < Old_arrListCount &&  New_Ret <= New_arrListCount &&  New_Ret <= Old_arrListCount))))) && (New_Ret != New_arrListCount ||   (0 < New_Ret && 0 <= New_Ret && -1 < New_Ret && 1 <= New_Ret && -1 <= New_Ret && Old_index < New_Ret && New_Ret != Old_index && Old_index <= New_Ret && New_arrListCount <= New_Ret && New_Ret <= New_arrListCount && New_Ret == New_arrListCount && New_Ret <= Old_arrListCount && New_Ret == Old_arrListCount && Old_arrListCount <= New_Ret))))
 
-simplified postcondition: ((New_containsNewRet && New_arrListCount <= Old_arrListCount && Old_arrListCount <= New_arrListCount && (!(New_arrListCount <= Old_index)) && Old_index >= 0))
+simplified postcondition: ((New_containsNewRet && Old_index <= Old_arrListCount && (!(Old_index == Old_arrListCount)) && New_arrListCount == Old_arrListCount && Old_index >= 0))
 
-CNF simplified: ((New_arrListCount == Old_arrListCount && New_containsNewRet && (!(New_arrListCount <= Old_index)) && Old_index >= 0))
+CNF simplified: ((Old_index < Old_arrListCount && New_containsNewRet && New_arrListCount == Old_arrListCount && Old_index >= 0))
 
-Predicate root : New_Ret != Old_arrListCount
+Predicate root : New_Ret != New_arrListCount
 
-Predicate root Right : New_Ret == Old_arrListCount
+Predicate root Right : Old_arrListCount <= New_Ret
 
-Any:
+Predicate root Right Right : New_Ret <= Old_arrListCount
 
-L:
+rounds: 8
 
-SubL:
+pex time: 117.19420576095581
 
-pex time: 82.11412215232849
+learn time: 1053.7375438213348
 
-learn time: 76.78366494178772
+Samples: 51
 
-Samples: 17
+---------------------
+PUT_ContainsContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+learned postcondition: ((0 <= New_arrListCount && 0 <= Old_arrListCount && -1 < New_arrListCount && -1 < Old_arrListCount && -1 <= New_arrListCount && -1 <= Old_arrListCount && -1 <= Old_arrListIndexOfX && -1 <= New_arrListIndexOfX && -1 <= Old_arrListLastIndexOfX && -1 <= New_arrListLastIndexOfX && Old_arrListCount <= New_arrListCount && New_arrListCount <= Old_arrListCount && New_arrListCount == Old_arrListCount && New_arrListIndexOfX < New_arrListCount && New_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX < New_arrListCount && Old_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX <= New_arrListCount && New_arrListIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX == Old_arrListIndexOfX && Old_arrListLastIndexOfX < New_arrListCount && New_arrListLastIndexOfX < New_arrListCount && Old_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX < Old_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && New_arrListIndexOfX <= Old_arrListIndexOfX && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX <= New_arrListCount && New_arrListLastIndexOfX <= New_arrListCount && Old_arrListLastIndexOfX <= Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX) && (((!((!(New_Ret)))) ||   (((!(New_Ret)) && -1 == Old_arrListIndexOfX && -1 == New_arrListIndexOfX && -1 == Old_arrListLastIndexOfX && -1 == New_arrListLastIndexOfX && Old_arrListLastIndexOfX ==                   Old_arrListIndexOfX && New_arrListLastIndexOfX ==                   Old_arrListIndexOfX && Old_arrListLastIndexOfX <=                   Old_arrListIndexOfX && New_arrListLastIndexOfX <=                   Old_arrListIndexOfX && Old_arrListLastIndexOfX ==                   New_arrListIndexOfX && New_arrListLastIndexOfX ==                   New_arrListIndexOfX && Old_arrListLastIndexOfX <=                   New_arrListIndexOfX && New_arrListLastIndexOfX <=                   New_arrListIndexOfX) && (((!(New_arrListIndexOfX <                          Old_arrListLastIndexOfX)) ||   false) && (New_arrListIndexOfX <                      Old_arrListLastIndexOfX ||   true)))) && ((!(New_Ret)) ||   (New_Ret && 0 < New_arrListCount && 0 < Old_arrListCount && 1 <= New_arrListCount && 1 <= Old_arrListCount && 0 <= Old_arrListIndexOfX && -1 < New_arrListIndexOfX && -1 < Old_arrListIndexOfX && 0 <= New_arrListIndexOfX && 0 <= Old_arrListLastIndexOfX && 0 <= New_arrListLastIndexOfX && -1 < Old_arrListLastIndexOfX && -1 < New_arrListLastIndexOfX))))
+
+simplified postcondition: ((New_arrListCount == Old_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && New_arrListIndexOfX <= Old_arrListIndexOfX && New_arrListLastIndexOfX <= Old_arrListCount && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_Ret && New_arrListIndexOfX >= 0) || (New_arrListCount == Old_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && New_arrListIndexOfX <= Old_arrListIndexOfX && (!(-1 == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListIndexOfX && (!(New_Ret)) && Old_arrListCount >= -1 && New_arrListIndexOfX <= -1 && Old_arrListLastIndexOfX >= -1 && New_arrListLastIndexOfX == -1))
+
+CNF simplified: ((Old_arrListIndexOfX == New_arrListIndexOfX && New_arrListCount == Old_arrListCount) && ((New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_Ret && New_arrListIndexOfX >= 0) || ((!(-1 == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListIndexOfX && (!(New_Ret)) && Old_arrListCount >= -1 && New_arrListIndexOfX <= -1 && Old_arrListLastIndexOfX >= -1 && New_arrListLastIndexOfX == -1)))
+
+Predicate root : Not(New_Ret)
+
+Predicate root Right : New_arrListIndexOfX < Old_arrListLastIndexOfX
+
+rounds: 9
+
+pex time: 227.85607933998108
+
+learn time: 21156.66184616089
+
+Samples: 67
+
+---------------------
+PUT_IndexOfContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+learned postcondition: ((-1 <= New_Ret && 0 <= New_arrListCount && 0 <= Old_arrListCount && -1 < New_arrListCount && -1 < Old_arrListCount && -1 <= New_arrListCount && -1 <= Old_arrListCount && New_Ret < New_arrListCount && New_Ret < Old_arrListCount && New_Ret <= New_arrListCount && New_Ret <= Old_arrListCount && New_Ret != New_arrListCount && New_Ret != Old_arrListCount && -1 <= Old_arrListLastIndexOfX && -1 <= New_arrListLastIndexOfX && New_Ret <= Old_arrListLastIndexOfX && New_Ret <= New_arrListLastIndexOfX && Old_arrListCount <= New_arrListCount && New_arrListCount <= Old_arrListCount && New_arrListCount == Old_arrListCount && New_arrListLastIndexOfX < New_arrListCount && Old_arrListLastIndexOfX < New_arrListCount && Old_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX < Old_arrListCount && Old_arrListLastIndexOfX != Old_arrListCount && New_arrListLastIndexOfX != Old_arrListCount && Old_arrListLastIndexOfX <= New_arrListCount && New_arrListLastIndexOfX <= New_arrListCount && Old_arrListLastIndexOfX <= Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX != New_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX) && (((!(New_arrListContainsX)) ||   ((Old_arrListContainsX && New_arrListContainsX && 0 <= New_Ret && -1 < New_Ret && 0 < New_arrListCount && 0 < Old_arrListCount && 1 <= New_arrListCount && 1 <= Old_arrListCount && 0 <= Old_arrListLastIndexOfX && 0 <= New_arrListLastIndexOfX && -1 < Old_arrListLastIndexOfX && -1 < New_arrListLastIndexOfX) && (((!(0 == Old_arrListCount)) || false) && (0 == Old_arrListCount || true)))) && (New_arrListContainsX ||   (-1 == New_Ret && (!(Old_arrListContainsX)) && (!(New_arrListContainsX)) && -1 == Old_arrListLastIndexOfX && -1 == New_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_Ret && New_arrListLastIndexOfX <= New_Ret && New_Ret == Old_arrListLastIndexOfX && New_Ret == New_arrListLastIndexOfX))))
+
+simplified postcondition: ((New_arrListCount == Old_arrListCount && (!(-1 == Old_arrListCount)) && (!(New_arrListContainsX)) && (!(Old_arrListContainsX)) && Old_arrListCount >= -1 && Old_arrListLastIndexOfX == -1 && New_arrListLastIndexOfX == -1 && New_Ret == -1) || (New_Ret <= New_arrListLastIndexOfX && New_arrListCount == Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && Old_arrListContainsX && New_arrListContainsX && New_Ret >= 0))
+
+CNF simplified: ((New_arrListCount == Old_arrListCount) && (((!(-1 == Old_arrListCount)) && (!(New_arrListContainsX)) && (!(Old_arrListContainsX)) && Old_arrListCount >= -1 && Old_arrListLastIndexOfX == -1 && New_arrListLastIndexOfX == -1 && New_Ret == -1) || (New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret <= New_arrListLastIndexOfX && Old_arrListContainsX && New_arrListContainsX && New_Ret >= 0)))
+
+Predicate root : New_arrListContainsX
+
+Predicate root Right : 0 == Old_arrListCount
+
+rounds: 4
+
+pex time: 83.08693075180054
+
+learn time: 4423.183902025223
+
+Samples: 29
+
+---------------------
+PUT_LastIndexOfContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+learned postcondition: ((-1 <= New_Ret && 0 <= New_arrListCount && 0 <= Old_arrListCount && -1 < New_arrListCount && -1 < Old_arrListCount && -1 <= New_arrListCount && -1 <= Old_arrListCount && -1 <= Old_arrListIndexOfX && -1 <= New_arrListIndexOfX && New_Ret < New_arrListCount && New_Ret < Old_arrListCount && New_Ret <= New_arrListCount && New_Ret <= Old_arrListCount && New_Ret != New_arrListCount && New_Ret != Old_arrListCount && New_arrListIndexOfX <= New_Ret && Old_arrListIndexOfX <= New_Ret && Old_arrListCount <= New_arrListCount && New_arrListCount <= Old_arrListCount && New_arrListCount == Old_arrListCount && New_arrListIndexOfX < New_arrListCount && New_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX < New_arrListCount && Old_arrListIndexOfX < Old_arrListCount && Old_arrListIndexOfX != New_arrListCount && Old_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX <= New_arrListCount && New_arrListIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListCount && New_arrListIndexOfX != New_arrListCount && New_arrListIndexOfX != Old_arrListCount && New_arrListIndexOfX == Old_arrListIndexOfX && Old_arrListIndexOfX <= New_arrListIndexOfX && New_arrListIndexOfX <= Old_arrListIndexOfX) && (((!(Old_arrListContainsX)) ||   ((Old_arrListContainsX && New_arrListContainsX && 0 <= New_Ret && -1 < New_Ret && 0 < New_arrListCount && 0 < Old_arrListCount && 1 <= New_arrListCount && 1 <= Old_arrListCount && 0 <= Old_arrListIndexOfX && -1 < New_arrListIndexOfX && -1 < Old_arrListIndexOfX && 0 <= New_arrListIndexOfX) && (((!(-1 == New_Ret)) || false) && (-1 == New_Ret || true)))) && (Old_arrListContainsX ||   (-1 == New_Ret && -1 == Old_arrListIndexOfX && (!(Old_arrListContainsX)) && (!(New_arrListContainsX)) && -1 == New_arrListIndexOfX && New_Ret == New_arrListIndexOfX && New_Ret <= New_arrListIndexOfX && New_Ret == Old_arrListIndexOfX && New_Ret <= Old_arrListIndexOfX))))
+
+simplified postcondition: (((!(-1 == Old_arrListCount)) && New_arrListCount == Old_arrListCount && (!(Old_arrListContainsX)) && (!(New_arrListContainsX)) && Old_arrListCount >= -1 && New_Ret == -1 && Old_arrListIndexOfX == -1 && New_arrListIndexOfX == -1) || (New_Ret <= Old_arrListCount && (!(New_Ret == Old_arrListCount)) && Old_arrListIndexOfX <= New_Ret && New_arrListCount == Old_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && New_arrListIndexOfX <= Old_arrListIndexOfX && New_arrListContainsX && Old_arrListContainsX && New_arrListIndexOfX >= 0))
+
+CNF simplified: ((New_arrListCount == Old_arrListCount) && (((!(-1 == Old_arrListCount)) && (!(Old_arrListContainsX)) && (!(New_arrListContainsX)) && Old_arrListCount >= -1 && New_Ret == -1 && Old_arrListIndexOfX == -1 && New_arrListIndexOfX == -1) || (New_Ret < Old_arrListCount && Old_arrListIndexOfX == New_arrListIndexOfX && Old_arrListIndexOfX <= New_Ret && New_arrListContainsX && Old_arrListContainsX && New_arrListIndexOfX >= 0)))
+
+Predicate root : Old_arrListContainsX
+
+Predicate root Right : -1 == New_Ret
+
+rounds: 5
+
+pex time: 115.79963684082031
+
+learn time: 4554.223504781723
+
+Samples: 30
+
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+learned postcondition: ((-1 < New_Ret && 0 <= New_Ret && -1 <= New_Ret) && (((!(0 == New_Ret)) ||   ((0 == New_Ret) && (((!(1 <= New_Ret)) || false) && (1 <= New_Ret || true)))) && (0 == New_Ret || (0 < New_Ret && 1 <= New_Ret))))
+
+simplified postcondition: ((New_Ret >= 1) || (New_Ret == 0))
+
+CNF simplified: (((New_Ret >= 1) || (New_Ret == 0)))
+
+Predicate root : 0 == New_Ret
+
+Predicate root Right : 1 <= New_Ret
+
+rounds: 2
+
+pex time: 16.81808876991272
+
+learn time: 0.582200288772583
+
+Samples: 3
+
+======================
+Average Rounds: 5.555555555555555
+
+Average Pex Time: 160.42393276426526
+
+Average Learn Time: 10016.41416449017
