@@ -120,7 +120,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_ret_key", New_Ret_Key);
             PexObserve.ValueForViewing("$new_ret_value", New_Ret_Value);
 
-            Assert.True(((New_bhCount == -1 + Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value <= Old_bhMinimumValue && Old_bhMinimumValue <= New_Ret_Value && New_bhCount >= 0 && Old_bhMinimumValue >= 0)));
+            Assert.True((New_Ret_Value == Old_bhMinimumValue && New_bhCount == -1 + Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_bhCount >= 0 && Old_bhMinimumValue >= 0));
         }
 
         [PexMethod]
@@ -158,7 +158,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_ret_key", New_Ret_Key);
             PexObserve.ValueForViewing("$new_ret_value", New_Ret_Value);
 
-            Assert.True(((Old_index <= New_bhCount && New_bhCount == -1 + Old_bhCount && Old_bhMinimumKey <= New_Ret_Key && Old_index >= 0 && New_bhMinimumValue >= 0)));
+            Assert.True((Old_index <= New_bhCount && New_bhCount == -1 + Old_bhCount && Old_bhMinimumKey <= New_Ret_Key && Old_index >= 0 && New_bhMinimumValue >= 0));
         }
 
         [PexMethod]
@@ -188,7 +188,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$old_bh_value", Old_value);
             PexObserve.ValueForViewing("$new_ret", New_Ret);
 
-            Assert.True((((!(New_Ret == Old_bhCount)) && New_Ret <= Old_bhCount && Old_bhCount <= New_bhCount && New_bhCount <= Old_bhCount && New_Ret >= -1 && Old_bhMinimumValue >= 0)));
+            Assert.True((Old_bhCount == New_bhCount && New_Ret < Old_bhCount && New_Ret >= -1 && Old_bhMinimumValue >= 0));
         }
 
         [PexMethod]
