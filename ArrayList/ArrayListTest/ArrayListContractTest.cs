@@ -189,7 +189,7 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$old_arrList_contains_x", Old_arrListContainsX);
             PexObserve.ValueForViewing("$new_arrList_contains_x", New_arrListContainsX);
 
-            Assert.True(((New_arrListContainsX && New_arrListCount <= Old_arrListCount && Old_arrListCount <= New_arrListCount && (!(New_arrListCount <= New_arrListLastIndexOfX)) && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && Old_arrListContainsX && (!(Old_x == New_arrListCount)) && New_arrListIndexOfX <= Old_arrListIndexOfX && Old_x >= 0 && New_arrListIndexOfX >= 0) || (New_arrListContainsX && New_arrListCount <= Old_arrListCount && Old_arrListCount <= New_arrListCount && (!(New_arrListCount <= New_arrListLastIndexOfX)) && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_x && (!(Old_arrListContainsX)) && (!(Old_x == Old_arrListCount)) && New_arrListLastIndexOfX <= New_arrListIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX == -1 && Old_arrListLastIndexOfX == -1) || (New_arrListContainsX && New_arrListCount <= Old_arrListCount && Old_arrListCount <= New_arrListCount && (!(New_arrListCount <= New_arrListLastIndexOfX)) && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && (!(Old_arrListContainsX)) && New_arrListLastIndexOfX <= New_arrListIndexOfX && New_arrListLastIndexOfX <= 1 && New_arrListIndexOfX >= 0 && Old_x == 1 && Old_arrListIndexOfX == -1 && Old_arrListLastIndexOfX == -1)));
+            Assert.True(((New_arrListContainsX && New_arrListIndexOfX <= Old_index && New_arrListCount == Old_arrListCount && Old_index <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1)));
         }
 
         [PexMethod]
@@ -245,7 +245,7 @@ namespace ArrayList.Test
             //PexObserve.ValueForViewing("$old_arrList_contains_x", Old_arrListContainsX);
             //PexObserve.ValueForViewing("$new_arrList_contains_x", New_arrListContainsX);
 
-            Assert.True(((New_arrListCount <= Old_arrListCount && Old_arrListCount <= New_arrListCount && (!(New_arrListCount <= New_arrListLastIndexOfX)) && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && (!(Old_x == New_arrListCount)) && (!(New_arrListLastIndexOfX == Old_x)) && New_Ret && Old_arrListIndexOfX == 0 && Old_x >= 0 && Old_arrListLastIndexOfX >= 1 && New_arrListIndexOfX == 0) || (New_arrListCount <= Old_arrListCount && Old_arrListCount <= New_arrListCount && (!(New_arrListCount <= Old_arrListIndexOfX)) && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(1 == Old_arrListIndexOfX)) && Old_arrListLastIndexOfX <= Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListIndexOfX && Old_arrListIndexOfX == New_arrListIndexOfX && Old_arrListIndexOfX >= -1) || (New_arrListCount <= Old_arrListCount && Old_arrListCount <= New_arrListCount && (!(New_arrListCount <= Old_arrListIndexOfX)) && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_Ret && Old_arrListLastIndexOfX <= Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListIndexOfX && Old_arrListIndexOfX == New_arrListIndexOfX && Old_arrListIndexOfX >= -1 && Old_x == 0)));
+            Assert.True(((Old_arrListIndexOfX == New_arrListIndexOfX && New_arrListCount == Old_arrListCount) && ((New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_Ret && New_arrListIndexOfX >= 0) || ((!(-1 == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListIndexOfX && (!(New_Ret)) && Old_arrListCount >= -1 && New_arrListIndexOfX <= -1 && Old_arrListLastIndexOfX >= -1 && New_arrListLastIndexOfX == -1))));
         }
 
         [PexMethod]
@@ -329,8 +329,8 @@ namespace ArrayList.Test
             PexObserve.ValueForViewing("$New_ret", New_Ret);
 
             //PexObserve.ValueForViewing("$new_containsNewRet", New_containsNewRet);
-            
-            Assert.True(false);
+
+            Assert.True(((New_Ret >= 1) || (New_Ret == 0)));
         }
     }
 }
