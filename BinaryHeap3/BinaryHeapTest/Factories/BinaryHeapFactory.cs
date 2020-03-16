@@ -31,7 +31,7 @@ namespace BinaryHeap.Test.Factories
         public static BinaryHeap<int, int> CreateBinaryHeapKeyValPair([PexAssumeNotNull]KeyValuePair<int, int>[] pairs, int capacity)
         {
             //PexAssume.TrueForAll(0, pairs.Length, _i => pairs[_i].Key > -11 && pairs[_i].Key < 11 && pairs[_i].Value > -11 && pairs[_i].Value < 11);
-            //PexAssume.TrueForAll(0, pairs.Length, _i => pairs[_i].Key > -101 && pairs[_i].Key < 101);
+            PexAssume.TrueForAll(0, pairs.Length, _i => (pairs[_i].Value < -1 && pairs[_i].Value >= -1));
             PexAssume.IsTrue(capacity > 0);
             PexAssume.IsTrue(pairs.Length <= 8 || pairs.Length >= 8);
             var bh = new BinaryHeap<int, int>(capacity, Comparer<int>.Default.Compare);
