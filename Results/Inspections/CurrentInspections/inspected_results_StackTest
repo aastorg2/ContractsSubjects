@@ -6,28 +6,153 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-learned postcondition: ((New_ContainsNewRet && New_s1Count == Old_s1Count && New_s1Count <= Old_s1Count && Old_s1Count <= New_s1Count && 1 <= Old_s1Count && 0 < Old_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= Old_s1Count && 1 <= New_s1Count && 0 < New_s1Count && 0 <= New_s1Count && -1 < New_s1Count && -1 <= New_s1Count) && (((!(New_Ret <= Old_s1Count)) ||   ((New_Ret <= Old_s1Count && New_Ret <= New_s1Count) && (((!(New_Ret != New_s1Count)) ||   ((New_Ret != Old_s1Count &&  New_Ret != New_s1Count &&  New_Ret < Old_s1Count &&  New_Ret < New_s1Count) &&  (((!(1 == New_Ret)) || ((1 == New_Ret &&   1 < Old_s1Count &&   1 < New_s1Count &&   1 <= New_Ret &&   0 < New_Ret &&   0 <= New_Ret &&   -1 < New_Ret &&   -1 <= New_Ret) &&  (((!(New_Ret ==               Old_s1Count)) ||  false) &&   (New_Ret ==               Old_s1Count ||  true)))) &&  (1 == New_Ret || true)))) && (New_Ret != New_s1Count ||   (New_Ret == Old_s1Count &&  New_Ret == New_s1Count &&  Old_s1Count <= New_Ret &&  New_s1Count <= New_Ret &&  1 <= New_Ret &&  0 < New_Ret &&  0 <= New_Ret &&  -1 < New_Ret &&  -1 <= New_Ret))))) && (New_Ret <= Old_s1Count ||   (New_Ret != Old_s1Count && New_Ret != New_s1Count && Old_s1Count < New_Ret && Old_s1Count <= New_Ret && New_s1Count < New_Ret && New_s1Count <= New_Ret && 1 < New_Ret && 1 <= New_Ret && 0 < New_Ret && 0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret))))
+Label:
 
-simplified postcondition: ((New_ContainsNewRet && New_s1Count <= Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count >= 1))
+Analysis:
 
-CNF simplified: ((New_s1Count == Old_s1Count && New_ContainsNewRet && New_s1Count >= 1))
+learned postcondition: ((New_ContainsNewRet && 0 < New_s1Count && 0 < Old_s1Count && 1 <= New_s1Count && 0 <= New_s1Count && -1 < New_s1Count && 1 <= Old_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count <= Old_s1Count && New_s1Count == Old_s1Count) && (((!(New_s1Count < New_Ret)) ||   ((1 < New_Ret && 0 < New_Ret && 1 <= New_Ret && 0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret && New_s1Count < New_Ret && Old_s1Count < New_Ret && New_Ret != New_s1Count && Old_s1Count <= New_Ret && New_Ret != Old_s1Count && New_s1Count <= New_Ret) && (((!(New_Ret <= Old_s1Count)) || false) && (New_Ret <= Old_s1Count || true)))) && (New_s1Count < New_Ret ||   (New_Ret <= New_s1Count && New_Ret <= Old_s1Count))))
 
-Predicate: root : New_Ret <= Old_s1Count
+simplified postcondition: ((New_ContainsNewRet && New_s1Count == Old_s1Count && Old_s1Count >= 1))
 
-Predicate: root Right : New_Ret != New_s1Count
+CNF simplified: ((New_ContainsNewRet && New_s1Count == Old_s1Count && Old_s1Count >= 1))
 
-Predicate: root Right Right : 1 == New_Ret
+Predicate root : New_s1Count < New_Ret
 
-Predicate: root Right Right Right : New_Ret == Old_s1Count
+Predicate root Right : New_Ret <= Old_s1Count
 
-Any:
+rounds: 5
 
-L:
+pex time: 99.16025185585022
 
-SubL:
+learn time: 94.45568227767944
 
-pex time: 125.34368777275085
+Samples: 15
 
-learn time: 171.80214619636536
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
 
-Samples: 21
+Label:
+
+Analysis:
+
+learned postcondition: ((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (((!(New_Ret < Old_Top)) ||   ((0 < Old_Top && 1 <= Old_Top && 0 <= Old_Top && -1 < Old_Top && -1 <= Old_Top && New_Ret < Old_Top && New_Ret <= Old_Top && New_Ret != Old_Top) && (((!(0 < New_Top)) ||   ((0 < New_Top &&  1 <= New_Top &&  0 <= New_Top &&  -1 < New_Top &&  -1 <= New_Top &&  New_Ret < New_Top &&  New_Ret <= New_Top &&  New_Ret != New_Top) &&  (((!(0 < New_Ret)) || ((0 < New_Ret &&   1 < Old_Top &&   1 < New_Top &&   1 <= New_Ret &&   New_Top <= Old_Top &&   Old_Top <= New_Top &&   New_Top == Old_Top) &&  (((!(New_Ret == 0)) ||  false) &&   (New_Ret == 0 ||  true)))) &&  (0 < New_Ret || (0 == New_Ret &&  New_Ret == 0))))) && (0 < New_Top ||   (0 == New_Ret &&  New_Ret == 0 &&  New_Top < Old_Top &&  New_Top <= Old_Top &&  New_Top != Old_Top &&  New_Top <= New_Ret))))) && (New_Ret < Old_Top || (Old_Top <= New_Ret))))
+
+simplified postcondition: ((Old_Top <= New_Ret && New_Ret >= 0) || (New_Top == Old_Top && New_Ret >= 0 && Old_Top >= 1) || (New_Top == Old_Top && New_Ret == 0) || (New_Ret == 0 && New_Top >= 1) || (New_Top <= Old_Top && New_Ret == 0) || (New_Top <= Old_Top && New_Top <= 0 && New_Ret == 0))
+
+CNF simplified: (((Old_Top <= New_Ret && New_Ret >= 0) || (New_Top == Old_Top && New_Ret >= 0 && Old_Top >= 1) || (New_Top == Old_Top && New_Ret == 0) || (New_Ret == 0 && New_Top >= 1) || (New_Top <= Old_Top && New_Ret == 0) || (New_Top <= Old_Top && New_Top <= 0 && New_Ret == 0)))
+
+Predicate root : New_Ret < Old_Top
+
+Predicate root Right : 0 < New_Top
+
+Predicate root Right Right : 0 < New_Ret
+
+Predicate root Right Right Right : New_Ret == 0
+
+rounds: 8
+
+pex time: 109.50939917564392
+
+learn time: 2479.3014364242554
+
+Samples: 39
+
+---------------------
+PUT_ContainsContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+learned postcondition: ((0 <= New_s1Count && -1 < New_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && New_s1Count <= Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count == Old_s1Count) && (((!((!(New_Ret)))) ||   (((!(New_Ret))) && (((!(New_Ret)) || false) && (New_Ret || true)))) && ((!(New_Ret)) ||   (New_Ret && 0 < New_s1Count && 0 < Old_s1Count && 1 <= New_s1Count && 1 <= Old_s1Count && New_Top <= Old_Top && Old_Top <= New_Top && New_Top == Old_Top))))
+
+simplified postcondition: ((New_s1Count == Old_s1Count && (!(New_Ret)) && New_s1Count >= 0) || (New_s1Count == Old_s1Count && New_Top == Old_Top && New_s1Count >= 1))
+
+CNF simplified: ((New_s1Count == Old_s1Count) && (((!(New_Ret)) && New_s1Count >= 0) || (New_Top == Old_Top && New_s1Count >= 1)))
+
+Predicate root : Not(New_Ret)
+
+Predicate root Right : New_Ret
+
+rounds: 6
+
+pex time: 180.56096863746643
+
+learn time: 1431.2623090744019
+
+Samples: 31
+
+---------------------
+PUT_PopContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+learned postcondition: ((0 < Old_s1Count && -1 < New_s1Count && -1 < Old_s1Count && 0 <= New_s1Count && 0 <= Old_s1Count && 1 <= Old_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && New_Ret <= Old_Top && Old_Top <= New_Ret && New_Ret == Old_Top && New_s1Count < Old_s1Count && New_s1Count != Old_s1Count && New_s1Count <= Old_s1Count && New_s1Count == Old_s1Count - 1) && (((!(New_ContainsNewRet)) ||   ((New_ContainsNewRet && 1 < Old_s1Count && 0 < New_s1Count && 1 <= New_s1Count) && (((!(1 < Old_Top)) ||   ((0 < Old_Top &&  0 < New_Ret &&  1 < Old_Top &&  1 < New_Ret &&  0 <= Old_Top &&  0 <= New_Ret &&  1 <= Old_Top &&  1 <= New_Ret &&  -1 < Old_Top &&  -1 < New_Ret &&  -1 <= Old_Top &&  -1 <= New_Ret) &&  (((!(0 == Old_Top)) || false) &&  (0 == Old_Top || true)))) && (1 < Old_Top ||   (Old_Top < Old_s1Count &&  New_Ret < Old_s1Count &&  Old_Top <= Old_s1Count &&  New_Ret <= New_s1Count &&  New_Ret <= Old_s1Count &&  Old_Top != Old_s1Count &&  New_Ret != Old_s1Count &&  Old_Top <= New_s1Count))))) && (New_ContainsNewRet || ((!(New_ContainsNewRet))))))
+
+simplified postcondition: ((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count && (!(New_ContainsNewRet)) && Old_s1Count >= 1) || (New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count && New_s1Count >= 1))
+
+CNF simplified: ((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count) && (((!(New_ContainsNewRet)) && Old_s1Count >= 1) || (New_s1Count >= 1)))
+
+Predicate root : New_ContainsNewRet
+
+Predicate root Right : 1 < Old_Top
+
+Predicate root Right Right : 0 == Old_Top
+
+rounds: 11
+
+pex time: 320.80222249031067
+
+learn time: 114350.75859427452
+
+Samples: 95
+
+---------------------
+PUT_PushContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+learned postcondition: ((New_s1ContainsX && 0 < New_s1Count && -1 < New_s1Count && New_Top <= Old_x && -1 < Old_s1Count && Old_x == New_Top && 0 <= New_s1Count && 0 <= Old_s1Count && Old_x <= New_Top && 1 <= New_s1Count && New_Top == Old_x && -1 <= New_s1Count && -1 <= Old_s1Count && Old_s1Count < New_s1Count && New_s1Count != Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count == Old_s1Count + 1) && (((!(Old_s1ContainsX)) ||   ((Old_s1ContainsX && 1 < New_s1Count && 0 < Old_s1Count && 1 <= Old_s1Count) && (((!(New_s1Count < Old_x)) ||   ((1 < Old_x &&  0 < Old_x &&  -1 < Old_x &&  0 <= Old_x &&  1 <= Old_x &&  0 < New_Top &&  1 < New_Top &&  -1 <= Old_x &&  0 <= New_Top &&  1 <= New_Top &&  -1 < New_Top &&  -1 <= New_Top &&  New_s1Count < Old_x &&  Old_s1Count < Old_x &&  Old_x != New_s1Count &&  Old_x != Old_s1Count &&  Old_s1Count <= Old_x &&  New_s1Count <= Old_x &&  Old_s1Count < New_Top &&  New_s1Count < New_Top &&  Old_s1Count <= New_Top &&  New_s1Count <= New_Top &&  New_Top != New_s1Count &&  New_Top != Old_s1Count) &&  (((!(1 == Old_Top)) || ((0 < Old_Top &&   1 == Old_Top &&   0 <= Old_Top &&   1 <= Old_Top &&   -1 < Old_Top &&   -1 <= Old_Top &&   1 < Old_s1Count &&   Old_Top < Old_x &&   Old_Top <= Old_x &&   Old_x != Old_Top &&   Old_Top < New_Top &&   New_Top != Old_Top &&   Old_Top <= New_Top &&   Old_Top <                                        New_s1Count &&   Old_Top <                                        Old_s1Count &&   Old_Top <=                                        Old_s1Count &&   Old_Top !=               New_s1Count &&   Old_Top !=               Old_s1Count &&   Old_Top <=                                        New_s1Count) &&  (((!(Old_s1Count <                                        Old_Top)) ||  false) &&   (Old_s1Count <                                        Old_Top ||  true)))) &&  (1 == Old_Top || true)))) && (New_s1Count < Old_x ||   (Old_x <= New_s1Count &&  New_Top <= New_s1Count))))) && (Old_s1ContainsX || ((!(Old_s1ContainsX))))))
+
+simplified postcondition: ((New_s1ContainsX && New_Top == Old_x && New_s1Count == 1 + Old_s1Count && (!(Old_s1ContainsX)) && New_s1Count >= 1) || (New_s1ContainsX && New_Top == Old_x && New_s1Count == 1 + Old_s1Count && (!(1 == Old_Top)) && Old_s1Count >= 1) || (New_s1ContainsX && New_Top == Old_x && New_s1Count == 1 + Old_s1Count && (!(1 == Old_s1Count)) && Old_s1Count >= 1) || (New_s1ContainsX && New_Top == Old_x && New_s1Count == 1 + Old_s1Count && New_Top <= New_s1Count && Old_s1Count >= 1))
+
+CNF simplified: ((New_s1ContainsX && New_Top == Old_x && New_s1Count == 1 + Old_s1Count) && (((!(Old_s1ContainsX)) && New_s1Count >= 1) || ((!(1 == Old_Top)) && Old_s1Count >= 1) || ((!(1 == Old_s1Count)) && Old_s1Count >= 1) || (New_Top <= New_s1Count && Old_s1Count >= 1)))
+
+Predicate root : Old_s1ContainsX
+
+Predicate root Right : New_s1Count < Old_x
+
+Predicate root Right Right : 1 == Old_Top
+
+Predicate root Right Right Right : Old_s1Count < Old_Top
+
+rounds: 8
+
+pex time: 165.32518577575684
+
+learn time: 51093.066529512405
+
+Samples: 79
+
+======================
+Average Rounds: 7.6
+
+Average Pex Time: 175.07160558700562
+
+Average Learn Time: 33889.768910312654
