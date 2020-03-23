@@ -3,7 +3,17 @@
 > ### Requirements:
 > - Python version: 3.7 and pip
 
-#### Analyze.py
+#### pex_runner.py
+---
+> This Script used to run pex on a singular PUT*.
+> *Performs other actions as well, but running pex is the main concern for now.
+> The results will be printed to standard console (run_pex function returns generated tests in a list).
+> When running command, use -run flag.
+> ##### EXAMPLE USESAGE:
+>> ```sh
+>> $ python.exe pex_runner.py -run `test_file.cs` `solution.sln` `assembly.dll`
+
+#### analyze.py
 ---
 > This Script used to analyze inspections results.
 > The results will be printed to standard console.
@@ -36,7 +46,7 @@
 >> Correct conjunctive contracts missed with PexChoose: <br>
 >> &emsp;&emsp;PUT_CountContract
 
-#### Inspect.py
+#### inspect.py
 ---
 > This Script used to generate inspections results from a run file.
 > The inspection file will be generated in the working directory with "inspected" appened to the front of the run file name.
