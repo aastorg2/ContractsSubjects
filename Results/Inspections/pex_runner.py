@@ -13,7 +13,7 @@ import shutil
 import io
 import platform
 from test import Test
-from lxml import etree
+from xml.etree import ElementTree as ET
 
 # CONSTANTS #
 WINDOWS = "Windows"
@@ -129,9 +129,9 @@ def parse_report(contract: "str", report: "str")-> "None":
     number_of_tests_generated = int()
     number_of_passing_tests = int()
     # API call to parse xml into tree
-    tree = etree.parse(report)
+    tree = ET.parse(report)
     # Query the tree for generated tests and see the result
-    for test in tree.xpath("//generatedTest"):
+    for test in tree.findall(".//generatedTest"):
             # check for TermFailure exception
             name = test.get("name")
             if name.find("TermDestruction") != -1:
