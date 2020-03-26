@@ -248,10 +248,12 @@ if __name__ == "__main__":
     # Set upn pex methods within the contract test and run pex
     #run(test_file, solution, assembly) # puts as parameter
     # The contracts pex will generate tests for
-    contracts = ['PUT_AddContract', 'PUT_RemoveContract', 'PUT_InsertContract', 'PUT_SetContract', 'PUT_GetContract',
+    # NOTE: A single contract will be the input
+    stack_contracts = ["PUT_PushContract"]
+    arrlist_contracts = ['PUT_AddContract', 'PUT_RemoveContract', 'PUT_InsertContract', 'PUT_SetContract', 'PUT_GetContract',
                  'PUT_ContainsContract', 'PUT_IndexOfContract', 'PUT_LastIndexOfContract', 'PUT_CountContract']
     # Runs pex and stores the generated tests
-    tests = run_pex(assembly, contracts[0])
+    tests = run_pex(assembly, stack_contracts[0])
 
     for test in tests:
         print(test)
