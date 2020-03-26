@@ -15,8 +15,8 @@ namespace BinaryHeap.Test.Factories
         {
             PexAssume.IsTrue(capacity > 0);
             PexAssume.IsTrue(priorities.Length == values.Length);
-            PexAssume.TrueForAll(priorities, e => e <= 12 || e >= 12);
-            PexAssume.TrueForAll(values, e => e <= 12 || e >= 12);
+            PexAssume.TrueForAll(priorities, e => e < -1 || e >= -1);
+            PexAssume.TrueForAll(values, e => e < -1 || e >= -1);
             var bh = new BinaryHeap<int, int>(capacity, Comparer<int>.Default.Compare);
 
             for (int i = 0; i < priorities.Length; i++)
@@ -31,7 +31,8 @@ namespace BinaryHeap.Test.Factories
         public static BinaryHeap<int, int> CreateBinaryHeapKeyValPair([PexAssumeNotNull]KeyValuePair<int, int>[] pairs, int capacity)
         {
             //PexAssume.TrueForAll(0, pairs.Length, _i => pairs[_i].Key > -11 && pairs[_i].Key < 11 && pairs[_i].Value > -11 && pairs[_i].Value < 11);
-            PexAssume.TrueForAll(0, pairs.Length, _i => (pairs[_i].Value < -1 && pairs[_i].Value >= -1));
+            //PexAssume.TrueForAll(0, pairs.Length, _i => (pairs[_i].Key < -1 || pairs[_i].Key >= -1));
+            //PexAssume.TrueForAll(0, pairs.Length, _i => (pairs[_i].Value < -1 || pairs[_i].Value >= -1));
             PexAssume.IsTrue(capacity > 0);
             PexAssume.IsTrue(pairs.Length <= 8 || pairs.Length >= 8);
             var bh = new BinaryHeap<int, int>(capacity, Comparer<int>.Default.Compare);
