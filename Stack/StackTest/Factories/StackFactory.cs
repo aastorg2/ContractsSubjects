@@ -49,8 +49,8 @@ namespace Stack.Test.Factories
         public static Stack.Stack<int> Create([PexAssumeNotNull]int[] elems)
         {
             //PexAssume.AreDistinctValues(elems);
-            //PexAssume.TrueForAll(elems, e => e != 0);
-            //PexAssume.TrueForAll(0, elems.Length, _i => elems[_i] > -11 && elems[_i] < 11);
+            PexAssume.TrueForAll(elems, e => e <= -6 || e > -6 );
+            //PexAssume.TrueForAll(0, elems.Length, _i => elems[_i] < -2 || elems[_i] >= 2);
             Stack.Stack<int> ret = new Stack.Stack<int>();
             for (int i = 0; i < elems.Length; i++)
             {
