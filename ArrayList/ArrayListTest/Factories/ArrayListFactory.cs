@@ -15,8 +15,8 @@ namespace ArrayList.Test.Factories
         public static ArrayList Create(int[] elems)
         {
             //PexAssume.IsTrue( elems.Length < 11);
-            //PexAssume.TrueForAll(0, elems.Length, _i => elems[_i] > -11 && elems[_i] < 11);
             PexAssume.IsNotNull(elems);
+            PexAssume.TrueForAll(0, elems.Length, _i => elems[_i] < 5 || elems[_i] >= 5);
             ArrayList arrList = new ArrayList();
             
             for (int i = 0; i < elems.Length; i++)
