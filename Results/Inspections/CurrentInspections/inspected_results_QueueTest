@@ -16,6 +16,8 @@ simplified postcondition: ((New_s1ContainsX && New_s1Count == 1 + Old_s1Count &&
 
 CNF simplified: ((New_s1ContainsX && New_s1Count == 1 + Old_s1Count) && (((!(Old_s1ContainsX)) && New_s1Count >= 1) || (New_Top == Old_Top && Old_s1Count >= 1)))
 
+CNF simplified (smt): (and (and New_s1ContainsX (= New_s1Count (+ 1 Old_s1Count))) (or (and (not Old_s1ContainsX) (>= New_s1Count 1)) (and (= New_Top Old_Top) (>= Old_s1Count 1))))
+
 Predicate root : Old_s1ContainsX
 
 Predicate root Right : Not(Old_s1ContainsX)
@@ -44,6 +46,8 @@ simplified postcondition: ((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Coun
 
 CNF simplified: ((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count) && (((!(New_s1ContainsNewRet)) && Old_s1Count >= 1) || (New_s1Count >= 1)))
 
+CNF simplified (smt): (and (and (= New_Ret Old_Top) (= New_s1Count (+ -1 Old_s1Count))) (or (and (not New_s1ContainsNewRet) (>= Old_s1Count 1)) (>= New_s1Count 1)))
+
 Predicate root : Not(New_s1ContainsNewRet)
 
 Predicate root Right : New_s1ContainsNewRet
@@ -71,6 +75,8 @@ learned postcondition: ((New_s1ContainsNewRet && 0 < New_s1Count && 0 < Old_s1Co
 simplified postcondition: ((New_s1ContainsNewRet && New_s1Count == Old_s1Count && Old_s1Count >= 1))
 
 CNF simplified: ((New_s1ContainsNewRet && New_s1Count == Old_s1Count && Old_s1Count >= 1))
+
+CNF simplified (smt): (and New_s1ContainsNewRet (= New_s1Count Old_s1Count) (>= Old_s1Count 1))
 
 Predicate root : New_Ret <= Old_s1Count
 
@@ -104,6 +110,8 @@ simplified postcondition: ((New_s1Count == Old_s1Count && (!(New_Ret)) && Old_s1
 
 CNF simplified: ((New_s1Count == Old_s1Count) && (((!(New_Ret)) && Old_s1Count >= 0) || (New_Top == Old_Top && Old_s1Count >= 1)))
 
+CNF simplified (smt): (and (= New_s1Count Old_s1Count) (or (and (not New_Ret) (>= Old_s1Count 0)) (and (= New_Top Old_Top) (>= Old_s1Count 1))))
+
 Predicate root : Not(New_Ret)
 
 Predicate root Right : New_Ret
@@ -131,6 +139,8 @@ learned postcondition: ((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (((!(
 simplified postcondition: ((Old_Top <= New_Top && New_Ret >= 0) || (New_Ret == 0))
 
 CNF simplified: (((Old_Top <= New_Top && New_Ret >= 0) || (New_Ret == 0)))
+
+CNF simplified (smt): (or (and (<= Old_Top New_Top) (>= New_Ret 0)) (= New_Ret 0))
 
 Predicate root : New_Top < Old_Top
 

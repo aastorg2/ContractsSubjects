@@ -16,6 +16,8 @@ simplified postcondition: ((New_bhMinimumKey <= Old_key && New_bhCount == 1 + Ol
 
 CNF simplified: ((New_bhMinimumKey <= Old_key && New_bhCount == 1 + Old_bhCount && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1))
 
+CNF simplified (smt): (and (<= New_bhMinimumKey Old_key) (= New_bhCount (+ 1 Old_bhCount)) (not (= Old_bhIndexOfValue Old_bhCount)) (<= Old_bhIndexOfValue Old_bhCount) (<= New_bhIndexOfValue Old_bhCount) (>= New_bhIndexOfValue 0) (>= Old_bhIndexOfValue -1))
+
 
 rounds: 5
 
@@ -40,6 +42,8 @@ learned postcondition: (0 < New_bhCount && 0 < Old_bhCount && 0 <= Old_bhCount &
 simplified postcondition: ((Old_bhCount <= New_bhCount && New_bhCount <= Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value <= Old_bhMinimumValue && New_bhMinimumValue <= New_Ret_Value && New_bhMinimumKey == Old_bhMinimumKey && Old_bhMinimumValue <= New_bhMinimumValue && Old_bhCount >= 1))
 
 CNF simplified: ((Old_bhCount == New_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value <= Old_bhMinimumValue && New_bhMinimumValue <= New_Ret_Value && New_bhMinimumKey == Old_bhMinimumKey && Old_bhMinimumValue <= New_bhMinimumValue && Old_bhCount >= 1))
+
+CNF simplified (smt): (and (= Old_bhCount New_bhCount) (= New_Ret_Key Old_bhMinimumKey) (<= New_Ret_Value Old_bhMinimumValue) (<= New_bhMinimumValue New_Ret_Value) (= New_bhMinimumKey Old_bhMinimumKey) (<= Old_bhMinimumValue New_bhMinimumValue) (>= Old_bhCount 1))
 
 
 rounds: 4
@@ -66,6 +70,8 @@ simplified postcondition: ((New_bhCount == -1 + Old_bhCount && Old_bhMinimumKey 
 
 CNF simplified: ((Old_bhMinimumKey == New_Ret_Key && New_Ret_Value == Old_bhMinimumValue && New_bhCount == -1 + Old_bhCount && New_bhCount >= 0 && New_bhMinimumValue >= 0))
 
+CNF simplified (smt): (and (= Old_bhMinimumKey New_Ret_Key) (= New_Ret_Value Old_bhMinimumValue) (= New_bhCount (+ -1 Old_bhCount)) (>= New_bhCount 0) (>= New_bhMinimumValue 0))
+
 
 rounds: 5
 
@@ -90,6 +96,8 @@ learned postcondition: (0 <= Old_index && -1 < Old_index && 0 < Old_bhCount && -
 simplified postcondition: ((Old_index <= New_bhCount && New_bhCount == -1 + Old_bhCount && Old_bhMinimumKey <= New_Ret_Key && Old_index >= 0 && New_bhMinimumValue >= 0))
 
 CNF simplified: ((Old_index <= New_bhCount && New_bhCount == -1 + Old_bhCount && Old_bhMinimumKey <= New_Ret_Key && Old_index >= 0 && New_bhMinimumValue >= 0))
+
+CNF simplified (smt): (and (<= Old_index New_bhCount) (= New_bhCount (+ -1 Old_bhCount)) (<= Old_bhMinimumKey New_Ret_Key) (>= Old_index 0) (>= New_bhMinimumValue 0))
 
 
 rounds: 5
@@ -116,6 +124,8 @@ simplified postcondition: (((!(New_Ret == Old_bhCount)) && New_Ret <= Old_bhCoun
 
 CNF simplified: ((Old_bhCount == New_bhCount && (!(New_Ret == Old_bhCount)) && New_Ret <= Old_bhCount && New_Ret >= -1))
 
+CNF simplified (smt): (and (= Old_bhCount New_bhCount) (not (= New_Ret Old_bhCount)) (<= New_Ret Old_bhCount) (>= New_Ret -1))
+
 
 rounds: 4
 
@@ -141,6 +151,8 @@ simplified postcondition: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Ol
 
 CNF simplified: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_prioirty && (!(New_bhIndexOfValue == New_bhCount)) && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1))
 
+CNF simplified (smt): (and (<= Old_bhCount New_bhCount) (<= New_bhMinimumKey Old_prioirty) (not (= New_bhIndexOfValue New_bhCount)) (not (= Old_bhIndexOfValue Old_bhCount)) (<= Old_bhIndexOfValue Old_bhCount) (<= New_bhIndexOfValue Old_bhCount) (>= New_bhIndexOfValue 0) (>= Old_bhIndexOfValue -1))
+
 
 rounds: 4
 
@@ -165,6 +177,8 @@ learned postcondition: (0 < New_bhCount && 0 <= Old_bhCount && -1 < New_bhCount 
 simplified postcondition: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_prioirty && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && Newd_bhIndexOfValue <= Old_bhCount && (!(Newd_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue >= -1 && Newd_bhIndexOfValue >= 0))
 
 CNF simplified: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_prioirty && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && Newd_bhIndexOfValue <= Old_bhCount && (!(Newd_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue >= -1 && Newd_bhIndexOfValue >= 0))
+
+CNF simplified (smt): (and (<= Old_bhCount New_bhCount) (<= New_bhMinimumKey Old_prioirty) (not (= Old_bhIndexOfValue Old_bhCount)) (<= Old_bhIndexOfValue Old_bhCount) (<= Newd_bhIndexOfValue Old_bhCount) (not (= Newd_bhIndexOfValue New_bhCount)) (>= Old_bhIndexOfValue -1) (>= Newd_bhIndexOfValue 0))
 
 
 rounds: 3

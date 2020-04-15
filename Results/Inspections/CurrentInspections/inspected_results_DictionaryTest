@@ -16,6 +16,8 @@ simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && (!(Old_d
 
 CNF simplified: ((New_dContainsKeyX && New_dContainsValueY && (!(Old_dContainsKeyX)) && New_dCount == 1 + Old_dCount) && (((!(Old_dContainsValueY)) && Old_dCount >= 0) || (Old_dCount >= 1)))
 
+CNF simplified (smt): (and (and New_dContainsKeyX New_dContainsValueY (not Old_dContainsKeyX) (= New_dCount (+ 1 Old_dCount))) (or (and (not Old_dContainsValueY) (>= Old_dCount 0)) (>= Old_dCount 1)))
+
 Predicate root : Not(Old_dContainsValueY)
 
 Predicate root Right : Old_dContainsValueY
@@ -43,6 +45,8 @@ learned postcondition: ((0 <= New_dCount && -1 < New_dCount && 0 <= Old_dCount &
 simplified postcondition: (((!(New_dContainsKeyX)) && New_Ret && Old_dContainsKeyX && New_dCount == -1 + Old_dCount && Old_dCount >= 1) || ((!(New_dContainsKeyX)) && (!(New_Ret)) && New_dCount == Old_dCount && (!(Old_dContainsKeyX)) && Old_dCount >= 0))
 
 CNF simplified: (((!(New_dContainsKeyX))) && ((New_Ret && Old_dContainsKeyX && New_dCount == -1 + Old_dCount && Old_dCount >= 1) || ((!(New_Ret)) && New_dCount == Old_dCount && (!(Old_dContainsKeyX)) && Old_dCount >= 0)))
+
+CNF simplified (smt): (and (not New_dContainsKeyX) (or (and New_Ret Old_dContainsKeyX (= New_dCount (+ -1 Old_dCount)) (>= Old_dCount 1)) (and (not New_Ret) (= New_dCount Old_dCount) (not Old_dContainsKeyX) (>= Old_dCount 0))))
 
 Predicate root : New_dCount == Old_dCount
 
@@ -72,6 +76,8 @@ simplified postcondition: ((Old_dContainsKeyX && New_dContainsKeyX && New_Contai
 
 CNF simplified: ((Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && New_dCount == Old_dCount && Old_dCount >= 1) && ((New_ContainsKeyNewRet) || ((!(New_Ret == Old_x)))))
 
+CNF simplified (smt): (and (and Old_dContainsKeyX New_dContainsKeyX New_ContainsValueNewRet (= New_dCount Old_dCount) (>= Old_dCount 1)) (or New_ContainsKeyNewRet (not (= New_Ret Old_x))))
+
 Predicate root : New_ContainsKeyNewRet
 
 Predicate root Right : Not(New_ContainsKeyNewRet)
@@ -99,6 +105,8 @@ learned postcondition: ((New_dContainsKeyX && New_dContainsValueY && 0 < New_dCo
 simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && (!(Old_dContainsKeyX)) && New_dCount == 1 + Old_dCount && New_dCount >= 1) || (New_dContainsKeyX && New_dContainsValueY && Old_dContainsKeyX && New_dCount == Old_dCount && Old_dCount >= 1))
 
 CNF simplified: ((New_dContainsKeyX && New_dContainsValueY) && (((!(Old_dContainsKeyX)) && New_dCount == 1 + Old_dCount && New_dCount >= 1) || (Old_dContainsKeyX && New_dCount == Old_dCount && Old_dCount >= 1)))
+
+CNF simplified (smt): (and (and New_dContainsKeyX New_dContainsValueY) (or (and (not Old_dContainsKeyX) (= New_dCount (+ 1 Old_dCount)) (>= New_dCount 1)) (and Old_dContainsKeyX (= New_dCount Old_dCount) (>= Old_dCount 1))))
 
 Predicate root : New_dCount == Old_dCount + 1
 
@@ -128,6 +136,8 @@ simplified postcondition: ((New_dCount == Old_dCount && (!(New_Ret)) && Old_dCou
 
 CNF simplified: ((New_dCount == Old_dCount) && (((!(New_Ret)) && Old_dCount >= 0) || (Old_dCount >= 1)))
 
+CNF simplified (smt): (and (= New_dCount Old_dCount) (or (and (not New_Ret) (>= Old_dCount 0)) (>= Old_dCount 1)))
+
 Predicate root : Not(New_Ret)
 
 Predicate root Right : New_Ret
@@ -156,6 +166,8 @@ simplified postcondition: ((New_dCount == Old_dCount && (!(New_Ret)) && Old_dCou
 
 CNF simplified: ((New_dCount == Old_dCount) && (((!(New_Ret)) && Old_dCount >= 0) || (Old_dCount >= 1)))
 
+CNF simplified (smt): (and (= New_dCount Old_dCount) (or (and (not New_Ret) (>= Old_dCount 0)) (>= Old_dCount 1)))
+
 Predicate root : Not(New_Ret)
 
 Predicate root Right : New_Ret
@@ -183,6 +195,8 @@ learned postcondition: ((-1 < New_Ret && 0 <= New_Ret && -1 <= New_Ret) && (((!(
 simplified postcondition: ((New_Ret >= 1) || (New_Ret == 0))
 
 CNF simplified: (((New_Ret >= 1) || (New_Ret == 0)))
+
+CNF simplified (smt): (or (>= New_Ret 1) (= New_Ret 0))
 
 Predicate root : 0 == New_Ret
 

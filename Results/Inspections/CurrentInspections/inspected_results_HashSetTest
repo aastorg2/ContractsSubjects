@@ -14,6 +14,8 @@ simplified postcondition: ((New_hsContainsX && (!(New_Ret)) && Old_hsContainsX &
 
 CNF simplified: ((New_hsContainsX) && (((!(New_Ret)) && Old_hsContainsX && New_hsCount == Old_hsCount && Old_hsCount >= 1) || ((!(Old_hsContainsX)) && New_Ret && New_hsCount == 1 + Old_hsCount && Old_hsCount >= 0)))
 
+CNF simplified (smt): (and New_hsContainsX (or (and (not New_Ret) Old_hsContainsX (= New_hsCount Old_hsCount) (>= Old_hsCount 1)) (and (not Old_hsContainsX) New_Ret (= New_hsCount (+ 1 Old_hsCount)) (>= Old_hsCount 0))))
+
 Predicate root : Old_hsCount < New_hsCount
 
 Predicate root Right : Old_hsContainsX
@@ -45,6 +47,8 @@ learned postcondition: ((0 <= New_hsCount && -1 < New_hsCount && 0 <= Old_hsCoun
 simplified postcondition: (((!(New_hsContainsX)) && New_Ret && Old_hsContainsX && New_hsCount == -1 + Old_hsCount && Old_hsCount >= 1) || ((!(New_hsContainsX)) && (!(Old_hsContainsX)) && (!(New_Ret)) && New_hsCount == Old_hsCount && Old_hsCount >= 0))
 
 CNF simplified: (((!(New_hsContainsX))) && ((New_Ret && Old_hsContainsX && New_hsCount == -1 + Old_hsCount && Old_hsCount >= 1) || ((!(Old_hsContainsX)) && (!(New_Ret)) && New_hsCount == Old_hsCount && Old_hsCount >= 0)))
+
+CNF simplified (smt): (and (not New_hsContainsX) (or (and New_Ret Old_hsContainsX (= New_hsCount (+ -1 Old_hsCount)) (>= Old_hsCount 1)) (and (not Old_hsContainsX) (not New_Ret) (= New_hsCount Old_hsCount) (>= Old_hsCount 0))))
 
 Predicate root : Not(New_Ret)
 
@@ -78,6 +82,8 @@ simplified postcondition: ((New_hsCount == Old_hsCount && (!(New_Ret)) && Old_hs
 
 CNF simplified: ((New_hsCount == Old_hsCount) && (((!(New_Ret)) && Old_hsCount >= 0) || (Old_hsCount >= 1)))
 
+CNF simplified (smt): (and (= New_hsCount Old_hsCount) (or (and (not New_Ret) (>= Old_hsCount 0)) (>= Old_hsCount 1)))
+
 Predicate root : Not(New_Ret)
 
 Predicate root Right : New_Ret
@@ -109,6 +115,8 @@ learned postcondition: ((-1 < New_Ret && 0 <= New_Ret && -1 <= New_Ret) && (((!(
 simplified postcondition: ((New_Ret == 0) || (New_Ret >= 1))
 
 CNF simplified: (((New_Ret == 0) || (New_Ret >= 1)))
+
+CNF simplified (smt): (or (= New_Ret 0) (>= New_Ret 1))
 
 Predicate root : 0 == New_Ret
 

@@ -16,6 +16,8 @@ simplified postcondition: ((New_arrListContainsX && New_Ret == New_arrListLastIn
 
 CNF simplified: ((Old_arrListCount == New_arrListLastIndexOfX && New_arrListContainsX && New_Ret == New_arrListLastIndexOfX && New_arrListCount == 1 + Old_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
 
+CNF simplified (smt): (and (= Old_arrListCount New_arrListLastIndexOfX) New_arrListContainsX (= New_Ret New_arrListLastIndexOfX) (= New_arrListCount (+ 1 Old_arrListCount)) (<= Old_arrListIndexOfX New_arrListIndexOfX) (<= Old_arrListIndexOfX Old_arrListLastIndexOfX) (<= New_arrListIndexOfX New_arrListLastIndexOfX) (not (= New_arrListLastIndexOfX Old_arrListLastIndexOfX)) (<= Old_arrListLastIndexOfX New_arrListLastIndexOfX) (>= New_arrListIndexOfX 0) (>= Old_arrListIndexOfX -1))
+
 Predicate root : 0 < New_Ret
 
 Predicate root Right : Old_arrListContainsX
@@ -56,6 +58,8 @@ simplified postcondition: ((New_arrListCount <= Old_arrListCount && (!(New_arrLi
 
 CNF simplified: ((New_arrListCount <= Old_arrListCount && (!(New_arrListLastIndexOfX == New_arrListCount)) && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= -1))
 
+CNF simplified (smt): (and (<= New_arrListCount Old_arrListCount) (not (= New_arrListLastIndexOfX New_arrListCount)) (not (= Old_arrListLastIndexOfX Old_arrListCount)) (<= Old_arrListLastIndexOfX New_arrListCount) (<= Old_arrListIndexOfX Old_arrListLastIndexOfX) (<= New_arrListIndexOfX New_arrListLastIndexOfX) (<= New_arrListLastIndexOfX Old_arrListLastIndexOfX) (>= Old_arrListIndexOfX -1) (>= New_arrListIndexOfX -1))
+
 Predicate root : 0 < Old_x
 
 Predicate root Right : Old_x < Old_arrListIndexOfX
@@ -89,6 +93,8 @@ learned postcondition: (New_arrListContainsX && 0 <= Old_index && -1 < Old_index
 simplified postcondition: ((New_arrListContainsX && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && New_arrListCount == 1 + Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
 
 CNF simplified: ((New_arrListContainsX && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && New_arrListCount == 1 + Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
+
+CNF simplified (smt): (and New_arrListContainsX (<= New_arrListIndexOfX Old_index) (<= Old_index New_arrListLastIndexOfX) (= New_arrListCount (+ 1 Old_arrListCount)) (<= New_arrListLastIndexOfX Old_arrListCount) (<= Old_arrListIndexOfX Old_arrListLastIndexOfX) (not (= New_arrListLastIndexOfX Old_arrListLastIndexOfX)) (<= Old_arrListLastIndexOfX New_arrListLastIndexOfX) (>= New_arrListIndexOfX 0) (>= Old_arrListIndexOfX -1))
 
 Predicate root : 0 == Old_x
 
@@ -126,6 +132,8 @@ simplified postcondition: ((New_arrListContainsX && New_arrListIndexOfX <= Old_i
 
 CNF simplified: ((New_arrListContainsX && New_arrListIndexOfX <= Old_index && New_arrListCount == Old_arrListCount && Old_index <= New_arrListLastIndexOfX && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX <= Old_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1))
 
+CNF simplified (smt): (and New_arrListContainsX (<= New_arrListIndexOfX Old_index) (= New_arrListCount Old_arrListCount) (<= Old_index New_arrListLastIndexOfX) (not (= New_arrListLastIndexOfX Old_arrListCount)) (<= New_arrListLastIndexOfX Old_arrListCount) (<= Old_arrListIndexOfX Old_arrListLastIndexOfX) (<= Old_arrListLastIndexOfX New_arrListLastIndexOfX) (>= New_arrListIndexOfX 0) (>= Old_arrListIndexOfX -1))
+
 Predicate root : Old_x < New_arrListCount
 
 Predicate root Right : -1 < Old_x
@@ -162,6 +170,8 @@ simplified postcondition: ((New_containsNewRet && Old_index <= Old_arrListCount 
 
 CNF simplified: ((Old_index < Old_arrListCount && New_containsNewRet && New_arrListCount == Old_arrListCount && Old_index >= 0))
 
+CNF simplified (smt): (and (< Old_index Old_arrListCount) New_containsNewRet (= New_arrListCount Old_arrListCount) (>= Old_index 0))
+
 Predicate root : New_Ret != New_arrListCount
 
 Predicate root Right : Old_arrListCount <= New_Ret
@@ -192,6 +202,8 @@ simplified postcondition: ((New_arrListCount == Old_arrListCount && Old_arrListI
 
 CNF simplified: ((Old_arrListIndexOfX == New_arrListIndexOfX && New_arrListCount == Old_arrListCount) && ((New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_Ret && New_arrListIndexOfX >= 0) || ((!(-1 == Old_arrListCount)) && Old_arrListLastIndexOfX <= New_arrListIndexOfX && (!(New_Ret)) && Old_arrListCount >= -1 && New_arrListIndexOfX <= -1 && Old_arrListLastIndexOfX >= -1 && New_arrListLastIndexOfX == -1)))
 
+CNF simplified (smt): (and (and (= Old_arrListIndexOfX New_arrListIndexOfX) (= New_arrListCount Old_arrListCount)) (or (and (< New_arrListLastIndexOfX Old_arrListCount) (= New_arrListLastIndexOfX Old_arrListLastIndexOfX) (<= New_arrListIndexOfX New_arrListLastIndexOfX) New_Ret (>= New_arrListIndexOfX 0)) (and (not (= -1 Old_arrListCount)) (<= Old_arrListLastIndexOfX New_arrListIndexOfX) (not New_Ret) (>= Old_arrListCount -1) (<= New_arrListIndexOfX -1) (>= Old_arrListLastIndexOfX -1) (= New_arrListLastIndexOfX -1))))
+
 Predicate root : Not(New_Ret)
 
 Predicate root Right : New_arrListIndexOfX < Old_arrListLastIndexOfX
@@ -219,6 +231,8 @@ learned postcondition: ((-1 <= New_Ret && 0 <= New_arrListCount && 0 <= Old_arrL
 simplified postcondition: ((New_arrListCount == Old_arrListCount && (!(-1 == Old_arrListCount)) && (!(New_arrListContainsX)) && (!(Old_arrListContainsX)) && Old_arrListCount >= -1 && Old_arrListLastIndexOfX == -1 && New_arrListLastIndexOfX == -1 && New_Ret == -1) || (New_Ret <= New_arrListLastIndexOfX && New_arrListCount == Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && Old_arrListContainsX && New_arrListContainsX && New_Ret >= 0))
 
 CNF simplified: ((New_arrListCount == Old_arrListCount) && (((!(-1 == Old_arrListCount)) && (!(New_arrListContainsX)) && (!(Old_arrListContainsX)) && Old_arrListCount >= -1 && Old_arrListLastIndexOfX == -1 && New_arrListLastIndexOfX == -1 && New_Ret == -1) || (New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret <= New_arrListLastIndexOfX && Old_arrListContainsX && New_arrListContainsX && New_Ret >= 0)))
+
+CNF simplified (smt): (and (= New_arrListCount Old_arrListCount) (or (and (not (= -1 Old_arrListCount)) (not New_arrListContainsX) (not Old_arrListContainsX) (>= Old_arrListCount -1) (= Old_arrListLastIndexOfX -1) (= New_arrListLastIndexOfX -1) (= New_Ret -1)) (and (< New_arrListLastIndexOfX Old_arrListCount) (= New_arrListLastIndexOfX Old_arrListLastIndexOfX) (<= New_Ret New_arrListLastIndexOfX) Old_arrListContainsX New_arrListContainsX (>= New_Ret 0))))
 
 Predicate root : New_arrListContainsX
 
@@ -248,6 +262,8 @@ simplified postcondition: (((!(-1 == Old_arrListCount)) && New_arrListCount == O
 
 CNF simplified: ((New_arrListCount == Old_arrListCount) && (((!(-1 == Old_arrListCount)) && (!(Old_arrListContainsX)) && (!(New_arrListContainsX)) && Old_arrListCount >= -1 && New_Ret == -1 && Old_arrListIndexOfX == -1 && New_arrListIndexOfX == -1) || (New_Ret < Old_arrListCount && Old_arrListIndexOfX == New_arrListIndexOfX && Old_arrListIndexOfX <= New_Ret && New_arrListContainsX && Old_arrListContainsX && New_arrListIndexOfX >= 0)))
 
+CNF simplified (smt): (and (= New_arrListCount Old_arrListCount) (or (and (not (= -1 Old_arrListCount)) (not Old_arrListContainsX) (not New_arrListContainsX) (>= Old_arrListCount -1) (= New_Ret -1) (= Old_arrListIndexOfX -1) (= New_arrListIndexOfX -1)) (and (< New_Ret Old_arrListCount) (= Old_arrListIndexOfX New_arrListIndexOfX) (<= Old_arrListIndexOfX New_Ret) New_arrListContainsX Old_arrListContainsX (>= New_arrListIndexOfX 0))))
+
 Predicate root : Old_arrListContainsX
 
 Predicate root Right : -1 == New_Ret
@@ -275,6 +291,8 @@ learned postcondition: ((-1 < New_Ret && 0 <= New_Ret && -1 <= New_Ret) && (((!(
 simplified postcondition: ((New_Ret >= 1) || (New_Ret == 0))
 
 CNF simplified: (((New_Ret >= 1) || (New_Ret == 0)))
+
+CNF simplified (smt): (or (>= New_Ret 1) (= New_Ret 0))
 
 Predicate root : 0 == New_Ret
 
