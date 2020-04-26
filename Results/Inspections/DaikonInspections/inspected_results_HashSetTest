@@ -1,0 +1,100 @@
+Problem: HashSetTest
+
+---------------------
+PUT_AddContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((((!(Old_hsContainsX)) == (New_Ret) && (!(Old_hsContainsX)) == (New_hsCount - Old_hsCount - 1 == 0) && ((!(!(Old_hsContainsX))) || (New_hsContainsX == New_Ret)) && (Old_hsContainsX) == (!(New_Ret)) && (Old_hsContainsX) == (New_hsCount == Old_hsCount) && ((!(Old_hsContainsX)) || (New_hsContainsX == Old_hsContainsX)) && New_hsContainsX && New_hsCount >= 1 && Old_hsCount >= 0 && New_hsCount >= Old_hsCount)))
+
+CNF simplified (smt): (and (= (not Old_hsContainsX) New_Ret) (= (not Old_hsContainsX) (= (- (- New_hsCount Old_hsCount) 1) 0)) (or (not (not Old_hsContainsX)) (= New_hsContainsX New_Ret)) (= Old_hsContainsX (not New_Ret)) (= Old_hsContainsX (= New_hsCount Old_hsCount)) (or (not Old_hsContainsX) (= New_hsContainsX Old_hsContainsX)) New_hsContainsX (>= New_hsCount 1) (>= Old_hsCount 0) (>= New_hsCount Old_hsCount))
+
+
+rounds: 5
+
+pex time: 622.4349794387817
+
+learn time: 16.29662299156189
+
+Samples: 4
+
+---------------------
+PUT_RemoveContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: (((Old_hsContainsX == New_Ret && (!(New_Ret)) == (New_hsCount == Old_hsCount) && ((!(!(New_Ret))) || (New_hsContainsX == New_Ret)) && (New_Ret) == (New_hsCount - Old_hsCount + 1 == 0) && ((!(New_Ret)) || (Old_hsCount >= 1)) && !(New_hsContainsX) && New_hsCount >= 0 && Old_hsCount >= 0 && New_hsCount <= Old_hsCount)))
+
+CNF simplified (smt): (and (= Old_hsContainsX New_Ret) (= (not New_Ret) (= New_hsCount Old_hsCount)) (or (not (not New_Ret)) (= New_hsContainsX New_Ret)) (= New_Ret (= (+ (- New_hsCount Old_hsCount) 1) 0)) (or (not New_Ret) (>= Old_hsCount 1)) (not New_hsContainsX) (>= New_hsCount 0) (>= Old_hsCount 0) (<= New_hsCount Old_hsCount))
+
+
+rounds: 5
+
+pex time: 616.9083802700043
+
+learn time: 17.78455090522766
+
+Samples: 4
+
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: (true)
+
+CNF simplified (smt): true
+
+
+rounds: 1
+
+pex time: 107.98185563087463
+
+learn time: 3.2574570178985596
+
+Samples: 4
+
+---------------------
+PUT_ContainsContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: (((New_hsCount == Old_hsCount && New_hsCount >= 0)))
+
+CNF simplified (smt): (and (= New_hsCount Old_hsCount) (>= New_hsCount 0))
+
+
+rounds: 4
+
+pex time: 494.52557706832886
+
+learn time: 11.704685926437378
+
+Samples: 4
+
+======================
+Average Rounds: 3.75
+
+Average Pex Time: 460.4626981019974
+
+Average Learn Time: 12.260829210281372
