@@ -107,7 +107,7 @@ namespace Queue.Test
             PexObserve.ValueForViewing("$new_ret", New_Ret);
             PexObserve.ValueForViewing("$New_s1ContainsNewRet", New_s1ContainsNewRet);
 
-            Assert.True(((New_s1ContainsNewRet && New_s1Count <= Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count >= 1)));
+            Assert.True(((New_s1Count == Old_s1Count && New_s1ContainsNewRet && Old_s1Count >= 1)));
         }
 
         [PexMethod]
@@ -133,7 +133,7 @@ namespace Queue.Test
             PexObserve.ValueForViewing("$new_ret", New_Ret);
             //PexObserve.ValueForViewing("$new_containsNewRet", New_ContainsNewRet);
 
-            Assert.True(((Old_Top <= New_Top && New_Ret >= 0) || (New_Ret == 0)));
+            Assert.True(((New_Top == Old_Top && New_Ret >= 0) || New_Ret == 0));
         }
         [PexMethod]
         public void PUT_ContainsContract([PexAssumeUnderTest]Queue.Queue<int> s1, int x)

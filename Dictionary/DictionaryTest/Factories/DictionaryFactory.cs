@@ -14,8 +14,8 @@ namespace Dictionary.Test.Factories
             PexAssume.AreDistinctValues(keys);
             PexAssume.IsTrue(keys.Length <= 2 || keys.Length > 2);
             PexAssume.IsTrue(keys.Length == values.Length);
-            //PexAssume.TrueForAll(0, keys.Length, _i => keys[_i] > -11 && keys[_i] < 11);
-            PexAssume.TrueForAll(0, values.Length, _j => values[_j] > -11 && values[_j] < 11);
+            //PexAssume.TrueForAll(0, keys.Length, _i => keys[_i] <= -11 || keys[_i] > 11);
+            //PexAssume.TrueForAll(0, values.Length, _j => values[_j] <= 6 || values[_j] > 6);
             //DataStructures.Utility.Int32EqualityComparer comparer = new DataStructures.Utility.Int32EqualityComparer();
 
             Dictionary.Dictionary<int, int> ret = new Dictionary.Dictionary<int, int>(keys.Length);// DataStructure has big enough capacity for Commutativity Test
