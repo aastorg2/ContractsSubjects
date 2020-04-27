@@ -1,0 +1,10 @@
+
+Tool: Precis
+	Number of Contracts: 3
+	['PUT_GetContract', 'PUT_IndexOfContract', 'PUT_LastIndexOfContract']
+Tool: Daikon
+	Number of Contracts: 0
+	[]
+Tool: Equivalent
+	Number of Contracts: 6
+	['PUT_AddContract', 'PUT_RemoveContract', 'PUT_InsertContract', 'PUT_SetContract', 'PUT_ContainsContract', 'PUT_CountContract']
