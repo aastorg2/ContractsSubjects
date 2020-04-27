@@ -1,0 +1,215 @@
+Problem: ArrayListTest
+
+---------------------
+PUT_AddContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_arrListLastIndexOfX == New_Ret && Old_arrListCount == New_Ret && New_arrListContainsX && New_arrListCount >= 1 && New_arrListIndexOfX >= 0 && Old_arrListIndexOfX >= -1 && Old_arrListLastIndexOfX >= -1 && New_Ret >= 0 && New_arrListCount > New_arrListIndexOfX && New_arrListCount > Old_arrListIndexOfX && New_arrListCount > Old_arrListLastIndexOfX && New_arrListCount - New_Ret - 1 == 0 && New_arrListCount != Old_arrListIndexOfX && New_arrListCount != Old_arrListLastIndexOfX && New_arrListIndexOfX >= Old_arrListIndexOfX && New_arrListIndexOfX <= New_Ret && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListIndexOfX < New_Ret && Old_arrListLastIndexOfX < New_Ret && New_Ret != Old_arrListIndexOfX))
+
+CNF simplified (smt): (and (= New_arrListLastIndexOfX New_Ret) (= Old_arrListCount New_Ret) New_arrListContainsX (>= New_arrListCount 1) (>= New_arrListIndexOfX 0) (>= Old_arrListIndexOfX -1) (>= Old_arrListLastIndexOfX -1) (>= New_Ret 0) (> New_arrListCount New_arrListIndexOfX) (> New_arrListCount Old_arrListIndexOfX) (> New_arrListCount Old_arrListLastIndexOfX) (= (- (- New_arrListCount New_Ret) 1) 0) (not (= New_arrListCount Old_arrListIndexOfX)) (not (= New_arrListCount Old_arrListLastIndexOfX)) (>= New_arrListIndexOfX Old_arrListIndexOfX) (<= New_arrListIndexOfX New_Ret) (<= Old_arrListIndexOfX Old_arrListLastIndexOfX) (< Old_arrListIndexOfX New_Ret) (< Old_arrListLastIndexOfX New_Ret) (not (= New_Ret Old_arrListIndexOfX)))
+
+
+rounds: 4
+
+pex time: 76.40977644920349
+
+learn time: 10.758504867553711
+
+Samples: 9
+
+---------------------
+PUT_RemoveContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_arrListCount >= 0 && New_arrListIndexOfX >= -1 && New_arrListLastIndexOfX >= -1 && Old_arrListCount >= 0 && Old_arrListIndexOfX >= -1 && Old_arrListLastIndexOfX >= -1 && New_arrListCount > New_arrListIndexOfX && New_arrListCount > New_arrListLastIndexOfX && New_arrListCount <= Old_arrListCount && New_arrListCount >= Old_arrListIndexOfX && New_arrListCount >= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX < Old_arrListCount && New_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListLastIndexOfX < Old_arrListCount && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && New_arrListLastIndexOfX != Old_arrListCount && Old_arrListCount > Old_arrListIndexOfX && Old_arrListCount > Old_arrListLastIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX))
+
+CNF simplified (smt): (and (>= New_arrListCount 0) (>= New_arrListIndexOfX -1) (>= New_arrListLastIndexOfX -1) (>= Old_arrListCount 0) (>= Old_arrListIndexOfX -1) (>= Old_arrListLastIndexOfX -1) (> New_arrListCount New_arrListIndexOfX) (> New_arrListCount New_arrListLastIndexOfX) (<= New_arrListCount Old_arrListCount) (>= New_arrListCount Old_arrListIndexOfX) (>= New_arrListCount Old_arrListLastIndexOfX) (<= New_arrListIndexOfX New_arrListLastIndexOfX) (< New_arrListIndexOfX Old_arrListCount) (<= New_arrListIndexOfX Old_arrListLastIndexOfX) (< New_arrListLastIndexOfX Old_arrListCount) (<= New_arrListLastIndexOfX Old_arrListLastIndexOfX) (not (= New_arrListLastIndexOfX Old_arrListCount)) (> Old_arrListCount Old_arrListIndexOfX) (> Old_arrListCount Old_arrListLastIndexOfX) (<= Old_arrListIndexOfX Old_arrListLastIndexOfX))
+
+
+rounds: 8
+
+pex time: 130.48413038253784
+
+learn time: 27.24400305747986
+
+Samples: 9
+
+---------------------
+PUT_InsertContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_arrListContainsX && New_arrListCount >= 1 && New_arrListIndexOfX >= 0 && New_arrListLastIndexOfX >= 0 && Old_arrListCount >= 0 && Old_arrListIndexOfX >= -1 && Old_arrListLastIndexOfX >= -1 && New_arrListCount > New_arrListIndexOfX && New_arrListCount > New_arrListLastIndexOfX && New_arrListCount - Old_arrListCount - 1 == 0 && New_arrListCount > Old_arrListIndexOfX && New_arrListCount > Old_arrListLastIndexOfX && New_arrListCount > Old_index && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX <= Old_arrListCount && New_arrListIndexOfX <= Old_index && New_arrListLastIndexOfX <= Old_arrListCount && New_arrListLastIndexOfX > Old_arrListIndexOfX && New_arrListLastIndexOfX > Old_arrListLastIndexOfX && New_arrListLastIndexOfX >= Old_index && Old_arrListCount > Old_arrListIndexOfX && Old_arrListCount > Old_arrListLastIndexOfX && Old_arrListCount >= Old_index && Old_arrListIndexOfX <= Old_arrListLastIndexOfX))
+
+CNF simplified (smt): (and New_arrListContainsX (>= New_arrListCount 1) (>= New_arrListIndexOfX 0) (>= New_arrListLastIndexOfX 0) (>= Old_arrListCount 0) (>= Old_arrListIndexOfX -1) (>= Old_arrListLastIndexOfX -1) (> New_arrListCount New_arrListIndexOfX) (> New_arrListCount New_arrListLastIndexOfX) (= (- (- New_arrListCount Old_arrListCount) 1) 0) (> New_arrListCount Old_arrListIndexOfX) (> New_arrListCount Old_arrListLastIndexOfX) (> New_arrListCount Old_index) (<= New_arrListIndexOfX New_arrListLastIndexOfX) (<= New_arrListIndexOfX Old_arrListCount) (<= New_arrListIndexOfX Old_index) (<= New_arrListLastIndexOfX Old_arrListCount) (> New_arrListLastIndexOfX Old_arrListIndexOfX) (> New_arrListLastIndexOfX Old_arrListLastIndexOfX) (>= New_arrListLastIndexOfX Old_index) (> Old_arrListCount Old_arrListIndexOfX) (> Old_arrListCount Old_arrListLastIndexOfX) (>= Old_arrListCount Old_index) (<= Old_arrListIndexOfX Old_arrListLastIndexOfX))
+
+
+rounds: 5
+
+pex time: 83.67046666145325
+
+learn time: 15.675188541412354
+
+Samples: 9
+
+---------------------
+PUT_SetContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_arrListCount == Old_arrListCount && New_arrListContainsX && New_arrListCount >= 1 && New_arrListIndexOfX >= 0 && New_arrListLastIndexOfX >= 0 && Old_arrListIndexOfX >= -1 && Old_arrListLastIndexOfX >= -1 && New_arrListCount > New_arrListIndexOfX && New_arrListCount > New_arrListLastIndexOfX && New_arrListCount > Old_arrListIndexOfX && New_arrListCount > Old_arrListLastIndexOfX && New_arrListCount > Old_index && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListIndexOfX <= Old_index && New_arrListLastIndexOfX >= Old_arrListIndexOfX && New_arrListLastIndexOfX >= Old_arrListLastIndexOfX && New_arrListLastIndexOfX >= Old_index && Old_arrListIndexOfX <= Old_arrListLastIndexOfX))
+
+CNF simplified (smt): (and (= New_arrListCount Old_arrListCount) New_arrListContainsX (>= New_arrListCount 1) (>= New_arrListIndexOfX 0) (>= New_arrListLastIndexOfX 0) (>= Old_arrListIndexOfX -1) (>= Old_arrListLastIndexOfX -1) (> New_arrListCount New_arrListIndexOfX) (> New_arrListCount New_arrListLastIndexOfX) (> New_arrListCount Old_arrListIndexOfX) (> New_arrListCount Old_arrListLastIndexOfX) (> New_arrListCount Old_index) (<= New_arrListIndexOfX New_arrListLastIndexOfX) (<= New_arrListIndexOfX Old_index) (>= New_arrListLastIndexOfX Old_arrListIndexOfX) (>= New_arrListLastIndexOfX Old_arrListLastIndexOfX) (>= New_arrListLastIndexOfX Old_index) (<= Old_arrListIndexOfX Old_arrListLastIndexOfX))
+
+
+rounds: 5
+
+pex time: 78.89542698860168
+
+learn time: 15.378073692321777
+
+Samples: 9
+
+---------------------
+PUT_GetContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_arrListCount == Old_arrListCount && New_containsNewRet && New_arrListCount > Old_index))
+
+CNF simplified (smt): (and (= New_arrListCount Old_arrListCount) New_containsNewRet (> New_arrListCount Old_index))
+
+
+rounds: 3
+
+pex time: 32.13269853591919
+
+learn time: 7.10082745552063
+
+Samples: 9
+
+---------------------
+PUT_ContainsContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_arrListCount == Old_arrListCount && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && (New_arrListIndexOfX == -1) == (!(New_Ret)) && (New_arrListIndexOfX == -1) == (New_arrListLastIndexOfX == -1) && ((!(New_arrListIndexOfX == -1)) || (New_arrListIndexOfX == New_arrListLastIndexOfX)) && (New_arrListIndexOfX >= 0) == (New_Ret) && (New_arrListIndexOfX >= 0) == (New_arrListLastIndexOfX >= 0) && New_arrListCount >= 0 && New_arrListIndexOfX >= -1 && New_arrListLastIndexOfX >= -1 && New_arrListCount > New_arrListIndexOfX && New_arrListCount > New_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX))
+
+CNF simplified (smt): (and (= New_arrListCount Old_arrListCount) (= New_arrListIndexOfX Old_arrListIndexOfX) (= New_arrListLastIndexOfX Old_arrListLastIndexOfX) (= (= New_arrListIndexOfX -1) (not New_Ret)) (= (= New_arrListIndexOfX -1) (= New_arrListLastIndexOfX -1)) (or (not (= New_arrListIndexOfX -1)) (= New_arrListIndexOfX New_arrListLastIndexOfX)) (= (>= New_arrListIndexOfX 0) New_Ret) (= (>= New_arrListIndexOfX 0) (>= New_arrListLastIndexOfX 0)) (>= New_arrListCount 0) (>= New_arrListIndexOfX -1) (>= New_arrListLastIndexOfX -1) (> New_arrListCount New_arrListIndexOfX) (> New_arrListCount New_arrListLastIndexOfX) (<= New_arrListIndexOfX New_arrListLastIndexOfX))
+
+
+rounds: 7
+
+pex time: 97.54375958442688
+
+learn time: 26.36208701133728
+
+Samples: 9
+
+---------------------
+PUT_IndexOfContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_arrListContainsX == Old_arrListContainsX && New_arrListCount == Old_arrListCount && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_arrListCount >= 0 && New_arrListLastIndexOfX >= -1 && New_Ret >= -1 && New_arrListCount > New_arrListLastIndexOfX && New_arrListCount > New_Ret && New_arrListLastIndexOfX >= New_Ret))
+
+CNF simplified (smt): (and (= New_arrListContainsX Old_arrListContainsX) (= New_arrListCount Old_arrListCount) (= New_arrListLastIndexOfX Old_arrListLastIndexOfX) (>= New_arrListCount 0) (>= New_arrListLastIndexOfX -1) (>= New_Ret -1) (> New_arrListCount New_arrListLastIndexOfX) (> New_arrListCount New_Ret) (>= New_arrListLastIndexOfX New_Ret))
+
+
+rounds: 5
+
+pex time: 84.55582046508789
+
+learn time: 14.05133318901062
+
+Samples: 9
+
+---------------------
+PUT_LastIndexOfContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_arrListContainsX == Old_arrListContainsX && New_arrListCount == Old_arrListCount && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListCount >= 0 && New_arrListIndexOfX >= -1 && New_Ret >= -1 && New_arrListCount > New_arrListIndexOfX && New_arrListCount > New_Ret && New_arrListIndexOfX <= New_Ret))
+
+CNF simplified (smt): (and (= New_arrListContainsX Old_arrListContainsX) (= New_arrListCount Old_arrListCount) (= New_arrListIndexOfX Old_arrListIndexOfX) (>= New_arrListCount 0) (>= New_arrListIndexOfX -1) (>= New_Ret -1) (> New_arrListCount New_arrListIndexOfX) (> New_arrListCount New_Ret) (<= New_arrListIndexOfX New_Ret))
+
+
+rounds: 4
+
+pex time: 57.96336913108826
+
+learn time: 10.574254035949707
+
+Samples: 9
+
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_Ret >= 0))
+
+CNF simplified (smt): (>= New_Ret 0)
+
+
+rounds: 4
+
+pex time: 25.80376935005188
+
+learn time: 9.808663606643677
+
+Samples: 9
+
+======================
+Average Rounds: 5.0
+
+Average Pex Time: 74.16213528315227
+
+Average Learn Time: 15.216992828581068

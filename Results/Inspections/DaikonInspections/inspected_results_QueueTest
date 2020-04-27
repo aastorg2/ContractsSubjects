@@ -1,0 +1,123 @@
+Problem: QueueTest
+
+---------------------
+PUT_EnqueueContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_s1ContainsX && Old_s1Count >= 0 && New_s1Count - Old_s1Count - 1 == 0))
+
+CNF simplified (smt): (and New_s1ContainsX (>= Old_s1Count 0) (= (- (- New_s1Count Old_s1Count) 1) 0))
+
+
+rounds: 5
+
+pex time: 143.41251921653748
+
+learn time: 16.335225582122803
+
+Samples: 7
+
+---------------------
+PUT_DequeueContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((Old_Top == New_Ret && New_s1Count >= 0 && New_s1Count - Old_s1Count + 1 == 0))
+
+CNF simplified (smt): (and (= Old_Top New_Ret) (>= New_s1Count 0) (= (+ (- New_s1Count Old_s1Count) 1) 0))
+
+
+rounds: 4
+
+pex time: 64.69961357116699
+
+learn time: 11.47701382637024
+
+Samples: 7
+
+---------------------
+PUT_PeekContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_s1Count == Old_s1Count && New_s1ContainsNewRet))
+
+CNF simplified (smt): (and (= New_s1Count Old_s1Count) New_s1ContainsNewRet)
+
+
+rounds: 6
+
+pex time: 74.54393124580383
+
+learn time: 18.08401322364807
+
+Samples: 7
+
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_Ret >= 0))
+
+CNF simplified (smt): (>= New_Ret 0)
+
+
+rounds: 4
+
+pex time: 99.2321228981018
+
+learn time: 10.864116668701172
+
+Samples: 7
+
+---------------------
+PUT_ContainsContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_s1Count == Old_s1Count && ((!(New_Ret)) || (New_Top == Old_Top)) && New_s1Count >= 0))
+
+CNF simplified (smt): (and (= New_s1Count Old_s1Count) (or (not New_Ret) (= New_Top Old_Top)) (>= New_s1Count 0))
+
+
+rounds: 6
+
+pex time: 76.2892713546753
+
+learn time: 22.372313737869263
+
+Samples: 7
+
+======================
+Average Rounds: 5.0
+
+Average Pex Time: 91.63549165725708
+
+Average Learn Time: 15.826536607742309

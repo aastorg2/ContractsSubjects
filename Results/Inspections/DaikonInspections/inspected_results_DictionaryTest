@@ -1,0 +1,169 @@
+Problem: DictionaryTest
+
+---------------------
+PUT_AddContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_dContainsKeyX == New_dContainsValueY && Old_dContainsKeyX == Old_dContainsKeyX && New_dContainsKeyX && New_dCount >= 1 && !(Old_dContainsKeyX) && Old_dCount >= 0 && New_dCount - Old_dCount - 1 == 0))
+
+CNF simplified (smt): (and (= New_dContainsKeyX New_dContainsValueY) (= Old_dContainsKeyX Old_dContainsKeyX) New_dContainsKeyX (>= New_dCount 1) (not Old_dContainsKeyX) (>= Old_dCount 0) (= (- (- New_dCount Old_dCount) 1) 0))
+
+
+rounds: 3
+
+pex time: 356.92957377433777
+
+learn time: 7.563889980316162
+
+Samples: 12
+
+---------------------
+PUT_RemoveContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((Old_dContainsKeyX == New_Ret && (!(New_Ret)) == (New_dCount == Old_dCount) && ((!(!(New_Ret))) || (New_dContainsKeyX == New_Ret)) && (New_Ret) == (New_dCount - Old_dCount + 1 == 0) && !(New_dContainsKeyX) && New_dCount >= 0 && Old_dCount >= 0 && New_dCount <= Old_dCount))
+
+CNF simplified (smt): (and (= Old_dContainsKeyX New_Ret) (= (not New_Ret) (= New_dCount Old_dCount)) (or (not (not New_Ret)) (= New_dContainsKeyX New_Ret)) (= New_Ret (= (+ (- New_dCount Old_dCount) 1) 0)) (not New_dContainsKeyX) (>= New_dCount 0) (>= Old_dCount 0) (<= New_dCount Old_dCount))
+
+
+rounds: 5
+
+pex time: 467.89922523498535
+
+learn time: 16.7252676486969
+
+Samples: 12
+
+---------------------
+PUT_GetContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_ContainsValueNewRet == New_dContainsKeyX && New_ContainsValueNewRet == Old_dContainsKeyX && New_dCount == Old_dCount && New_ContainsValueNewRet))
+
+CNF simplified (smt): (and (= New_ContainsValueNewRet New_dContainsKeyX) (= New_ContainsValueNewRet Old_dContainsKeyX) (= New_dCount Old_dCount) New_ContainsValueNewRet)
+
+
+rounds: 3
+
+pex time: 336.57941031455994
+
+learn time: 7.19176721572876
+
+Samples: 12
+
+---------------------
+PUT_SetContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_dContainsKeyX == New_dContainsValueY && New_dContainsKeyX && New_dCount >= 1 && Old_dCount >= 0 && New_dCount >= Old_dCount))
+
+CNF simplified (smt): (and (= New_dContainsKeyX New_dContainsValueY) New_dContainsKeyX (>= New_dCount 1) (>= Old_dCount 0) (>= New_dCount Old_dCount))
+
+
+rounds: 4
+
+pex time: 458.8957574367523
+
+learn time: 12.057153463363647
+
+Samples: 12
+
+---------------------
+PUT_ContainsKeyContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_dCount == Old_dCount && New_dCount >= 0))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) (>= New_dCount 0))
+
+
+rounds: 5
+
+pex time: 464.920241355896
+
+learn time: 16.770310163497925
+
+Samples: 12
+
+---------------------
+PUT_ContainsValueContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_dCount == Old_dCount && New_dCount >= 0))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) (>= New_dCount 0))
+
+
+rounds: 5
+
+pex time: 235.84775066375732
+
+learn time: 16.256202936172485
+
+Samples: 12
+
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: (true)
+
+CNF simplified (smt): true
+
+
+rounds: 1
+
+pex time: 34.468746185302734
+
+learn time: 3.2640938758850098
+
+Samples: 12
+
+======================
+Average Rounds: 3.7142857142857144
+
+Average Pex Time: 336.5058149950845
+
+Average Learn Time: 11.40409789766584
