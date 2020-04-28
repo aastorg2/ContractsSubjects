@@ -1,0 +1,10 @@
+
+Tool: Precis
+	Number of Contracts: 5
+	['PUT_AddContract', 'PUT_MinimumContract', 'PUT_RemoveMinimumContract', 'PUT_RemoveAtContract', 'PUT_IndexOfContract']
+Tool: Daikon
+	Number of Contracts: 0
+	[]
+Tool: Equivalent
+	Number of Contracts: 0
+	[]
