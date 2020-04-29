@@ -6,33 +6,27 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+Label:
+
 Analysis:
 
-learned postcondition: ((New_hsContainsX && 0 < New_hsCount && 0 <= New_hsCount && -1 < New_hsCount && 1 <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && -1 <= New_hsCount && Old_hsCount <= New_hsCount) && (((!(Old_hsCount < New_hsCount)) ||   ((New_Ret && (!(Old_hsContainsX)) && Old_hsCount < New_hsCount && New_hsCount != Old_hsCount && New_hsCount == Old_hsCount + 1) && (((!(Old_hsContainsX)) || false) && (Old_hsContainsX || true)))) && (Old_hsCount < New_hsCount ||   (Old_hsContainsX && (!(New_Ret)) && 0 < Old_hsCount && 1 <= Old_hsCount && New_hsCount <= Old_hsCount && New_hsCount == Old_hsCount))))
+learned postcondition: ((Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 1 <= New_hsCount && 0 < New_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && New_hsContainsX) && ((Old_hsContainsX && (!(New_Ret)) && New_hsCount == Old_hsCount && Old_hsCount >= 1) || (New_Ret && (!(Old_hsContainsX)) && New_hsCount == 1 + Old_hsCount)))
 
-simplified postcondition: ((New_hsContainsX && (!(New_Ret)) && Old_hsContainsX && New_hsCount == Old_hsCount && Old_hsCount >= 1) || (New_hsContainsX && (!(Old_hsContainsX)) && New_Ret && New_hsCount == 1 + Old_hsCount && Old_hsCount >= 0))
+simplified postcondition: ((New_hsContainsX && (!(New_Ret)) && Old_hsContainsX && New_hsCount == Old_hsCount && Old_hsCount >= 1) || (New_hsContainsX && (!(Old_hsContainsX)) && New_Ret && New_hsCount == 1 + Old_hsCount && New_hsCount >= 1))
 
-CNF simplified: ((New_hsContainsX) && (((!(New_Ret)) && Old_hsContainsX && New_hsCount == Old_hsCount && Old_hsCount >= 1) || ((!(Old_hsContainsX)) && New_Ret && New_hsCount == 1 + Old_hsCount && Old_hsCount >= 0)))
+CNF simplified: ((New_hsContainsX) && (((!(New_Ret)) && Old_hsContainsX && New_hsCount == Old_hsCount && Old_hsCount >= 1) || ((!(Old_hsContainsX)) && New_Ret && New_hsCount == 1 + Old_hsCount && New_hsCount >= 1)))
 
-CNF simplified (smt): (and New_hsContainsX (or (and (not New_Ret) Old_hsContainsX (= New_hsCount Old_hsCount) (>= Old_hsCount 1)) (and (not Old_hsContainsX) New_Ret (= New_hsCount (+ 1 Old_hsCount)) (>= Old_hsCount 0))))
+CNF simplified (smt): (and New_hsContainsX (or (and (not New_Ret) Old_hsContainsX (= New_hsCount Old_hsCount) (>= Old_hsCount 1)) (and (not Old_hsContainsX) New_Ret (= New_hsCount (+ 1 Old_hsCount)) (>= New_hsCount 1))))
 
-Predicate root : Old_hsCount < New_hsCount
+Predicate chosen at root : Not(Old_hsContainsX)
 
-Predicate root Right : Old_hsContainsX
+rounds: 6
 
-Any:
+pex time: 745.364716053009
 
-L:
+learn time: 83.58687138557434
 
-SubL:
-
-rounds: 4
-
-pex time: 501.57436323165894
-
-learn time: 178.99540829658508
-
-Samples: 24
+Samples: 54
 
 ---------------------
 PUT_RemoveContract
@@ -40,33 +34,27 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+Label:
+
 Analysis:
 
-learned postcondition: ((0 <= New_hsCount && -1 < New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && -1 <= New_hsCount && (!(New_hsContainsX)) && New_hsCount <= Old_hsCount) && (((!((!(New_Ret)))) ||   (((!(New_Ret)) && (!(Old_hsContainsX)) && Old_hsCount <= New_hsCount && New_hsCount == Old_hsCount) && (((!(Old_hsContainsX)) || false) && (Old_hsContainsX || true)))) && ((!(New_Ret)) ||   (New_Ret && Old_hsContainsX && 0 < Old_hsCount && 1 <= Old_hsCount && New_hsCount < Old_hsCount && New_hsCount != Old_hsCount && New_hsCount == Old_hsCount - 1))))
+learned postcondition: ((New_hsCount <= Old_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && (!(New_hsContainsX))) && ((New_Ret && Old_hsContainsX && New_hsCount == -1 + Old_hsCount && Old_hsCount >= 1) || ((!(New_Ret)) && New_hsCount == Old_hsCount && (!(Old_hsContainsX)))))
 
-simplified postcondition: (((!(New_hsContainsX)) && New_Ret && Old_hsContainsX && New_hsCount == -1 + Old_hsCount && Old_hsCount >= 1) || ((!(New_hsContainsX)) && (!(Old_hsContainsX)) && (!(New_Ret)) && New_hsCount == Old_hsCount && Old_hsCount >= 0))
+simplified postcondition: (((!(New_hsContainsX)) && New_Ret && Old_hsContainsX && New_hsCount == -1 + Old_hsCount && New_hsCount >= 0) || ((!(New_hsContainsX)) && (!(New_Ret)) && (!(Old_hsContainsX)) && New_hsCount == Old_hsCount && Old_hsCount >= 0))
 
-CNF simplified: (((!(New_hsContainsX))) && ((New_Ret && Old_hsContainsX && New_hsCount == -1 + Old_hsCount && Old_hsCount >= 1) || ((!(Old_hsContainsX)) && (!(New_Ret)) && New_hsCount == Old_hsCount && Old_hsCount >= 0)))
+CNF simplified: (((!(New_hsContainsX))) && ((New_Ret && Old_hsContainsX && New_hsCount == -1 + Old_hsCount && New_hsCount >= 0) || ((!(New_Ret)) && (!(Old_hsContainsX)) && New_hsCount == Old_hsCount && Old_hsCount >= 0)))
 
-CNF simplified (smt): (and (not New_hsContainsX) (or (and New_Ret Old_hsContainsX (= New_hsCount (+ -1 Old_hsCount)) (>= Old_hsCount 1)) (and (not Old_hsContainsX) (not New_Ret) (= New_hsCount Old_hsCount) (>= Old_hsCount 0))))
+CNF simplified (smt): (and (not New_hsContainsX) (or (and New_Ret Old_hsContainsX (= New_hsCount (+ -1 Old_hsCount)) (>= New_hsCount 0)) (and (not New_Ret) (not Old_hsContainsX) (= New_hsCount Old_hsCount) (>= Old_hsCount 0))))
 
-Predicate root : Not(New_Ret)
+Predicate chosen at root : New_hsCount == Old_hsCount
 
-Predicate root Right : Old_hsContainsX
+rounds: 5
 
-Any:
+pex time: 605.3532242774963
 
-L:
+learn time: 78.95042514801025
 
-SubL:
-
-rounds: 4
-
-pex time: 512.9517447948456
-
-learn time: 542.3117685317993
-
-Samples: 35
+Samples: 47
 
 ---------------------
 PUT_ContainsContract
@@ -74,9 +62,11 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+Label:
+
 Analysis:
 
-learned postcondition: ((0 <= New_hsCount && 0 <= Old_hsCount && -1 < New_hsCount && -1 < Old_hsCount && -1 <= New_hsCount && -1 <= Old_hsCount && New_hsCount <= Old_hsCount && New_hsCount == Old_hsCount && Old_hsCount <= New_hsCount) && (((!((!(New_Ret)))) ||   (((!(New_Ret))) && (((!(New_Ret)) || false) && (New_Ret || true)))) && ((!(New_Ret)) ||   (New_Ret && 0 < New_hsCount && 0 < Old_hsCount && 1 <= New_hsCount && 1 <= Old_hsCount))))
+learned postcondition: ((New_hsCount <= Old_hsCount && Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && New_hsCount == Old_hsCount) && ((!(New_Ret)) || (Old_hsCount >= 1 && New_hsCount >= 1)))
 
 simplified postcondition: ((New_hsCount == Old_hsCount && (!(New_Ret)) && Old_hsCount >= 0) || (New_hsCount == Old_hsCount && Old_hsCount >= 1))
 
@@ -84,23 +74,15 @@ CNF simplified: ((New_hsCount == Old_hsCount) && (((!(New_Ret)) && Old_hsCount >
 
 CNF simplified (smt): (and (= New_hsCount Old_hsCount) (or (and (not New_Ret) (>= Old_hsCount 0)) (>= Old_hsCount 1)))
 
-Predicate root : Not(New_Ret)
+Predicate chosen at root : Not(New_Ret)
 
-Predicate root Right : New_Ret
+rounds: 5
 
-Any:
+pex time: 515.2950851917267
 
-L:
+learn time: 38.43277859687805
 
-SubL:
-
-rounds: 4
-
-pex time: 479.04184794425964
-
-learn time: 276.0477795600891
-
-Samples: 25
+Samples: 40
 
 ---------------------
 PUT_CountContract
@@ -108,30 +90,31 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+Label:
+
 Analysis:
 
-learned postcondition: ((-1 < New_Ret && 0 <= New_Ret && -1 <= New_Ret) && (((!(0 == New_Ret)) ||   ((0 == New_Ret) && (((!(1 <= New_Ret)) || false) && (1 <= New_Ret || true)))) && (0 == New_Ret || (0 < New_Ret && 1 <= New_Ret))))
+learned postcondition: ((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (New_Ret >= 1 || New_Ret == 0))
 
-simplified postcondition: ((New_Ret == 0) || (New_Ret >= 1))
+simplified postcondition: (New_Ret == 0 || New_Ret >= 1)
 
 CNF simplified: (((New_Ret == 0) || (New_Ret >= 1)))
 
 CNF simplified (smt): (or (= New_Ret 0) (>= New_Ret 1))
 
-Predicate root : 0 == New_Ret
-
-Predicate root Right : 1 <= New_Ret
-
-Any:
-
-L:
-
-SubL:
+Predicate chosen at root : 1 <= New_Ret
 
 rounds: 2
 
-pex time: 252.91954493522644
+pex time: 146.4104564189911
 
-learn time: 0.6095857620239258
+learn time: 0.2878119945526123
 
-Samples: 4
+Samples: 5
+
+======================
+Average Rounds: 4.5
+
+Average Pex Time: 503.1058704853058
+
+Average Learn Time: 50.314471781253815
