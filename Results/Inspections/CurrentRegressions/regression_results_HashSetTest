@@ -1,0 +1,150 @@
+Problem: HashSetTest
+
+PUT: PUT_AddContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_hsContainsX)
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_hsContainsX)
+root: not expressive in with conjunctions
+Predicate chosen at root : New_hsCount != Old_hsCount
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : New_hsCount != Old_hsCount
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_hsCount < New_hsCount
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_hsCount < New_hsCount
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_hsContainsX)
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_hsContainsX)
+===== Final Result for PUT_AddContract
+
+postcondition: 
+((Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 1 <= New_hsCount && 0 < New_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && New_hsContainsX) && ((Old_hsContainsX && (!(New_Ret)) && New_hsCount == Old_hsCount && Old_hsCount >= 1) || (New_Ret && (!(Old_hsContainsX)) && New_hsCount == 1 + Old_hsCount)))
+rounds: 6
+
+simplified post: 
+((New_hsContainsX && (!(New_Ret)) && Old_hsContainsX && New_hsCount == Old_hsCount && Old_hsCount >= 1) || (New_hsContainsX && (!(Old_hsContainsX)) && New_Ret && New_hsCount == 1 + Old_hsCount && New_hsCount >= 1))
+pex time: 745.364716053009
+
+learn time: 83.58687138557434
+
+Samples: 54
+
+PUT: PUT_RemoveContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : New_hsCount == Old_hsCount
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : New_hsCount == Old_hsCount
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_hsCount <= New_hsCount
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_hsCount <= New_hsCount
+root: not expressive in with conjunctions
+Predicate chosen at root : New_hsCount == Old_hsCount
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : New_hsCount == Old_hsCount
+root: not expressive in with conjunctions
+Predicate chosen at root : New_hsCount == Old_hsCount
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : New_hsCount == Old_hsCount
+===== Final Result for PUT_RemoveContract
+
+postcondition: 
+((New_hsCount <= Old_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && (!(New_hsContainsX))) && ((New_Ret && Old_hsContainsX && New_hsCount == -1 + Old_hsCount && Old_hsCount >= 1) || ((!(New_Ret)) && New_hsCount == Old_hsCount && (!(Old_hsContainsX)))))
+rounds: 5
+
+simplified post: 
+(((!(New_hsContainsX)) && New_Ret && Old_hsContainsX && New_hsCount == -1 + Old_hsCount && New_hsCount >= 0) || ((!(New_hsContainsX)) && (!(New_Ret)) && (!(Old_hsContainsX)) && New_hsCount == Old_hsCount && Old_hsCount >= 0))
+pex time: 605.3532242774963
+
+learn time: 78.95042514801025
+
+Samples: 47
+
+PUT: PUT_ContainsContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+===== Final Result for PUT_ContainsContract
+
+postcondition: 
+((New_hsCount <= Old_hsCount && Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && New_hsCount == Old_hsCount) && ((!(New_Ret)) || (Old_hsCount >= 1 && New_hsCount >= 1)))
+rounds: 5
+
+simplified post: 
+((New_hsCount == Old_hsCount && (!(New_Ret)) && Old_hsCount >= 0) || (New_hsCount == Old_hsCount && Old_hsCount >= 1))
+pex time: 515.2950851917267
+
+learn time: 38.43277859687805
+
+Samples: 40
+
+PUT: PUT_CountContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= New_Ret
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= New_Ret
+===== Final Result for PUT_CountContract
+
+postcondition: 
+((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (New_Ret >= 1 || New_Ret == 0))
+rounds: 2
+
+simplified post: 
+(New_Ret == 0 || New_Ret >= 1)
+pex time: 146.4104564189911
+
+learn time: 0.2878119945526123
+
+Samples: 5
+

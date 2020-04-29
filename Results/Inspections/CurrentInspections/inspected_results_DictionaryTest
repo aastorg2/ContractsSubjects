@@ -14,10 +14,6 @@ learned postcondition: ((Old_dCount < New_dCount && Old_dCount <= New_dCount && 
 
 simplified postcondition: (((!(Old_dContainsKeyX)) && New_dCount == 1 + Old_dCount && New_dContainsKeyX && New_dContainsValueY && (!(Old_dContainsValueY)) && New_dCount >= 1) || ((!(Old_dContainsKeyX)) && New_dCount == 1 + Old_dCount && New_dContainsKeyX && New_dContainsValueY && Old_dCount >= 1))
 
-CNF simplified: (((!(Old_dContainsKeyX)) && New_dCount == 1 + Old_dCount && New_dContainsKeyX && New_dContainsValueY) && (((!(Old_dContainsValueY)) && New_dCount >= 1) || (Old_dCount >= 1)))
-
-CNF simplified (smt): (and (and (not Old_dContainsKeyX) (= New_dCount (+ 1 Old_dCount)) New_dContainsKeyX New_dContainsValueY) (or (and (not Old_dContainsValueY) (>= New_dCount 1)) (>= Old_dCount 1)))
-
 Predicate chosen at root : Not(Old_dContainsValueY)
 
 rounds: 5
@@ -41,10 +37,6 @@ Analysis:
 learned postcondition: ((New_dCount <= Old_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && (!(New_dContainsKeyX))) && ((New_Ret && New_dCount == -1 + Old_dCount && Old_dContainsKeyX && Old_dCount >= 1) || ((!(New_Ret)) && New_dCount == Old_dCount && (!(Old_dContainsKeyX)))))
 
 simplified postcondition: (((!(New_dContainsKeyX)) && (!(Old_dContainsKeyX)) && New_dCount == Old_dCount && (!(New_Ret)) && Old_dCount >= 0) || ((!(New_dContainsKeyX)) && New_Ret && Old_dContainsKeyX && New_dCount == -1 + Old_dCount && New_dCount >= 0))
-
-CNF simplified: (((!(New_dContainsKeyX))) && (((!(Old_dContainsKeyX)) && New_dCount == Old_dCount && (!(New_Ret)) && Old_dCount >= 0) || (New_Ret && Old_dContainsKeyX && New_dCount == -1 + Old_dCount && New_dCount >= 0)))
-
-CNF simplified (smt): (and (not New_dContainsKeyX) (or (and (not Old_dContainsKeyX) (= New_dCount Old_dCount) (not New_Ret) (>= Old_dCount 0)) (and New_Ret Old_dContainsKeyX (= New_dCount (+ -1 Old_dCount)) (>= New_dCount 0))))
 
 Predicate chosen at root : New_dCount == Old_dCount
 
@@ -70,10 +62,6 @@ learned postcondition: ((New_dCount <= Old_dCount && Old_dCount <= New_dCount &&
 
 simplified postcondition: ((New_dCount == Old_dCount && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && (!(New_Ret == Old_x)) && Old_dCount >= 1) || (New_dCount == Old_dCount && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && New_ContainsKeyNewRet && Old_dCount >= 1))
 
-CNF simplified: ((New_dCount == Old_dCount && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && Old_dCount >= 1) && (((!(New_Ret == Old_x))) || (New_ContainsKeyNewRet)))
-
-CNF simplified (smt): (and (and (= New_dCount Old_dCount) Old_dContainsKeyX New_dContainsKeyX New_ContainsValueNewRet (>= Old_dCount 1)) (or (not (= New_Ret Old_x)) New_ContainsKeyNewRet))
-
 Predicate chosen at root : New_Ret != Old_x
 
 rounds: 4
@@ -94,23 +82,19 @@ Label:
 
 Analysis:
 
-learned postcondition: ((Old_dCount <= New_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 1 <= New_dCount && 0 < New_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && New_dContainsKeyX && New_dContainsValueY) && ((!(Old_dContainsValueY)) || Old_dCount >= 1))
+learned postcondition: (((Old_dCount <= New_dCount && New_dContainsValueY && New_dContainsKeyX && Old_dCount >= 0 && New_dCount >= 1)) && ((Old_dContainsKeyX && New_dCount == Old_dCount && Old_dCount >= 1) || (New_dCount == 1 + Old_dCount && (!(Old_dContainsKeyX)))))
 
-simplified postcondition: ((Old_dCount <= New_dCount && New_dContainsKeyX && New_dContainsValueY && (!(Old_dContainsValueY)) && Old_dCount >= 0 && New_dCount >= 1) || (Old_dCount <= New_dCount && New_dContainsKeyX && New_dContainsValueY && Old_dCount >= 1))
+simplified postcondition: ((New_dContainsValueY && New_dContainsKeyX && Old_dContainsKeyX && New_dCount == Old_dCount && Old_dCount >= 1) || (New_dContainsValueY && New_dContainsKeyX && (!(Old_dContainsKeyX)) && New_dCount == 1 + Old_dCount && New_dCount >= 1))
 
-CNF simplified: ((Old_dCount <= New_dCount && New_dContainsKeyX && New_dContainsValueY) && (((!(Old_dContainsValueY)) && Old_dCount >= 0 && New_dCount >= 1) || (Old_dCount >= 1)))
+Predicate chosen at root : Not(Old_dContainsKeyX)
 
-CNF simplified (smt): (and (and (<= Old_dCount New_dCount) New_dContainsKeyX New_dContainsValueY) (or (and (not Old_dContainsValueY) (>= Old_dCount 0) (>= New_dCount 1)) (>= Old_dCount 1)))
+rounds: 6
 
-Predicate chosen at root : Not(Old_dContainsValueY)
+pex time: 613.3234422206879
 
-rounds: 5
+learn time: 324.9341928958893
 
-pex time: 601.5598113536835
-
-learn time: 219.7592899799347
-
-Samples: 52
+Samples: 61
 
 ---------------------
 PUT_ContainsKeyContract
@@ -125,10 +109,6 @@ Analysis:
 learned postcondition: ((New_dCount <= Old_dCount && Old_dCount <= New_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && New_dCount == Old_dCount) && ((!(New_Ret)) || (New_dCount >= 1 && Old_dCount >= 1)))
 
 simplified postcondition: ((New_dCount == Old_dCount && (!(New_Ret)) && Old_dCount >= 0) || (New_dCount == Old_dCount && Old_dCount >= 1))
-
-CNF simplified: ((New_dCount == Old_dCount) && (((!(New_Ret)) && Old_dCount >= 0) || (Old_dCount >= 1)))
-
-CNF simplified (smt): (and (= New_dCount Old_dCount) (or (and (not New_Ret) (>= Old_dCount 0)) (>= Old_dCount 1)))
 
 Predicate chosen at root : Not(New_Ret)
 
@@ -154,10 +134,6 @@ learned postcondition: ((New_dCount <= Old_dCount && Old_dCount <= New_dCount &&
 
 simplified postcondition: ((New_dCount == Old_dCount && (!(New_Ret)) && Old_dCount >= 0) || (New_dCount == Old_dCount && Old_dCount >= 1))
 
-CNF simplified: ((New_dCount == Old_dCount) && (((!(New_Ret)) && Old_dCount >= 0) || (Old_dCount >= 1)))
-
-CNF simplified (smt): (and (= New_dCount Old_dCount) (or (and (not New_Ret) (>= Old_dCount 0)) (>= Old_dCount 1)))
-
 Predicate chosen at root : Not(New_Ret)
 
 rounds: 5
@@ -182,10 +158,6 @@ learned postcondition: ((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (New_
 
 simplified postcondition: (New_Ret == 0 || New_Ret >= 1)
 
-CNF simplified: (((New_Ret == 0 ) || (New_Ret >= 1)))
-
-CNF simplified (smt): (or (= New_Ret 0) (>= New_Ret 1))
-
 Predicate chosen at root : 1 <= New_Ret
 
 rounds: 2
@@ -197,8 +169,8 @@ learn time: 0.3027982711791992
 Samples: 6
 
 ======================
-Average Rounds: 4.571428571428571
+Average Rounds: 4.7142857142857
 
-Average Pex Time: 479.9904282433646
+Average Pex Time: 481.67094693865
 
-Average Learn Time: 88.99312257766724
+Averagea Learn Time: 104.01810870852
