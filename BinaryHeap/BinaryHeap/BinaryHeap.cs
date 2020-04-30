@@ -2,12 +2,13 @@
 using System.Runtime.Serialization;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Contracts;
 using System.Collections.Generic;
 using System.Collections;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using Common.Utility;
+using Common.Utility4QuickGraph3;
 using BinaryHeap.Utility;
 
 namespace BinaryHeap
@@ -27,13 +28,13 @@ namespace BinaryHeap
     /// http://dotnetslackers.com/Community/files/folders/data-structures-and-algorithms/entry28722.aspx
     /// </remarks>
     // [DebuggerDisplay("Count = {Count}")]
-    public class BinaryHeap<TPriority, TValue> :
-        IEnumerable<KeyValuePair<TPriority, TValue>>
+    public class BinaryHeap<TPriority, TValue>
+    : IEnumerable<KeyValuePair<TPriority, TValue>>
     {
-        readonly Comparison<TPriority> priorityComparison;
-        private KeyValuePair<TPriority, TValue>[] items;
-        private int count;
-        private int version;
+        readonly Func<TPriority, TPriority, int> priorityComparsion;
+        KeyValuePair<TPriority, TValue>[] items;
+        int count;
+        int version;
 
         const int DefaultCapacity = 16;
 
@@ -41,24 +42,22 @@ namespace BinaryHeap
             : this(DefaultCapacity, Comparer<TPriority>.Default.Compare)
         { }
 
-        public BinaryHeap(Comparison<TPriority> priorityComparison)
+        public BinaryHeap(Func<TPriority, TPriority, int> priorityComparison)
             : this(DefaultCapacity, priorityComparison)
         { }
 
-        public BinaryHeap(int capacity, Comparison<TPriority> priorityComparison)
+        public BinaryHeap(int capacity, Func<TPriority, TPriority, int> priorityComparison)
         {
-            if (capacity < 0)
-                throw new ArgumentOutOfRangeException("capacity");
-            if (priorityComparison == null)
-                throw new ArgumentNullException("priorityComparison");
+            Contract.Requires(capacity >= 0);
+            Contract.Requires(priorityComparison != null);
 
             this.items = new KeyValuePair<TPriority, TValue>[capacity];
-            this.priorityComparison = priorityComparison;
+            this.priorityComparsion = priorityComparison;
         }
 
-        public Comparison<TPriority> PriorityComparison
+        public Func<TPriority, TPriority, int> PriorityComparison
         {
-            get { return this.priorityComparison; }
+            get { return this.priorityComparsion; }
         }
 
         public int Capacity
@@ -73,8 +72,6 @@ namespace BinaryHeap
 
         public void Add(TPriority priority, TValue value)
         {
-            GraphContracts.Assert(count <= this.items.Length);
-
             this.version++;
             this.ResizeArray();
             this.items[this.count++] = new KeyValuePair<TPriority, TValue>(priority, value);
@@ -94,6 +91,14 @@ namespace BinaryHeap
             }
         }
 
+        public TValue[] ToValueArray()
+        {
+            var values = new TValue[this.items.Length];
+            for (int i = 0; i < values.Length; ++i)
+                values[i] = this.items[i].Value;
+            return values;
+        }
+
         private void ResizeArray()
         {
             if (this.count == this.items.Length)
@@ -106,7 +111,7 @@ namespace BinaryHeap
 
         public KeyValuePair<TPriority, TValue> Minimum()
         {
-            /* NotpAssume.IsTrue(this.count > 0); */
+            //NotpAssume.IsTrue(this.count >0);
             if (this.count == 0)
                 throw new InvalidOperationException();
             return this.items[0];
@@ -125,10 +130,10 @@ namespace BinaryHeap
 
         public KeyValuePair<TPriority, TValue> RemoveAt(int index)
         {
-            /* NotpAssume.IsTrue(this.count >0);*/
+            //NotpAssume.IsTrue(this.count >0);
             if (this.count == 0)
                 throw new InvalidOperationException("heap is empty");
-            /* NotpAssume.IsTrue(index >= 0 || index <this.count || index + this.count >= this.count); */
+            //NotpAssume.IsTrue(index >= 0 || index <this.count || index + this.count >= this.count);
             if (index < 0 | index >= this.count | index + this.count < this.count)
                 throw new ArgumentOutOfRangeException("index");
 
@@ -181,54 +186,80 @@ namespace BinaryHeap
             return -1;
         }
 
+        public bool MinimumUpdate(TPriority priority, TValue value)
+        {
+            // find index
+            for (int i = 0; i < this.count; i++)
+            {
+                if (object.Equals(value, this.items[i].Value))
+                {
+                    if (this.priorityComparsion(priority, this.items[i].Key) <= 0)
+                    {
+                        this.RemoveAt(i);
+                        this.Add(priority, value);
+                        return true;
+                    }
+                    return false;
+                }
+            }
+
+            // not in collection
+            this.Add(priority, value);
+            return true;
+        }
+
         public void Update(TPriority priority, TValue value)
         {
             // find index
             var index = this.IndexOf(value);
-            /* NotpAssume.IsTrue(index >=0); */
-            if (index < 0)
-                throw new InvalidOperationException("value was not found in the heap");
-
-            // remove and add
-            this.RemoveAt(index);
+            // remove if needed
+            if (index > -1)
+                this.RemoveAt(index);
             this.Add(priority, value);
         }
 
+        [Pure]
         private bool Less(int i, int j)
         {
-            GraphContracts.Assert(i >= 0 & i < this.count &
-                         j >= 0 & j < this.count &
-                         i != j, String.Format("i: {0}, j: {1}", i, j));
+            Contract.Requires(
+                i >= 0 & i < this.count &
+                j >= 0 & j < this.count &
+                i != j);
 
-            return this.priorityComparison(this.items[i].Key, this.items[j].Key) <= 0;
+            return this.priorityComparsion(this.items[i].Key, this.items[j].Key) <= 0;
         }
 
         private void Swap(int i, int j)
         {
-            GraphContracts.Assert(i >= 0 & i < this.count &
-                         j >= 0 & j < this.count &
-                         i != j);
+            Contract.Requires(
+                i >= 0 && i < this.count &&
+                j >= 0 && j < this.count &&
+                i != j);
 
             var kv = this.items[i];
             this.items[i] = this.items[j];
             this.items[j] = kv;
         }
 
-        [Conditional("DEBUG")]
-        public void ObjectInvariant()
+#if DEEP_INVARIANT
+        [ContractInvariantMethod]
+        void ObjectInvariant()
         {
-            GraphContracts.Assert(this.items != null);
-            GraphContracts.Assert(
+            Contract.Invariant(this.items != null);
+            Contract.Invariant(
                 this.count > -1 &
                 this.count <= this.items.Length);
-            for (int index = 0; index < this.count; ++index)
-            {
-                var left = 2 * index + 1;
-                GraphContracts.Assert(left >= count || this.Less(index, left));
-                var right = 2 * index + 2;
-                GraphContracts.Assert(right >= count || this.Less(index, right));
-            }
+            Contract.Invariant(
+                EnumerableContract.All(0, this.count, index =>
+                {
+                    var left = 2 * index + 1;
+                    var right = 2 * index + 2;
+                    return  (left >= count || this.Less(index, left)) &&
+                            (right >= count || this.Less(index, right));
+                })
+            );
         }
+#endif
 
         #region IEnumerable<KeyValuePair<TKey,TValue>> Members
         public IEnumerator<KeyValuePair<TPriority, TValue>> GetEnumerator()
@@ -262,7 +293,7 @@ namespace BinaryHeap
                         throw new InvalidOperationException();
                     if (this.index < 0 | this.index == this.count)
                         throw new InvalidOperationException();
-                    GraphContracts.Assert(this.index <= this.count);
+                    Contract.Assert(this.index <= this.count);
                     return this.items[this.index];
                 }
             }
@@ -299,7 +330,6 @@ namespace BinaryHeap
         }
         #endregion
 
-        // Shiyu's code
         public Object Clone()
         {
             BinaryHeap<TPriority, TValue> bh = new BinaryHeap<TPriority, TValue>(this.Capacity, Comparer<TPriority>.Default.Compare);
@@ -314,16 +344,6 @@ namespace BinaryHeap
             return bh;
         }
 
-        /*
-        public virtual BinaryHeap<int,int> Clone()
-        {
-            BinaryHeap<int, int> bh = new BinaryHeap<int, int>(this.Capacity, Comparer<int>.Default.Compare);
-            bh.count = this.count;
-            bh.version = this.version;
-            Array.Copy(this.items, bh.items, this.count);
-            return bh;
-        }*/
-
         public string ToStringForInts()
         {
             string ret = "{";
@@ -333,21 +353,5 @@ namespace BinaryHeap
             }
             return ret + "}";
         }
-
-        //public TPriority SearchPriorityByValue(int value)
-        //{
-        //    for (int i = 0; i < this.count; i++)
-        //    {
-        //        if (object.Equals(value, this.items[i].Value))
-        //        {
-        //            return this.items[i].Key;
-        //        }
-        //    }
-        //    //if (this.items[0].Key.GetType().ToString().Contains("int") || this.items[0].Key.GetType().ToString().Contains("Int"))
-            
-        //    return default(TPriority);
-        //}
-        
     }
-    
 }

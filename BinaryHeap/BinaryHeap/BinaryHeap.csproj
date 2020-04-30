@@ -39,9 +39,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Common\Utility\bin\Debug\Utility.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Utility4QuickGraph3">
+      <HintPath>..\..\Common\Utility4QuickGraph3\bin\Debug\Utility4QuickGraph3.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
