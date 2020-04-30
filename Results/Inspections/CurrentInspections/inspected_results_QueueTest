@@ -153,3 +153,15 @@ pex time: 88.2282042503357
 learn time: 213.96838855743408
 
 Samples: 37
+
+SMT check results:
+
+Tool: Precis
+	Number of Contracts: 5
+	['PUT_EnqueueContract', 'PUT_DequeueContract', 'PUT_PeekContract', 'PUT_CountContract', 'PUT_ContainsContract']
+Tool: Daikon
+	Number of Contracts: 0
+	[]
+Tool: Equivalent
+	Number of Contracts: 0
+	[]

@@ -180,13 +180,13 @@ Label: Accept
 
 Analysis: Unsure
 
-learned postcondition: (0 < New_bhCount && 0 <= Old_bhCount && -1 < New_bhCount && 1 <= New_bhCount && 0 <= New_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && -1 <= New_bhCount && -1 < New_bhIndexOfValue && 0 <= New_bhIndexOfValue && -1 <= Old_bhIndexOfValue && -1 <= New_bhIndexOfValue && Old_bhCount <= New_bhCount && Old_bhIndexOfValue < Old_bhCount && New_bhMinimumKey <= Old_prioirty && New_bhIndexOfValue < New_bhCount && Old_bhIndexOfValue < New_bhCount && New_bhIndexOfValue != New_bhCount && New_bhIndexOfValue <= New_bhCount && Old_bhIndexOfValue != New_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue <= New_bhCount && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount)
+learned postcondition: (0 < New_bhCount && 0 <= Old_bhCount && -1 < New_bhCount && 1 <= New_bhCount && 0 <= New_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && -1 <= New_bhCount && -1 < New_bhIndexOfValue && 0 <= New_bhIndexOfValue && -1 <= Old_bhIndexOfValue && -1 <= New_bhIndexOfValue && Old_bhCount <= New_bhCount && Old_bhIndexOfValue < Old_bhCount && New_bhMinimumKey <= Old_priority && New_bhIndexOfValue < New_bhCount && Old_bhIndexOfValue < New_bhCount && New_bhIndexOfValue != New_bhCount && New_bhIndexOfValue <= New_bhCount && Old_bhIndexOfValue != New_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue <= New_bhCount && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount)
 
-simplified postcondition: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_prioirty && (!(New_bhIndexOfValue == New_bhCount)) && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1))
+simplified postcondition: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && (!(New_bhIndexOfValue == New_bhCount)) && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1))
 
-CNF simplified: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_prioirty && (!(New_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue < Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1))
+CNF simplified: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && (!(New_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue < Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1))
 
-CNF simplified (smt): (and (<= Old_bhCount New_bhCount) (<= New_bhMinimumKey Old_prioirty) (not (= New_bhIndexOfValue New_bhCount)) (< Old_bhIndexOfValue Old_bhCount) (<= New_bhIndexOfValue Old_bhCount) (>= New_bhIndexOfValue 0) (>= Old_bhIndexOfValue -1))
+CNF simplified (smt): (and (<= Old_bhCount New_bhCount) (<= New_bhMinimumKey Old_priority) (not (= New_bhIndexOfValue New_bhCount)) (< Old_bhIndexOfValue Old_bhCount) (<= New_bhIndexOfValue Old_bhCount) (>= New_bhIndexOfValue 0) (>= Old_bhIndexOfValue -1))
 
 Predicate root : 0 < New_Ret
 
@@ -214,13 +214,13 @@ Label: Accept
 
 Analysis: Unsure
 
-learned postcondition: (0 < New_bhCount && 0 <= Old_bhCount && -1 < New_bhCount && 1 <= New_bhCount && 0 <= New_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && -1 <= New_bhCount && -1 <= Old_bhIndexOfValue && -1 < Newd_bhIndexOfValue && 0 <= Newd_bhIndexOfValue && -1 <= Newd_bhIndexOfValue && Old_bhCount <= New_bhCount && Old_bhIndexOfValue < Old_bhCount && New_bhMinimumKey <= Old_prioirty && Old_bhIndexOfValue < New_bhCount && Old_bhIndexOfValue != New_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue <= New_bhCount && Old_bhIndexOfValue <= Old_bhCount && Newd_bhIndexOfValue < New_bhCount && Newd_bhIndexOfValue <= Old_bhCount && Newd_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue <= New_bhCount)
+learned postcondition: (0 < New_bhCount && 0 <= Old_bhCount && -1 < New_bhCount && 1 <= New_bhCount && 0 <= New_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && -1 <= New_bhCount && -1 <= Old_bhIndexOfValue && -1 < Newd_bhIndexOfValue && 0 <= Newd_bhIndexOfValue && -1 <= Newd_bhIndexOfValue && Old_bhCount <= New_bhCount && Old_bhIndexOfValue < Old_bhCount && New_bhMinimumKey <= Old_priority && Old_bhIndexOfValue < New_bhCount && Old_bhIndexOfValue != New_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue <= New_bhCount && Old_bhIndexOfValue <= Old_bhCount && Newd_bhIndexOfValue < New_bhCount && Newd_bhIndexOfValue <= Old_bhCount && Newd_bhIndexOfValue != New_bhCount && Newd_bhIndexOfValue <= New_bhCount)
 
-simplified postcondition: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_prioirty && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && Newd_bhIndexOfValue <= Old_bhCount && (!(Newd_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue >= -1 && Newd_bhIndexOfValue >= 0))
+simplified postcondition: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && Newd_bhIndexOfValue <= Old_bhCount && (!(Newd_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue >= -1 && Newd_bhIndexOfValue >= 0))
 
-CNF simplified: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_prioirty && Old_bhIndexOfValue < Old_bhCount && Newd_bhIndexOfValue <= Old_bhCount && (!(Newd_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue >= -1 && Newd_bhIndexOfValue >= 0))
+CNF simplified: ((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && Old_bhIndexOfValue < Old_bhCount && Newd_bhIndexOfValue <= Old_bhCount && (!(Newd_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue >= -1 && Newd_bhIndexOfValue >= 0))
 
-CNF simplified (smt): (and (<= Old_bhCount New_bhCount) (<= New_bhMinimumKey Old_prioirty) (< Old_bhIndexOfValue Old_bhCount) (<= Newd_bhIndexOfValue Old_bhCount) (not (= Newd_bhIndexOfValue New_bhCount)) (>= Old_bhIndexOfValue -1) (>= Newd_bhIndexOfValue 0))
+CNF simplified (smt): (and (<= Old_bhCount New_bhCount) (<= New_bhMinimumKey Old_priority) (< Old_bhIndexOfValue Old_bhCount) (<= Newd_bhIndexOfValue Old_bhCount) (not (= Newd_bhIndexOfValue New_bhCount)) (>= Old_bhIndexOfValue -1) (>= Newd_bhIndexOfValue 0))
 
 Predicate root : 0 < New_Ret
 

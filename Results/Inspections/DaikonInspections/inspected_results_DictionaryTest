@@ -10,16 +10,18 @@ Label:
 
 Analysis:
 
-CNF simplified: ((New_dContainsKeyX == New_dContainsValueY && Old_dContainsKeyX == Old_dContainsKeyX && New_dContainsKeyX && New_dCount >= 1 && !(Old_dContainsKeyX) && Old_dCount >= 0 && New_dCount - Old_dCount - 1 == 0))
+simplified postcondition: ((Old_dContainsKeyX == Old_dContainsKeyX && New_dContainsKeyX && New_dContainsValueY && New_dCount >= 1 && !(Old_dContainsKeyX) && Old_dCount >= 0 && New_dCount - Old_dCount - 1 == 0))
 
-CNF simplified (smt): (and (= New_dContainsKeyX New_dContainsValueY) (= Old_dContainsKeyX Old_dContainsKeyX) New_dContainsKeyX (>= New_dCount 1) (not Old_dContainsKeyX) (>= Old_dCount 0) (= (- (- New_dCount Old_dCount) 1) 0))
+CNF simplified: ((Old_dContainsKeyX == Old_dContainsKeyX && New_dContainsKeyX && New_dContainsValueY && New_dCount >= 1 && !(Old_dContainsKeyX) && Old_dCount >= 0 && New_dCount - Old_dCount - 1 == 0))
+
+CNF simplified (smt): (and (= Old_dContainsKeyX Old_dContainsKeyX) New_dContainsKeyX New_dContainsValueY (>= New_dCount 1) (not Old_dContainsKeyX) (>= Old_dCount 0) (= (- (- New_dCount Old_dCount) 1) 0))
 
 
-rounds: 3
+rounds: 
 
-pex time: 356.92957377433777
+pex time: 231.9313416481018
 
-learn time: 7.563889980316162
+learn time: 4.070473909378052
 
 Samples: 12
 
@@ -33,16 +35,18 @@ Label:
 
 Analysis:
 
-CNF simplified: ((Old_dContainsKeyX == New_Ret && (!(New_Ret)) == (New_dCount == Old_dCount) && ((!(!(New_Ret))) || (New_dContainsKeyX == New_Ret)) && (New_Ret) == (New_dCount - Old_dCount + 1 == 0) && !(New_dContainsKeyX) && New_dCount >= 0 && Old_dCount >= 0 && New_dCount <= Old_dCount))
+simplified postcondition: (((!(Old_dContainsKeyX)) == (!(New_Ret)) && (!(Old_dContainsKeyX)) == (New_dCount == Old_dCount) && (Old_dContainsKeyX) == (New_Ret) && (Old_dContainsKeyX) == (New_dCount - Old_dCount + 1 == 0) && ((!(Old_dContainsKeyX)) || (Old_dCount >= 1)) && !(New_dContainsKeyX) && New_dCount >= 0 && Old_dCount >= 0 && New_dCount <= Old_dCount))
 
-CNF simplified (smt): (and (= Old_dContainsKeyX New_Ret) (= (not New_Ret) (= New_dCount Old_dCount)) (or (not (not New_Ret)) (= New_dContainsKeyX New_Ret)) (= New_Ret (= (+ (- New_dCount Old_dCount) 1) 0)) (not New_dContainsKeyX) (>= New_dCount 0) (>= Old_dCount 0) (<= New_dCount Old_dCount))
+CNF simplified: ((((!(Old_dContainsKeyX)) == (!(New_Ret)) && (!(Old_dContainsKeyX)) == (New_dCount == Old_dCount) && (Old_dContainsKeyX) == (New_Ret) && (Old_dContainsKeyX) == (New_dCount - Old_dCount + 1 == 0) && ((!(Old_dContainsKeyX)) || (Old_dCount >= 1)) && !(New_dContainsKeyX) && New_dCount >= 0 && Old_dCount >= 0 && New_dCount <= Old_dCount)))
+
+CNF simplified (smt): (and (= (not Old_dContainsKeyX) (not New_Ret)) (= (not Old_dContainsKeyX) (= New_dCount Old_dCount)) (= Old_dContainsKeyX New_Ret) (= Old_dContainsKeyX (= (+ (- New_dCount Old_dCount) 1) 0)) (or (not Old_dContainsKeyX) (>= Old_dCount 1)) (not New_dContainsKeyX) (>= New_dCount 0) (>= Old_dCount 0) (<= New_dCount Old_dCount))
 
 
-rounds: 5
+rounds: 2
 
-pex time: 467.89922523498535
+pex time: 508.3208713531494
 
-learn time: 16.7252676486969
+learn time: 26.792346000671387
 
 Samples: 12
 
@@ -56,16 +60,18 @@ Label:
 
 Analysis:
 
-CNF simplified: ((New_ContainsValueNewRet == New_dContainsKeyX && New_ContainsValueNewRet == Old_dContainsKeyX && New_dCount == Old_dCount && New_ContainsValueNewRet))
+simplified postcondition: ((New_dCount == Old_dCount && New_ContainsValueNewRet && New_dContainsKeyX && Old_dContainsKeyX))
 
-CNF simplified (smt): (and (= New_ContainsValueNewRet New_dContainsKeyX) (= New_ContainsValueNewRet Old_dContainsKeyX) (= New_dCount Old_dCount) New_ContainsValueNewRet)
+CNF simplified: ((New_dCount == Old_dCount && New_ContainsValueNewRet && New_dContainsKeyX && Old_dContainsKeyX))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) New_ContainsValueNewRet New_dContainsKeyX Old_dContainsKeyX)
 
 
-rounds: 3
+rounds: 6
 
-pex time: 336.57941031455994
+pex time: 280.4077904224396
 
-learn time: 7.19176721572876
+learn time: 7.8600099086761475
 
 Samples: 12
 
@@ -79,16 +85,18 @@ Label:
 
 Analysis:
 
-CNF simplified: ((New_dContainsKeyX == New_dContainsValueY && New_dContainsKeyX && New_dCount >= 1 && Old_dCount >= 0 && New_dCount >= Old_dCount))
+simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_dCount >= 1 && Old_dCount >= 0 && New_dCount >= Old_dCount))
 
-CNF simplified (smt): (and (= New_dContainsKeyX New_dContainsValueY) New_dContainsKeyX (>= New_dCount 1) (>= Old_dCount 0) (>= New_dCount Old_dCount))
+CNF simplified: ((New_dContainsKeyX && New_dContainsValueY && New_dCount >= 1 && Old_dCount >= 0 && New_dCount >= Old_dCount))
+
+CNF simplified (smt): (and New_dContainsKeyX New_dContainsValueY (>= New_dCount 1) (>= Old_dCount 0) (>= New_dCount Old_dCount))
 
 
-rounds: 4
+rounds: 3
 
-pex time: 458.8957574367523
+pex time: 240.31106781959534
 
-learn time: 12.057153463363647
+learn time: 8.885505199432373
 
 Samples: 12
 
@@ -102,16 +110,18 @@ Label:
 
 Analysis:
 
-CNF simplified: ((New_dCount == Old_dCount && New_dCount >= 0))
+simplified postcondition: ((New_dCount == Old_dCount && ((!(New_Ret)) || (New_dCount >= 1)) && New_dCount >= 0))
 
-CNF simplified (smt): (and (= New_dCount Old_dCount) (>= New_dCount 0))
+CNF simplified: (((New_dCount == Old_dCount && ((!(New_Ret)) || (New_dCount >= 1)) && New_dCount >= 0)))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) (or (not New_Ret) (>= New_dCount 1)) (>= New_dCount 0))
 
 
-rounds: 5
+rounds: 3
 
-pex time: 464.920241355896
+pex time: 479.95327138900757
 
-learn time: 16.770310163497925
+learn time: 25.916404008865356
 
 Samples: 12
 
@@ -125,16 +135,18 @@ Label:
 
 Analysis:
 
-CNF simplified: ((New_dCount == Old_dCount && New_dCount >= 0))
+simplified postcondition: ((New_dCount == Old_dCount && ((!(New_Ret)) || (New_dCount >= 1)) && New_dCount >= 0))
 
-CNF simplified (smt): (and (= New_dCount Old_dCount) (>= New_dCount 0))
+CNF simplified: (((New_dCount == Old_dCount && ((!(New_Ret)) || (New_dCount >= 1)) && New_dCount >= 0)))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) (or (not New_Ret) (>= New_dCount 1)) (>= New_dCount 0))
 
 
-rounds: 5
+rounds: 6
 
-pex time: 235.84775066375732
+pex time: 146.45395278930664
 
-learn time: 16.256202936172485
+learn time: 18.304338693618774
 
 Samples: 12
 
@@ -148,22 +160,36 @@ Label:
 
 Analysis:
 
-CNF simplified: (true)
+simplified postcondition: (true)
+
+CNF simplified: ((true))
 
 CNF simplified (smt): true
 
 
-rounds: 1
+rounds: 5
 
-pex time: 34.468746185302734
+pex time: 23.76407814025879
 
-learn time: 3.2640938758850098
+learn time: 3.629027843475342
 
 Samples: 12
 
 ======================
 Average Rounds: 3.7142857142857144
 
-Average Pex Time: 336.5058149950845
+Average Pex Time: 273.0203390802656
 
-Average Learn Time: 11.40409789766584
+Average Learn Time: 13.636872223445348
+
+SMT check results:
+
+Tool: Precis
+	Number of Contracts: 4
+	['PUT_AddContract', 'PUT_GetContract', 'PUT_SetContract', 'PUT_CountContract']
+Tool: Daikon
+	Number of Contracts: 0
+	[]
+Tool: Equivalent
+	Number of Contracts: 3
+	['PUT_RemoveContract', 'PUT_ContainsKeyContract', 'PUT_ContainsValueContract']

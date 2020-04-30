@@ -24,6 +24,29 @@ learn time: 35.74171161651611
 Samples: 7
 
 ---------------------
+PUT_PopContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_s1Count >= 0 && Old_s1Count >= 1 && New_s1Count - Old_s1Count + 1 == 0))
+
+CNF simplified (smt): (and (>= New_s1Count 0) (>= Old_s1Count 1) (= (+ (- New_s1Count Old_s1Count) 1) 0))
+
+
+rounds: 3
+
+pex time: 23.336567640304565
+
+learn time: 7.150811672210693
+
+Samples: 7
+
+---------------------
 PUT_PeekContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
@@ -69,9 +92,44 @@ learn time: 20.82184338569641
 
 Samples: 7
 
+---------------------
+PUT_ContainsContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_s1Count == Old_s1Count && ((!(New_Ret)) || (New_s1Count >= 1)) && New_s1Count >= 0))
+
+CNF simplified (smt): (and (= New_s1Count Old_s1Count) (or (not New_Ret) (>= New_s1Count 1)) (>= New_s1Count 0))
+
+
+rounds: 6
+
+pex time: 50.19357872009277
+
+learn time: 21.094056367874146
+
+Samples: 7
+
 ======================
-Average Rounds: 7.333333333333333
+Average Rounds: 6.2
 
-Average Pex Time: 55.02531027793884
+Average Pex Time: 47.721215438842776
 
-Average Learn Time: 23.290263493855793
+Average Learn Time: 19.623131704330444
+
+SMT check results:
+
+Tool: Precis
+	Number of Contracts: 5
+	['PUT_PushContract', 'PUT_PopContract', 'PUT_PeekContract', 'PUT_CountContract', 'PUT_ContainsContract']
+Tool: Daikon
+	Number of Contracts: 0
+	[]
+Tool: Equivalent
+	Number of Contracts: 0
+	[]
