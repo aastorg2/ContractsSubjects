@@ -6,6 +6,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Precis
+
 Label:
 
 Analysis:
@@ -32,6 +34,8 @@ PUT_MinimumContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Precis
 
 Label:
 
@@ -60,6 +64,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Precis
+
 Label:
 
 Analysis:
@@ -86,6 +92,8 @@ PUT_RemoveAtContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Precis
 
 Label:
 
@@ -114,6 +122,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Precis
+
 Label:
 
 Analysis:
@@ -141,6 +151,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Unknown
+
 Label:
 
 Analysis:
@@ -167,6 +179,8 @@ PUT_MinimumUpdateContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Unknown
 
 Label:
 

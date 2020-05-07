@@ -6,6 +6,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Precis
+
 Label:
 
 Analysis:
@@ -35,6 +37,8 @@ PUT_CountContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Precis
 
 Label:
 
@@ -70,6 +74,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Precis
+
 Label:
 
 Analysis:
@@ -99,6 +105,8 @@ PUT_PopContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Precis
 
 Label:
 
@@ -131,6 +139,8 @@ PUT_PushContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Precis
 
 Label:
 

@@ -6,6 +6,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Unknown
+
 Label:
 
 Analysis:
@@ -33,6 +35,8 @@ PUT_RemoveVertexContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Precis
 
 Label:
 
@@ -62,6 +66,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Unknown
+
 Label:
 
 Analysis:
@@ -89,6 +95,8 @@ PUT_ContainsEdgeContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Unknown
 
 Label:
 
@@ -118,6 +126,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Unknown
+
 Label:
 
 Analysis:
@@ -145,6 +155,8 @@ PUT_IsVerticesEmptyContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Unknown
 
 Label:
 
@@ -174,6 +186,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Unknown
+
 Label:
 
 Analysis:
@@ -201,6 +215,8 @@ PUT_ContainsVertexContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Unknown
 
 Label:
 
@@ -230,6 +246,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Unknown
+
 Label:
 
 Analysis:
@@ -257,6 +275,8 @@ PUT_RemoveEdgeContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Unknown
 
 Label:
 
@@ -286,6 +306,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Unknown
+
 Label:
 
 Analysis:
@@ -313,6 +335,8 @@ PUT_EdgeCountContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Unknown
 
 Label:
 
@@ -342,6 +366,8 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
+smt check: Unknown
+
 Label:
 
 Analysis:
@@ -369,6 +395,8 @@ PUT_IsAdjacentEdgesEmptyContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Unknown
 
 Label:
 
