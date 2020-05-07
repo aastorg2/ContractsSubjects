@@ -121,15 +121,3 @@ Average Rounds: 6.2
 Average Pex Time: 47.721215438842776
 
 Average Learn Time: 19.623131704330444
-
-SMT check results:
-
-Tool: Precis
-	Number of Contracts: 5
-	['PUT_PushContract', 'PUT_PopContract', 'PUT_PeekContract', 'PUT_CountContract', 'PUT_ContainsContract']
-Tool: Daikon
-	Number of Contracts: 0
-	[]
-Tool: Equivalent
-	Number of Contracts: 0
-	[]

@@ -180,9 +180,9 @@ Analysis:
 
 learned postcondition: ((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (New_Ret >= 1 || New_Ret == 0))
 
-simplified postcondition: (New_Ret == 0 || New_Ret >= 1)
+simplified postcondition: ((New_Ret == 0 || New_Ret >= 1))
 
-CNF simplified: (((ew_Ret == 0 ) || (ew_Ret >= 1)))
+CNF simplified: (((New_Ret == 0 ) || (New_Ret >= 1)))
 
 CNF simplified (smt): (or (= New_Ret 0) (>= New_Ret 1))
 
@@ -202,15 +202,3 @@ Average Rounds: 4.7142857142857
 Average Pex Time: 481.67094693865
 
 Averagea Learn Time: 104.01810870852
-
-SMT check results:
-
-Tool: Precis
-	Number of Contracts: 4
-	['PUT_AddContract', 'PUT_GetContract', 'PUT_SetContract', 'PUT_CountContract']
-Tool: Daikon
-	Number of Contracts: 0
-	[]
-Tool: Equivalent
-	Number of Contracts: 3
-	['PUT_RemoveContract', 'PUT_ContainsKeyContract', 'PUT_ContainsValueContract']
