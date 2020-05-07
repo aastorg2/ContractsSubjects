@@ -65,7 +65,7 @@ Analysis:
                 if "Predicate" in lines[lineIndex]:
                     predicates.append(lines[lineIndex])
                 lineIndex += 1
-        if "rounds" in lines[lineIndex]:
+        if "rounds" in lines[lineIndex] and not "max" in lines[lineIndex]:
                     #predicate = "None"
                     #predicateRight = "None"
                     #predicateLeft = "None"
