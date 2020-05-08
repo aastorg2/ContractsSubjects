@@ -12,25 +12,23 @@ Label:
 
 Analysis:
 
-learned postcondition: ((New_ContainsNewRet && 0 < New_s1Count && 0 < Old_s1Count && 1 <= New_s1Count && 0 <= New_s1Count && -1 < New_s1Count && 1 <= Old_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count <= Old_s1Count && New_s1Count == Old_s1Count) && (((!(New_s1Count < New_Ret)) ||   ((1 < New_Ret && 0 < New_Ret && 1 <= New_Ret && 0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret && New_s1Count < New_Ret && Old_s1Count < New_Ret && New_Ret != New_s1Count && Old_s1Count <= New_Ret && New_Ret != Old_s1Count && New_s1Count <= New_Ret) && (((!(New_Ret <= Old_s1Count)) || false) && (New_Ret <= Old_s1Count || true)))) && (New_s1Count < New_Ret ||   (New_Ret <= New_s1Count && New_Ret <= Old_s1Count))))
+learned postcondition: (((New_s1Count == Old_s1Count && New_ContainsNewRet && Old_s1Count >= 1)) && ((Old_s1Count >= 2 && New_s1Count >= 2) || (New_s1Count == 1 && Old_s1Count == 1)))
 
-simplified postcondition: ((New_ContainsNewRet && New_s1Count == Old_s1Count && Old_s1Count >= 1))
+simplified postcondition: ((New_s1Count == Old_s1Count && New_ContainsNewRet && Old_s1Count >= 2) || (New_ContainsNewRet && New_s1Count == 1 && Old_s1Count == 1))
 
-CNF simplified: ((New_ContainsNewRet && New_s1Count == Old_s1Count && Old_s1Count >= 1))
+CNF simplified: ((New_ContainsNewRet) && ((New_s1Count == Old_s1Count && Old_s1Count >= 2) || (New_s1Count == 1 && Old_s1Count == 1)))
 
-CNF simplified (smt): (and New_ContainsNewRet (= New_s1Count Old_s1Count) (>= Old_s1Count 1))
+CNF simplified (smt): (and New_ContainsNewRet (or (and (= New_s1Count Old_s1Count) (>= Old_s1Count 2)) (and (= New_s1Count 1) (= Old_s1Count 1))))
 
-Predicate root : New_s1Count < New_Ret
+Predicate chosen at root : 1 == Old_s1Count
 
-Predicate root Right : New_Ret <= Old_s1Count
+rounds: 6
 
-rounds: 5
+pex time: 43.5341682434082
 
-pex time: 99.16025185585022
+learn time: 9.728874921798706
 
-learn time: 94.45568227767944
-
-Samples: 15
+Samples: 17
 
 ---------------------
 PUT_CountContract
@@ -44,29 +42,23 @@ Label:
 
 Analysis:
 
-learned postcondition: ((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (((!(New_Ret < Old_Top)) ||   ((0 < Old_Top && 1 <= Old_Top && 0 <= Old_Top && -1 < Old_Top && -1 <= Old_Top && New_Ret < Old_Top && New_Ret <= Old_Top && New_Ret != Old_Top) && (((!(0 < New_Top)) ||   ((0 < New_Top &&  1 <= New_Top &&  0 <= New_Top &&  -1 < New_Top &&  -1 <= New_Top &&  New_Ret < New_Top &&  New_Ret <= New_Top &&  New_Ret != New_Top) &&  (((!(0 < New_Ret)) || ((0 < New_Ret &&   1 < Old_Top &&   1 < New_Top &&   1 <= New_Ret &&   New_Top <= Old_Top &&   Old_Top <= New_Top &&   New_Top == Old_Top) &&  (((!(New_Ret == 0)) ||  false) &&   (New_Ret == 0 ||  true)))) &&  (0 < New_Ret || (0 == New_Ret &&  New_Ret == 0))))) && (0 < New_Top ||   (0 == New_Ret &&  New_Ret == 0 &&  New_Top < Old_Top &&  New_Top <= Old_Top &&  New_Top != Old_Top &&  New_Top <= New_Ret))))) && (New_Ret < Old_Top || (Old_Top <= New_Ret))))
+learned postcondition: ((New_Ret >= 0) && (New_Top == Old_Top || New_Ret == 0))
 
-simplified postcondition: ((Old_Top <= New_Ret && New_Ret >= 0) || (New_Top == Old_Top && New_Ret >= 0 && Old_Top >= 1) || (New_Top == Old_Top && New_Ret == 0) || (New_Ret == 0 && New_Top >= 1) || (New_Top <= Old_Top && New_Ret == 0) || (New_Top <= Old_Top && New_Top <= 0 && New_Ret == 0))
+simplified postcondition: ((New_Top == Old_Top && New_Ret >= 0) || New_Ret == 0)
 
-CNF simplified: (((Old_Top <= New_Ret && New_Ret >= 0) || (New_Top == Old_Top && New_Ret >= 0 && Old_Top >= 1) || (New_Top == Old_Top && New_Ret == 0) || (New_Ret == 0 && New_Top >= 1) || (New_Top <= Old_Top && New_Ret == 0) || (New_Top <= Old_Top && New_Top <= 0 && New_Ret == 0)))
+CNF simplified: (((New_Top == Old_Top && New_Ret >= 0) || (New_Ret == 0)))
 
-CNF simplified (smt): (or (and (<= Old_Top New_Ret) (>= New_Ret 0)) (and (= New_Top Old_Top) (>= New_Ret 0) (>= Old_Top 1)) (and (= New_Top Old_Top) (= New_Ret 0)) (and (= New_Ret 0) (>= New_Top 1)) (and (<= New_Top Old_Top) (= New_Ret 0)) (and (<= New_Top Old_Top) (<= New_Top 0) (= New_Ret 0)))
+CNF simplified (smt): (or (and (= New_Top Old_Top) (>= New_Ret 0)) (= New_Ret 0))
 
-Predicate root : New_Ret < Old_Top
+Predicate chosen at root : New_Top == Old_Top
 
-Predicate root Right : 0 < New_Top
+rounds: 7
 
-Predicate root Right Right : 0 < New_Ret
+pex time: 47.80462431907654
 
-Predicate root Right Right Right : New_Ret == 0
+learn time: 52.22892761230469
 
-rounds: 8
-
-pex time: 109.50939917564392
-
-learn time: 2479.3014364242554
-
-Samples: 39
+Samples: 27
 
 ---------------------
 PUT_ContainsContract
@@ -80,25 +72,23 @@ Label:
 
 Analysis:
 
-learned postcondition: ((0 <= New_s1Count && -1 < New_s1Count && 0 <= Old_s1Count && -1 < Old_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && New_s1Count <= Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count == Old_s1Count) && (((!((!(New_Ret)))) ||   (((!(New_Ret))) && (((!(New_Ret)) || false) && (New_Ret || true)))) && ((!(New_Ret)) ||   (New_Ret && 0 < New_s1Count && 0 < Old_s1Count && 1 <= New_s1Count && 1 <= Old_s1Count && New_Top <= Old_Top && Old_Top <= New_Top && New_Top == Old_Top))))
+learned postcondition: (((New_s1Count == Old_s1Count && Old_s1Count >= 0)) && ((!(New_Ret)) || (New_Top == Old_Top && Old_s1Count >= 1 && New_s1Count >= 1)))
 
-simplified postcondition: ((New_s1Count == Old_s1Count && (!(New_Ret)) && New_s1Count >= 0) || (New_s1Count == Old_s1Count && New_Top == Old_Top && New_s1Count >= 1))
+simplified postcondition: ((New_s1Count == Old_s1Count && (!(New_Ret)) && Old_s1Count >= 0) || (New_s1Count == Old_s1Count && New_Top == Old_Top && Old_s1Count >= 1))
 
-CNF simplified: ((New_s1Count == Old_s1Count) && (((!(New_Ret)) && New_s1Count >= 0) || (New_Top == Old_Top && New_s1Count >= 1)))
+CNF simplified: ((New_s1Count == Old_s1Count) && (((!(New_Ret)) && Old_s1Count >= 0) || (New_Top == Old_Top && Old_s1Count >= 1)))
 
-CNF simplified (smt): (and (= New_s1Count Old_s1Count) (or (and (not New_Ret) (>= New_s1Count 0)) (and (= New_Top Old_Top) (>= New_s1Count 1))))
+CNF simplified (smt): (and (= New_s1Count Old_s1Count) (or (and (not New_Ret) (>= Old_s1Count 0)) (and (= New_Top Old_Top) (>= Old_s1Count 1))))
 
-Predicate root : Not(New_Ret)
+Predicate chosen at root : Not(New_Ret)
 
-Predicate root Right : New_Ret
+rounds: 5
 
-rounds: 6
+pex time: 47.6549437046051
 
-pex time: 180.56096863746643
+learn time: 63.48613929748535
 
-learn time: 1431.2623090744019
-
-Samples: 31
+Samples: 21
 
 ---------------------
 PUT_PopContract
@@ -112,27 +102,23 @@ Label:
 
 Analysis:
 
-learned postcondition: ((0 < Old_s1Count && -1 < New_s1Count && -1 < Old_s1Count && 0 <= New_s1Count && 0 <= Old_s1Count && 1 <= Old_s1Count && -1 <= New_s1Count && -1 <= Old_s1Count && New_Ret <= Old_Top && Old_Top <= New_Ret && New_Ret == Old_Top && New_s1Count < Old_s1Count && New_s1Count != Old_s1Count && New_s1Count <= Old_s1Count && New_s1Count == Old_s1Count - 1) && (((!(New_ContainsNewRet)) ||   ((New_ContainsNewRet && 1 < Old_s1Count && 0 < New_s1Count && 1 <= New_s1Count) && (((!(1 < Old_Top)) ||   ((0 < Old_Top &&  0 < New_Ret &&  1 < Old_Top &&  1 < New_Ret &&  0 <= Old_Top &&  0 <= New_Ret &&  1 <= Old_Top &&  1 <= New_Ret &&  -1 < Old_Top &&  -1 < New_Ret &&  -1 <= Old_Top &&  -1 <= New_Ret) &&  (((!(0 == Old_Top)) || false) &&  (0 == Old_Top || true)))) && (1 < Old_Top ||   (Old_Top < Old_s1Count &&  New_Ret < Old_s1Count &&  Old_Top <= Old_s1Count &&  New_Ret <= New_s1Count &&  New_Ret <= Old_s1Count &&  Old_Top != Old_s1Count &&  New_Ret != Old_s1Count &&  Old_Top <= New_s1Count))))) && (New_ContainsNewRet || ((!(New_ContainsNewRet))))))
+learned postcondition: (((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count && New_s1Count >= 0)) && ((!(New_ContainsNewRet)) || (New_s1Count >= 1 && Old_s1Count >= 2)))
 
-simplified postcondition: ((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count && (!(New_ContainsNewRet)) && Old_s1Count >= 1) || (New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count && New_s1Count >= 1))
+simplified postcondition: ((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count && (!(New_ContainsNewRet)) && New_s1Count >= 0) || (New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count && Old_s1Count >= 2))
 
-CNF simplified: ((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count) && (((!(New_ContainsNewRet)) && Old_s1Count >= 1) || (New_s1Count >= 1)))
+CNF simplified: ((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count) && (((!(New_ContainsNewRet)) && New_s1Count >= 0) || (Old_s1Count >= 2)))
 
-CNF simplified (smt): (and (and (= New_Ret Old_Top) (= New_s1Count (+ -1 Old_s1Count))) (or (and (not New_ContainsNewRet) (>= Old_s1Count 1)) (>= New_s1Count 1)))
+CNF simplified (smt): (and (and (= New_Ret Old_Top) (= New_s1Count (+ -1 Old_s1Count))) (or (and (not New_ContainsNewRet) (>= New_s1Count 0)) (>= Old_s1Count 2)))
 
-Predicate root : New_ContainsNewRet
+Predicate chosen at root : Not(New_ContainsNewRet)
 
-Predicate root Right : 1 < Old_Top
+rounds: 5
 
-Predicate root Right Right : 0 == Old_Top
+pex time: 45.62761068344116
 
-rounds: 11
+learn time: 212.9666862487793
 
-pex time: 320.80222249031067
-
-learn time: 114350.75859427452
-
-Samples: 95
+Samples: 30
 
 ---------------------
 PUT_PushContract
@@ -146,33 +132,27 @@ Label:
 
 Analysis:
 
-learned postcondition: ((New_s1ContainsX && 0 < New_s1Count && -1 < New_s1Count && New_Top <= Old_x && -1 < Old_s1Count && Old_x == New_Top && 0 <= New_s1Count && 0 <= Old_s1Count && Old_x <= New_Top && 1 <= New_s1Count && New_Top == Old_x && -1 <= New_s1Count && -1 <= Old_s1Count && Old_s1Count < New_s1Count && New_s1Count != Old_s1Count && Old_s1Count <= New_s1Count && New_s1Count == Old_s1Count + 1) && (((!(Old_s1ContainsX)) ||   ((Old_s1ContainsX && 1 < New_s1Count && 0 < Old_s1Count && 1 <= Old_s1Count) && (((!(New_s1Count < Old_x)) ||   ((1 < Old_x &&  0 < Old_x &&  -1 < Old_x &&  0 <= Old_x &&  1 <= Old_x &&  0 < New_Top &&  1 < New_Top &&  -1 <= Old_x &&  0 <= New_Top &&  1 <= New_Top &&  -1 < New_Top &&  -1 <= New_Top &&  New_s1Count < Old_x &&  Old_s1Count < Old_x &&  Old_x != New_s1Count &&  Old_x != Old_s1Count &&  Old_s1Count <= Old_x &&  New_s1Count <= Old_x &&  Old_s1Count < New_Top &&  New_s1Count < New_Top &&  Old_s1Count <= New_Top &&  New_s1Count <= New_Top &&  New_Top != New_s1Count &&  New_Top != Old_s1Count) &&  (((!(1 == Old_Top)) || ((0 < Old_Top &&   1 == Old_Top &&   0 <= Old_Top &&   1 <= Old_Top &&   -1 < Old_Top &&   -1 <= Old_Top &&   1 < Old_s1Count &&   Old_Top < Old_x &&   Old_Top <= Old_x &&   Old_x != Old_Top &&   Old_Top < New_Top &&   New_Top != Old_Top &&   Old_Top <= New_Top &&   Old_Top <                                        New_s1Count &&   Old_Top <                                        Old_s1Count &&   Old_Top <=                                        Old_s1Count &&   Old_Top !=               New_s1Count &&   Old_Top !=               Old_s1Count &&   Old_Top <=                                        New_s1Count) &&  (((!(Old_s1Count <                                        Old_Top)) ||  false) &&   (Old_s1Count <                                        Old_Top ||  true)))) &&  (1 == Old_Top || true)))) && (New_s1Count < Old_x ||   (Old_x <= New_s1Count &&  New_Top <= New_s1Count))))) && (Old_s1ContainsX || ((!(Old_s1ContainsX))))))
+learned postcondition: (((Old_x == New_Top && New_s1Count == 1 + Old_s1Count && New_s1ContainsX && New_s1Count >= 1)) && ((!(Old_s1ContainsX)) || (Old_s1Count >= 1 && New_s1Count >= 2)))
 
-simplified postcondition: ((New_s1ContainsX && New_Top == Old_x && New_s1Count == 1 + Old_s1Count && (!(Old_s1ContainsX)) && New_s1Count >= 1) || (New_s1ContainsX && New_Top == Old_x && New_s1Count == 1 + Old_s1Count && (!(1 == Old_Top)) && Old_s1Count >= 1) || (New_s1ContainsX && New_Top == Old_x && New_s1Count == 1 + Old_s1Count && (!(1 == Old_s1Count)) && Old_s1Count >= 1) || (New_s1ContainsX && New_Top == Old_x && New_s1Count == 1 + Old_s1Count && New_Top <= New_s1Count && Old_s1Count >= 1))
+simplified postcondition: ((Old_x == New_Top && New_s1Count == 1 + Old_s1Count && New_s1ContainsX && (!(Old_s1ContainsX)) && New_s1Count >= 1) || (Old_x == New_Top && New_s1Count == 1 + Old_s1Count && New_s1ContainsX && New_s1Count >= 2))
 
-CNF simplified: ((New_s1ContainsX && New_Top == Old_x && New_s1Count == 1 + Old_s1Count) && (((!(Old_s1ContainsX)) && New_s1Count >= 1) || ((!(1 == Old_Top)) && Old_s1Count >= 1) || ((!(1 == Old_s1Count)) && Old_s1Count >= 1) || (New_Top <= New_s1Count && Old_s1Count >= 1)))
+CNF simplified: ((Old_x == New_Top && New_s1Count == 1 + Old_s1Count && New_s1ContainsX) && (((!(Old_s1ContainsX)) && New_s1Count >= 1) || (New_s1Count >= 2)))
 
-CNF simplified (smt): (and (and New_s1ContainsX (= New_Top Old_x) (= New_s1Count (+ 1 Old_s1Count))) (or (and (not Old_s1ContainsX) (>= New_s1Count 1)) (and (not (= 1 Old_Top)) (>= Old_s1Count 1)) (and (not (= 1 Old_s1Count)) (>= Old_s1Count 1)) (and (<= New_Top New_s1Count) (>= Old_s1Count 1))))
+CNF simplified (smt): (and (and (= Old_x New_Top) (= New_s1Count (+ 1 Old_s1Count)) New_s1ContainsX) (or (and (not Old_s1ContainsX) (>= New_s1Count 1)) (>= New_s1Count 2)))
 
-Predicate root : Old_s1ContainsX
+Predicate chosen at root : Not(Old_s1ContainsX)
 
-Predicate root Right : New_s1Count < Old_x
+rounds: 7
 
-Predicate root Right Right : 1 == Old_Top
+pex time: 69.16713547706604
 
-Predicate root Right Right Right : Old_s1Count < Old_Top
+learn time: 300.152508020401
 
-rounds: 8
-
-pex time: 165.32518577575684
-
-learn time: 51093.066529512405
-
-Samples: 79
+Samples: 32
 
 ======================
-Average Rounds: 7.6
+Average Rounds: 6.0
 
-Average Pex Time: 175.07160558700562
+Average Pex Time: 50.75769648551941
 
-Average Learn Time: 33889.768910312654
+Average Learn Time: 127.7126272201538
