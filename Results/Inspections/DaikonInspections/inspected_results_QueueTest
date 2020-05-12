@@ -56,7 +56,7 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Precis
 
 Label:
 
@@ -81,7 +81,7 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Precis
 
 Label:
 
