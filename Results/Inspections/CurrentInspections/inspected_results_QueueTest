@@ -72,6 +72,24 @@ Label:
 
 Analysis:
 
+learned postcondition: (((New_s1Count == Old_s1Count && New_s1ContainsNewRet && Old_s1Count >= 1)) && (New_Ret >= 0 || ((!(Old_s1Count <= New_Ret)) && (!(New_s1Count <= New_Ret)))))
+
+simplified postcondition: ((New_s1Count == Old_s1Count && New_s1ContainsNewRet && Old_s1Count >= 1))
+
+CNF simplified: ((New_s1Count == Old_s1Count && New_s1ContainsNewRet && Old_s1Count >= 1))
+
+CNF simplified (smt): (and (= New_s1Count Old_s1Count) New_s1ContainsNewRet (>= Old_s1Count 1))
+
+Predicate chosen at root : 0 <= New_Ret
+
+rounds: 4
+
+pex time: 62.92612171173096
+
+learn time: 11.810110092163086
+
+Samples: 14
+
 ---------------------
 PUT_ContainsContract
 Disjunctive (PexChoose):
@@ -114,9 +132,27 @@ Label:
 
 Analysis:
 
+learned postcondition: ((New_Ret >= 0) && ((New_Top == Old_Top && New_Ret >= 1) || New_Ret == 0))
+
+simplified postcondition: ((New_Top == Old_Top && New_Ret >= 1) || New_Ret == 0)
+
+CNF simplified: (((New_Top == Old_Top && New_Ret >= 1) || (New_Ret == 0 )))
+
+CNF simplified (smt): (or (and (= New_Top Old_Top) (>= New_Ret 1)) (= New_Ret 0))
+
+Predicate chosen at root : 0 == New_Ret
+
+rounds: 6
+
+pex time: 57.333619117736816
+
+learn time: 71.31788849830627
+
+Samples: 27
+
 ======================
-Average Rounds: 5.333333333333333
+Average Rounds: 5.2
 
-Average Pex Time: 68.13463354110718
+Average Pex Time: 64.932728290558
 
-Average Learn Time: 190.19787605603537
+Average Learn Time: 130.74432535172
