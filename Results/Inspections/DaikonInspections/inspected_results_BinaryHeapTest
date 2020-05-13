@@ -108,6 +108,8 @@ Disjunctive (Truly):
 
 smt check: Precis
 
+smt check: Precis
+
 Label:
 
 Analysis:
@@ -125,9 +127,61 @@ learn time: 11.92998480796814
 
 Samples: 8
 
+Problem: BinaryHeapTest
+
+---------------------
+PUT_MinimumUpdateContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Unknown
+
+Label:
+
+Analysis:
+
+CNF simplified: ((((!(!(New_Ret))) || ((Old_bhIndexOfValue == -1 || Old_bhIndexOfValue == 0 || Old_bhIndexOfValue == 1))) && ((!(!(New_Ret))) || (New_bhCount == Old_bhCount)) && ((!(!(New_Ret))) || ((New_bhIndexOfValue == 0 || New_bhIndexOfValue == 1))) && ((!(!(New_Ret))) || ((Old_bhIndexOfValue == 0 || Old_bhIndexOfValue == 1))) && New_bhCount >= 1 && New_bhIndexOfValue >= 0 && Old_bhCount >= 0 && New_bhCount >= Old_bhCount))
+
+CNF simplified (smt): (and (or (not (not New_Ret)) (or (= Old_bhIndexOfValue -1) (= Old_bhIndexOfValue 0) (= Old_bhIndexOfValue 1))) (or (not (not New_Ret)) (= New_bhCount Old_bhCount)) (or (not (not New_Ret)) (or (= New_bhIndexOfValue 0) (= New_bhIndexOfValue 1))) (or (not (not New_Ret)) (or (= Old_bhIndexOfValue 0) (= Old_bhIndexOfValue 1))) (>= New_bhCount 1) (>= New_bhIndexOfValue 0) (>= Old_bhCount 0) (>= New_bhCount Old_bhCount))
+
+
+rounds: 6
+
+pex time: 366.2089731693268
+
+learn time: 37.957809925079346
+
+Samples: 8
+
+---------------------
+PUT_UpdateContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Unknown
+
+Label:
+
+Analysis:
+
+CNF simplified: ((New_bhCount >= 1 && New_bhIndexOfValue >= 0 && Old_bhCount >= 0 && (Old_bhIndexOfValue == -1 || Old_bhIndexOfValue == 0 || Old_bhIndexOfValue == 1) && New_bhCount >= Old_bhCount))
+
+CNF simplified (smt): (and (>= New_bhCount 1) (>= New_bhIndexOfValue 0) (>= Old_bhCount 0) (or (= Old_bhIndexOfValue -1) (= Old_bhIndexOfValue 0) (= Old_bhIndexOfValue 1)) (>= New_bhCount Old_bhCount))
+
+
+rounds: 3
+
+pex time: 244.9354076385498
+
+learn time: 9.68629264831543
+
+Samples: 8
+
 ======================
-Average Rounds: 4.4
+Average Rounds: 4.42857142857
 
-Average Pex Time: 155.01594104766846
+Average Pex Time: 198.032012292
 
-Average Learn Time: 14.1942964553833
+Average Learn Time: 16.94508355
