@@ -108,8 +108,6 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-smt check: Precis
-
 Label:
 
 Analysis:
@@ -127,9 +125,6 @@ learn time: 11.92998480796814
 
 Samples: 8
 
-Problem: BinaryHeapTest
-
----------------------
 PUT_MinimumUpdateContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
