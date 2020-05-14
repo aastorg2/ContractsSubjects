@@ -8,9 +8,9 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (!(New_hsContainsX)) holds because an item x will always be added from the set if not present before add is called, and if present, then it will still be present in the set after add is called. !(Old_hsContainsX) If an item x is not in the set before add is called, then it follows that the set has one more element in it. If an item x is in the set before add is called, then it is true that the state of the set didn't change after this call and the set has at least one elements.
 
 learned postcondition: ((Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 1 <= New_hsCount && 0 < New_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && New_hsContainsX) && ((Old_hsContainsX && (!(New_Ret)) && New_hsCount == Old_hsCount && Old_hsCount >= 1) || (New_Ret && (!(Old_hsContainsX)) && New_hsCount == 1 + Old_hsCount)))
 
@@ -38,9 +38,9 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (!(New_hsContainsX)) holds because an item x will always be removed from the set if present before remove is called, and if not present, then there is no way it can be in the set after remove is called. (New_hsCount == Old_hsCount) If the number of elements in the set does not change after remove is called, then is true that the set can be of any non-negative size and the element to remove was not present within the set and the state of the set did not change after this call. If the number of elements in the set does change after remove is called, then it follows that the set has one less elements in it.
 
 learned postcondition: ((New_hsCount <= Old_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && (!(New_hsContainsX))) && ((New_Ret && Old_hsContainsX && New_hsCount == -1 + Old_hsCount && Old_hsCount >= 1) || ((!(New_Ret)) && New_hsCount == Old_hsCount && (!(Old_hsContainsX)))))
 
@@ -68,9 +68,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_hsCount == Old_hsCount) holds because contains does not change the state of the set upon call. !(New_Ret) If the item is not within the set, then it is true that set has any amount of non-zero elements. If the item is within the set, then it is true the set has at least one element.
 
 learned postcondition: ((New_hsCount <= Old_hsCount && Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && New_hsCount == Old_hsCount) && ((!(New_Ret)) || (Old_hsCount >= 1 && New_hsCount >= 1)))
 
@@ -98,9 +98,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_Ret == 0 || New_Ret >= 1) This holds because it's a ground truth that the count will wither be empty or contain some positive amount of elements.
 
 learned postcondition: ((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (New_Ret >= 1 || New_Ret == 0))
 
