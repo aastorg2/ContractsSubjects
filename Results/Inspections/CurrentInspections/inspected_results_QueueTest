@@ -8,27 +8,27 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_s1Count == 1 + Old_s1Count && New_s1ContainsX) holds becuase the new item will be insterted at the end of the Queue. !(Old_s1ContainsX) If the item to enqueue was not present in the pre state, then it holds that there will be at least one element in the post state. If not, then it holds that there will be at least two elemets in the post state.
 
-learned postcondition: (((New_s1Count == 1 + Old_s1Count && New_s1ContainsX && New_s1Count >= 1)) && ((!(Old_s1ContainsX)) || (New_Top == Old_Top && Old_Top <= Old_x && Old_s1Count >= 1 && New_s1Count >= 2)))
+learned postcondition: (((New_s1Count == 1 + Old_s1Count && New_s1ContainsX && New_s1Count >= 1)) && ((!(Old_s1ContainsX)) || (New_Top == Old_Top && New_s1Count >= 2 && Old_s1Count >= 1)))
 
-simplified postcondition: ((New_s1Count == 1 + Old_s1Count && New_s1ContainsX && (!(Old_s1ContainsX)) && New_s1Count >= 1) || (New_s1Count == 1 + Old_s1Count && New_s1ContainsX && New_Top == Old_Top && Old_Top <= Old_x && New_s1Count >= 2))
+simplified postcondition: ((New_s1Count == 1 + Old_s1Count && New_s1ContainsX && (!(Old_s1ContainsX)) && New_s1Count >= 1) || (New_s1Count == 1 + Old_s1Count && New_s1ContainsX && New_Top == Old_Top && Old_s1Count >= 1))
 
-CNF simplified: ((New_s1Count == 1 + Old_s1Count && New_s1ContainsX) && (((!(Old_s1ContainsX)) && New_s1Count >= 1) || (New_Top == Old_Top && Old_Top <= Old_x && New_s1Count >= 2)))
+CNF simplified: ((New_s1Count == 1 + Old_s1Count && New_s1ContainsX) && (((!(Old_s1ContainsX)) && New_s1Count >= 1) || (New_Top == Old_Top && New_s1Count >= 1)))
 
-CNF simplified (smt): (and (and (= New_s1Count (+ 1 Old_s1Count)) New_s1ContainsX) (or (and (not Old_s1ContainsX) (>= New_s1Count 1)) (and (= New_Top Old_Top) (<= Old_Top Old_x) (>= New_s1Count 2))))
+CNF simplified (smt): (and (and (= New_s1Count (+ 1 Old_s1Count)) New_s1ContainsX) (or (and (not Old_s1ContainsX) (>= New_s1Count 1)) (and (= New_Top Old_Top) (>= New_s1Count 1))))
 
 Predicate chosen at root : Not(Old_s1ContainsX)
 
-rounds: 6
+rounds: 5
 
-pex time: 100.75285172462463
+pex time: 228.7134792804718
 
-learn time: 294.4274501800537
+learn time: 508.9372580051422
 
-Samples: 32
+Samples: 36
 
 ---------------------
 PUT_DequeueContract
@@ -38,9 +38,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count) holds because the returned item will be from the front and the number of elements decreases by one in the post state. !(New_s1ContainsNewRet) If the removed item is no longer in the Queue, there will be at least zero elements in the post state. If not, there will be at least one elements in the post state.
 
 learned postcondition: (((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count && New_s1Count >= 0)) && ((!(New_s1ContainsNewRet)) || (Old_s1Count >= 2 && New_s1Count >= 1)))
 
@@ -68,9 +68,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_s1Count == Old_s1Count && New_s1ContainsNewRet && Old_s1Count >= 1) holds because there is at least one element present and the state of the Queue does not change bewteen pre and post.
 
 learned postcondition: (((New_s1Count == Old_s1Count && New_s1ContainsNewRet && Old_s1Count >= 1)) && (New_Ret >= 0 || ((!(Old_s1Count <= New_Ret)) && (!(New_s1Count <= New_Ret)))))
 
@@ -98,9 +98,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_s1Count == Old_s1Count) holds because the number of elements does not change between states. !(New_Ret) If the queried item is not present, then it holds that there are at least zero elements in the post state. If not, then it holds that there is at least one element present in the post state.
 
 learned postcondition: (((New_s1Count == Old_s1Count && New_s1Count >= 0)) && ((!(New_Ret)) || (New_Top == Old_Top && New_s1Count >= 1 && Old_s1Count >= 1)))
 
@@ -128,9 +128,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: ((New_Top == Old_Top && New_Ret >= 1) || (New_Ret == 0 )) holds because the state of the Queue does not change and the number of elements is non-negative.
 
 learned postcondition: ((New_Ret >= 0) && ((New_Top == Old_Top && New_Ret >= 1) || New_Ret == 0))
 
@@ -151,8 +151,8 @@ learn time: 71.31788849830627
 Samples: 27
 
 ======================
-Average Rounds: 5.2
+Average Rounds: 5
 
-Average Pex Time: 64.932728290558
+Average Pex Time: 90.524853801727
 
-Average Learn Time: 130.74432535172
+Average Learn Time: 173.64628691673

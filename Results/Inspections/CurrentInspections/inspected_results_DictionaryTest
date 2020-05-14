@@ -8,9 +8,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: ((!(Old_dContainsKeyX)) && New_dCount == 1 + Old_dCount && New_dContainsKeyX && New_dContainsValueY) holds the item to add cannot be present in the pre state and the number of elements will increase by one. !(Old_dContainsValueY) If the value to add is not present in thte pre state, then there will be at least one element in the post state. If not, then it holds that there was at least one element in the pre state.
 
 learned postcondition: ((Old_dCount < New_dCount && Old_dCount <= New_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 1 <= New_dCount && 0 < New_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && New_dCount != Old_dCount && (!(Old_dContainsKeyX)) && New_dCount == Old_dCount + 1 && New_dContainsKeyX && New_dContainsValueY) && ((!(Old_dContainsValueY)) || (New_dCount >= 2 && Old_dCount >= 1)))
 
@@ -38,9 +38,9 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (!(New_dContainsKeyX)) holds because key will not be present in the post state. New_dCount == Old_dCount If the number of elements did not change, then nothing was removed. If not, then one element is removed.
 
 learned postcondition: ((New_dCount <= Old_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && (!(New_dContainsKeyX))) && ((New_Ret && New_dCount == -1 + Old_dCount && Old_dContainsKeyX && Old_dCount >= 1) || ((!(New_Ret)) && New_dCount == Old_dCount && (!(Old_dContainsKeyX)))))
 
@@ -68,9 +68,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_dCount == Old_dCount && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && Old_dCount >= 1) holds because the state of the Dictionary does not change from pre to post. New_Ret != Old_x It holds that the value will either be the same as the key or not equal to the key.
 
 learned postcondition: ((New_dCount <= Old_dCount && Old_dCount <= New_dCount && 1 <= Old_dCount && 0 < Old_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 1 <= New_dCount && 0 < New_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && New_dCount == Old_dCount && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet) && ((!(New_Ret == Old_x)) || New_ContainsKeyNewRet))
 
@@ -98,9 +98,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_dContainsValueY && New_dContainsKeyX) holds because the key-value pair will be present in the post state. !(Old_dContainsKeyX) If a key x is not present in the pre state, then the number of elements will increase by one and be at least one. If not, the number of elements won't change and there was at least one element in the pre state.
 
 learned postcondition: (((Old_dCount <= New_dCount && New_dContainsValueY && New_dContainsKeyX && Old_dCount >= 0 && New_dCount >= 1)) && ((Old_dContainsKeyX && New_dCount == Old_dCount && Old_dCount >= 1) || (New_dCount == 1 + Old_dCount && (!(Old_dContainsKeyX)))))
 
@@ -128,9 +128,9 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_dCount == Old_dCount) holds because the number of elements does not change between states. !(New_Ret) If a key x is not present, then the number of elements present is at least zero. If not then the number of elements is at least one.
 
 learned postcondition: ((New_dCount <= Old_dCount && Old_dCount <= New_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && New_dCount == Old_dCount) && ((!(New_Ret)) || (New_dCount >= 1 && Old_dCount >= 1)))
 
@@ -158,9 +158,9 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_dCount == Old_dCount) holds because the number of elements does not change between states. !(New_Ret) If a value x is not present, then the number of elements present is at least zero. If not then the number of elements is at least one.
 
 learned postcondition: ((New_dCount <= Old_dCount && Old_dCount <= New_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && New_dCount == Old_dCount) && ((!(New_Ret)) || (New_dCount >= 1 && Old_dCount >= 1)))
 
@@ -188,9 +188,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: ((New_Ret == 0 ) || (New_Ret >= 1)) holds because the number of elements cannot be negative.
 
 learned postcondition: ((0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret) && (New_Ret >= 1 || New_Ret == 0))
 

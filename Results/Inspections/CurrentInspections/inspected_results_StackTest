@@ -8,9 +8,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_ContainsNewRet) holds because the item will still be on the top. 1 == Old_s1Count If there is one element in the pre state there will be on in the post state. If not, the number of elements still won't change.
 
 learned postcondition: (((New_s1Count == Old_s1Count && New_ContainsNewRet && Old_s1Count >= 1)) && ((Old_s1Count >= 2 && New_s1Count >= 2) || (New_s1Count == 1 && Old_s1Count == 1)))
 
@@ -38,9 +38,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: ((New_Top == Old_Top && New_Ret >= 0) || (New_Ret == 0)) holds because the state of the Stack does not change.
 
 learned postcondition: ((New_Ret >= 0) && (New_Top == Old_Top || New_Ret == 0))
 
@@ -68,9 +68,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_s1Count == Old_s1Count) holds because the state does not change. !(New_Ret) If the queried item is not present, there are at least zero elements. If not, there is at least one element.
 
 learned postcondition: (((New_s1Count == Old_s1Count && Old_s1Count >= 0)) && ((!(New_Ret)) || (New_Top == Old_Top && Old_s1Count >= 1 && New_s1Count >= 1)))
 
@@ -98,9 +98,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count) holds because the returned item will be from the top and the number of elements decreases by one in the post state. !(New_s1ContainsNewRet) If the removed item is no longer in the Stack, there will be at least zero elements in the post state. If not, there will be at least one elements in the post state. If not, it holds that there was at least 1 element in the pre state.
 
 learned postcondition: (((New_Ret == Old_Top && New_s1Count == -1 + Old_s1Count && New_s1Count >= 0)) && ((!(New_ContainsNewRet)) || (New_s1Count >= 1 && Old_s1Count >= 2)))
 
@@ -128,9 +128,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (Old_x == New_Top && New_s1Count == 1 + Old_s1Count && New_s1ContainsX) holds becuase the new item will be insterted to the top of the Stack. !(Old_s1ContainsX) If the item to push was not present in the pre state, then it holds that there will be at least one element in the post state. If not, then it holds that there will be at least two elemets in the post state.
 
 learned postcondition: (((Old_x == New_Top && New_s1Count == 1 + Old_s1Count && New_s1ContainsX && New_s1Count >= 1)) && ((!(Old_s1ContainsX)) || (Old_s1Count >= 1 && New_s1Count >= 2)))
 

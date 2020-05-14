@@ -8,9 +8,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_bhMinimumKey <= Old_key && New_bhCount == 1 + Old_bhCount && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1) holds because the number of elements will increase by one, the minimum can change, and the lower bound for indexOf will be at least zero.
 
 learned postcondition: (0 < New_bhCount && 0 <= Old_bhCount && -1 < New_bhCount && 1 <= New_bhCount && 0 <= New_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && -1 <= New_bhCount && -1 < New_bhIndexOfValue && 0 <= New_bhIndexOfValue && -1 <= Old_bhIndexOfValue && -1 <= New_bhIndexOfValue && Old_bhCount < New_bhCount && New_bhCount != Old_bhCount && Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_key && New_bhCount == Old_bhCount + 1 && Old_bhIndexOfValue < Old_bhCount && New_bhIndexOfValue < New_bhCount && Old_bhIndexOfValue < New_bhCount && New_bhIndexOfValue != New_bhCount && New_bhIndexOfValue <= New_bhCount && Old_bhIndexOfValue != New_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue <= New_bhCount && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount)
 
@@ -37,9 +37,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (Old_bhCount == New_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value <= Old_bhMinimumValue && New_bhMinimumValue <= New_Ret_Value && New_bhMinimumKey == Old_bhMinimumKey && Old_bhMinimumValue <= New_bhMinimumValue && Old_bhCount >= 1) holds because the state of the Heap does not change and their is at least one element.
 
 learned postcondition: (0 < New_bhCount && 0 < Old_bhCount && 0 <= Old_bhCount && -1 < New_bhCount && -1 < Old_bhCount && 1 <= New_bhCount && 1 <= Old_bhCount && 0 <= New_bhCount && -1 <= New_bhCount && -1 <= Old_bhCount && New_bhCount == Old_bhCount && Old_bhCount <= New_bhCount && New_bhCount <= Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Key <= New_bhMinimumKey && New_bhMinimumKey <= New_Ret_Key && Old_bhMinimumKey <= New_Ret_Key && New_Ret_Key == New_bhMinimumKey && New_Ret_Key <= Old_bhMinimumKey && New_Ret_Value == New_bhMinimumValue && New_Ret_Value == Old_bhMinimumValue && New_Ret_Value <= New_bhMinimumValue && New_Ret_Value <= Old_bhMinimumValue && Old_bhMinimumValue <= New_Ret_Value && New_bhMinimumValue <= New_Ret_Value && Old_bhMinimumKey <= New_bhMinimumKey && New_bhMinimumKey <= Old_bhMinimumKey && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue <= Old_bhMinimumValue && New_bhMinimumValue == Old_bhMinimumValue && Old_bhMinimumValue <= New_bhMinimumValue)
 
@@ -66,9 +66,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: False
 
-Analysis:
+Analysis: (Old_bhMinimumKey == New_Ret_Key && New_Ret_Value == Old_bhMinimumValue && New_bhCount == -1 + Old_bhCount && New_bhCount >= 0 && New_bhMinimumValue >= 0) does not hold because the minimum value can be negative.
 
 learned postcondition: (0 < Old_bhCount && 0 <= Old_bhCount && -1 < New_bhCount && -1 < Old_bhCount && 1 <= Old_bhCount && 0 <= New_bhCount && -1 <= New_bhCount && -1 <= Old_bhCount && -1 < New_bhMinimumValue && 0 <= New_bhMinimumValue && -1 <= New_bhMinimumValue && New_bhCount < Old_bhCount && New_bhCount != Old_bhCount && New_bhCount <= Old_bhCount && New_bhCount == Old_bhCount - 1 && New_Ret_Key == Old_bhMinimumKey && Old_bhMinimumKey <= New_Ret_Key && New_Ret_Key <= Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && New_Ret_Value <= Old_bhMinimumValue && Old_bhMinimumValue <= New_Ret_Value)
 
@@ -95,9 +95,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: False
 
-Analysis:
+Analysis: (Old_index <= New_bhCount && New_bhCount == -1 + Old_bhCount && Old_bhMinimumKey <= New_Ret_Key && Old_index >= 0 && New_bhMinimumValue >= 0) does not hold because the minimum value can be negative.
 
 learned postcondition: (0 <= Old_index && -1 < Old_index && 0 < Old_bhCount && -1 <= Old_index && 0 <= Old_bhCount && -1 < New_bhCount && -1 < Old_bhCount && 1 <= Old_bhCount && 0 <= New_bhCount && -1 <= New_bhCount && -1 <= Old_bhCount && -1 < New_bhMinimumValue && 0 <= New_bhMinimumValue && Old_index < Old_bhCount && Old_index != Old_bhCount && Old_index <= New_bhCount && Old_index <= Old_bhCount && -1 <= New_bhMinimumValue && New_bhCount < Old_bhCount && New_bhCount != Old_bhCount && New_bhCount <= Old_bhCount && New_bhCount == Old_bhCount - 1 && Old_bhMinimumKey <= New_Ret_Key)
 
@@ -124,9 +124,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (Old_bhCount == New_bhCount && (!(New_Ret == Old_bhCount)) && New_Ret <= Old_bhCount && New_Ret >= -1) holds beause the number of elements does no change between states and the index of the queried item is bounded by neg one and the number of elements.
 
 learned postcondition: (-1 <= New_Ret && 0 <= Old_bhCount && -1 < New_bhCount && -1 < Old_bhCount && 0 <= New_bhCount && -1 <= New_bhCount && -1 <= Old_bhCount && New_Ret < New_bhCount && New_Ret < Old_bhCount && New_Ret != New_bhCount && New_Ret != Old_bhCount && New_Ret <= New_bhCount && New_Ret <= Old_bhCount && New_bhCount == Old_bhCount && Old_bhCount <= New_bhCount && New_bhCount <= Old_bhCount)
 
@@ -153,9 +153,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && (!(New_bhIndexOfValue == New_bhCount)) && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1) holds because the number of elements can increase in the post state, the minimum can be changed, and the lower bound of the index of method will be at least zero.
 
 learned postcondition: (0 < New_bhCount && 0 <= Old_bhCount && -1 < New_bhCount && 1 <= New_bhCount && 0 <= New_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && -1 <= New_bhCount && -1 < New_bhIndexOfValue && 0 <= New_bhIndexOfValue && -1 <= Old_bhIndexOfValue && -1 <= New_bhIndexOfValue && Old_bhCount <= New_bhCount && Old_bhIndexOfValue < Old_bhCount && New_bhMinimumKey <= Old_priority && New_bhIndexOfValue < New_bhCount && Old_bhIndexOfValue < New_bhCount && New_bhIndexOfValue != New_bhCount && New_bhIndexOfValue <= New_bhCount && Old_bhIndexOfValue != New_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue <= New_bhCount && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount)
 
@@ -182,9 +182,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && (!(New_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue >= -1 && New_bhIndexOfValue >= 0) holds because the number of elements can increase in the post state, the mimium node can change, and lower bound of indexOf will be at least zero in the post state.
 
 learned postcondition: (0 < New_bhCount && 0 <= Old_bhCount && -1 < New_bhCount && 1 <= New_bhCount && 0 <= New_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && -1 <= New_bhCount && -1 <= Old_bhIndexOfValue && -1 < New_bhIndexOfValue && 0 <= New_bhIndexOfValue && -1 <= New_bhIndexOfValue && Old_bhCount <= New_bhCount && Old_bhIndexOfValue < Old_bhCount && New_bhMinimumKey <= Old_priority && Old_bhIndexOfValue < New_bhCount && Old_bhIndexOfValue != New_bhCount && Old_bhIndexOfValue != Old_bhCount && Old_bhIndexOfValue <= New_bhCount && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue < New_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue != New_bhCount && New_bhIndexOfValue <= New_bhCount)
 
