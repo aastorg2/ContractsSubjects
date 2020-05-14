@@ -1,0 +1,124 @@
+Problem: HashSetTest
+
+---------------------
+PUT_AddContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Daikon
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_hsCount < Old_hsCount)) && Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 1 <= New_hsCount && 0 < New_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && (!(-1 == Old_hsCount)) && (!(0 == New_hsCount)) && (!(-1 == New_hsCount)) && (!((!(New_hsContainsX)))) && New_hsContainsX)
+
+simplified postcondition: ((Old_hsCount <= New_hsCount && (!(-1 == Old_hsCount)) && (!(0 == New_hsCount)) && New_hsContainsX && Old_hsCount >= -1))
+
+CNF simplified: ((Old_hsCount <= New_hsCount && (!(-1 == Old_hsCount)) && (!(0 == New_hsCount)) && New_hsContainsX && Old_hsCount >= -1))
+
+CNF simplified (smt): (and (<= Old_hsCount New_hsCount) (not (= -1 Old_hsCount)) (not (= 0 New_hsCount)) New_hsContainsX (>= Old_hsCount -1))
+
+
+rounds: 3
+
+pex time: 375.5389361381531
+
+learn time: 1.0450074672698975
+
+Samples: 21
+
+---------------------
+PUT_RemoveContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Daikon
+
+Label:
+
+Analysis:
+
+learned postcondition: (New_hsCount <= Old_hsCount && (!(Old_hsCount < New_hsCount)) && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && (!(-1 == Old_hsCount)) && (!(-1 == New_hsCount)) && (!(New_hsContainsX)) && (!(New_hsContainsX)))
+
+simplified postcondition: ((New_hsCount <= Old_hsCount && (!(-1 == New_hsCount)) && (!(New_hsContainsX)) && New_hsCount >= -1))
+
+CNF simplified: ((New_hsCount <= Old_hsCount && (!(-1 == New_hsCount)) && (!(New_hsContainsX)) && New_hsCount >= -1))
+
+CNF simplified (smt): (and (<= New_hsCount Old_hsCount) (not (= -1 New_hsCount)) (not New_hsContainsX) (>= New_hsCount -1))
+
+
+rounds: 3
+
+pex time: 349.03363728523254
+
+learn time: 1.016007661819458
+
+Samples: 24
+
+---------------------
+PUT_ContainsContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Equivalent
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_hsCount < Old_hsCount)) && New_hsCount <= Old_hsCount && (!(Old_hsCount < New_hsCount)) && Old_hsCount <= New_hsCount && 0 <= Old_hsCount && -1 < Old_hsCount && -1 <= Old_hsCount && 0 <= New_hsCount && -1 < New_hsCount && -1 <= New_hsCount && (!(New_hsCount != Old_hsCount)) && New_hsCount == Old_hsCount && (!(-1 == Old_hsCount)) && (!(-1 == New_hsCount)))
+
+simplified postcondition: ((New_hsCount == Old_hsCount && (!(-1 == Old_hsCount)) && Old_hsCount >= -1))
+
+CNF simplified: ((New_hsCount == Old_hsCount && (!(-1 == Old_hsCount)) && Old_hsCount >= -1))
+
+CNF simplified (smt): (and (= New_hsCount Old_hsCount) (not (= -1 Old_hsCount)) (>= Old_hsCount -1))
+
+
+rounds: 3
+
+pex time: 302.69383239746094
+
+learn time: 0.9310412406921387
+
+Samples: 21
+
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Label:
+
+Analysis:
+
+learned postcondition: (0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret && (!(-1 == New_Ret)))
+
+simplified postcondition: (((!(-1 == New_Ret)) && New_Ret >= -1))
+
+CNF simplified: (((!(-1 == New_Ret)) && New_Ret >= -1))
+
+CNF simplified (smt): (and (not (= -1 New_Ret)) (>= New_Ret -1))
+
+
+rounds: 2
+
+pex time: 90.11979484558105
+
+learn time: 0.03902721405029297
+
+Samples: 5
+
+======================
+Average Rounds: 2.75
+
+Average Pex Time: 279.3465501666069
+
+Average Learn Time: 0.7577708959579468

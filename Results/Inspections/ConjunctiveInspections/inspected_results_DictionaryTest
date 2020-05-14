@@ -1,0 +1,211 @@
+Problem: DictionaryTest
+
+---------------------
+PUT_AddContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Equivalent
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_dCount < Old_dCount)) && (!(New_dCount <= Old_dCount)) && Old_dCount < New_dCount && Old_dCount <= New_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 1 <= New_dCount && 0 < New_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && New_dCount != Old_dCount && (!(New_dCount == Old_dCount)) && (!(-1 == Old_dCount)) && (!(0 == New_dCount)) && (!(-1 == New_dCount)) && (!(Old_dContainsKeyX)) && (!((!(New_dContainsKeyX)))) && (!((!(New_dContainsValueY)))) && New_dCount == Old_dCount + 1 && (!(Old_dContainsKeyX)) && New_dContainsKeyX && New_dContainsValueY)
+
+simplified postcondition: (((!(0 == New_dCount)) && (!(-1 == New_dCount)) && New_dCount == 1 + Old_dCount && (!(Old_dContainsKeyX)) && New_dContainsKeyX && New_dContainsValueY && New_dCount >= -1))
+
+CNF simplified: (((!(0 == New_dCount)) && (!(-1 == New_dCount)) && New_dCount == 1 + Old_dCount && (!(Old_dContainsKeyX)) && New_dContainsKeyX && New_dContainsValueY && New_dCount >= -1))
+
+CNF simplified (smt): (and (not (= 0 New_dCount)) (not (= -1 New_dCount)) (= New_dCount (+ 1 Old_dCount)) (not Old_dContainsKeyX) New_dContainsKeyX New_dContainsValueY (>= New_dCount -1))
+
+
+rounds: 3
+
+pex time: 1520.7048509120941
+
+learn time: 1.473005771636963
+
+Samples: 21
+
+---------------------
+PUT_RemoveContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Daikon
+
+Label:
+
+Analysis:
+
+learned postcondition: (New_dCount <= Old_dCount && (!(Old_dCount < New_dCount)) && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && (!(-1 == Old_dCount)) && (!(-1 == New_dCount)) && (!(New_dContainsKeyX)) && (!(New_dContainsKeyX)))
+
+simplified postcondition: ((New_dCount <= Old_dCount && (!(-1 == New_dCount)) && (!(New_dContainsKeyX)) && New_dCount >= -1))
+
+CNF simplified: ((New_dCount <= Old_dCount && (!(-1 == New_dCount)) && (!(New_dContainsKeyX)) && New_dCount >= -1))
+
+CNF simplified (smt): (and (<= New_dCount Old_dCount) (not (= -1 New_dCount)) (not New_dContainsKeyX) (>= New_dCount -1))
+
+
+rounds: 4
+
+pex time: 2093.684577703476
+
+learn time: 1.848036766052246
+
+Samples: 32
+
+---------------------
+PUT_GetContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_dCount < Old_dCount)) && New_dCount <= Old_dCount && (!(Old_dCount < New_dCount)) && Old_dCount <= New_dCount && 1 <= Old_dCount && 0 < Old_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 1 <= New_dCount && 0 < New_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && (!(New_dCount != Old_dCount)) && New_dCount == Old_dCount && (!(0 == Old_dCount)) && (!(-1 == Old_dCount)) && (!(0 == New_dCount)) && (!(-1 == New_dCount)) && (!((!(Old_dContainsKeyX)))) && (!((!(New_dContainsKeyX)))) && (!((!(New_ContainsValueNewRet)))) && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet)
+
+simplified postcondition: ((New_dCount == Old_dCount && (!(0 == Old_dCount)) && (!(-1 == Old_dCount)) && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && Old_dCount >= -1))
+
+CNF simplified: ((New_dCount == Old_dCount && (!(0 == Old_dCount)) && (!(-1 == Old_dCount)) && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && Old_dCount >= -1))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) (not (= 0 Old_dCount)) (not (= -1 Old_dCount)) Old_dContainsKeyX New_dContainsKeyX New_ContainsValueNewRet (>= Old_dCount -1))
+
+
+rounds: 3
+
+pex time: 1157.117737531662
+
+learn time: 1.4919977188110352
+
+Samples: 22
+
+---------------------
+PUT_SetContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Equivalent
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_dCount < Old_dCount)) && Old_dCount <= New_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 1 <= New_dCount && 0 < New_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && (!(-1 == Old_dCount)) && (!(0 == New_dCount)) && (!(-1 == New_dCount)) && (!((!(New_dContainsValueY)))) && (!((!(New_dContainsKeyX)))) && New_dContainsValueY && New_dContainsKeyX)
+
+simplified postcondition: ((Old_dCount <= New_dCount && (!(-1 == Old_dCount)) && (!(0 == New_dCount)) && New_dContainsValueY && New_dContainsKeyX && Old_dCount >= -1))
+
+CNF simplified: ((Old_dCount <= New_dCount && (!(-1 == Old_dCount)) && (!(0 == New_dCount)) && New_dContainsValueY && New_dContainsKeyX && Old_dCount >= -1))
+
+CNF simplified (smt): (and (<= Old_dCount New_dCount) (not (= -1 Old_dCount)) (not (= 0 New_dCount)) New_dContainsValueY New_dContainsKeyX (>= Old_dCount -1))
+
+
+rounds: 3
+
+pex time: 374.5304174423218
+
+learn time: 1.7860467433929443
+
+Samples: 28
+
+---------------------
+PUT_ContainsKeyContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Daikon
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_dCount < Old_dCount)) && New_dCount <= Old_dCount && (!(Old_dCount < New_dCount)) && Old_dCount <= New_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && (!(New_dCount != Old_dCount)) && New_dCount == Old_dCount && (!(-1 == Old_dCount)) && (!(-1 == New_dCount)))
+
+simplified postcondition: ((New_dCount == Old_dCount && (!(-1 == Old_dCount)) && Old_dCount >= -1))
+
+CNF simplified: ((New_dCount == Old_dCount && (!(-1 == Old_dCount)) && Old_dCount >= -1))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) (not (= -1 Old_dCount)) (>= Old_dCount -1))
+
+
+rounds: 4
+
+pex time: 314.3042268753052
+
+learn time: 1.4599838256835938
+
+Samples: 27
+
+---------------------
+PUT_ContainsValueContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Daikon
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_dCount < Old_dCount)) && New_dCount <= Old_dCount && (!(Old_dCount < New_dCount)) && Old_dCount <= New_dCount && 0 <= Old_dCount && -1 < Old_dCount && -1 <= Old_dCount && 0 <= New_dCount && -1 < New_dCount && -1 <= New_dCount && (!(New_dCount != Old_dCount)) && New_dCount == Old_dCount && (!(-1 == Old_dCount)) && (!(-1 == New_dCount)))
+
+simplified postcondition: ((New_dCount == Old_dCount && (!(-1 == Old_dCount)) && Old_dCount >= -1))
+
+CNF simplified: ((New_dCount == Old_dCount && (!(-1 == Old_dCount)) && Old_dCount >= -1))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) (not (= -1 Old_dCount)) (>= Old_dCount -1))
+
+
+rounds: 4
+
+pex time: 189.6979570388794
+
+learn time: 1.2630150318145752
+
+Samples: 20
+
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Label:
+
+Analysis:
+
+learned postcondition: (0 <= New_Ret && -1 < New_Ret && -1 <= New_Ret && (!(-1 == New_Ret)))
+
+simplified postcondition: (((!(-1 == New_Ret)) && New_Ret >= -1))
+
+CNF simplified: (((!(-1 == New_Ret)) && New_Ret >= -1))
+
+CNF simplified (smt): (and (not (= -1 New_Ret)) (>= New_Ret -1))
+
+
+rounds: 2
+
+pex time: 83.41787028312683
+
+learn time: 0.04200267791748047
+
+Samples: 5
+
+======================
+Average Rounds: 3.2857142857142856
+
+Average Pex Time: 819.065376826695
+
+Average Learn Time: 1.3377269336155482

@@ -1,0 +1,211 @@
+Problem: BinaryHeapTest
+
+---------------------
+PUT_AddContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_bhCount < Old_bhCount)) && (!(New_bhCount <= Old_bhCount)) && Old_bhCount < New_bhCount && Old_bhCount <= New_bhCount && Old_bhIndexOfValue < Old_bhCount && Old_bhIndexOfValue <= Old_bhCount && (!(Old_bhCount < Old_bhIndexOfValue)) && (!(Old_bhCount <= Old_bhIndexOfValue)) && New_bhIndexOfValue <= Old_bhCount && (!(Old_bhCount < New_bhIndexOfValue)) && Old_bhIndexOfValue < New_bhCount && Old_bhIndexOfValue <= New_bhCount && (!(New_bhCount < Old_bhIndexOfValue)) && (!(New_bhCount <= Old_bhIndexOfValue)) && New_bhIndexOfValue < New_bhCount && New_bhIndexOfValue <= New_bhCount && (!(New_bhCount < New_bhIndexOfValue)) && (!(New_bhCount <= New_bhIndexOfValue)) && New_bhMinimumKey <= Old_key && (!(Old_key < New_bhMinimumKey)) && 0 <= Old_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && 1 <= New_bhCount && 0 < New_bhCount && 0 <= New_bhCount && -1 < New_bhCount && -1 <= New_bhCount && -1 <= Old_bhIndexOfValue && 0 <= New_bhIndexOfValue && -1 < New_bhIndexOfValue && -1 <= New_bhIndexOfValue && New_bhCount != Old_bhCount && (!(New_bhCount == Old_bhCount)) && Old_bhIndexOfValue != Old_bhCount && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue != New_bhCount && (!(Old_bhIndexOfValue == New_bhCount)) && New_bhIndexOfValue != New_bhCount && (!(New_bhIndexOfValue == New_bhCount)) && (!(-1 == Old_bhCount)) && (!(0 == New_bhCount)) && (!(-1 == New_bhCount)) && (!(-1 == New_bhIndexOfValue)) && New_bhCount == Old_bhCount + 1)
+
+simplified postcondition: (((!(New_bhCount <= Old_bhIndexOfValue)) && (!(New_bhCount <= New_bhIndexOfValue)) && New_bhMinimumKey <= Old_key && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(-1 == New_bhIndexOfValue)) && New_bhCount == 1 + Old_bhCount && Old_bhIndexOfValue >= -1 && New_bhIndexOfValue >= -1))
+
+CNF simplified: (((!(New_bhCount <= Old_bhIndexOfValue)) && (!(New_bhCount <= New_bhIndexOfValue)) && New_bhMinimumKey <= Old_key && (!(Old_bhIndexOfValue == Old_bhCount)) && (!(-1 == New_bhIndexOfValue)) && New_bhCount == 1 + Old_bhCount && Old_bhIndexOfValue >= -1 && New_bhIndexOfValue >= -1))
+
+CNF simplified (smt): (and (not (<= New_bhCount Old_bhIndexOfValue)) (not (<= New_bhCount New_bhIndexOfValue)) (<= New_bhMinimumKey Old_key) (not (= Old_bhIndexOfValue Old_bhCount)) (not (= -1 New_bhIndexOfValue)) (= New_bhCount (+ 1 Old_bhCount)) (>= Old_bhIndexOfValue -1) (>= New_bhIndexOfValue -1))
+
+
+rounds: 7
+
+pex time: 142.36611366271973
+
+learn time: 42.59512710571289
+
+Samples: 61
+
+---------------------
+PUT_MinimumContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_bhCount < Old_bhCount)) && New_bhCount <= Old_bhCount && (!(Old_bhCount < New_bhCount)) && Old_bhCount <= New_bhCount && (!(New_bhMinimumKey < Old_bhMinimumKey)) && New_bhMinimumKey <= Old_bhMinimumKey && (!(Old_bhMinimumKey < New_bhMinimumKey)) && Old_bhMinimumKey <= New_bhMinimumKey && (!(New_Ret_Key < Old_bhMinimumKey)) && New_Ret_Key <= Old_bhMinimumKey && (!(Old_bhMinimumKey < New_Ret_Key)) && Old_bhMinimumKey <= New_Ret_Key && (!(New_Ret_Key < New_bhMinimumKey)) && New_Ret_Key <= New_bhMinimumKey && (!(New_bhMinimumKey < New_Ret_Key)) && New_bhMinimumKey <= New_Ret_Key && (!(New_bhMinimumValue < Old_bhMinimumValue)) && New_bhMinimumValue <= Old_bhMinimumValue && (!(Old_bhMinimumValue < New_bhMinimumValue)) && Old_bhMinimumValue <= New_bhMinimumValue && (!(New_Ret_Value < Old_bhMinimumValue)) && New_Ret_Value <= Old_bhMinimumValue && (!(Old_bhMinimumValue < New_Ret_Value)) && Old_bhMinimumValue <= New_Ret_Value && (!(New_Ret_Value < New_bhMinimumValue)) && New_Ret_Value <= New_bhMinimumValue && (!(New_bhMinimumValue < New_Ret_Value)) && New_bhMinimumValue <= New_Ret_Value && 1 <= Old_bhCount && 0 < Old_bhCount && 0 <= Old_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && 1 <= New_bhCount && 0 < New_bhCount && 0 <= New_bhCount && -1 < New_bhCount && -1 <= New_bhCount && (!(New_bhCount != Old_bhCount)) && New_bhCount == Old_bhCount && (!(New_bhMinimumKey != Old_bhMinimumKey)) && New_bhMinimumKey == Old_bhMinimumKey && (!(New_Ret_Key != Old_bhMinimumKey)) && New_Ret_Key == Old_bhMinimumKey && (!(New_Ret_Key != New_bhMinimumKey)) && New_Ret_Key == New_bhMinimumKey && (!(New_bhMinimumValue != Old_bhMinimumValue)) && New_bhMinimumValue == Old_bhMinimumValue && (!(New_Ret_Value != Old_bhMinimumValue)) && New_Ret_Value == Old_bhMinimumValue && (!(New_Ret_Value != New_bhMinimumValue)) && New_Ret_Value == New_bhMinimumValue && (!(0 == Old_bhCount)) && (!(-1 == Old_bhCount)) && (!(0 == New_bhCount)) && (!(-1 == New_bhCount)))
+
+simplified postcondition: ((New_bhCount == Old_bhCount && New_Ret_Key == Old_bhMinimumKey && Old_bhMinimumKey == New_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumValue == New_bhMinimumValue && (!(0 == Old_bhCount)) && (!(-1 == Old_bhCount)) && Old_bhCount >= -1))
+
+CNF simplified: ((New_bhCount == Old_bhCount && New_Ret_Key == Old_bhMinimumKey && Old_bhMinimumKey == New_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumValue == New_bhMinimumValue && (!(0 == Old_bhCount)) && (!(-1 == Old_bhCount)) && Old_bhCount >= -1))
+
+CNF simplified (smt): (and (= New_bhCount Old_bhCount) (= New_Ret_Key Old_bhMinimumKey) (= Old_bhMinimumKey New_bhMinimumKey) (= New_Ret_Value Old_bhMinimumValue) (= Old_bhMinimumValue New_bhMinimumValue) (not (= 0 Old_bhCount)) (not (= -1 Old_bhCount)) (>= Old_bhCount -1))
+
+
+rounds: 4
+
+pex time: 40.237584829330444
+
+learn time: 5.7440009117126465
+
+Samples: 19
+
+---------------------
+PUT_RemoveMinimumContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Label:
+
+Analysis:
+
+learned postcondition: (New_bhCount < Old_bhCount && New_bhCount <= Old_bhCount && (!(Old_bhCount < New_bhCount)) && (!(Old_bhCount <= New_bhCount)) && (!(New_Ret_Key < Old_bhMinimumKey)) && New_Ret_Key <= Old_bhMinimumKey && (!(Old_bhMinimumKey < New_Ret_Key)) && Old_bhMinimumKey <= New_Ret_Key && (!(New_Ret_Value < Old_bhMinimumValue)) && New_Ret_Value <= Old_bhMinimumValue && (!(Old_bhMinimumValue < New_Ret_Value)) && Old_bhMinimumValue <= New_Ret_Value && 1 <= Old_bhCount && 0 < Old_bhCount && 0 <= Old_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && 0 <= New_bhCount && -1 < New_bhCount && -1 <= New_bhCount && New_bhCount != Old_bhCount && (!(New_bhCount == Old_bhCount)) && (!(New_Ret_Key != Old_bhMinimumKey)) && New_Ret_Key == Old_bhMinimumKey && (!(New_Ret_Value != Old_bhMinimumValue)) && New_Ret_Value == Old_bhMinimumValue && (!(0 == Old_bhCount)) && (!(-1 == Old_bhCount)) && (!(-1 == New_bhCount)) && New_bhCount == Old_bhCount - 1)
+
+simplified postcondition: ((New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && (!(-1 == New_bhCount)) && New_bhCount == -1 + Old_bhCount && New_bhCount >= -1))
+
+CNF simplified: ((New_Ret_Key == Old_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && (!(-1 == New_bhCount)) && New_bhCount == -1 + Old_bhCount && New_bhCount >= -1))
+
+CNF simplified (smt): (and (= New_Ret_Key Old_bhMinimumKey) (= New_Ret_Value Old_bhMinimumValue) (not (= -1 New_bhCount)) (= New_bhCount (+ -1 Old_bhCount)) (>= New_bhCount -1))
+
+
+rounds: 4
+
+pex time: 288.1243546009064
+
+learn time: 10.68804121017456
+
+Samples: 43
+
+---------------------
+PUT_RemoveAtContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Label:
+
+Analysis:
+
+learned postcondition: (New_bhCount < Old_bhCount && New_bhCount <= Old_bhCount && (!(Old_bhCount < New_bhCount)) && (!(Old_bhCount <= New_bhCount)) && Old_index < Old_bhCount && Old_index <= Old_bhCount && (!(Old_bhCount < Old_index)) && (!(Old_bhCount <= Old_index)) && Old_index <= New_bhCount && (!(New_bhCount < Old_index)) && (!(New_Ret_Key < Old_bhMinimumKey)) && Old_bhMinimumKey <= New_Ret_Key && 1 <= Old_bhCount && 0 < Old_bhCount && 0 <= Old_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && 0 <= New_bhCount && -1 < New_bhCount && -1 <= New_bhCount && 0 <= Old_index && -1 < Old_index && -1 <= Old_index && New_bhCount != Old_bhCount && (!(New_bhCount == Old_bhCount)) && Old_index != Old_bhCount && (!(Old_index == Old_bhCount)) && (!(0 == Old_bhCount)) && (!(-1 == Old_bhCount)) && (!(-1 == New_bhCount)) && (!(-1 == Old_index)) && New_bhCount == Old_bhCount - 1)
+
+simplified postcondition: ((Old_index <= New_bhCount && Old_bhMinimumKey <= New_Ret_Key && (!(-1 == Old_index)) && New_bhCount == -1 + Old_bhCount && Old_index >= -1))
+
+CNF simplified: ((Old_index <= New_bhCount && Old_bhMinimumKey <= New_Ret_Key && (!(-1 == Old_index)) && New_bhCount == -1 + Old_bhCount && Old_index >= -1))
+
+CNF simplified (smt): (and (<= Old_index New_bhCount) (<= Old_bhMinimumKey New_Ret_Key) (not (= -1 Old_index)) (= New_bhCount (+ -1 Old_bhCount)) (>= Old_index -1))
+
+
+rounds: 4
+
+pex time: 327.2594015598297
+
+learn time: 15.904060363769531
+
+Samples: 51
+
+---------------------
+PUT_IndexOfContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_bhCount < Old_bhCount)) && New_bhCount <= Old_bhCount && (!(Old_bhCount < New_bhCount)) && Old_bhCount <= New_bhCount && New_Ret < Old_bhCount && New_Ret <= Old_bhCount && (!(Old_bhCount < New_Ret)) && (!(Old_bhCount <= New_Ret)) && New_Ret < New_bhCount && New_Ret <= New_bhCount && (!(New_bhCount < New_Ret)) && (!(New_bhCount <= New_Ret)) && 0 <= Old_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && 0 <= New_bhCount && -1 < New_bhCount && -1 <= New_bhCount && -1 <= New_Ret && (!(New_bhCount != Old_bhCount)) && New_bhCount == Old_bhCount && New_Ret != Old_bhCount && (!(New_Ret == Old_bhCount)) && New_Ret != New_bhCount && (!(New_Ret == New_bhCount)) && (!(-1 == Old_bhCount)) && (!(-1 == New_bhCount)))
+
+simplified postcondition: (((!(Old_bhCount <= New_Ret)) && New_bhCount == Old_bhCount && New_Ret >= -1))
+
+CNF simplified: (((!(Old_bhCount <= New_Ret)) && New_bhCount == Old_bhCount && New_Ret >= -1))
+
+CNF simplified (smt): (and (not (<= Old_bhCount New_Ret)) (= New_bhCount Old_bhCount) (>= New_Ret -1))
+
+
+rounds: 5
+
+pex time: 60.13129663467407
+
+learn time: 12.57700800895691
+
+Samples: 39
+
+---------------------
+PUT_UpdateContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Unknown
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_bhCount < Old_bhCount)) && Old_bhCount <= New_bhCount && Old_bhIndexOfValue < Old_bhCount && Old_bhIndexOfValue <= Old_bhCount && (!(Old_bhCount < Old_bhIndexOfValue)) && (!(Old_bhCount <= Old_bhIndexOfValue)) && New_bhIndexOfValue <= Old_bhCount && (!(Old_bhCount < New_bhIndexOfValue)) && Old_bhIndexOfValue < New_bhCount && Old_bhIndexOfValue <= New_bhCount && (!(New_bhCount < Old_bhIndexOfValue)) && (!(New_bhCount <= Old_bhIndexOfValue)) && New_bhIndexOfValue < New_bhCount && New_bhIndexOfValue <= New_bhCount && (!(New_bhCount < New_bhIndexOfValue)) && (!(New_bhCount <= New_bhIndexOfValue)) && (!(Old_priority < New_bhMinimumKey)) && New_bhMinimumKey <= Old_priority && 0 <= Old_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && 1 <= New_bhCount && 0 < New_bhCount && 0 <= New_bhCount && -1 < New_bhCount && -1 <= New_bhCount && -1 <= Old_bhIndexOfValue && 0 <= New_bhIndexOfValue && -1 < New_bhIndexOfValue && -1 <= New_bhIndexOfValue && Old_bhIndexOfValue != Old_bhCount && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue != New_bhCount && (!(Old_bhIndexOfValue == New_bhCount)) && New_bhIndexOfValue != New_bhCount && (!(New_bhIndexOfValue == New_bhCount)) && (!(-1 == Old_bhCount)) && (!(0 == New_bhCount)) && (!(-1 == New_bhCount)) && (!(-1 == New_bhIndexOfValue)))
+
+simplified postcondition: ((Old_bhCount <= New_bhCount && (!(Old_bhCount <= Old_bhIndexOfValue)) && New_bhIndexOfValue <= Old_bhCount && New_bhMinimumKey <= Old_priority && (!(New_bhIndexOfValue == New_bhCount)) && (!(-1 == New_bhIndexOfValue)) && Old_bhIndexOfValue >= -1 && New_bhIndexOfValue >= -1))
+
+CNF simplified: ((Old_bhCount <= New_bhCount && (!(Old_bhCount <= Old_bhIndexOfValue)) && New_bhIndexOfValue <= Old_bhCount && New_bhMinimumKey <= Old_priority && (!(New_bhIndexOfValue == New_bhCount)) && (!(-1 == New_bhIndexOfValue)) && Old_bhIndexOfValue >= -1 && New_bhIndexOfValue >= -1))
+
+CNF simplified (smt): (and (<= Old_bhCount New_bhCount) (not (<= Old_bhCount Old_bhIndexOfValue)) (<= New_bhIndexOfValue Old_bhCount) (<= New_bhMinimumKey Old_priority) (not (= New_bhIndexOfValue New_bhCount)) (not (= -1 New_bhIndexOfValue)) (>= Old_bhIndexOfValue -1) (>= New_bhIndexOfValue -1))
+
+
+rounds: 4
+
+pex time: 346.4709858894348
+
+learn time: 20.473445177078247
+
+Samples: 57
+
+---------------------
+PUT_MinimumUpdateContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Unknown
+
+Label:
+
+Analysis:
+
+learned postcondition: ((!(New_bhCount < Old_bhCount)) && Old_bhCount <= New_bhCount && Old_bhIndexOfValue < Old_bhCount && Old_bhIndexOfValue <= Old_bhCount && (!(Old_bhCount < Old_bhIndexOfValue)) && (!(Old_bhCount <= Old_bhIndexOfValue)) && New_bhIndexOfValue <= Old_bhCount && (!(Old_bhCount < New_bhIndexOfValue)) && Old_bhIndexOfValue < New_bhCount && Old_bhIndexOfValue <= New_bhCount && (!(New_bhCount < Old_bhIndexOfValue)) && (!(New_bhCount <= Old_bhIndexOfValue)) && New_bhIndexOfValue < New_bhCount && New_bhIndexOfValue <= New_bhCount && (!(New_bhCount < New_bhIndexOfValue)) && (!(New_bhCount <= New_bhIndexOfValue)) && (!(Old_priority < New_bhMinimumKey)) && New_bhMinimumKey <= Old_priority && 0 <= Old_bhCount && -1 < Old_bhCount && -1 <= Old_bhCount && 1 <= New_bhCount && 0 < New_bhCount && 0 <= New_bhCount && -1 < New_bhCount && -1 <= New_bhCount && (!(1 < Old_bhIndexOfValue)) && -1 <= Old_bhIndexOfValue && 0 <= New_bhIndexOfValue && -1 < New_bhIndexOfValue && -1 <= New_bhIndexOfValue && Old_bhIndexOfValue != Old_bhCount && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue != New_bhCount && (!(Old_bhIndexOfValue == New_bhCount)) && New_bhIndexOfValue != New_bhCount && (!(New_bhIndexOfValue == New_bhCount)) && (!(-1 == Old_bhCount)) && (!(0 == New_bhCount)) && (!(-1 == New_bhCount)) && (!(-1 == New_bhIndexOfValue)))
+
+simplified postcondition: ((Old_bhCount <= New_bhCount && (!(Old_bhCount <= Old_bhIndexOfValue)) && New_bhIndexOfValue <= Old_bhCount && New_bhMinimumKey <= Old_priority && (!(New_bhIndexOfValue == New_bhCount)) && (!(-1 == New_bhIndexOfValue)) && Old_bhIndexOfValue >= -1 && Old_bhIndexOfValue <= 1 && New_bhIndexOfValue >= -1))
+
+CNF simplified: ((Old_bhCount <= New_bhCount && (!(Old_bhCount <= Old_bhIndexOfValue)) && New_bhIndexOfValue <= Old_bhCount && New_bhMinimumKey <= Old_priority && (!(New_bhIndexOfValue == New_bhCount)) && (!(-1 == New_bhIndexOfValue)) && Old_bhIndexOfValue >= -1 && Old_bhIndexOfValue <= 1 && New_bhIndexOfValue >= -1))
+
+CNF simplified (smt): (and (<= Old_bhCount New_bhCount) (not (<= Old_bhCount Old_bhIndexOfValue)) (<= New_bhIndexOfValue Old_bhCount) (<= New_bhMinimumKey Old_priority) (not (= New_bhIndexOfValue New_bhCount)) (not (= -1 New_bhIndexOfValue)) (>= Old_bhIndexOfValue -1) (<= Old_bhIndexOfValue 1) (>= New_bhIndexOfValue -1))
+
+
+rounds: 5
+
+pex time: 321.1817800998688
+
+learn time: 36.34851026535034
+
+Samples: 78
+
+======================
+Average Rounds: 4.714285714285714
+
+Average Pex Time: 217.96735961096627
+
+Average Learn Time: 20.618599006107875
