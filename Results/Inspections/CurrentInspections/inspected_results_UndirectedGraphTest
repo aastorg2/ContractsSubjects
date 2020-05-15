@@ -8,9 +8,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: False
 
-Analysis:
+Analysis: Old_ugVertexCount <= 1 does not actually hold when !(Old_ugContainsVertexX) because there can be any non-negative amount of vertives in the pre state when trying to add.
 
 learned postcondition: (((Old_ugVertexCount <= New_ugVertexCount && New_ugAdjacentDegree <= Old_ugVertexCount && New_ugAdjacentDegree <= Old_ugEdgeCount && New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty)) && New_ugContainsVertexX && New_ugVertexCount >= 1 && New_ugAdjacentDegree >= 0)) && (((!(Old_ugContainsVertexX)) && (!(Old_ugEdgeCount == New_ugVertexCount)) && (!(New_ugEdgeCount == New_ugVertexCount)) && New_ugIsAdjacentEdgesEmpty && New_Ret && New_ugVertexCount == 1 + Old_ugVertexCount && New_ugVertexCount >= 1 && Old_ugEdgeCount <= 1 && New_ugEdgeCount <= 1 && New_ugAdjacentDegree == 0 && Old_ugVertexCount <= 1) || ((!(Old_ugIsVerticesEmpty)) && Old_ugContainsVertexX && (!(New_Ret)) && New_ugVertexCount == Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && Old_ugAdjacentDegree <= New_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && Old_ugAdjacentDegree >= 0 && Old_ugAdjacentDegree <= 1 && Old_ugVertexCount >= 1)))
 
@@ -38,9 +38,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe: True? All true only holds because of precondition ((!(Old_ugIsVerticesEmpty)) && New_Ret...)
 
-Analysis:
+Analysis: ((!(New_ugContainsVertexX))&& (!(Old_ugIsVerticesEmpty)) && New_ugVertexCount == -1 + Old_ugVertexCount && New_Ret && Old_ugContainsVertexX && New_ugVertexCount >= 0 && New_ugEdgeCount >= 0 && Old_ugAdjacentDegree >= 0) holds because item to remove will always be in the pre state so it will always be removed. !(New_ugIsAdjacentEdgesEmpty) If there are adjacent edges, then it holds that the number of edges will decrease by the degree. If not, then the graph will have edges in the post state.
 
 learned postcondition: (((Old_ugAdjacentDegree <= Old_ugVertexCount && (!(New_ugContainsVertexX)) && (!(Old_ugIsVerticesEmpty)) && New_ugVertexCount == -1 + Old_ugVertexCount && New_ugEdgeCount ==           Old_ugEdgeCount + -1*Old_ugAdjacentDegree && New_Ret && Old_ugContainsVertexX && New_ugVertexCount >= 0 && New_ugEdgeCount >= 0 && Old_ugAdjacentDegree >= 0)) && ((!(New_ugIsAdjacentEdgesEmpty)) || (Old_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmpty && New_ugIsEdgesEmpty && Old_ugVertexCount >= 1 && New_ugVertexCount >= 0 && Old_ugAdjacentDegree == 0 && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0)))
 
@@ -68,9 +68,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: True but was for False TG
 
-Analysis:
+Analysis: (Old_ugAdjacentDegree <= Old_ugVertexCount && New_ugVertexCount == Old_ugVertexCount && (!(0 == Old_ugVertexCount)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && New_ugIsAdjacentEdgesEmpty && Old_ugContainsVertexX && New_ugContainsVertexX && New_ugEdgeCount >= 0 && Old_ugAdjacentDegree >= 0 && New_ugAdjacentDegree == 0) Holds because there must be at least one vertex in the graph in the pre state. !(Old_ugIsEdgesEmpty) If there are edges, then the number of edges will decrease by the adjacent degree. If not, there are no edges in the graph.
 
 learned postcondition: (((Old_ugAdjacentDegree <= Old_ugVertexCount && New_ugVertexCount == Old_ugVertexCount && (!(0 == Old_ugVertexCount)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && New_ugEdgeCount ==           Old_ugEdgeCount + -1*Old_ugAdjacentDegree && New_ugIsAdjacentEdgesEmpty && Old_ugContainsVertexX && New_ugContainsVertexX && New_ugEdgeCount >= 0 && Old_ugAdjacentDegree >= 0 && New_ugAdjacentDegree == 0)) && ((Old_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmpty && New_ugIsEdgesEmpty && Old_ugAdjacentDegree == 0 && Old_ugVertexCount >= 1 && New_ugEdgeCount == 0 && New_ugVertexCount >= 1 && New_ugAdjacentDegree == 0 && Old_ugEdgeCount == 0) || ((!(Old_ugEdgeCount <= New_ugAdjacentDegree)) && (!(Old_ugIsEdgesEmpty)) && Old_ugEdgeCount >= 1)))
 
@@ -98,9 +98,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: False
 
-Analysis:
+Analysis: (!(1 == Old_target)) does not hold when the edges are not emtpy.
 
 learned postcondition: (((Old_ugAdjacentDegreeSource <= Old_ugVertexCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegreeSource ==           Old_ugAdjacentDegreeSource && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugVertexCount >= 1 && Old_ugAdjacentDegreeSource >= 0)) && (((!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && (!(Old_target == Old_ugVertexCount)) && (!(0 == New_ugEdgeCount)) && (!(Old_target == New_ugVertexCount)) && Old_ugAdjacentDegreeTarget <= Old_ugVertexCount && (!(Old_source == Old_ugVertexCount)) && (!(Old_target == New_ugEdgeCount)) && (!(-1 == Old_source)) && New_ugAdjacentDegreeTarget <=           Old_ugAdjacentDegreeTarget && (!(Old_source == New_ugVertexCount)) && (!(1 == Old_source)) && (!(Old_source == New_ugEdgeCount)) && (!(Old_target == Old_ugEdgeCount)) && (!(0 == Old_ugEdgeCount)) && (!(Old_source == Old_ugEdgeCount)) && Old_ugAdjacentDegreeTarget <= New_ugVertexCount && (!(-1 == Old_target)) && Old_ugAdjacentDegreeTarget <= New_ugEdgeCount && (!(1 == Old_target)) && Old_ugAdjacentDegreeTarget <= Old_ugEdgeCount && Old_ugAdjacentDegreeTarget <=           Old_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget <=           New_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget >= 0) || ((!(New_ContainsEdgeSrcTar)) && Old_ugIsEdgesEmpty && New_ugIsEdgesEmpty && New_ugIsAdjacentEdgesEmptySource && (!(New_Ret)) && Old_ugIsAdjacentEdgesEmptySource && (!(Old_ContainsEdgeSrcTar)) && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && Old_ugAdjacentDegreeSource == 0 && New_ugAdjacentDegreeSource == 0 && Old_ugVertexCount >= 1 && New_ugVertexCount >= 1)))
 
@@ -121,6 +121,36 @@ learn time: 22415.21362042427
 Samples: 64
 
 ---------------------
+PUT_AdjacentEdgeContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Unknown
+
+Truly Safe: False   
+
+Analysis: New_Ret_Target == Old_x does not always hold when Old_ugAdjacentDegree == 1
+
+learned postcondition: (((Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(0 == Old_ugAdjacentDegree)) && New_Ret_Target == Old_x && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(New_ugIsAdjacentEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_ugAdjacentDegree >= 0 && Old_index == 0)) && (((!(New_Ret_Source == Old_ugVertexCount)) && (!(New_Ret_Source == New_ugVertexCount)) && (!(New_Ret_Source == Old_ugAdjacentDegree)) && (!(New_Ret_Source == New_ugAdjacentDegree)) && (!(1 == New_Ret_Source)) && Old_ugVertexCount >= 2 && New_ugAdjacentDegree >= 2 && Old_ugEdgeCount >= 2 && Old_index == 0 && New_Ret_Source >= 0 && New_Ret_Target == 0 && Old_ugAdjacentDegree >= 2 && Old_x == 0 && New_ugEdgeCount >= 2 && New_ugVertexCount >= 2) || (Old_ugEdgeCount <= Old_ugVertexCount && Old_ugEdgeCount <= New_ugVertexCount && New_ugEdgeCount <= Old_ugVertexCount && New_ugEdgeCount <= New_ugVertexCount && New_ugAdjacentDegree == 1 && Old_ugAdjacentDegree == 1)))
+
+simplified postcondition: ((Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(New_ugIsAdjacentEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && (!(New_Ret_Source == Old_ugVertexCount)) && (!(New_Ret_Source == Old_ugAdjacentDegree)) && (!(1 == New_Ret_Source)) && New_Ret_Target == 0 && Old_index == 0 && Old_x == 0 && New_Ret_Source >= 0 && Old_ugAdjacentDegree >= 2) || (New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_Ret_Target == Old_x && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(New_ugIsAdjacentEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_ugEdgeCount <= Old_ugVertexCount && Old_ugEdgeCount >= 1 && New_ugAdjacentDegree == 1 && Old_index == 0 && Old_ugAdjacentDegree == 1))
+
+CNF simplified: ((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(New_ugIsAdjacentEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_index == 0) && ((Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(New_Ret_Source == Old_ugVertexCount)) && (!(New_Ret_Source == Old_ugAdjacentDegree)) && (!(1 == New_Ret_Source)) && New_Ret_Target == 0 && Old_x == 0 && New_Ret_Source >= 0 && Old_ugAdjacentDegree >= 2) || (New_Ret_Target == Old_x && Old_ugEdgeCount <= Old_ugVertexCount && Old_ugEdgeCount >= 1 && New_ugAdjacentDegree == 1 && Old_ugAdjacentDegree == 1)))
+
+CNF simplified (smt): (and (and (= New_ugVertexCount Old_ugVertexCount) (= New_ugEdgeCount Old_ugEdgeCount) (not Old_ugIsAdjacentEdgesEmpty) (not New_ugIsAdjacentEdgesEmpty) (not Old_ugIsVerticesEmpty) (not New_ugIsVerticesEmpty) (not Old_ugIsEdgesEmpty) (not New_ugIsEdgesEmpty) Old_ugContainsVertexX New_ugContainsVertexX (= Old_index 0)) (or (and (<= Old_ugAdjacentDegree Old_ugVertexCount) (<= Old_ugAdjacentDegree Old_ugEdgeCount) (= New_ugAdjacentDegree Old_ugAdjacentDegree) (not (= New_Ret_Source Old_ugVertexCount)) (not (= New_Ret_Source Old_ugAdjacentDegree)) (not (= 1 New_Ret_Source)) (= New_Ret_Target 0) (= Old_x 0) (>= New_Ret_Source 0) (>= Old_ugAdjacentDegree 2)) (and (= New_Ret_Target Old_x) (<= Old_ugEdgeCount Old_ugVertexCount) (>= Old_ugEdgeCount 1) (= New_ugAdjacentDegree 1) (= Old_ugAdjacentDegree 1))))
+
+Predicate chosen at root : 1 == Old_ugAdjacentDegree
+
+rounds: 6
+
+pex time: 757.7828276157379
+
+learn time: 2212.87255358696
+
+Samples: 31
+
+---------------------
 PUT_ContainsEdgeIntContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
@@ -128,9 +158,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis: (New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugVertexCount >= 1) holds in order for contains to be called the must be vertices in the pre state. 1 <= Old_ugEdgeCount If there is at most one edge in the graph, then it holds that there are edges and vertices in the graph. If not, then the graph is completely empty.
 
 learned postcondition: (((Old_ugAdjacentDegreeSource <= Old_ugVertexCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegreeSource ==           Old_ugAdjacentDegreeSource && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugVertexCount >= 1 && Old_ugAdjacentDegreeSource >= 0)) && (((!(Old_ContainsEdgeSrcTar)) && (!(New_ContainsEdgeSrcTar)) && Old_ugIsAdjacentEdgesEmptySource && (!(New_Ret)) && New_ugIsAdjacentEdgesEmptySource && New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && New_ugVertexCount >= 1 && Old_ugVertexCount >= 1 && New_ugEdgeCount == 0 && New_ugAdjacentDegreeSource == 0 && Old_ugAdjacentDegreeSource == 0 && Old_ugEdgeCount == 0) || ((!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugEdgeCount >= 1 && New_ugEdgeCount >= 1)))
 
@@ -158,9 +188,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: True but was False for TG
 
-Analysis:
+Analysis: (New_ugVertexCount == Old_ugVertexCount) holds becuase the state remains unchanged. !(New_ugIsEdgesEmpty) If there are no edges in the post state, then there were none in the pre state. If not, the were edges and vertices in the pre state. 
 
 learned postcondition: (((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && Old_ugVertexCount >= 0 && Old_ugEdgeCount >= 0)) && ((New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && Old_ugVertexCount >= 0 && New_ugVertexCount >= 0 && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0) || ((!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && (!(New_Ret)) && New_ugVertexCount >= 1 && Old_ugVertexCount >= 1 && New_ugEdgeCount >= 1 && Old_ugEdgeCount >= 1)))
 
@@ -188,9 +218,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: True but was False for TG
 
-Analysis:
+Analysis: If !(New_ugIsVerticesEmpty), then there were vertices in the pre state, if not, then thee graph was empty.
 
 learned postcondition: (((New_ugEdgeCount == Old_ugEdgeCount && Old_ugEdgeCount >= 0 && New_Ret >= 0)) && ((New_ugIsVerticesEmpty && Old_ugIsVerticesEmpty && New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && New_ugEdgeCount == 0 && New_Ret == 0 && Old_ugEdgeCount == 0) || ((!(New_ugIsVerticesEmpty)) && (!(Old_ugIsVerticesEmpty)) && New_Ret >= 1)))
 
@@ -218,9 +248,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: True but was False for TG
 
-Analysis:
+Analysis: If !(Old_ugIsVerticesEmpty), then there are vertices in the post state, if not, then thee graph was empty.
 
 learned postcondition: (((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && Old_ugVertexCount >= 0 && Old_ugEdgeCount >= 0)) && ((Old_ugIsVerticesEmpty && New_ugIsVerticesEmpty && (!(New_Ret)) && Old_ugIsEdgesEmpty && New_ugIsEdgesEmpty && New_ugVertexCount == 0 && Old_ugVertexCount == 0 && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0) || ((!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugVertexCount >= 1 && New_ugVertexCount >= 1)))
 
@@ -248,9 +278,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: False
 
-Analysis:
+Analysis: New_ugAdjacentDegreeTarget == 1 does not hold when there are no edges.
 
 learned postcondition: (((New_ugAdjacentDegreeSource <= Old_ugVertexCount && New_ugAdjacentDegreeTarget <= Old_ugVertexCount && Old_ugEdgeCount <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && Old_ugAdjacentDegreeTarget <= Old_ugEdgeCount && New_ugAdjacentDegreeSource <= New_ugEdgeCount && New_ugAdjacentDegreeTarget <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <=           New_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget <=           New_ugAdjacentDegreeTarget && New_ugVertexCount == Old_ugVertexCount && (!(New_ugIsAdjacentEdgesEmptySource)) && (!(New_ugIsAdjacentEdgesEmptyTarget)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar && Old_ugAdjacentDegreeSource >= 0 && New_ugAdjacentDegreeSource >= 1 && Old_ugAdjacentDegreeTarget >= 0 && New_ugAdjacentDegreeTarget >= 1)) && ((Old_ugIsEdgesEmpty && New_Ret && (!(Old_ContainsEdgeSrcTar)) && Old_ugIsAdjacentEdgesEmptyTarget && Old_ugIsAdjacentEdgesEmptySource && Old_target <= Old_source && New_ugVertexCount >= 1 && Old_ugVertexCount >= 1 && New_ugAdjacentDegreeTarget == 1 && Old_ugAdjacentDegreeSource == 0 && Old_ugAdjacentDegreeTarget == 0 && New_ugEdgeCount == 1 && New_ugAdjacentDegreeSource == 1 && Old_ugEdgeCount == 0) || ((!(Old_ugIsEdgesEmpty)) && Old_ugEdgeCount >= 1)))
 
@@ -278,9 +308,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: False
 
-Analysis:
+Analysis: (!(New_ugEdgeCount <= New_ugAdjacentDegreeSource) does not hold the the graph has edges in the post state.
 
 learned postcondition: (((Old_ugAdjacentDegreeTarget <= Old_ugVertexCount && New_ugEdgeCount <= Old_ugEdgeCount && Old_ugAdjacentDegreeTarget <= Old_ugEdgeCount && New_ugAdjacentDegreeTarget <= New_ugEdgeCount && New_ugAdjacentDegreeSource <=           Old_ugAdjacentDegreeSource && Old_ugAdjacentDegreeSource <=           Old_ugAdjacentDegreeTarget && New_ugAdjacentDegreeSource <=           New_ugAdjacentDegreeTarget && New_ugAdjacentDegreeTarget <=           Old_ugAdjacentDegreeTarget && New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && Old_ugVertexCount >= 1 && New_ugAdjacentDegreeSource >= 0)) && ((New_ugIsEdgesEmpty && (!(New_ContainsEdgeSrcTar)) && Old_ugAdjacentDegreeTarget == Old_ugEdgeCount && New_ugIsAdjacentEdgesEmptySource && Old_ugEdgeCount == Old_ugAdjacentDegreeSource && New_ugIsAdjacentEdgesEmptyTarget && New_ugVertexCount >= 1 && Old_ugEdgeCount >= 0 && Old_ugEdgeCount <= 1 && New_ugAdjacentDegreeTarget == 0 && New_ugAdjacentDegreeSource == 0 && Old_ugVertexCount >= 1 && New_ugEdgeCount == 0) || ((!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && (!(Old_ugEdgeCount <= New_ugAdjacentDegreeSource)) && (!(Old_ugEdgeCount <= Old_ugAdjacentDegreeSource)) && Old_ugAdjacentDegreeSource <= New_ugEdgeCount && Old_ugAdjacentDegreeTarget <= New_ugEdgeCount && (!(New_ugEdgeCount <= New_ugAdjacentDegreeSource)) && Old_ugEdgeCount >= 1 && Old_ugVertexCount >= 2 && New_ugEdgeCount >= 1 && New_ugVertexCount >= 2)))
 
@@ -308,9 +338,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: True
 
-Analysis:
+Analysis:  If 0 < New_ugVertexCount then there we there are vertices in the graph, if not, then the graph is empty.
 
 learned postcondition: (((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && Old_ugVertexCount >= 0 && Old_ugEdgeCount >= 0)) && ((New_ugIsVerticesEmpty && Old_ugIsVerticesEmpty && New_Ret && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && Old_ugVertexCount == 0 && New_ugVertexCount == 0) || ((!(New_ugIsVerticesEmpty)) && (!(Old_ugIsVerticesEmpty)) && Old_ugVertexCount >= 1 && New_ugVertexCount >= 1)))
 
@@ -338,9 +368,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: True but was False for TG
 
-Analysis:
+Analysis: (New_ugVertexCount == Old_ugVertexCount) holds because the state does not change. !(New_ugIsEdgesEmpty) If there are edges in the post state, then there are vertices in the graph. If not, then the graph is empty.
 
 learned postcondition: (((New_ugVertexCount == Old_ugVertexCount && Old_ugVertexCount >= 0 && New_Ret >= 0)) && ((New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && New_Ret == 0 && New_ugVertexCount >= 0 && Old_ugVertexCount >= 0) || ((!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && New_Ret >= 1 && New_ugVertexCount >= 1 && Old_ugVertexCount >= 1)))
 
@@ -368,9 +398,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: False
 
-Analysis:
+Analysis: !(Old_x == Old_ugEdgeCount) does not hold when the graph has edges.
 
 learned postcondition: (((New_Ret <= Old_ugVertexCount && New_Ret <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_ugVertexCount >= 1 && New_Ret >= 0)) && (((!(Old_x == New_ugEdgeCount)) && (!(Old_x == Old_ugEdgeCount))) || (New_ugIsAdjacentEdgesEmpty && New_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmpty && Old_ugIsEdgesEmpty && Old_ugEdgeCount == 0 && New_Ret == 0 && New_ugVertexCount >= 1 && Old_ugVertexCount >= 1 && New_ugEdgeCount == 0 && Old_x == 0)))
 
@@ -398,9 +428,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Label:
+Truly Safe: False
 
-Analysis:
+Analysis: (!(1 == Old_x)) does not hold when there adjacent edges to a node x.
 
 learned postcondition: (((Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_ugVertexCount >= 1 && Old_ugAdjacentDegree >= 0)) && ((New_Ret && (!(Old_ugVertexCount <= Old_ugEdgeCount)) && (!(New_ugVertexCount <= New_ugEdgeCount)) && (!(New_ugVertexCount <= Old_ugEdgeCount)) && (!(Old_ugVertexCount <= New_ugEdgeCount)) && New_ugVertexCount >= 1 && Old_ugVertexCount >= 1 && New_ugAdjacentDegree == 0 && Old_ugAdjacentDegree == 0) || ((!(New_Ret)) && (!(Old_x == New_ugEdgeCount)) && (!(Old_x == Old_ugAdjacentDegree)) && (!(Old_x == Old_ugVertexCount)) && (!(Old_x == New_ugVertexCount)) && (!(Old_x == New_ugAdjacentDegree)) && (!(1 == Old_x)) && (!(Old_x == Old_ugEdgeCount)) && Old_x >= 0 && New_ugEdgeCount >= 1 && Old_ugEdgeCount >= 1 && New_ugAdjacentDegree >= 1)))
 
