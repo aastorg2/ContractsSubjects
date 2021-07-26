@@ -1,0 +1,42 @@
+Problem: ArrayListTest
+
+PUT: PUT_IndexOfContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+===== Final Result for PUT_IndexOfContract
+
+postcondition: 
+(((Old_arrListLastIndexOfX <= Old_arrListCount && New_Ret <= Old_arrListLastIndexOfX && New_arrListCount == Old_arrListCount && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX && New_Ret >= -1)) && ((Old_arrListContainsX && New_arrListContainsX && New_Ret >= 0 && Old_arrListCount >= 1 && New_arrListCount >= 1 && New_arrListLastIndexOfX >= 0 && Old_arrListLastIndexOfX >= 0) || ((!(Old_arrListContainsX)) && (!(New_arrListContainsX)) && New_Ret == -1 && Old_arrListLastIndexOfX == -1 && New_arrListLastIndexOfX == -1)))
+rounds: 5
+
+simplified post: 
+((Old_arrListLastIndexOfX <= Old_arrListCount && New_Ret <= Old_arrListLastIndexOfX && New_arrListCount == Old_arrListCount && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && Old_arrListContainsX && New_arrListContainsX && New_Ret >= 0) || (New_arrListCount == Old_arrListCount && (!(-1 == Old_arrListCount)) && (!(Old_arrListContainsX)) && (!(New_arrListContainsX)) && Old_arrListCount >= -1 && Old_arrListLastIndexOfX == -1 && New_arrListLastIndexOfX == -1 && New_Ret == -1))
+pex time: 72.06200909614563
+
+learn time: 290.36925864219666
+
+Samples: 29
+

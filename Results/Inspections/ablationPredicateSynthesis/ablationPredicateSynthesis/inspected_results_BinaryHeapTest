@@ -1,0 +1,62 @@
+Problem: BinaryHeapTest
+
+---------------------
+PUT_MinimumContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Equivalent
+
+Label:
+
+Analysis:
+
+learned postcondition: (((New_bhCount == Old_bhCount && New_Ret_Key == Old_bhMinimumKey && Old_bhMinimumKey == New_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumValue == New_bhMinimumValue && Old_bhCount >= 1)) && (((!(0 == New_Ret_Value)) && (!(0 == New_bhMinimumValue)) && (!(0 == Old_bhMinimumValue))) || (New_bhMinimumValue == 0 && New_Ret_Value == 0 && Old_bhMinimumValue == 0 && New_bhCount >= 1 && Old_bhCount >= 1)))
+
+simplified postcondition: ((New_bhCount == Old_bhCount && New_Ret_Key == Old_bhMinimumKey && Old_bhMinimumKey == New_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumValue == New_bhMinimumValue && Old_bhCount >= 1))
+
+CNF simplified: ((New_bhCount == Old_bhCount && New_Ret_Key == Old_bhMinimumKey && Old_bhMinimumKey == New_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumValue == New_bhMinimumValue && Old_bhCount >= 1))
+
+CNF simplified (smt): (and (= New_bhCount Old_bhCount) (= New_Ret_Key Old_bhMinimumKey) (= Old_bhMinimumKey New_bhMinimumKey) (= New_Ret_Value Old_bhMinimumValue) (= Old_bhMinimumValue New_bhMinimumValue) (>= Old_bhCount 1))
+
+Predicate chosen at root : 0 == New_Ret_Value
+
+rounds: 6
+
+pex time: 59.483168601989746
+
+learn time: 1262.8887662887573
+
+Samples: 32
+
+---------------------
+PUT_IndexOfContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Other
+
+Label:
+
+Analysis: this took longer than the 5 hours max limit.
+
+learned postcondition: (((New_Ret <= Old_bhCount && New_bhCount == Old_bhCount && (!(New_Ret == Old_bhCount)) && New_Ret >= -1)) && ((New_bhCount == 0 && Old_bhCount == 0 && New_Ret == -1) || (New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && Old_bhCount >= 1 && New_bhCount >= 1)))
+
+simplified postcondition: (((!(New_Ret == 0)) && New_Ret >= -1 && New_Ret <= 0 && New_bhCount == 0 && Old_bhCount == 0) || (New_Ret <= Old_bhCount && New_bhCount == Old_bhCount && (!(New_Ret == Old_bhCount)) && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_Ret >= -1))
+
+CNF simplified: ((New_Ret >= -1) && (((!(New_Ret == 0)) && New_Ret <= 0 && New_bhCount == 0 && Old_bhCount == 0) || (New_Ret < Old_bhCount && New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue)))
+
+CNF simplified (smt): (and (>= New_Ret -1) (or (and (not (= New_Ret 0)) (<= New_Ret 0) (= New_bhCount 0) (= Old_bhCount 0)) (and (< New_Ret Old_bhCount) (= New_bhCount Old_bhCount) (= New_bhMinimumKey Old_bhMinimumKey) (= New_bhMinimumValue Old_bhMinimumValue))))
+
+Predicate chosen at root : 1 <= Old_bhCount
+
+rounds: 11
+
+pex time: 130.48723769187927
+
+learn time: 114082.23776316643
+
+Samples: 132
+======================

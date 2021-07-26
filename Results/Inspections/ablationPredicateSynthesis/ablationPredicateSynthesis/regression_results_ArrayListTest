@@ -1,0 +1,458 @@
+Problem: ArrayListTest
+
+PUT: PUT_AddContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX == Old_arrListIndexOfX
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX == Old_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListLastIndexOfX
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListLastIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListCount <= New_arrListIndexOfX
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListCount <= New_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListLastIndexOfX
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListLastIndexOfX
+===== Final Result for PUT_AddContract
+
+postcondition: 
+(((New_Ret <= New_arrListCount && Old_arrListIndexOfX <= New_arrListIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_Ret && Old_arrListLastIndexOfX <= New_Ret && New_Ret == Old_arrListCount && (!(New_Ret == New_arrListCount)) && (!(New_Ret == Old_arrListLastIndexOfX)) && New_Ret == New_arrListLastIndexOfX && New_arrListContainsX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= 0)) && (((!(Old_arrListCount <= New_arrListIndexOfX)) && New_arrListIndexOfX == Old_arrListIndexOfX && (!(New_Ret <= New_arrListIndexOfX)) && Old_arrListContainsX && (!(New_arrListLastIndexOfX <=               New_arrListIndexOfX)) && New_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX >= 0 && New_arrListCount >= 2) || (New_arrListIndexOfX == New_Ret && New_Ret == Old_arrListCount && (!(Old_arrListContainsX)) && New_arrListLastIndexOfX == New_Ret && Old_arrListLastIndexOfX == -1 && Old_arrListIndexOfX == -1 && New_Ret >= 0)))
+rounds: 5
+
+simplified post: 
+((New_Ret <= New_arrListCount && Old_arrListLastIndexOfX <= New_Ret && New_Ret == Old_arrListCount && (!(New_Ret == New_arrListCount)) && (!(New_Ret == Old_arrListLastIndexOfX)) && New_Ret == New_arrListLastIndexOfX && New_arrListContainsX && New_arrListIndexOfX == Old_arrListIndexOfX && Old_arrListContainsX && New_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX >= 0) || (New_Ret <= New_arrListCount && New_Ret == Old_arrListCount && (!(New_Ret == New_arrListCount)) && (!(New_Ret == -1)) && New_Ret == New_arrListLastIndexOfX && New_arrListContainsX && (!(Old_arrListContainsX)) && New_arrListIndexOfX == New_Ret && New_Ret >= -1 && Old_arrListIndexOfX == -1 && Old_arrListLastIndexOfX == -1))
+pex time: 90.80229187011719
+
+learn time: 573.7666599750519
+
+Samples: 30
+
+PUT: PUT_RemoveContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX == Old_arrListIndexOfX
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX == Old_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListIndexOfX <= Old_arrListIndexOfX
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListIndexOfX <= Old_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_arrListLastIndexOfX
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_arrListLastIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_arrListLastIndexOfX
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_arrListLastIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX == New_arrListIndexOfX
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX == New_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX <= New_arrListIndexOfX
+Final Tree ====
+Round: 6
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX <= New_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX <= New_arrListIndexOfX
+Final Tree ====
+Round: 7
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX <= New_arrListIndexOfX
+===== Final Result for PUT_RemoveContract
+
+postcondition: 
+(((New_arrListCount <= Old_arrListCount && Old_arrListLastIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListLastIndexOfX <=           Old_arrListLastIndexOfX && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount)) && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= -1)) && (((!(New_arrListLastIndexOfX <=               New_arrListIndexOfX)) && (!(New_arrListCount <= Old_arrListIndexOfX)) && New_arrListContainsX && (!(Old_arrListCount <= New_arrListCount)) && (!(1 == New_arrListCount)) && Old_arrListContainsX && (!(New_arrListCount <= Old_x)) && Old_x <= Old_arrListLastIndexOfX && (!(Old_arrListLastIndexOfX <=               New_arrListLastIndexOfX)) && Old_arrListIndexOfX <= New_arrListIndexOfX && Old_arrListIndexOfX >= 0) || New_arrListLastIndexOfX == New_arrListIndexOfX || (New_arrListLastIndexOfX == New_arrListIndexOfX && (!(New_arrListCount <= Old_arrListIndexOfX)) && New_arrListContainsX && (!(Old_arrListCount <= New_arrListCount)) && (!(1 == New_arrListCount)) && Old_arrListContainsX && (!(New_arrListCount <= Old_x)) && Old_x <= Old_arrListLastIndexOfX && (!(Old_arrListLastIndexOfX <=               New_arrListLastIndexOfX)) && Old_arrListIndexOfX <= New_arrListLastIndexOfX && Old_arrListIndexOfX >= 0)))
+rounds: 8
+
+simplified post: 
+((New_arrListCount <= Old_arrListCount && Old_arrListLastIndexOfX <= New_arrListCount && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListLastIndexOfX <= Old_arrListLastIndexOfX && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && (!(New_arrListLastIndexOfX == New_arrListCount)) && New_arrListLastIndexOfX == New_arrListIndexOfX && Old_arrListIndexOfX >= -1 && New_arrListLastIndexOfX >= -1) || (Old_arrListLastIndexOfX <= New_arrListCount && New_arrListContainsX && (!(Old_arrListCount <= New_arrListCount)) && Old_arrListContainsX && (!(New_arrListLastIndexOfX <= New_arrListIndexOfX)) && (!(New_arrListCount <= Old_x)) && (!(Old_arrListLastIndexOfX <=           New_arrListLastIndexOfX)) && Old_x <= Old_arrListLastIndexOfX && Old_arrListIndexOfX <= New_arrListIndexOfX && Old_arrListIndexOfX >= 0))
+pex time: 154.99291849136353
+
+learn time: 2646.416135787964
+
+Samples: 60
+
+PUT: PUT_InsertContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x <= Old_arrListCount
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x <= Old_arrListCount
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX < New_arrListIndexOfX
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX < New_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX <= New_arrListIndexOfX
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX <= New_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX == New_arrListIndexOfX
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX == New_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX != Old_index
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX != Old_index
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX != Old_index
+Final Tree ====
+Round: 6
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX != Old_index
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX != Old_index
+Final Tree ====
+Round: 7
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX != Old_index
+===== Final Result for PUT_InsertContract
+
+postcondition: 
+(((Old_arrListCount <= New_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <=           New_arrListLastIndexOfX && (!(New_arrListCount == Old_arrListCount)) && (!(New_arrListLastIndexOfX ==               Old_arrListLastIndexOfX)) && New_arrListContainsX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= 0)) && ((!(Old_arrListIndexOfX == Old_index)) || ((!(New_arrListLastIndexOfX == Old_x)) && (!(Old_x == Old_arrListCount)) && (!(Old_arrListCount <= New_arrListIndexOfX)) && (!(New_arrListLastIndexOfX <=               New_arrListIndexOfX)) && New_arrListIndexOfX == Old_arrListIndexOfX && Old_arrListContainsX && (!(1 == Old_x)) && New_arrListIndexOfX <= Old_arrListLastIndexOfX && (!(-1 == Old_x)) && Old_x >= -1 && New_arrListCount >= 2 && New_arrListIndexOfX >= 0)))
+rounds: 8
+
+simplified post: 
+((Old_arrListCount <= New_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && (!(New_arrListCount == Old_arrListCount)) && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && New_arrListContainsX && (!(Old_arrListIndexOfX == Old_index)) && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= 0) || (Old_arrListCount <= New_arrListCount && New_arrListLastIndexOfX <= Old_arrListCount && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && New_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <= New_arrListLastIndexOfX && (!(New_arrListCount == Old_arrListCount)) && (!(New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX)) && New_arrListContainsX && (!(New_arrListLastIndexOfX == Old_x)) && (!(Old_x == Old_arrListCount)) && Old_arrListContainsX && (!(1 == Old_x)) && New_arrListIndexOfX == Old_arrListIndexOfX && (!(-1 == Old_x)) && New_arrListIndexOfX >= 0 && Old_x >= -1))
+pex time: 164.52101731300354
+
+learn time: 3988.7539467811584
+
+Samples: 56
+
+PUT: PUT_SetContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 == New_arrListLastIndexOfX
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 == New_arrListLastIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListIndexOfX
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX <= Old_arrListIndexOfX
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX <= Old_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX < Old_index
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX < Old_index
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX == Old_arrListIndexOfX
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX == Old_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX != Old_index
+Final Tree ====
+Round: 6
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX != Old_index
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListIndexOfX
+Final Tree ====
+Round: 7
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListLastIndexOfX
+Final Tree ====
+Round: 8
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListLastIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX == Old_index
+Final Tree ====
+Round: 9
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX == Old_index
+===== Final Result for PUT_SetContract
+
+postcondition: 
+(((New_arrListLastIndexOfX <= Old_arrListCount && New_arrListIndexOfX <= Old_index && Old_index <= New_arrListLastIndexOfX && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && Old_arrListLastIndexOfX <=           New_arrListLastIndexOfX && New_arrListCount == Old_arrListCount && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListContainsX && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= 0)) && (((!(New_arrListLastIndexOfX <= Old_index)) && (!(New_arrListLastIndexOfX <=               New_arrListIndexOfX)) && New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX && New_arrListIndexOfX <= Old_arrListIndexOfX && Old_arrListContainsX && Old_arrListCount >= 2 && New_arrListLastIndexOfX >= 1 && Old_arrListIndexOfX >= 0 && New_arrListCount >= 2) || (Old_arrListIndexOfX <= New_arrListIndexOfX && New_arrListLastIndexOfX == Old_index && Old_arrListIndexOfX <= Old_index && Old_arrListLastIndexOfX <= Old_index)))
+rounds: 10
+
+simplified post: 
+((Old_index <= Old_arrListCount && New_arrListIndexOfX <= Old_index && Old_arrListIndexOfX <= Old_arrListLastIndexOfX && New_arrListCount == Old_arrListCount && (!(Old_index == Old_arrListCount)) && New_arrListContainsX && Old_arrListIndexOfX <= New_arrListIndexOfX && Old_arrListLastIndexOfX <= Old_index && New_arrListLastIndexOfX == Old_index && Old_arrListIndexOfX >= -1 && New_arrListIndexOfX >= 0) || (New_arrListLastIndexOfX <= Old_arrListCount && New_arrListIndexOfX <= Old_index && Old_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListCount == Old_arrListCount && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListContainsX && New_arrListIndexOfX <= Old_arrListIndexOfX && (!(New_arrListLastIndexOfX <= Old_index)) && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && Old_arrListContainsX && New_arrListIndexOfX >= 0))
+pex time: 146.59275674819946
+
+learn time: 4961.945419311523
+
+Samples: 65
+
+PUT: PUT_GetContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret != Old_index
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret != Old_index
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret != Old_index
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret != Old_index
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == New_Ret
+root left: not expressive in with conjunctions
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == New_Ret
+root left: not expressive in with conjunctions
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == New_Ret
+root left: not expressive in with conjunctions
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == New_Ret
+root left: not expressive in with conjunctions
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret == Old_index
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret == Old_index
+
+===== Final Result for PUT_GetContract
+
+postcondition: 
+(((Old_index <= Old_arrListCount && New_arrListCount == Old_arrListCount && (!(Old_index == Old_arrListCount)) && New_containsNewRet && Old_index >= 0)) && ((!(New_Ret == Old_index)) || ((!(Old_arrListCount <= New_Ret)) && (!(New_arrListCount <= New_Ret)) && New_Ret >= 0)))
+rounds: 6
+
+simplified post: 
+((Old_index <= Old_arrListCount && New_arrListCount == Old_arrListCount && (!(Old_index == Old_arrListCount)) && New_containsNewRet && Old_index >= 0))
+pex time: 60.947285413742065
+
+learn time: 40.30201244354248
+
+Samples: 32
+
+PUT: PUT_ContainsContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX != Old_x
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListIndexOfX != Old_x
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX <= New_arrListIndexOfX
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX <= New_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_arrListLastIndexOfX
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_arrListLastIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_arrListLastIndexOfX
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_arrListLastIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_arrListLastIndexOfX
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_arrListLastIndexOfX
+===== Final Result for PUT_ContainsContract
+
+postcondition: 
+(((New_arrListLastIndexOfX <= Old_arrListCount && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListCount == Old_arrListCount && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX && New_arrListIndexOfX >= -1)) && ((New_Ret && Old_arrListCount >= 1 && New_arrListLastIndexOfX >= 0 && Old_arrListIndexOfX >= 0 && New_arrListCount >= 1 && Old_arrListLastIndexOfX >= 0 && New_arrListIndexOfX >= 0) || ((!(New_Ret)) && Old_arrListIndexOfX == -1 && New_arrListLastIndexOfX == -1 && Old_arrListLastIndexOfX == -1 && New_arrListIndexOfX == -1)))
+rounds: 6
+
+simplified post: 
+((New_arrListLastIndexOfX <= Old_arrListCount && New_arrListIndexOfX <= New_arrListLastIndexOfX && New_arrListCount == Old_arrListCount && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListIndexOfX == Old_arrListIndexOfX && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && New_Ret && New_arrListIndexOfX >= 0) || (New_arrListCount == Old_arrListCount && (!(-1 == Old_arrListCount)) && (!(New_Ret)) && Old_arrListCount >= -1 && Old_arrListIndexOfX == -1 && New_arrListLastIndexOfX == -1 && New_arrListIndexOfX == -1 && Old_arrListLastIndexOfX == -1))
+pex time: 70.7132875919342
+
+learn time: 505.063707113266
+
+Samples: 34
+
+PUT: PUT_IndexOfContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX <= New_Ret
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_arrListLastIndexOfX <= New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret == New_arrListLastIndexOfX
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret == New_arrListLastIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret == New_arrListLastIndexOfX
+Final Tree ====
+Round: 6
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret == New_arrListLastIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX <= New_Ret
+Final Tree ====
+Round: 7
+root: not expressive in with conjunctions
+Predicate chosen at root : New_arrListLastIndexOfX <= New_Ret
+===== Final Result for PUT_IndexOfContract
+
+postcondition: 
+(((New_arrListLastIndexOfX <= Old_arrListCount && New_Ret <= New_arrListLastIndexOfX && New_arrListCount == Old_arrListCount && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX && New_Ret >= -1)) && (((!(New_arrListLastIndexOfX <= New_Ret)) && Old_arrListContainsX && (!(1 == Old_arrListCount)) && (!(1 == New_arrListCount)) && New_arrListContainsX && (!(Old_arrListLastIndexOfX <= New_Ret)) && New_arrListCount >= 1 && New_Ret >= 0 && Old_arrListCount >= 1) || (New_Ret == New_arrListLastIndexOfX && New_Ret == Old_arrListLastIndexOfX)))
+rounds: 8
+
+simplified post: 
+((New_Ret <= Old_arrListCount && New_arrListCount == Old_arrListCount && (!(New_Ret == Old_arrListCount)) && New_Ret == Old_arrListLastIndexOfX && New_Ret == New_arrListLastIndexOfX && New_Ret >= -1) || (New_arrListLastIndexOfX <= Old_arrListCount && New_arrListCount == Old_arrListCount && (!(New_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX == Old_arrListLastIndexOfX && Old_arrListContainsX && New_arrListContainsX && (!(New_arrListLastIndexOfX <= New_Ret)) && New_Ret >= 0))
+pex time: 107.79440355300903
+
+learn time: 555.0185284614563
+
+Samples: 48
+
+PUT: PUT_LastIndexOfContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListIndexOfX
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListIndexOfX
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret != Old_x
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret != Old_x
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListIndexOfX
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_arrListIndexOfX
+===== Final Result for PUT_LastIndexOfContract
+
+postcondition: 
+(((New_Ret <= Old_arrListCount && Old_arrListIndexOfX <= New_Ret && New_arrListCount == Old_arrListCount && (!(New_Ret == Old_arrListCount)) && New_arrListIndexOfX == Old_arrListIndexOfX && Old_arrListIndexOfX >= -1)) && ((Old_arrListContainsX && New_arrListContainsX && Old_arrListCount >= 1 && New_arrListCount >= 1 && New_Ret >= 0 && Old_arrListIndexOfX >= 0 && New_arrListIndexOfX >= 0) || ((!(Old_arrListContainsX)) && (!(New_arrListContainsX)) && Old_arrListIndexOfX == -1 && New_arrListIndexOfX == -1 && New_Ret == -1)))
+rounds: 6
+
+simplified post: 
+((New_Ret <= Old_arrListCount && Old_arrListIndexOfX <= New_Ret && New_arrListCount == Old_arrListCount && (!(New_Ret == Old_arrListCount)) && New_arrListIndexOfX == Old_arrListIndexOfX && Old_arrListContainsX && New_arrListContainsX && Old_arrListIndexOfX >= 0) || (New_arrListCount == Old_arrListCount && (!(-1 == Old_arrListCount)) && (!(Old_arrListContainsX)) && (!(New_arrListContainsX)) && Old_arrListCount >= -1 && Old_arrListIndexOfX == -1 && New_Ret == -1 && New_arrListIndexOfX == -1))
+pex time: 74.84131717681885
+
+learn time: 280.57983016967773
+
+Samples: 33
+
+PUT: PUT_CountContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= New_Ret
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < New_Ret
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < New_Ret
+===== Final Result for PUT_CountContract
+
+postcondition: 
+((New_Ret >= 0) && (New_Ret >= 1 || New_Ret == 0))
+rounds: 3
+
+simplified post: 
+(New_Ret == 0 || New_Ret >= 1)
+pex time: 19.462058544158936
+
+learn time: 0.297931432723999
+
+Samples: 5
+
+

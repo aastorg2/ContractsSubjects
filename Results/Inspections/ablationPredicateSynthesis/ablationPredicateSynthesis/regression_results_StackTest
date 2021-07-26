@@ -1,0 +1,238 @@
+Problem: StackTest
+
+PUT: PUT_CountContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == New_Ret
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == New_Ret
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < New_Ret
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < New_Ret
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+Final Tree ====
+Round: 6
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+Final Tree ====
+Round: 7
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+Final Tree ====
+Round: 8
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+Final Tree ====
+Round: 9
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+Final Tree ====
+Round: 10
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Top <= Old_Top
+===== Final Result for PUT_CountContract
+
+postcondition: 
+((New_Ret >= 0) && (New_Top <= Old_Top || New_Ret == 0))
+rounds: 11
+
+simplified post: 
+((New_Top <= Old_Top && New_Ret >= 0) || New_Ret == 0)
+pex time: 75.35354614257812
+
+learn time: 115.07738518714905
+
+Samples: 43
+
+PUT: PUT_PeekContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == Old_s1Count
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == Old_s1Count
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == Old_s1Count
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == Old_s1Count
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == Old_s1Count
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == Old_s1Count
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == Old_s1Count
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == Old_s1Count
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == Old_s1Count
+Final Tree ====
+Round: 6
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == Old_s1Count
+===== Final Result for PUT_PeekContract
+
+postcondition: 
+(((New_s1Count == Old_s1Count && New_ContainsNewRet && Old_s1Count >= 1)) && ((Old_s1Count >= 2 && New_s1Count >= 2) || (New_s1Count == 1 && Old_s1Count == 1)))
+rounds: 7
+
+simplified post: 
+((New_ContainsNewRet && New_s1Count == 1 && Old_s1Count == 1) || (New_s1Count == Old_s1Count && New_ContainsNewRet && Old_s1Count >= 2))
+pex time: 51.323301792144775
+
+learn time: 13.325958490371704
+
+Samples: 19
+
+PUT: PUT_ContainsContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+===== Final Result for PUT_ContainsContract
+
+postcondition: 
+(((New_s1Count == Old_s1Count && Old_s1Count >= 0)) && ((!(New_Ret)) || (New_Top == Old_Top && Old_s1Count >= 1 && New_s1Count >= 1)))
+rounds: 4
+
+simplified post: 
+((New_s1Count == Old_s1Count && (!(New_Ret)) && Old_s1Count >= 0) || (New_s1Count == Old_s1Count && New_Top == Old_Top && Old_s1Count >= 1))
+pex time: 30.988187551498413
+
+learn time: 52.05813813209534
+
+Samples: 21
+
+PUT: PUT_PopContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ContainsNewRet)
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ContainsNewRet)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ContainsNewRet)
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ContainsNewRet)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ContainsNewRet)
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ContainsNewRet)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ContainsNewRet)
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ContainsNewRet)
+===== Final Result for PUT_PopContract
+
+postcondition: 
+(((New_s1Count <= Old_s1Count && (!(New_s1Count == Old_s1Count)) && New_Ret == Old_Top && New_s1Count >= 0)) && ((!(New_ContainsNewRet)) || (Old_s1Count >= 2 && New_s1Count >= 1)))
+rounds: 5
+
+simplified post: 
+((New_s1Count <= Old_s1Count && (!(New_s1Count == Old_s1Count)) && New_Ret == Old_Top && (!(New_ContainsNewRet)) && New_s1Count >= 0) || (New_s1Count <= Old_s1Count && (!(New_s1Count == Old_s1Count)) && New_Ret == Old_Top && New_s1Count >= 1))
+pex time: 49.69020342826843
+
+learn time: 252.37701797485352
+
+Samples: 29
+
+PUT: PUT_PushContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_s1ContainsX)
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_s1ContainsX)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_s1ContainsX)
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_s1ContainsX)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_s1ContainsX)
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_s1ContainsX)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_s1ContainsX)
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_s1ContainsX)
+===== Final Result for PUT_PushContract
+
+postcondition: 
+(((Old_s1Count <= New_s1Count && (!(New_s1Count == Old_s1Count)) && Old_x == New_Top && New_s1ContainsX && Old_s1Count >= 0)) && ((!(Old_s1ContainsX)) || (Old_s1Count >= 1 && New_s1Count >= 2)))
+rounds: 5
+
+simplified post: 
+((Old_s1Count <= New_s1Count && (!(New_s1Count == Old_s1Count)) && Old_x == New_Top && New_s1ContainsX && (!(Old_s1ContainsX)) && Old_s1Count >= 0) || (Old_s1Count <= New_s1Count && (!(New_s1Count == Old_s1Count)) && Old_x == New_Top && New_s1ContainsX && Old_s1Count >= 1))
+pex time: 45.29724407196045
+
+learn time: 183.44468641281128
+
+Samples: 25
+

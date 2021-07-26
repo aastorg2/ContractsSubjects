@@ -1,0 +1,545 @@
+Problem: UndirectedGraphTest
+
+PUT: PUT_AddVertexContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_ugContainsVertexX
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_ugContainsVertexX
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 < Old_ugAdjacentDegree
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 < Old_ugAdjacentDegree
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 <= Old_ugAdjacentDegree
+root right: not expressive in with conjunctions
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 <= Old_ugAdjacentDegree
+root right: not expressive in with conjunctions
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_ugContainsVertexX
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_ugContainsVertexX
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsVerticesEmpty)
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsVerticesEmpty)
+===== Final Result for PUT_AddVertexContract
+
+postcondition: 
+(((Old_ugVertexCount <= New_ugVertexCount && New_ugAdjacentDegree <= Old_ugVertexCount && New_ugAdjacentDegree <= Old_ugEdgeCount && New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty)) && New_ugContainsVertexX && New_ugVertexCount >= 1 && New_ugAdjacentDegree >= 0)) && ((Old_ugIsVerticesEmpty && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(Old_ugContainsVertexX)) && (!(-1 == Old_ugAdjacentDegree)) && New_ugIsEdgesEmpty && New_ugIsAdjacentEdgesEmpty && Old_ugIsEdgesEmpty && New_Ret && Old_ugAdjacentDegree <= 0 && Old_ugVertexCount == 0 && Old_x >= 0 && Old_x <= 1 && New_ugAdjacentDegree == 0 && New_ugVertexCount == 1 && Old_ugEdgeCount == 0 && New_ugEdgeCount == 0) || ((!(Old_ugIsVerticesEmpty)) && Old_ugVertexCount >= 1)))
+rounds: 6
+
+simplified post: 
+(((!(New_ugIsVerticesEmpty)) && New_ugContainsVertexX && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(Old_ugContainsVertexX)) && (!(-1 == Old_ugAdjacentDegree)) && New_ugIsEdgesEmpty && New_ugIsAdjacentEdgesEmpty && Old_ugIsVerticesEmpty && Old_ugIsEdgesEmpty && New_Ret && New_ugAdjacentDegree == 0 && Old_ugVertexCount == 0 && Old_ugEdgeCount == 0 && Old_x >= 0 && Old_x <= 1 && New_ugVertexCount == 1 && Old_ugAdjacentDegree <= 0 && New_ugEdgeCount == 0) || (Old_ugVertexCount <= New_ugVertexCount && New_ugAdjacentDegree <= Old_ugVertexCount && New_ugAdjacentDegree <= Old_ugEdgeCount && New_ugEdgeCount == Old_ugEdgeCount && (!(New_ugIsVerticesEmpty)) && New_ugContainsVertexX && (!(Old_ugIsVerticesEmpty)) && New_ugAdjacentDegree >= 0 && Old_ugVertexCount >= 1))
+pex time: 754.1876680850983
+
+learn time: 4193.755111217499
+
+Samples: 67
+
+
+PUT: PUT_ClearAdjacentEdgesContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+===== Final Result for PUT_ClearAdjacentEdgesContract
+
+postcondition: 
+(((Old_ugAdjacentDegree <= Old_ugVertexCount && New_ugEdgeCount <= Old_ugEdgeCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && (!(0 == Old_ugVertexCount)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && New_ugIsAdjacentEdgesEmpty && Old_ugContainsVertexX && New_ugContainsVertexX && New_ugEdgeCount >= 0 && Old_ugAdjacentDegree >= 0 && New_ugAdjacentDegree == 0)) && ((Old_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmpty && New_ugIsEdgesEmpty && Old_ugEdgeCount == 0 && Old_ugVertexCount >= 1 && New_ugEdgeCount == 0 && Old_ugAdjacentDegree == 0 && New_ugVertexCount >= 1 && New_ugAdjacentDegree == 0) || ((!(Old_ugEdgeCount <= New_ugAdjacentDegree)) && (!(Old_ugIsEdgesEmpty)) && (!(Old_x == Old_ugVertexCount)) && (!(Old_x == New_ugVertexCount)) && (!(Old_ugAdjacentDegree == New_ugEdgeCount)) && Old_ugEdgeCount >= 1)))
+rounds: 4
+
+simplified post: 
+((Old_ugAdjacentDegree <= Old_ugVertexCount && New_ugEdgeCount <= Old_ugEdgeCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && (!(0 == Old_ugVertexCount)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && New_ugIsAdjacentEdgesEmpty && Old_ugContainsVertexX && New_ugContainsVertexX && (!(Old_ugIsEdgesEmpty)) && (!(Old_x == Old_ugVertexCount)) && (!(Old_ugAdjacentDegree == New_ugEdgeCount)) && New_ugEdgeCount >= 0 && Old_ugAdjacentDegree >= 0 && New_ugAdjacentDegree == 0) || (New_ugVertexCount == Old_ugVertexCount && (!(0 == Old_ugVertexCount)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && New_ugIsAdjacentEdgesEmpty && Old_ugContainsVertexX && New_ugContainsVertexX && Old_ugIsAdjacentEdgesEmpty && New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && Old_ugVertexCount >= 0 && New_ugEdgeCount == 0 && Old_ugAdjacentDegree == 0 && New_ugAdjacentDegree == 0 && Old_ugEdgeCount == 0))
+pex time: 506.0982971191406
+
+learn time: 409.67478108406067
+
+Samples: 29
+
+PUT: PUT_ContainsEdgeContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_ugAdjacentDegreeTarget != Old_ugAdjacentDegreeSource
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_ugAdjacentDegreeTarget != Old_ugAdjacentDegreeSource
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 <= Old_target
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 <= Old_target
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_target != New_ugEdgeCount
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_target != New_ugEdgeCount
+===== Final Result for PUT_ContainsEdgeContract
+
+postcondition: 
+Timeout or error
+rounds: 0
+
+simplified post: 
+Timeout or error
+pex time: 0
+
+learn time: 0.0
+
+Samples: 0
+
+PUT: PUT_RemoveVertexContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_ugEdgeCount != New_ugVertexCount
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_ugEdgeCount != New_ugVertexCount
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ugIsAdjacentEdgesEmpty)
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ugIsAdjacentEdgesEmpty)
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x <= New_ugEdgeCount
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x <= New_ugEdgeCount
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 <= New_ugAdjacentDegree
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 <= New_ugAdjacentDegree
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x != Old_ugVertexCount
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x != Old_ugVertexCount
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_ugIsAdjacentEdgesEmpty
+Final Tree ====
+Round: 6
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_ugIsAdjacentEdgesEmpty
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x != Old_ugVertexCount
+Final Tree ====
+Round: 7
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x != Old_ugVertexCount
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x != Old_ugVertexCount
+Final Tree ====
+Round: 8
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x != Old_ugVertexCount
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x != Old_ugVertexCount
+Final Tree ====
+Round: 9
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_x != Old_ugVertexCount
+===== Final Result for PUT_RemoveVertexContract
+
+postcondition: 
+(((New_ugVertexCount <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugVertexCount && New_ugEdgeCount <= Old_ugEdgeCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && (!(New_ugVertexCount == Old_ugVertexCount)) && (!(New_ugContainsVertexX)) && (!(Old_ugIsVerticesEmpty)) && New_Ret && Old_ugContainsVertexX && New_ugVertexCount >= 0 && New_ugEdgeCount >= 0 && Old_ugAdjacentDegree >= 0)) && ((!(Old_x == Old_ugVertexCount)) || (Old_ugIsAdjacentEdgesEmpty && Old_ugIsEdgesEmpty && New_ugIsEdgesEmpty && New_ugIsVerticesEmpty && Old_ugEdgeCount == 0 && New_ugVertexCount == 0 && Old_x == 1 && New_ugEdgeCount == 0 && Old_ugAdjacentDegree == 0)))
+rounds: 10
+
+simplified post: 
+((New_ugVertexCount <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugVertexCount && New_ugEdgeCount <= Old_ugEdgeCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && (!(New_ugVertexCount == Old_ugVertexCount)) && (!(New_ugContainsVertexX)) && (!(Old_ugIsVerticesEmpty)) && New_Ret && Old_ugContainsVertexX && (!(Old_x == Old_ugVertexCount)) && New_ugVertexCount >= 0 && New_ugEdgeCount >= 0 && Old_ugAdjacentDegree >= 0) || (New_ugVertexCount <= Old_ugVertexCount && (!(New_ugVertexCount == Old_ugVertexCount)) && (!(New_ugContainsVertexX)) && (!(Old_ugIsVerticesEmpty)) && New_Ret && Old_ugContainsVertexX && Old_ugIsAdjacentEdgesEmpty && Old_ugIsEdgesEmpty && New_ugIsEdgesEmpty && New_ugIsVerticesEmpty && New_ugEdgeCount == 0 && Old_ugAdjacentDegree == 0 && New_ugVertexCount >= 0 && Old_x == 1 && Old_ugEdgeCount == 0))
+pex time: 1277.2532832622528
+
+learn time: 6787.279418468475
+
+Samples: 91
+
+PUT: PUT_ContainsEdgeIntContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_source != New_ugAdjacentDegreeSource
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_source != New_ugAdjacentDegreeSource
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_source != New_ugVertexCount
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_source != New_ugVertexCount
+root: not expressive in with conjunctions
+Predicate chosen at root : New_ugIsEdgesEmpty
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : New_ugIsEdgesEmpty
+===== Final Result for PUT_ContainsEdgeIntContract
+
+postcondition: 
+(((New_ugAdjacentDegreeSource <= Old_ugVertexCount && New_ugAdjacentDegreeSource <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegreeSource ==           Old_ugAdjacentDegreeSource && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugVertexCount >= 1 && New_ugAdjacentDegreeSource >= 0)) && (((!(New_ugIsEdgesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(1 == Old_source)) && (!(Old_target == Old_ugEdgeCount)) && New_ugAdjacentDegreeTarget <=           New_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget <= New_ugVertexCount && (!(Old_target == New_ugEdgeCount)) && New_ugAdjacentDegreeTarget <= New_ugEdgeCount && (!(Old_source == Old_ugVertexCount)) && (!(Old_source == Old_ugEdgeCount)) && (!(1 == Old_target)) && New_ugAdjacentDegreeTarget <= Old_ugVertexCount && New_ugAdjacentDegreeTarget ==           Old_ugAdjacentDegreeTarget && (!(Old_source == New_ugEdgeCount)) && (!(Old_source == New_ugVertexCount)) && New_ugAdjacentDegreeTarget <=           Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget <= Old_ugEdgeCount && New_ugEdgeCount >= 1 && Old_ugEdgeCount >= 1 && Old_target >= 0) || (New_ugIsAdjacentEdgesEmptySource && New_ugIsEdgesEmpty && (!(New_ContainsEdgeSrcTar)) && (!(New_Ret)) && (!(Old_ContainsEdgeSrcTar)) && Old_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmptySource && Old_ugVertexCount >= 1 && Old_ugEdgeCount == 0 && New_ugEdgeCount == 0 && Old_ugAdjacentDegreeSource == 0 && New_ugAdjacentDegreeSource == 0 && New_ugVertexCount >= 1)))
+rounds: 4
+
+simplified post: 
+((New_ugAdjacentDegreeSource <= Old_ugVertexCount && New_ugAdjacentDegreeSource <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegreeSource ==       Old_ugAdjacentDegreeSource && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && (!(New_ugIsEdgesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(1 == Old_source)) && (!(Old_target == Old_ugEdgeCount)) && (!(1 == Old_target)) && New_ugAdjacentDegreeTarget <=       New_ugAdjacentDegreeSource && (!(Old_source == Old_ugEdgeCount)) && New_ugAdjacentDegreeTarget ==       Old_ugAdjacentDegreeTarget && (!(Old_source == Old_ugVertexCount)) && Old_ugVertexCount >= 1 && New_ugAdjacentDegreeSource >= 0 && Old_ugEdgeCount >= 1 && Old_target >= 0) || (New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && New_ugIsAdjacentEdgesEmptySource && New_ugIsEdgesEmpty && (!(New_ContainsEdgeSrcTar)) && (!(New_Ret)) && (!(Old_ContainsEdgeSrcTar)) && Old_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmptySource && New_ugAdjacentDegreeSource == 0 && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && Old_ugVertexCount >= 1 && Old_ugAdjacentDegreeSource == 0))
+pex time: 498.6927707195282
+
+learn time: 17265.822608947754
+
+Samples: 48
+
+PUT: PUT_AdjacentEdgeContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Target != Old_index
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Target != Old_index
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Source != Old_index
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Source != Old_index
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Source <= New_Ret_Target
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Source <= New_Ret_Target
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Target == New_Ret_Source
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Target == New_Ret_Source
+===== Final Result for PUT_AdjacentEdgeContract
+
+postcondition: 
+(((Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && Old_x <= New_Ret_Source && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && New_Ret_Target == Old_x && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(New_ugIsAdjacentEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_ugAdjacentDegree >= 1 && Old_index == 0)) && (((!(Old_ugEdgeCount <= Old_ugAdjacentDegree)) && (!(Old_ugEdgeCount <= New_ugAdjacentDegree)) && (!(New_ugEdgeCount <= Old_ugAdjacentDegree)) && (!(New_ugEdgeCount <= New_ugAdjacentDegree)) && Old_ugAdjacentDegree <= New_Ret_Source && (!(New_Ret_Source == Old_ugAdjacentDegree)) && (!(New_Ret_Source == New_ugAdjacentDegree)) && (!(New_Ret_Source == New_ugVertexCount)) && (!(New_Ret_Source == Old_ugVertexCount)) && New_ugAdjacentDegree <= New_Ret_Source && Old_x == 0 && New_ugAdjacentDegree >= 2 && Old_ugVertexCount >= 2 && New_ugVertexCount >= 2 && New_Ret_Target == 0 && Old_index == 0 && Old_ugAdjacentDegree >= 2) || (New_Ret_Source == Old_x && New_Ret_Target == Old_x)))
+rounds: 5
+
+simplified post: 
+((Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(New_ugIsAdjacentEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && New_Ret_Source == Old_x && New_Ret_Target == Old_x && Old_ugAdjacentDegree >= 1 && Old_index == 0) || (Old_ugAdjacentDegree <= Old_ugVertexCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(Old_ugIsAdjacentEdgesEmpty)) && (!(New_ugIsAdjacentEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && (!(Old_ugEdgeCount <= Old_ugAdjacentDegree)) && Old_ugAdjacentDegree <= New_Ret_Source && (!(New_Ret_Source == Old_ugAdjacentDegree)) && (!(New_Ret_Source == Old_ugVertexCount)) && Old_index == 0 && Old_x == 0 && Old_ugAdjacentDegree >= 2 && New_Ret_Target == 0))
+pex time: 630.644807100296
+
+learn time: 1723.244542837143
+
+Samples: 21
+
+PUT: PUT_IsVerticesEmptyContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+===== Final Result for PUT_IsVerticesEmptyContract
+
+postcondition: 
+(((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && Old_ugVertexCount >= 0 && Old_ugEdgeCount >= 0)) && ((New_Ret && New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && Old_ugVertexCount == 0 && New_ugVertexCount == 0) || ((!(New_Ret)) && New_ugVertexCount >= 1 && Old_ugVertexCount >= 1)))
+rounds: 2
+
+simplified post: 
+((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(New_Ret)) && Old_ugEdgeCount >= 0 && Old_ugVertexCount >= 1) || (New_Ret && New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && Old_ugVertexCount == 0 && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && New_ugVertexCount == 0))
+pex time: 187.94042539596558
+
+learn time: 9.046010255813599
+
+Samples: 9
+
+PUT: PUT_VertexCountContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ugIsVerticesEmpty)
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ugIsVerticesEmpty)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ugIsVerticesEmpty)
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ugIsVerticesEmpty)
+===== Final Result for PUT_VertexCountContract
+
+postcondition: 
+(((New_ugEdgeCount == Old_ugEdgeCount && Old_ugEdgeCount >= 0 && New_Ret >= 0)) && ((New_ugIsVerticesEmpty && Old_ugIsEdgesEmpty && Old_ugIsVerticesEmpty && New_ugIsEdgesEmpty && Old_ugEdgeCount == 0 && New_ugEdgeCount == 0 && New_Ret == 0) || ((!(New_ugIsVerticesEmpty)) && (!(Old_ugIsVerticesEmpty)) && New_Ret >= 1)))
+rounds: 3
+
+simplified post: 
+((New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && New_Ret >= 1 && Old_ugEdgeCount >= 0) || (New_ugIsVerticesEmpty && Old_ugIsEdgesEmpty && Old_ugIsVerticesEmpty && New_ugIsEdgesEmpty && Old_ugEdgeCount == 0 && New_ugEdgeCount == 0 && New_Ret == 0))
+pex time: 346.34775614738464
+
+learn time: 8.938729763031006
+
+Samples: 17
+
+PUT: PUT_ContainsVertexContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ugIsVerticesEmpty)
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_ugIsVerticesEmpty)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsVerticesEmpty)
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsVerticesEmpty)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsVerticesEmpty)
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsVerticesEmpty)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsVerticesEmpty)
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsVerticesEmpty)
+===== Final Result for PUT_ContainsVertexContract
+
+postcondition: 
+(((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && Old_ugVertexCount >= 0 && Old_ugEdgeCount >= 0)) && ((Old_ugIsVerticesEmpty && Old_ugIsEdgesEmpty && New_ugIsEdgesEmpty && (!(Old_ugIsAdjacentEdgesEmpty)) && New_ugIsVerticesEmpty && (!(New_Ret)) && New_ugVertexCount == 0 && New_ugEdgeCount == 0 && Old_ugVertexCount == 0 && Old_ugEdgeCount == 0) || ((!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && New_ugVertexCount >= 1 && Old_ugVertexCount >= 1)))
+rounds: 5
+
+simplified post: 
+((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugVertexCount >= 1 && Old_ugEdgeCount >= 0) || (Old_ugIsEdgesEmpty && New_ugIsEdgesEmpty && (!(Old_ugIsAdjacentEdgesEmpty)) && New_ugIsVerticesEmpty && Old_ugIsVerticesEmpty && (!(New_Ret)) && New_ugVertexCount == 0 && New_ugEdgeCount == 0 && Old_ugVertexCount == 0 && Old_ugEdgeCount == 0))
+pex time: 623.0220658779144
+
+learn time: 2999.48685836792
+
+Samples: 66
+
+PUT: PUT_AddEdgeContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : New_ugAdjacentDegreeTarget <= Old_ugEdgeCount
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : New_ugAdjacentDegreeTarget <= Old_ugEdgeCount
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= Old_ugEdgeCount
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= Old_ugEdgeCount
+===== Final Result for PUT_AddEdgeContract
+
+postcondition: 
+(((New_ugAdjacentDegreeSource <= Old_ugVertexCount && New_ugAdjacentDegreeTarget <= Old_ugVertexCount && Old_ugEdgeCount <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && Old_ugAdjacentDegreeTarget <= Old_ugEdgeCount && New_ugAdjacentDegreeSource <= New_ugEdgeCount && New_ugAdjacentDegreeTarget <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <=           New_ugAdjacentDegreeSource && Old_ugAdjacentDegreeSource <=           New_ugAdjacentDegreeTarget && Old_ugAdjacentDegreeTarget <=           New_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget <=           New_ugAdjacentDegreeTarget && New_ugVertexCount == Old_ugVertexCount && (!(New_ugIsAdjacentEdgesEmptySource)) && (!(New_ugIsAdjacentEdgesEmptyTarget)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar && Old_ugAdjacentDegreeSource >= 0 && New_ugAdjacentDegreeSource >= 1 && Old_ugAdjacentDegreeTarget >= 0 && New_ugAdjacentDegreeTarget >= 1)) && (((!(Old_ugIsEdgesEmpty)) && Old_ugEdgeCount >= 1) || (New_Ret && Old_target <= Old_source && Old_ugIsAdjacentEdgesEmptySource && (!(Old_ContainsEdgeSrcTar)) && Old_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmptyTarget && Old_ugVertexCount >= 1 && New_ugEdgeCount == 1 && Old_ugEdgeCount == 0 && New_ugAdjacentDegreeTarget == 1 && New_ugAdjacentDegreeSource == 1 && New_ugVertexCount >= 1 && Old_ugAdjacentDegreeSource == 0 && Old_ugAdjacentDegreeTarget == 0)))
+rounds: 3
+
+simplified post: 
+((New_ugAdjacentDegreeSource <= Old_ugVertexCount && New_ugAdjacentDegreeTarget <= Old_ugVertexCount && Old_ugEdgeCount <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && Old_ugAdjacentDegreeTarget <= Old_ugEdgeCount && New_ugAdjacentDegreeSource <= New_ugEdgeCount && New_ugAdjacentDegreeTarget <= New_ugEdgeCount && Old_ugAdjacentDegreeSource <=       New_ugAdjacentDegreeSource && Old_ugAdjacentDegreeSource <=       New_ugAdjacentDegreeTarget && Old_ugAdjacentDegreeTarget <=       New_ugAdjacentDegreeSource && Old_ugAdjacentDegreeTarget <=       New_ugAdjacentDegreeTarget && New_ugVertexCount == Old_ugVertexCount && (!(New_ugIsAdjacentEdgesEmptySource)) && (!(New_ugIsAdjacentEdgesEmptyTarget)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar && (!(Old_ugIsEdgesEmpty)) && Old_ugAdjacentDegreeSource >= 0 && New_ugAdjacentDegreeSource >= 1 && Old_ugAdjacentDegreeTarget >= 0 && New_ugAdjacentDegreeTarget >= 1 && Old_ugEdgeCount >= 1) || (New_ugVertexCount == Old_ugVertexCount && (!(New_ugIsAdjacentEdgesEmptySource)) && (!(New_ugIsAdjacentEdgesEmptyTarget)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ContainsEdgeSrcTar && New_Ret && Old_ugIsAdjacentEdgesEmptySource && (!(Old_ContainsEdgeSrcTar)) && Old_ugIsEdgesEmpty && Old_target <= Old_source && Old_ugIsAdjacentEdgesEmptyTarget && Old_ugVertexCount >= 1 && Old_ugAdjacentDegreeSource == 0 && Old_ugAdjacentDegreeTarget == 0 && New_ugAdjacentDegreeSource == 1 && New_ugAdjacentDegreeTarget == 1 && New_ugEdgeCount == 1 && Old_ugEdgeCount == 0))
+pex time: 371.2258539199829
+
+learn time: 3481.669073820114
+
+Samples: 21
+
+PUT: PUT_RemoveEdgeContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_source != Old_ugEdgeCount
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_source != Old_ugEdgeCount
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_target != New_ugVertexCount
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_target != New_ugVertexCount
+===== Final Result for PUT_RemoveEdgeContract
+
+postcondition: 
+(((Old_ugAdjacentDegreeSource <= Old_ugVertexCount && Old_ugAdjacentDegreeTarget <= Old_ugVertexCount && New_ugEdgeCount <= Old_ugEdgeCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && Old_ugAdjacentDegreeTarget <= Old_ugEdgeCount && New_ugAdjacentDegreeSource <= New_ugEdgeCount && New_ugAdjacentDegreeTarget <= New_ugEdgeCount && New_ugAdjacentDegreeSource <=           Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget <=           Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget <=           Old_ugAdjacentDegreeTarget && New_ugVertexCount == Old_ugVertexCount && (!(New_ugAdjacentDegreeTarget ==               Old_ugVertexCount)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && New_ugAdjacentDegreeSource >= 0 && New_ugAdjacentDegreeTarget >= 0)) && (((!(Old_source == Old_ugVertexCount)) && (!(Old_target == New_ugVertexCount)) && (!(Old_target == Old_ugVertexCount)) && (!(Old_source == New_ugVertexCount)) && (!(1 == Old_target)) && (!(1 == Old_source))) || (Old_ugIsAdjacentEdgesEmptyTarget && (!(Old_ContainsEdgeSrcTar)) && Old_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmptySource && (!(New_ContainsEdgeSrcTar)) && New_ugIsAdjacentEdgesEmptyTarget && New_ugIsEdgesEmpty && (!(New_Ret)) && New_ugIsAdjacentEdgesEmptySource && New_ugAdjacentDegreeTarget == 0 && Old_source == 1 && Old_ugAdjacentDegreeSource == 0 && New_ugVertexCount == 1 && Old_target == 1 && New_ugEdgeCount == 0 && Old_ugAdjacentDegreeTarget == 0 && New_ugAdjacentDegreeSource == 0 && Old_ugEdgeCount == 0 && Old_ugVertexCount == 1)))
+rounds: 4
+
+simplified post: 
+((Old_ugAdjacentDegreeSource <= Old_ugVertexCount && Old_ugAdjacentDegreeTarget <= Old_ugVertexCount && New_ugEdgeCount <= Old_ugEdgeCount && Old_ugAdjacentDegreeSource <= Old_ugEdgeCount && Old_ugAdjacentDegreeTarget <= Old_ugEdgeCount && New_ugAdjacentDegreeSource <= New_ugEdgeCount && New_ugAdjacentDegreeTarget <= New_ugEdgeCount && New_ugAdjacentDegreeSource <=       Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget <=       Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget <=       Old_ugAdjacentDegreeTarget && New_ugVertexCount == Old_ugVertexCount && (!(New_ugAdjacentDegreeTarget == Old_ugVertexCount)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && (!(Old_target == Old_ugVertexCount)) && (!(Old_source == Old_ugVertexCount)) && (!(1 == Old_target)) && (!(1 == Old_source)) && New_ugAdjacentDegreeSource >= 0 && New_ugAdjacentDegreeTarget >= 0) || (New_ugAdjacentDegreeTarget <= New_ugEdgeCount && New_ugAdjacentDegreeSource <=       Old_ugAdjacentDegreeSource && New_ugAdjacentDegreeTarget <=       Old_ugAdjacentDegreeTarget && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexSource && New_ugContainsVertexSource && Old_ugContainsVertexTarget && New_ugContainsVertexTarget && Old_ugIsAdjacentEdgesEmptyTarget && (!(Old_ContainsEdgeSrcTar)) && Old_ugIsEdgesEmpty && Old_ugIsAdjacentEdgesEmptySource && (!(New_ContainsEdgeSrcTar)) && New_ugIsAdjacentEdgesEmptyTarget && New_ugIsEdgesEmpty && (!(New_Ret)) && New_ugIsAdjacentEdgesEmptySource && New_ugEdgeCount <= 0 && Old_ugAdjacentDegreeSource <= 0 && Old_ugAdjacentDegreeTarget <= 0 && New_ugVertexCount == 1 && New_ugAdjacentDegreeSource >= 0 && New_ugAdjacentDegreeTarget >= 0 && Old_target == 1 && Old_ugVertexCount == 1 && Old_ugEdgeCount == 0 && Old_source == 1))
+pex time: 550.8293478488922
+
+learn time: 7970.247532129288
+
+Samples: 29
+
+PUT: PUT_IsEdgesEmptyContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < Old_ugVertexCount
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < Old_ugVertexCount
+===== Final Result for PUT_IsEdgesEmptyContract
+
+postcondition: 
+(((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && Old_ugVertexCount >= 0 && Old_ugEdgeCount >= 0)) && (((!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && New_ugVertexCount >= 1 && Old_ugVertexCount >= 1) || (New_Ret && New_ugIsVerticesEmpty && Old_ugIsVerticesEmpty && New_ugVertexCount == 0 && New_ugEdgeCount == 0 && Old_ugVertexCount == 0 && Old_ugEdgeCount == 0)))
+rounds: 2
+
+simplified post: 
+((New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugVertexCount >= 1 && Old_ugEdgeCount >= 0) || (New_Ret && New_ugIsVerticesEmpty && Old_ugIsVerticesEmpty && New_ugVertexCount == 0 && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && Old_ugVertexCount == 0))
+pex time: 195.1395926475525
+
+learn time: 8.286847114562988
+
+Samples: 9
+
+PUT: PUT_EdgeCountContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < New_Ret
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < New_Ret
+===== Final Result for PUT_EdgeCountContract
+
+postcondition: 
+(((New_ugVertexCount == Old_ugVertexCount && Old_ugVertexCount >= 0 && New_Ret >= 0)) && ((New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && New_ugVertexCount >= 0 && Old_ugVertexCount >= 0 && New_Ret == 0) || ((!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugVertexCount >= 1 && New_Ret >= 1 && New_ugVertexCount >= 1)))
+rounds: 2
+
+simplified post: 
+((New_ugVertexCount == Old_ugVertexCount && New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && Old_ugVertexCount >= 0 && New_Ret == 0) || (New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && New_Ret >= 1 && Old_ugVertexCount >= 1))
+pex time: 217.23858380317688
+
+learn time: 4.735008001327515
+
+Samples: 9
+
+PUT: PUT_AdjacentDegreeContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == New_Ret
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < New_ugEdgeCount
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < New_ugEdgeCount
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(Old_ugIsEdgesEmpty)
+===== Final Result for PUT_AdjacentDegreeContract
+
+postcondition: 
+(((New_Ret <= Old_ugVertexCount && New_Ret <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_ugVertexCount >= 1 && New_Ret >= 0)) && ((Old_ugIsEdgesEmpty && New_ugIsEdgesEmpty && New_ugIsAdjacentEdgesEmpty && Old_ugIsAdjacentEdgesEmpty && New_Ret == 0 && New_ugEdgeCount == 0 && Old_ugEdgeCount == 0 && New_ugVertexCount >= 1 && Old_ugVertexCount >= 1) || ((!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugEdgeCount >= 1 && New_ugEdgeCount >= 1)))
+rounds: 5
+
+simplified post: 
+((New_Ret <= Old_ugVertexCount && New_Ret <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && (!(Old_ugIsEdgesEmpty)) && (!(New_ugIsEdgesEmpty)) && Old_ugEdgeCount >= 1 && Old_ugVertexCount >= 1 && New_Ret >= 0) || (New_ugVertexCount == Old_ugVertexCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && New_ugIsEdgesEmpty && Old_ugIsEdgesEmpty && New_ugIsAdjacentEdgesEmpty && Old_ugIsAdjacentEdgesEmpty && New_Ret == 0 && New_ugEdgeCount == 0 && Old_ugVertexCount >= 1 && Old_ugEdgeCount == 0))
+pex time: 623.9306464195251
+
+learn time: 295.1288962364197
+
+Samples: 35
+
+PUT: PUT_IsAdjacentEdgesEmptyContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < Old_ugAdjacentDegree
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 < Old_ugAdjacentDegree
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : Not(New_Ret)
+===== Final Result for PUT_IsAdjacentEdgesEmptyContract
+
+postcondition: 
+(((Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && Old_ugVertexCount >= 1 && Old_ugAdjacentDegree >= 0)) && ((New_Ret && (!(New_ugVertexCount <= Old_ugEdgeCount)) && (!(New_ugVertexCount <= New_ugEdgeCount)) && (!(Old_ugVertexCount <= Old_ugEdgeCount)) && (!(Old_ugVertexCount <= New_ugEdgeCount)) && Old_ugAdjacentDegree == 0 && New_ugVertexCount >= 1 && Old_ugVertexCount >= 1 && New_ugAdjacentDegree == 0) || ((!(New_Ret)) && Old_ugEdgeCount >= 1 && New_ugEdgeCount >= 1 && New_ugAdjacentDegree >= 1 && Old_ugAdjacentDegree >= 1)))
+rounds: 6
+
+simplified post: 
+((Old_ugAdjacentDegree <= Old_ugVertexCount && Old_ugAdjacentDegree <= Old_ugEdgeCount && New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && New_ugAdjacentDegree == Old_ugAdjacentDegree && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && (!(New_Ret)) && Old_ugAdjacentDegree >= 1) || (New_ugVertexCount == Old_ugVertexCount && New_ugEdgeCount == Old_ugEdgeCount && (!(Old_ugIsVerticesEmpty)) && (!(New_ugIsVerticesEmpty)) && Old_ugContainsVertexX && New_ugContainsVertexX && New_Ret && (!(Old_ugVertexCount <= Old_ugEdgeCount)) && Old_ugEdgeCount >= 0 && Old_ugAdjacentDegree == 0 && New_ugAdjacentDegree == 0))
+pex time: 695.5649244785309
+
+learn time: 683.0732741355896
+
+Samples: 40
+

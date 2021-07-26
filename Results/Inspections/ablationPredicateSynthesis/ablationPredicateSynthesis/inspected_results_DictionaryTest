@@ -1,0 +1,246 @@
+Problem: DictionaryTest
+
+---------------------
+PUT_AddContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Truly Safe: 
+
+smt check: Precis
+
+Label:
+
+Analysis:
+
+learned postcondition: (((Old_dCount <= New_dCount && (!(New_dCount == Old_dCount)) && (!(Old_dContainsKeyX)) && New_dContainsKeyX && New_dContainsValueY && Old_dCount >= 0)) && ((!(Old_dContainsValueY)) || (Old_dCount >= 1 && New_dCount >= 2)))
+
+simplified postcondition: ((Old_dCount <= New_dCount && (!(New_dCount == Old_dCount)) && (!(Old_dContainsKeyX)) && New_dContainsKeyX && New_dContainsValueY && (!(Old_dContainsValueY)) && Old_dCount >= 0) || (Old_dCount <= New_dCount && (!(New_dCount == Old_dCount)) && (!(Old_dContainsKeyX)) && New_dContainsKeyX && New_dContainsValueY && Old_dCount >= 1))
+
+CNF simplified: ((Old_dCount < New_dCount && (!(Old_dContainsKeyX)) && New_dContainsKeyX && New_dContainsValueY) && (((!(Old_dContainsValueY)) && Old_dCount >= 0) || (Old_dCount >= 1)))
+
+CNF simplified (smt): (and (and (< Old_dCount New_dCount) (not Old_dContainsKeyX) New_dContainsKeyX New_dContainsValueY) (or (and (not Old_dContainsValueY) (>= Old_dCount 0)) (>= Old_dCount 1)))
+
+CNF simplified (smt): (and (and (< Old_dCount New_dCount) (not Old_dContainsKeyX) New_dContainsKeyX New_dContainsValueY) (or (and (not Old_dContainsValueY) (>= Old_dCount 0)) (>= Old_dCount 1)))
+
+Predicate chosen at root : Not(Old_dContainsValueY)
+
+rounds: 3
+
+pex time: 371.8283152580261
+
+learn time: 56.78616499900818
+
+Samples: 24
+
+---------------------
+PUT_RemoveContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Truly Safe: 
+
+smt check: Precis
+
+Label:
+
+Analysis:
+
+learned postcondition: (((New_dCount <= Old_dCount && (!(New_dContainsKeyX)) && New_dCount >= 0)) && ((Old_dContainsKeyX && New_Ret && (!(Old_dCount <= New_dCount)) && Old_dCount >= 1) || ((!(New_Ret)) && New_dCount == Old_dCount && (!(Old_dContainsKeyX)))))
+
+simplified postcondition: (((!(New_dContainsKeyX)) && (!(New_Ret)) && New_dCount == Old_dCount && (!(Old_dContainsKeyX)) && Old_dCount >= 0) || ((!(New_dContainsKeyX)) && Old_dContainsKeyX && New_Ret && (!(Old_dCount <= New_dCount)) && New_dCount >= 0))
+
+CNF simplified: (((!(New_dContainsKeyX))) && (((!(New_Ret)) && New_dCount == Old_dCount && (!(Old_dContainsKeyX)) && Old_dCount >= 0) || (Old_dContainsKeyX && New_Ret && (!(Old_dCount <= New_dCount)) && New_dCount >= 0)))
+
+CNF simplified (smt): (and (not New_dContainsKeyX) (or (and (not New_Ret) (= New_dCount Old_dCount) (not Old_dContainsKeyX) (>= Old_dCount 0)) (and Old_dContainsKeyX New_Ret (not (<= Old_dCount New_dCount)) (>= New_dCount 0))))
+
+CNF simplified (smt): (and (not New_dContainsKeyX) (or (and (not New_Ret) (= New_dCount Old_dCount) (not Old_dContainsKeyX) (>= Old_dCount 0)) (and Old_dContainsKeyX New_Ret (not (<= Old_dCount New_dCount)) (>= New_dCount 0))))
+
+Predicate chosen at root : New_dCount == Old_dCount
+
+rounds: 5
+
+pex time: 434.92052125930786
+
+learn time: 48.20413255691528
+
+Samples: 43
+
+---------------------
+PUT_GetContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Truly Safe: 
+
+smt check: Equivalent
+
+Label:
+
+Analysis:
+
+learned postcondition: (((New_dCount == Old_dCount && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && Old_dCount >= 1)) && (New_ContainsKeyNewRet || (!(New_Ret == Old_x))))
+
+simplified postcondition: ((New_dCount == Old_dCount && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && New_ContainsKeyNewRet && Old_dCount >= 1) || (New_dCount == Old_dCount && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && (!(New_Ret == Old_x)) && Old_dCount >= 1))
+
+CNF simplified: ((New_dCount == Old_dCount && Old_dContainsKeyX && New_dContainsKeyX && New_ContainsValueNewRet && Old_dCount >= 1) && ((New_ContainsKeyNewRet) || ((!(New_Ret == Old_x)))))
+
+CNF simplified (smt): (and (and (= New_dCount Old_dCount) Old_dContainsKeyX New_dContainsKeyX New_ContainsValueNewRet (>= Old_dCount 1)) (or New_ContainsKeyNewRet (not (= New_Ret Old_x))))
+
+CNF simplified (smt): (and (and (= New_dCount Old_dCount) Old_dContainsKeyX New_dContainsKeyX New_ContainsValueNewRet (>= Old_dCount 1)) (or New_ContainsKeyNewRet (not (= New_Ret Old_x))))
+
+Predicate chosen at root : New_Ret != Old_x
+
+rounds: 4
+
+pex time: 446.24142813682556
+
+learn time: 78.26126408576965
+
+Samples: 35
+
+---------------------
+PUT_SetContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Truly Safe: 
+
+smt check: Precis
+
+Label:
+
+Analysis:
+
+learned postcondition: (((Old_dCount <= New_dCount && New_dContainsValueY && New_dContainsKeyX && Old_dCount >= 0 && New_dCount >= 1)) && ((Old_dContainsKeyX && New_dCount == Old_dCount && Old_dCount >= 1) || ((!(New_dCount <= Old_dCount)) && (!(Old_dContainsKeyX)))))
+
+simplified postcondition: ((New_dContainsValueY && New_dContainsKeyX && (!(Old_dContainsKeyX)) && (!(New_dCount <= Old_dCount)) && Old_dCount >= 0) || (New_dContainsValueY && New_dContainsKeyX && New_dCount == Old_dCount && Old_dContainsKeyX && Old_dCount >= 1))
+
+CNF simplified: ((New_dContainsValueY && New_dContainsKeyX) && (((!(Old_dContainsKeyX)) && (!(New_dCount <= Old_dCount)) && Old_dCount >= 0) || (New_dCount == Old_dCount && Old_dContainsKeyX && Old_dCount >= 1)))
+
+CNF simplified (smt): (and (and New_dContainsValueY New_dContainsKeyX) (or (and (not Old_dContainsKeyX) (not (<= New_dCount Old_dCount)) (>= Old_dCount 0)) (and (= New_dCount Old_dCount) Old_dContainsKeyX (>= Old_dCount 1))))
+
+CNF simplified (smt): (and (and New_dContainsValueY New_dContainsKeyX) (or (and (not Old_dContainsKeyX) (not (<= New_dCount Old_dCount)) (>= Old_dCount 0)) (and (= New_dCount Old_dCount) Old_dContainsKeyX (>= Old_dCount 1))))
+
+Predicate chosen at root : Not(Old_dContainsKeyX)
+
+rounds: 6
+
+pex time: 667.6251728534698
+
+learn time: 259.5467059612274
+
+Samples: 68
+
+---------------------
+PUT_ContainsKeyContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Truly Safe: 
+
+smt check: Equivalent
+
+Label:
+
+Analysis:
+
+learned postcondition: (((New_dCount == Old_dCount && Old_dCount >= 0)) && ((!(New_Ret)) || (New_dCount >= 1 && Old_dCount >= 1)))
+
+simplified postcondition: ((New_dCount == Old_dCount && (!(New_Ret)) && Old_dCount >= 0) || (New_dCount == Old_dCount && Old_dCount >= 1))
+
+CNF simplified: ((New_dCount == Old_dCount) && (((!(New_Ret)) && Old_dCount >= 0) || (Old_dCount >= 1)))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) (or (and (not New_Ret) (>= Old_dCount 0)) (>= Old_dCount 1)))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) (or (and (not New_Ret) (>= Old_dCount 0)) (>= Old_dCount 1)))
+
+Predicate chosen at root : Not(New_Ret)
+
+rounds: 4
+
+pex time: 398.98828768730164
+
+learn time: 19.86698579788208
+
+Samples: 30
+
+---------------------
+PUT_ContainsValueContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Truly Safe: 
+
+smt check: Equivalent
+
+Label:
+
+Analysis:
+
+learned postcondition: (((New_dCount == Old_dCount && Old_dCount >= 0)) && ((!(New_Ret)) || (New_dCount >= 1 && Old_dCount >= 1)))
+
+simplified postcondition: ((New_dCount == Old_dCount && (!(New_Ret)) && Old_dCount >= 0) || (New_dCount == Old_dCount && Old_dCount >= 1))
+
+CNF simplified: ((New_dCount == Old_dCount) && (((!(New_Ret)) && Old_dCount >= 0) || (Old_dCount >= 1)))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) (or (and (not New_Ret) (>= Old_dCount 0)) (>= Old_dCount 1)))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) (or (and (not New_Ret) (>= Old_dCount 0)) (>= Old_dCount 1)))
+
+Predicate chosen at root : Not(New_Ret)
+
+rounds: 5
+
+pex time: 277.20195841789246
+
+learn time: 23.84399127960205
+
+Samples: 29
+
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+Truly Safe: 
+
+smt check: Equivalent
+
+Label:
+
+Analysis:
+
+learned postcondition: ((New_Ret >= 0) && (New_Ret >= 1 || New_Ret == 0))
+
+simplified postcondition: (New_Ret == 0 || New_Ret >= 1)
+
+CNF simplified: (((New_Ret == 0) || (New_Ret >= 1)))
+
+CNF simplified (smt): (or (= New_Ret 0) (>= New_Ret 1))
+
+CNF simplified (smt): (or (= New_Ret 0) (>= New_Ret 1))
+
+Predicate chosen at root : 0 < New_Ret
+
+rounds: 2
+
+pex time: 76.42722845077515
+
+learn time: 0.1949765682220459
+
+Samples: 5
+
+======================
+Average Rounds: 4.142857142857143
+
+Average Pex Time: 381.8904160090855
+
+Average Learn Time: 69.52917446408954

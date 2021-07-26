@@ -1,0 +1,329 @@
+Problem: BinaryHeapTest
+
+PUT: PUT_MinimumContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 <= New_Ret_Key
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 <= New_Ret_Key
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue != Old_bhMinimumKey
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue != Old_bhMinimumKey
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 < New_Ret_Value
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 < New_Ret_Value
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 == New_bhMinimumValue
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 == New_bhMinimumValue
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 == New_Ret_Value
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 == New_Ret_Value
+===== Final Result for PUT_MinimumContract
+
+postcondition: 
+(((New_bhCount == Old_bhCount && New_Ret_Key == Old_bhMinimumKey && Old_bhMinimumKey == New_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumValue == New_bhMinimumValue && Old_bhCount >= 1)) && (((!(0 == New_Ret_Value)) && (!(0 == New_bhMinimumValue)) && (!(0 == Old_bhMinimumValue))) || (New_bhMinimumValue == 0 && New_Ret_Value == 0 && Old_bhMinimumValue == 0 && New_bhCount >= 1 && Old_bhCount >= 1)))
+rounds: 6
+
+simplified post: 
+((New_bhCount == Old_bhCount && New_Ret_Key == Old_bhMinimumKey && Old_bhMinimumKey == New_bhMinimumKey && New_Ret_Value == Old_bhMinimumValue && Old_bhMinimumValue == New_bhMinimumValue && Old_bhCount >= 1))
+pex time: 59.483168601989746
+
+learn time: 1262.8887662887573
+
+Samples: 32
+
+PUT: PUT_MinimumUpdateContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 <= Old_priority
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 <= Old_priority
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhMinimumKey <= Old_bhMinimumKey
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhMinimumKey <= Old_bhMinimumKey
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue != Old_bhIndexOfValue
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue != Old_bhIndexOfValue
+===== Final Result for PUT_MinimumUpdateContract
+
+postcondition: 
+Timeout or error
+rounds: 0
+
+simplified post: 
+Timeout or error
+pex time: 0
+
+learn time: 0.0
+
+Samples: 0
+
+PUT: PUT_UpdateContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_bhIndexOfValue
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : -1 == Old_bhIndexOfValue
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_value != New_bhCount
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_value != New_bhCount
+===== Final Result for PUT_UpdateContract
+
+postcondition: 
+Timeout or error
+rounds: 0
+
+simplified post: 
+Timeout or error
+pex time: 0
+
+learn time: 0.0
+
+Samples: 0
+
+Problem: BinaryHeapTest
+
+PUT: PUT_RemoveAtContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumKey != New_bhCount
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumKey != New_bhCount
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhMinimumValue != Old_bhCount
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhMinimumValue != Old_bhCount
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Key != Old_bhCount
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Key != Old_bhCount
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue <= New_Ret_Value
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue <= New_Ret_Value
+===== Final Result for PUT_RemoveAtContract
+
+postcondition: 
+Timeout or error
+rounds: 0
+
+simplified post: 
+Timeout or error
+pex time: 0
+
+learn time: 0.0
+
+Samples: 0
+
+
+
+Problem: BinaryHeapTest
+
+PUT: PUT_RemoveMinimumContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumKey != New_bhCount
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumKey != New_bhCount
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhMinimumValue <= New_Ret_Value
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhMinimumValue <= New_Ret_Value
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 == New_Ret_Value
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 == New_Ret_Value
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Value != New_Ret_Key
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Value != New_Ret_Key
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Value != New_Ret_Key
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Value != New_Ret_Key
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Value != New_Ret_Key
+Final Tree ====
+Round: 6
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Value != New_Ret_Key
+root: not expressive in with conjunctions
+Predicate chosen at root : New_Ret_Value != New_Ret_Key
+===== Final Result for PUT_RemoveMinimumContract
+
+postcondition: 
+Timeout or error
+rounds: 0
+
+simplified post: 
+Timeout or error
+pex time: 0
+
+learn time: 0.0
+
+Samples: 0
+
+Problem: BinaryHeapTest
+
+PUT: PUT_AddContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhMinimumValue == Old_value
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhMinimumValue == Old_value
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhMinimumKey <= Old_bhMinimumKey
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhMinimumKey <= Old_bhMinimumKey
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhIndexOfValue <= Old_key
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhIndexOfValue <= Old_key
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhIndexOfValue != Old_value
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : New_bhIndexOfValue != Old_value
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 == New_bhCount
+===== Final Result for PUT_AddContract
+
+postcondition: 
+Timeout or error
+rounds: 0
+
+simplified post: 
+Timeout or error
+pex time: 0
+
+learn time: 0.0
+
+Samples: 0
+
+PUT: PUT_IndexOfContract
+
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_value <= New_Ret
+Final Tree ====
+Round: 1
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_value <= New_Ret
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= Old_bhCount
+Final Tree ====
+Round: 2
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= Old_bhCount
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 == Old_value
+Final Tree ====
+Round: 3
+root: not expressive in with conjunctions
+Predicate chosen at root : 0 == Old_value
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue <= New_bhMinimumKey
+Final Tree ====
+Round: 4
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue <= New_bhMinimumKey
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue <= New_bhMinimumKey
+Final Tree ====
+Round: 5
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue <= New_bhMinimumKey
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue <= New_bhMinimumKey
+Final Tree ====
+Round: 6
+root: not expressive in with conjunctions
+Predicate chosen at root : Old_bhMinimumValue <= New_bhMinimumKey
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= New_bhCount
+Final Tree ====
+Round: 7
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= New_bhCount
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= New_bhCount
+Final Tree ====
+Round: 8
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= New_bhCount
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= New_bhCount
+Final Tree ====
+Round: 9
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= New_bhCount
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= Old_bhCount
+Final Tree ====
+Round: 10
+root: not expressive in with conjunctions
+Predicate chosen at root : 1 <= Old_bhCount
+===== Final Result for PUT_IndexOfContract
+
+postcondition: 
+(((New_Ret <= Old_bhCount && New_bhCount == Old_bhCount && (!(New_Ret == Old_bhCount)) && New_Ret >= -1)) && ((New_bhCount == 0 && Old_bhCount == 0 && New_Ret == -1) || (New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && Old_bhCount >= 1 && New_bhCount >= 1)))
+rounds: 11
+
+simplified post: 
+(((!(New_Ret == 0)) && New_Ret >= -1 && New_Ret <= 0 && New_bhCount == 0 && Old_bhCount == 0) || (New_Ret <= Old_bhCount && New_bhCount == Old_bhCount && (!(New_Ret == Old_bhCount)) && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_Ret >= -1))
+pex time: 130.48723769187927
+
+learn time: 114082.23776316643
+
+Samples: 132
