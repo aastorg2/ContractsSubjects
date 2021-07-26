@@ -3,7 +3,6 @@ Problem: ArrayListTest
 ---------------------
 PUT_AddContract
 Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
 smt check: Equivalent
@@ -47,10 +46,10 @@ Samples: 58
 ---------------------
 PUT_RemoveContract
 Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
 smt check: Equivalent
+
 
 Truly Safe: True
 
@@ -85,7 +84,6 @@ Samples: 40
 ---------------------
 PUT_InsertContract
 Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
 smt check: Equivalent
@@ -125,10 +123,10 @@ Samples: 34
 ---------------------
 PUT_SetContract
 Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
 smt check: Equivalent
+
 
 Truly Safe: True
 
@@ -165,10 +163,9 @@ Samples: 36
 ---------------------
 PUT_GetContract
 Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
 
 Truly Safe: True
 
@@ -199,10 +196,10 @@ Samples: 51
 ---------------------
 PUT_ContainsContract
 Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
 smt check: Equivalent
+
 
 Truly Safe: True
 
@@ -231,10 +228,10 @@ Samples: 67
 ---------------------
 PUT_IndexOfContract
 Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
 
 Truly Safe: True
 
@@ -263,10 +260,10 @@ Samples: 29
 ---------------------
 PUT_LastIndexOfContract
 Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
 
 Truly Safe: True
 
@@ -299,6 +296,8 @@ Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
 smt check: Equivalent
+
+
 
 Truly Safe: True
 

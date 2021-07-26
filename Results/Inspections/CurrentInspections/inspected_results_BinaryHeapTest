@@ -6,7 +6,15 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
+
+
+
+
+
+
+
 
 Truly Safe: True
 
@@ -35,7 +43,15 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
+
+
+
+
+
+
+
 
 Truly Safe: True
 
@@ -64,7 +80,15 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
+
+
+
+
+
+
+
 
 Truly Safe: False
 
@@ -93,7 +117,15 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
+
+
+
+
+
+
+
 
 Truly Safe: False
 
@@ -122,7 +154,15 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
+
+
+
+
+
+
+
 
 Truly Safe: True
 
@@ -151,7 +191,15 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Equivalent
+
+
+
+
+
+
+
+
 
 Truly Safe: True
 
@@ -180,7 +228,15 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Equivalent
+
+
+
+
+
+
+
+
 
 Truly Safe: True
 

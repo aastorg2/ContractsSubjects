@@ -8,6 +8,13 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
+
+
+
+
+
+
+
 Truly Safe: True
 
 Analysis: (!(New_hsContainsX)) holds because an item x will always be added from the set if not present before add is called, and if present, then it will still be present in the set after add is called. !(Old_hsContainsX) If an item x is not in the set before add is called, then it follows that the set has one more element in it. If an item x is in the set before add is called, then it is true that the state of the set didn't change after this call and the set has at least one elements.
@@ -38,6 +45,13 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
+
+
+
+
+
+
+
 Truly Safe: True
 
 Analysis: (!(New_hsContainsX)) holds because an item x will always be removed from the set if present before remove is called, and if not present, then there is no way it can be in the set after remove is called. (New_hsCount == Old_hsCount) If the number of elements in the set does not change after remove is called, then is true that the set can be of any non-negative size and the element to remove was not present within the set and the state of the set did not change after this call. If the number of elements in the set does change after remove is called, then it follows that the set has one less elements in it.
@@ -66,7 +80,14 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
+
+
+
+
+
+
 
 Truly Safe: True
 
@@ -96,7 +117,14 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
+
+
+
+
+
+
 
 Truly Safe: True
 

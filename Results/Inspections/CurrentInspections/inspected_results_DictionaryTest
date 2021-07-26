@@ -6,7 +6,14 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
+
+
+
+
+
+
 
 Truly Safe: True
 
@@ -38,6 +45,13 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
+
+
+
+
+
+
+
 Truly Safe: True
 
 Analysis: (!(New_dContainsKeyX)) holds because key will not be present in the post state. New_dCount == Old_dCount If the number of elements did not change, then nothing was removed. If not, then one element is removed.
@@ -66,7 +80,14 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
+
+
+
+
+
+
 
 Truly Safe: True
 
@@ -96,7 +117,14 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
+
+
+
+
+
+
 
 Truly Safe: True
 
@@ -128,6 +156,13 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
+
+
+
+
+
+
+
 Truly Safe: True
 
 Analysis: (New_dCount == Old_dCount) holds because the number of elements does not change between states. !(New_Ret) If a key x is not present, then the number of elements present is at least zero. If not then the number of elements is at least one.
@@ -158,6 +193,13 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
+
+
+
+
+
+
+
 Truly Safe: True
 
 Analysis: (New_dCount == Old_dCount) holds because the number of elements does not change between states. !(New_Ret) If a value x is not present, then the number of elements present is at least zero. If not then the number of elements is at least one.
@@ -186,7 +228,14 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Precis
+smt check: Equivalent
+
+
+
+
+
+
+
 
 Truly Safe: True
 
