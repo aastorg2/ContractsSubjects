@@ -8,6 +8,8 @@ Disjunctive (Truly):
 
 smt check: Precis
 
+smt check: Precis
+
 Label:
 
 Analysis:
@@ -30,6 +32,8 @@ PUT_MinimumContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Precis
 
 smt check: Precis
 
@@ -58,6 +62,8 @@ Disjunctive (Truly):
 
 smt check: Precis
 
+smt check: Precis
+
 Label:
 
 Analysis:
@@ -80,6 +86,8 @@ PUT_RemoveAtContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Precis
 
 smt check: Precis
 
@@ -108,6 +116,8 @@ Disjunctive (Truly):
 
 smt check: Precis
 
+smt check: Precis
+
 Label:
 
 Analysis:
@@ -125,10 +135,13 @@ learn time: 11.92998480796814
 
 Samples: 8
 
+---------------------
 PUT_MinimumUpdateContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Unknown
 
 smt check: Unknown
 
@@ -154,6 +167,8 @@ PUT_UpdateContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Unknown
 
 smt check: Unknown
 

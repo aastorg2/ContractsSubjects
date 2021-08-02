@@ -97,30 +97,6 @@ learn time: 14.944774389266968
 Samples: 28
 
 ---------------------
-PUT_RemoveVertexContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Precis
-
-Label:
-
-Analysis:
-
-CNF simplified: ((New_ugContainsVertexX == Old_ugIsVerticesEmpty && New_ugContainsVertexX == Old_ugIsVerticesEmpty && Old_ugContainsVertexX == New_Ret && !(New_ugContainsVertexX) && New_ugEdgeCount >= 0 && New_ugVertexCount >= 0 && Old_ugAdjacentDegree >= 0 && Old_ugEdgeCount >= 0 && New_Ret && New_ugEdgeCount <= Old_ugEdgeCount && New_ugVertexCount - Old_ugVertexCount + 1 == 0 && Old_ugAdjacentDegree <= Old_ugEdgeCount && Old_ugAdjacentDegree <= Old_ugVertexCount && New_ugEdgeCount + Old_ugAdjacentDegree - Old_ugEdgeCount == 0))
-
-CNF simplified (smt): (and (= New_ugContainsVertexX Old_ugIsVerticesEmpty) (= New_ugContainsVertexX Old_ugIsVerticesEmpty) (= Old_ugContainsVertexX New_Ret) (not New_ugContainsVertexX) (>= New_ugEdgeCount 0) (>= New_ugVertexCount 0) (>= Old_ugAdjacentDegree 0) (>= Old_ugEdgeCount 0) New_Ret (<= New_ugEdgeCount Old_ugEdgeCount) (= (+ (- New_ugVertexCount Old_ugVertexCount) 1) 0) (<= Old_ugAdjacentDegree Old_ugEdgeCount) (<= Old_ugAdjacentDegree Old_ugVertexCount) (= (- (+ New_ugEdgeCount Old_ugAdjacentDegree) Old_ugEdgeCount) 0))
-
-rounds: 7
-
-pex time: 866.7240414619446
-
-learn time: 30.57917857170105
-
-Samples: 28
-
----------------------
 PUT_ContainsEdgeIntContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):

@@ -8,6 +8,8 @@ Disjunctive (Truly):
 
 smt check: Precis
 
+smt check: Equivalent
+
 Label:
 
 Analysis:
@@ -35,6 +37,8 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
+smt check: Daikon
+
 Label:
 
 Analysis:
@@ -59,6 +63,8 @@ PUT_GetContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Precis
 
 smt check: Precis
 
@@ -89,6 +95,8 @@ Disjunctive (Truly):
 
 smt check: Precis
 
+smt check: Equivalent
+
 Label:
 
 Analysis:
@@ -115,6 +123,8 @@ Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
 smt check: Equivalent
+
+smt check: Daikon
 
 Label:
 
@@ -143,6 +153,8 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
+smt check: Daikon
+
 Label:
 
 Analysis:
@@ -167,6 +179,8 @@ PUT_CountContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
+
+smt check: Precis
 
 smt check: Precis
 
