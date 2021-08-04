@@ -62,7 +62,10 @@ namespace Stack
             get { return _size; }
         }
 
+        public int ReturnOdd(int x){
 
+            return 2*x + 1;
+        }
         // Removes all Objects from the Stack.
         public void Clear()
         {
@@ -187,6 +190,7 @@ namespace Stack
             
             _array[_size++] = item;
             _version++;
+            
         }
 
         // Copies the Stack to an array, in the same order Pop would return the items.

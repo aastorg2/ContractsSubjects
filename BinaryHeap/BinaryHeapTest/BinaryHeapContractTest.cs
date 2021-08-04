@@ -52,18 +52,18 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$old_bh_minimum_value", Old_bhMinimumValue);
             PexObserve.ValueForViewing("$new_bh_minimum_value", New_bhMinimumValue);
 
-            Assert.True(((New_bhMinimumKey <= Old_key && New_bhCount == 1 + Old_bhCount && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1)));
+            Assert.True(false);
         }
 
         [PexMethod]
         public void PUT_MinimumContract([PexAssumeUnderTest]BinaryHeap.BinaryHeap<int, int> bh)
         {
-            AssumePrecondition.IsTrue(bh.Count > 0);
+            AssumePrecondition.IsTrue(true);
 
             int Old_bhCount = bh.Count;
             //int Old_bhCapacity = bh.Capacity;
-            int Old_bhMinimumKey = bh.Minimum().Key ;
-            int Old_bhMinimumValue =  bh.Minimum().Value ;
+            int Old_bhMinimumKey = bh.Count > 0 ? bh.Minimum().Key : PexChoose.Value<int>("old_bhMinimumKey");
+            int Old_bhMinimumValue = bh.Count > 0 ? bh.Minimum().Value : PexChoose.Value<int>("old_bhMinimumValue");
             
 
             //code
@@ -73,8 +73,8 @@ namespace BinaryHeap.Test
 
             int New_bhCount = bh.Count;
             //int New_bhCapacity = bh.Capacity;
-            int New_bhMinimumKey =bh.Minimum().Key;
-            int New_bhMinimumValue = bh.Minimum().Value;
+            int New_bhMinimumKey = bh.Count > 0 ? bh.Minimum().Key : PexChoose.Value<int>("old_bhMinimumKey");
+            int New_bhMinimumValue = bh.Count > 0 ? bh.Minimum().Value : PexChoose.Value<int>("old_bhMinimumValue");
 
             PexObserve.ValueForViewing("$old_bh_count", Old_bhCount);
             PexObserve.ValueForViewing("$new_bh_count", New_bhCount);
@@ -87,17 +87,18 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_ret_key", New_Ret_Key);
             PexObserve.ValueForViewing("$new_ret_value", New_Ret_Value);
 
-            Assert.True(((Old_bhCount <= New_bhCount && New_bhCount <= Old_bhCount && New_Ret_Key == Old_bhMinimumKey && New_Ret_Value <= Old_bhMinimumValue && New_bhMinimumValue <= New_Ret_Value && New_bhMinimumKey == Old_bhMinimumKey && Old_bhMinimumValue <= New_bhMinimumValue && Old_bhCount >= 1)));
+            Assert.True(false);
         }
 
         [PexMethod]
+        //[PexMethod(Timeout = 500, MaxConstraintSolverTime = 10, MaxRunsWithoutNewTests = 2147483647, MaxRuns = 2147483647)]
         public void PUT_RemoveMinimumContract([PexAssumeUnderTest]BinaryHeap.BinaryHeap<int, int> bh)
         {
-            AssumePrecondition.IsTrue(bh.Count > 0);
+            AssumePrecondition.IsTrue(true);
 
             int Old_bhCount = bh.Count;
-            int Old_bhMinimumKey =  bh.Minimum().Key;
-            int Old_bhMinimumValue = bh.Minimum().Value;
+            int Old_bhMinimumKey = bh.Count > 0 ? bh.Minimum().Key : PexChoose.Value<int>("old_bhMinimumKey");
+            int Old_bhMinimumValue = bh.Count > 0 ? bh.Minimum().Value : PexChoose.Value<int>("old_bhMinimumValue");
 
             //code
             var rm = bh.RemoveMinimum();
@@ -121,18 +122,19 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_ret_value", New_Ret_Value);
 
 
-            Assert.True(((New_bhCount == -1 + Old_bhCount && Old_bhMinimumKey <= New_Ret_Key && New_Ret_Key <= Old_bhMinimumKey && New_Ret_Value <= Old_bhMinimumValue && Old_bhMinimumValue <= New_Ret_Value && New_bhCount >= 0)));
+            Assert.True(false);
 
         }
 
         [PexMethod]
+        //[PexMethod(Timeout = 500, MaxConstraintSolverTime = 10, MaxRunsWithoutNewTests = 2147483647, MaxRuns = 2147483647)]
         public void PUT_RemoveAtContract([PexAssumeUnderTest]BinaryHeap.BinaryHeap<int, int> bh, int index)
         {
-            AssumePrecondition.IsTrue(index < bh.Count && index >= 0);
+            AssumePrecondition.IsTrue(true);
 
             int Old_bhCount = bh.Count;
-            int Old_bhMinimumKey = bh.Minimum().Key;
-            int Old_bhMinimumValue = bh.Minimum().Value;
+            int Old_bhMinimumKey = bh.Count > 0 ? bh.Minimum().Key : PexChoose.Value<int>("old_bhMinimumKey");
+            int Old_bhMinimumValue = bh.Count > 0 ? bh.Minimum().Value : PexChoose.Value<int>("old_bhMinimumValue");
             int Old_index = index;
             //bool Old_removeAtRoot = index == 0;
 
@@ -160,7 +162,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_ret_key", New_Ret_Key);
             PexObserve.ValueForViewing("$new_ret_value", New_Ret_Value);
 
-            Assert.True(((Old_index <= New_bhCount && New_bhCount == -1 + Old_bhCount && Old_bhMinimumKey <= New_Ret_Key && Old_index >= 0)));
+            Assert.True(false);
         }
 
         [PexMethod]
@@ -191,7 +193,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$new_ret", New_Ret);
 
 
-            Assert.True((((!(New_Ret == Old_bhCount)) && New_Ret <= Old_bhCount && Old_bhCount <= New_bhCount && New_bhCount <= Old_bhCount && New_Ret >= -1)));
+            Assert.True(false);
 
         }
 
@@ -239,9 +241,10 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$old_bh_value", Old_value);
             //PexObserve.ValueForViewing("$new_bh_value", New_value);
 
-            Assert.True(((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && (!(New_bhIndexOfValue == New_bhCount)) && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue >= 0 && Old_bhIndexOfValue >= -1)));
+            Assert.True(false);
         }
-
+        
+        //[PexMethod(Timeout = 500, MaxConstraintSolverTime = 10, MaxRunsWithoutNewTests = 2147483647, MaxRuns = 2147483647)]
         [PexMethod]
         public void PUT_MinimumUpdateContract([PexAssumeUnderTest]BinaryHeap.BinaryHeap<int, int> bh, int priority, int value)
         {
@@ -284,7 +287,7 @@ namespace BinaryHeap.Test
             PexObserve.ValueForViewing("$old_bh_value", Old_value);
             //PexObserve.ValueForViewing("$new_bh_value", New_value);
 
-            Assert.True(((Old_bhCount <= New_bhCount && New_bhMinimumKey <= Old_priority && (!(Old_bhIndexOfValue == Old_bhCount)) && Old_bhIndexOfValue <= Old_bhCount && New_bhIndexOfValue <= Old_bhCount && (!(New_bhIndexOfValue == New_bhCount)) && Old_bhIndexOfValue >= -1 && New_bhIndexOfValue >= 0)));
+            Assert.True(false);
         }
     }
 }
