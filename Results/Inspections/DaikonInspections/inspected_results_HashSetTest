@@ -8,7 +8,7 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-Truly Safe:
+Truly Safe: True
 
 Analysis:
 
@@ -26,56 +26,6 @@ learn time: 16.29662299156189
 Samples: 4
 
 ---------------------
-PUT_RemoveContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Equivalent
-
-Truly Safe:
-
-Analysis:
-
-CNF simplified: (((Old_hsContainsX == New_Ret && (!(New_Ret)) == (New_hsCount == Old_hsCount) && ((!(!(New_Ret))) || (New_hsContainsX == New_Ret)) && (New_Ret) == (New_hsCount - Old_hsCount + 1 == 0) && ((!(New_Ret)) || (Old_hsCount >= 1)) && !(New_hsContainsX) && New_hsCount >= 0 && Old_hsCount >= 0 && New_hsCount <= Old_hsCount)))
-
-CNF simplified (smt): (and (= Old_hsContainsX New_Ret) (= (not New_Ret) (= New_hsCount Old_hsCount)) (or (not (not New_Ret)) (= New_hsContainsX New_Ret)) (= New_Ret (= (+ (- New_hsCount Old_hsCount) 1) 0)) (or (not New_Ret) (>= Old_hsCount 1)) (not New_hsContainsX) (>= New_hsCount 0) (>= Old_hsCount 0) (<= New_hsCount Old_hsCount))
-
-
-rounds: 5
-
-pex time: 616.9083802700043
-
-learn time: 17.78455090522766
-
-Samples: 4
-
----------------------
-PUT_CountContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Precis
-
-Truly Safe:
-
-Analysis:
-
-CNF simplified: (true)
-
-CNF simplified (smt): true
-
-
-rounds: 1
-
-pex time: 107.98185563087463
-
-learn time: 3.2574570178985596
-
-Samples: 4
-
----------------------
 PUT_ContainsContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
@@ -84,7 +34,7 @@ Disjunctive (Truly):
 smt check: Precis
 
 
-Truly Safe:
+Truly Safe: True
 
 Analysis:
 
@@ -107,3 +57,53 @@ Average Rounds: 3.75
 Average Pex Time: 460.4626981019974
 
 Average Learn Time: 12.260829210281372
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Truly Safe: True
+
+Analysis:
+
+CNF simplified: (true)
+
+CNF simplified (smt): true
+
+
+rounds: 1
+
+pex time: 107.98185563087463
+
+learn time: 3.2574570178985596
+
+Samples: 4
+
+---------------------
+PUT_RemoveContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Equivalent
+
+Truly Safe: True
+
+Analysis:
+
+CNF simplified: (((Old_hsContainsX == New_Ret && (!(New_Ret)) == (New_hsCount == Old_hsCount) && ((!(!(New_Ret))) || (New_hsContainsX == New_Ret)) && (New_Ret) == (New_hsCount - Old_hsCount + 1 == 0) && ((!(New_Ret)) || (Old_hsCount >= 1)) && !(New_hsContainsX) && New_hsCount >= 0 && Old_hsCount >= 0 && New_hsCount <= Old_hsCount)))
+
+CNF simplified (smt): (and (= Old_hsContainsX New_Ret) (= (not New_Ret) (= New_hsCount Old_hsCount)) (or (not (not New_Ret)) (= New_hsContainsX New_Ret)) (= New_Ret (= (+ (- New_hsCount Old_hsCount) 1) 0)) (or (not New_Ret) (>= Old_hsCount 1)) (not New_hsContainsX) (>= New_hsCount 0) (>= Old_hsCount 0) (<= New_hsCount Old_hsCount))
+
+
+rounds: 5
+
+pex time: 616.9083802700043
+
+learn time: 17.78455090522766
+
+Samples: 4
+

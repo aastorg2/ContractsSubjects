@@ -8,9 +8,7 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-smt check: Precis
-
-Truly Safe:
+Truly Safe: True
 
 Analysis:
 
@@ -30,93 +28,6 @@ learn time: 4.070473909378052
 Samples: 12
 
 ---------------------
-PUT_RemoveContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Equivalent
-
-smt check: Equivalent
-
-Truly Safe:
-
-Analysis:
-
-simplified postcondition: (((!(Old_dContainsKeyX)) == (!(New_Ret)) && (!(Old_dContainsKeyX)) == (New_dCount == Old_dCount) && (Old_dContainsKeyX) == (New_Ret) && (Old_dContainsKeyX) == (New_dCount - Old_dCount  1 == 0) && ((!(Old_dContainsKeyX)) || (Old_dCount >= 1)) && !(New_dContainsKeyX) && New_dCount >= 0 && Old_dCount >= 0 && New_dCount <= Old_dCount))
-
-CNF simplified: ((((!(Old_dContainsKeyX)) == (!(New_Ret)) && (!(Old_dContainsKeyX)) == (New_dCount == Old_dCount) && (Old_dContainsKeyX) == (New_Ret) && (Old_dContainsKeyX) == (New_dCount - Old_dCount + 1 == 0) && ((!(Old_dContainsKeyX)) || (Old_dCount >= 1)) && !(New_dContainsKeyX) && New_dCount >= 0 && Old_dCount >= 0 && New_dCount <= Old_dCount)))
-
-CNF simplified (smt): (and (= (not Old_dContainsKeyX) (not New_Ret)) (= (not Old_dContainsKeyX) (= New_dCount Old_dCount)) (= Old_dContainsKeyX New_Ret) (= Old_dContainsKeyX (= (+ (- New_dCount Old_dCount) 1) 0)) (or (not Old_dContainsKeyX) (>= Old_dCount 1)) (not New_dContainsKeyX) (>= New_dCount 0) (>= Old_dCount 0) (<= New_dCount Old_dCount))
-
-
-rounds: 2
-
-pex time: 508.3208713531494
-
-learn time: 26.792346000671387
-
-Samples: 12
-
----------------------
-PUT_GetContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Precis
-
-smt check: Precis
-
-Truly Safe:
-
-Analysis:
-
-simplified postcondition: ((New_dCount == Old_dCount && New_ContainsValueNewRet && New_dContainsKeyX && Old_dContainsKeyX))
-
-CNF simplified: ((New_dCount == Old_dCount && New_ContainsValueNewRet && New_dContainsKeyX && Old_dContainsKeyX))
-
-CNF simplified (smt): (and (= New_dCount Old_dCount) New_ContainsValueNewRet New_dContainsKeyX Old_dContainsKeyX)
-
-
-rounds: 6
-
-pex time: 280.4077904224396
-
-learn time: 7.8600099086761475
-
-Samples: 12
-
----------------------
-PUT_SetContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Precis
-
-smt check: Precis
-
-Truly Safe:
-
-Analysis:
-
-simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_dCount >= 1 && Old_dCount >= 0 && New_dCount >= Old_dCount))
-
-CNF simplified: ((New_dContainsKeyX && New_dContainsValueY && New_dCount >= 1 && Old_dCount >= 0 && New_dCount >= Old_dCount))
-
-CNF simplified (smt): (and New_dContainsKeyX New_dContainsValueY (>= New_dCount 1) (>= Old_dCount 0) (>= New_dCount Old_dCount))
-
-
-rounds: 3
-
-pex time: 240.31106781959534
-
-learn time: 8.885505199432373
-
-Samples: 12
-
----------------------
 PUT_ContainsKeyContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
@@ -124,9 +35,7 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Equivalent
-
-Truly Safe:
+Truly Safe: True
 
 Analysis:
 
@@ -153,9 +62,7 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Equivalent
-
-Truly Safe:
+Truly Safe: True
 
 Analysis:
 
@@ -182,9 +89,7 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-smt check: Precis
-
-Truly Safe:
+Truly Safe: True
 
 Analysis:
 
@@ -209,3 +114,84 @@ Average Rounds: 3.7142857142857144
 Average Pex Time: 273.0203390802656
 
 Average Learn Time: 13.636872223445348
+---------------------
+PUT_GetContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Truly Safe: True
+
+Analysis:
+
+simplified postcondition: ((New_dCount == Old_dCount && New_ContainsValueNewRet && New_dContainsKeyX && Old_dContainsKeyX))
+
+CNF simplified: ((New_dCount == Old_dCount && New_ContainsValueNewRet && New_dContainsKeyX && Old_dContainsKeyX))
+
+CNF simplified (smt): (and (= New_dCount Old_dCount) New_ContainsValueNewRet New_dContainsKeyX Old_dContainsKeyX)
+
+
+rounds: 6
+
+pex time: 280.4077904224396
+
+learn time: 7.8600099086761475
+
+Samples: 12
+
+---------------------
+PUT_RemoveContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Equivalent
+
+Truly Safe: True
+
+Analysis:
+
+simplified postcondition: (((!(Old_dContainsKeyX)) == (!(New_Ret)) && (!(Old_dContainsKeyX)) == (New_dCount == Old_dCount) && (Old_dContainsKeyX) == (New_Ret) && (Old_dContainsKeyX) == (New_dCount - Old_dCount  1 == 0) && ((!(Old_dContainsKeyX)) || (Old_dCount >= 1)) && !(New_dContainsKeyX) && New_dCount >= 0 && Old_dCount >= 0 && New_dCount <= Old_dCount))
+
+CNF simplified: ((((!(Old_dContainsKeyX)) == (!(New_Ret)) && (!(Old_dContainsKeyX)) == (New_dCount == Old_dCount) && (Old_dContainsKeyX) == (New_Ret) && (Old_dContainsKeyX) == (New_dCount - Old_dCount + 1 == 0) && ((!(Old_dContainsKeyX)) || (Old_dCount >= 1)) && !(New_dContainsKeyX) && New_dCount >= 0 && Old_dCount >= 0 && New_dCount <= Old_dCount)))
+
+CNF simplified (smt): (and (= (not Old_dContainsKeyX) (not New_Ret)) (= (not Old_dContainsKeyX) (= New_dCount Old_dCount)) (= Old_dContainsKeyX New_Ret) (= Old_dContainsKeyX (= (+ (- New_dCount Old_dCount) 1) 0)) (or (not Old_dContainsKeyX) (>= Old_dCount 1)) (not New_dContainsKeyX) (>= New_dCount 0) (>= Old_dCount 0) (<= New_dCount Old_dCount))
+
+
+rounds: 2
+
+pex time: 508.3208713531494
+
+learn time: 26.792346000671387
+
+Samples: 12
+
+---------------------
+PUT_SetContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Truly Safe: True
+
+Analysis:
+
+simplified postcondition: ((New_dContainsKeyX && New_dContainsValueY && New_dCount >= 1 && Old_dCount >= 0 && New_dCount >= Old_dCount))
+
+CNF simplified: ((New_dContainsKeyX && New_dContainsValueY && New_dCount >= 1 && Old_dCount >= 0 && New_dCount >= Old_dCount))
+
+CNF simplified (smt): (and New_dContainsKeyX New_dContainsValueY (>= New_dCount 1) (>= Old_dCount 0) (>= New_dCount Old_dCount))
+
+
+rounds: 3
+
+pex time: 240.31106781959534
+
+learn time: 8.885505199432373
+
+Samples: 12
+

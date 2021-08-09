@@ -9,7 +9,7 @@ Disjunctive (Truly):
 smt check: Precis
 
 
-Truly Safe:
+Truly Safe: True
 
 Analysis:
 
@@ -27,85 +27,6 @@ learn time: 18.753911018371582
 Samples: 8
 
 ---------------------
-PUT_MinimumContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Precis
-
-
-Truly Safe:
-
-Analysis:
-
-CNF simplified: ((New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_bhCount >= 1))
-
-CNF simplified (smt): (and (= New_bhCount Old_bhCount) (= New_bhMinimumKey Old_bhMinimumKey) (= New_bhMinimumValue Old_bhMinimumValue) (>= New_bhCount 1))
-
-
-rounds: 4
-
-pex time: 41.02055621147156
-
-learn time: 11.151129245758057
-
-Samples: 8
-
----------------------
-PUT_RemoveMinimumContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Precis
-
-
-
-Truly Safe:
-
-Analysis:
-
-CNF simplified: ((New_bhCount >= 0 && Old_bhCount >= 1 && New_bhCount - Old_bhCount + 1 == 0))
-
-CNF simplified (smt): (and (>= New_bhCount 0) (>= Old_bhCount 1) (= (+ (- New_bhCount Old_bhCount) 1) 0))
-
-
-rounds: 5
-
-pex time: 297.3479483127594
-
-learn time: 16.286461353302002
-
-Samples: 8
-
----------------------
-PUT_RemoveAtContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Precis
-
-
-Truly Safe:
-
-Analysis:
-
-CNF simplified: ((New_bhCount >= 0 && Old_bhCount >= 1 && New_bhCount - Old_bhCount + 1 == 0 && New_bhCount >= Old_index && Old_bhCount > Old_index))
-
-CNF simplified (smt): (and (>= New_bhCount 0) (>= Old_bhCount 1) (= (+ (- New_bhCount Old_bhCount) 1) 0) (>= New_bhCount Old_index) (> Old_bhCount Old_index))
-
-
-rounds: 4
-
-pex time: 243.05484700202942
-
-learn time: 12.849995851516724
-
-Samples: 8
-
----------------------
 PUT_IndexOfContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
@@ -114,7 +35,7 @@ Disjunctive (Truly):
 smt check: Precis
 
 
-Truly Safe:
+Truly Safe: True
 
 Analysis:
 
@@ -132,6 +53,32 @@ learn time: 11.92998480796814
 Samples: 8
 
 ---------------------
+PUT_MinimumContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+
+Truly Safe: True
+
+Analysis:
+
+CNF simplified: ((New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_bhCount >= 1))
+
+CNF simplified (smt): (and (= New_bhCount Old_bhCount) (= New_bhMinimumKey Old_bhMinimumKey) (= New_bhMinimumValue Old_bhMinimumValue) (>= New_bhCount 1))
+
+
+rounds: 4
+
+pex time: 41.02055621147156
+
+learn time: 11.151129245758057
+
+Samples: 8
+
+---------------------
 PUT_MinimumUpdateContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
@@ -140,7 +87,7 @@ Disjunctive (Truly):
 smt check: Unknown
 
 
-Truly Safe:
+Truly Safe: False
 
 Analysis:
 
@@ -154,6 +101,59 @@ rounds: 6
 pex time: 366.2089731693268
 
 learn time: 37.957809925079346
+
+Samples: 8
+
+---------------------
+PUT_RemoveAtContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+
+Truly Safe: True
+
+Analysis:
+
+CNF simplified: ((New_bhCount >= 0 && Old_bhCount >= 1 && New_bhCount - Old_bhCount + 1 == 0 && New_bhCount >= Old_index && Old_bhCount > Old_index))
+
+CNF simplified (smt): (and (>= New_bhCount 0) (>= Old_bhCount 1) (= (+ (- New_bhCount Old_bhCount) 1) 0) (>= New_bhCount Old_index) (> Old_bhCount Old_index))
+
+
+rounds: 4
+
+pex time: 243.05484700202942
+
+learn time: 12.849995851516724
+
+Samples: 8
+
+---------------------
+PUT_RemoveMinimumContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+
+
+Truly Safe: True
+
+Analysis:
+
+CNF simplified: ((New_bhCount >= 0 && Old_bhCount >= 1 && New_bhCount - Old_bhCount + 1 == 0))
+
+CNF simplified (smt): (and (>= New_bhCount 0) (>= Old_bhCount 1) (= (+ (- New_bhCount Old_bhCount) 1) 0))
+
+
+rounds: 5
+
+pex time: 297.3479483127594
+
+learn time: 16.286461353302002
 
 Samples: 8
 

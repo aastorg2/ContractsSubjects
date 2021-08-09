@@ -1,106 +1,6 @@
 Problem: StackTest
 
 ---------------------
-PUT_PushContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Precis
-
-Truly Safe:
-
-Analysis:
-
-CNF simplified: ((New_Top == Old_x && New_s1ContainsX && Old_s1Count >= 0 && New_s1Count - Old_s1Count - 1 == 0))
-
-CNF simplified (smt): (and (= New_Top Old_x) New_s1ContainsX (>= Old_s1Count 0) (= (- (- New_s1Count Old_s1Count) 1) 0))
-
-
-rounds: 10
-
-pex time: 84.12073040008545
-
-learn time: 35.74171161651611
-
-Samples: 7
-
----------------------
-PUT_PopContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Precis
-
-Truly Safe:
-
-Analysis:
-
-CNF simplified: ((New_s1Count >= 0 && Old_s1Count >= 1 && New_s1Count - Old_s1Count + 1 == 0))
-
-CNF simplified (smt): (and (>= New_s1Count 0) (>= Old_s1Count 1) (= (+ (- New_s1Count Old_s1Count) 1) 0))
-
-
-rounds: 3
-
-pex time: 23.336567640304565
-
-learn time: 7.150811672210693
-
-Samples: 7
-
----------------------
-PUT_PeekContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Precis
-
-Truly Safe:
-
-Analysis:
-
-CNF simplified: ((New_s1Count == Old_s1Count && New_ContainsNewRet))
-
-CNF simplified (smt): (and (= New_s1Count Old_s1Count) New_ContainsNewRet)
-
-
-rounds: 5
-
-pex time: 34.60250926017761
-
-learn time: 13.307235479354858
-
-Samples: 7
-
----------------------
-PUT_CountContract
-Disjunctive (PexChoose):
-Disjunctive (Alternate Semantics):
-Disjunctive (Truly):
-
-smt check: Precis
-
-Truly Safe:
-
-Analysis:
-
-CNF simplified: ((New_Ret >= 0))
-
-CNF simplified (smt): (>= New_Ret 0)
-
-
-rounds: 7
-
-pex time: 46.35269117355347
-
-learn time: 20.82184338569641
-
-Samples: 7
-
----------------------
 PUT_ContainsContract
 Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
@@ -108,7 +8,7 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Truly Safe:
+Truly Safe: True
 
 Analysis:
 
@@ -131,3 +31,103 @@ Average Rounds: 6.2
 Average Pex Time: 47.721215438842776
 
 Average Learn Time: 19.623131704330444
+---------------------
+PUT_CountContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Truly Safe: True True
+
+Analysis:
+
+CNF simplified: ((New_Ret >= 0))
+
+CNF simplified (smt): (>= New_Ret 0)
+
+
+rounds: 7
+
+pex time: 46.35269117355347
+
+learn time: 20.82184338569641
+
+Samples: 7
+
+---------------------
+PUT_PeekContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Truly Safe: True 
+
+Analysis:
+
+CNF simplified: ((New_s1Count == Old_s1Count && New_ContainsNewRet))
+
+CNF simplified (smt): (and (= New_s1Count Old_s1Count) New_ContainsNewRet)
+
+
+rounds: 5
+
+pex time: 34.60250926017761
+
+learn time: 13.307235479354858
+
+Samples: 7
+
+---------------------
+PUT_PopContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Truly Safe: True
+
+Analysis:
+
+CNF simplified: ((New_s1Count >= 0 && Old_s1Count >= 1 && New_s1Count - Old_s1Count + 1 == 0))
+
+CNF simplified (smt): (and (>= New_s1Count 0) (>= Old_s1Count 1) (= (+ (- New_s1Count Old_s1Count) 1) 0))
+
+
+rounds: 3
+
+pex time: 23.336567640304565
+
+learn time: 7.150811672210693
+
+Samples: 7
+
+---------------------
+PUT_PushContract
+Disjunctive (PexChoose):
+Disjunctive (Alternate Semantics):
+Disjunctive (Truly):
+
+smt check: Precis
+
+Truly Safe: True
+
+Analysis:
+
+CNF simplified: ((New_Top == Old_x && New_s1ContainsX && Old_s1Count >= 0 && New_s1Count - Old_s1Count - 1 == 0))
+
+CNF simplified (smt): (and (= New_Top Old_x) New_s1ContainsX (>= Old_s1Count 0) (= (- (- New_s1Count Old_s1Count) 1) 0))
+
+
+rounds: 10
+
+pex time: 84.12073040008545
+
+learn time: 35.74171161651611
+
+Samples: 7
+
