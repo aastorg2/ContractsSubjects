@@ -8,9 +8,7 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Daikon
-
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -35,9 +33,7 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Daikon
-
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -62,9 +58,7 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-smt check: Precis
-
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -89,9 +83,8 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 

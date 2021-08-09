@@ -8,9 +8,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-smt check: Equivalent
+smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -37,13 +37,13 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Daikon
+smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
-simplified postcondition: (((!(Old_dContainsKeyX)) == (!(New_Ret)) && (!(Old_dContainsKeyX)) == (New_dCount == Old_dCount) && (Old_dContainsKeyX) == (New_Ret) && (Old_dContainsKeyX) == (New_dCount - Old_dCount + 1 == 0) && ((!(Old_dContainsKeyX)) || (Old_dCount >= 1)) && !(New_dContainsKeyX) && New_dCount >= 0 && Old_dCount >= 0 && New_dCount <= Old_dCount))
+simplified postcondition: (((!(Old_dContainsKeyX)) == (!(New_Ret)) && (!(Old_dContainsKeyX)) == (New_dCount == Old_dCount) && (Old_dContainsKeyX) == (New_Ret) && (Old_dContainsKeyX) == (New_dCount - Old_dCount  1 == 0) && ((!(Old_dContainsKeyX)) || (Old_dCount >= 1)) && !(New_dContainsKeyX) && New_dCount >= 0 && Old_dCount >= 0 && New_dCount <= Old_dCount))
 
 CNF simplified: ((((!(Old_dContainsKeyX)) == (!(New_Ret)) && (!(Old_dContainsKeyX)) == (New_dCount == Old_dCount) && (Old_dContainsKeyX) == (New_Ret) && (Old_dContainsKeyX) == (New_dCount - Old_dCount + 1 == 0) && ((!(Old_dContainsKeyX)) || (Old_dCount >= 1)) && !(New_dContainsKeyX) && New_dCount >= 0 && Old_dCount >= 0 && New_dCount <= Old_dCount)))
 
@@ -68,7 +68,7 @@ smt check: Precis
 
 smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -95,9 +95,9 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-smt check: Equivalent
+smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -124,9 +124,9 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Daikon
+smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -153,9 +153,9 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Daikon
+smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -184,7 +184,7 @@ smt check: Precis
 
 smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 

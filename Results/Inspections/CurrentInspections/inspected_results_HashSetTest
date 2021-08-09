@@ -43,7 +43,7 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Equivalent
 
 
 
@@ -80,7 +80,7 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Precis
 
 
 
@@ -117,7 +117,7 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Precis
 
 
 

@@ -8,9 +8,8 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -21,7 +20,7 @@ CNF simplified (smt): (and (= New_arrListLastIndexOfX New_Ret) (= Old_arrListCou
 
 rounds: 4
 
-pex time: 76.40977644920349
+pex time: 76.40977644920349f
 
 learn time: 10.758504867553711
 
@@ -35,9 +34,8 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -62,9 +60,8 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -89,9 +86,8 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -116,9 +112,8 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -143,9 +138,8 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Daikon
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -170,9 +164,8 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-smt check: Daikon
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -197,9 +190,7 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-smt check: Daikon
-
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -224,9 +215,7 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-smt check: Equivalent
-
-Label:
+Truly Safe:
 
 Analysis:
 

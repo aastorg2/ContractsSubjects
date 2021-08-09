@@ -8,7 +8,7 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -33,7 +33,7 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -58,7 +58,7 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -83,7 +83,7 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -108,7 +108,7 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 
