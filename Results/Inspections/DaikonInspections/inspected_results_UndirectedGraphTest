@@ -56,7 +56,7 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Truly Safe:
+Truly Safe: True
 
 Analysis:
 
@@ -152,11 +152,11 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Truly Safe:
+Truly Safe: True
 
 Analysis:
 
-CNF simplified: ((New_ContainsEdgeSrcTar == New_Ret && New_ugContainsVertexSource == Old_ugContainsVertexSource && New_ugContainsVertexTarget == Old_ugContainsVertexTarget && New_ugEdgeCount == Old_ugEdgeCount && New_ugIsEdgesEmpty == Old_ugIsEdgesEmpty && New_ugIsVerticesEmpty == Old_ugIsVerticesEmpty && New_ugIsVerticesEmpty == Old_ugIsVerticesEmpty && New_ugVertexCount == Old_ugVertexCount && Old_ContainsEdgeSrcTar == New_Ret && ((!(!(New_Ret))) || (New_ugIsVerticesEmpty == New_Ret)) && ((!(New_Ret)) || (New_ugContainsVertexSource == New_Ret)) && ((!(New_Ret)) || (New_ugContainsVertexTarget == New_Ret)) && ((!(New_Ret)) || (New_ugContainsVertexTarget)) && ((!(New_Ret)) || (!(New_ugIsEdgesEmpty))) && ((!(New_Ret)) || (New_ugIsEdgesEmpty == New_ugIsVerticesEmpty)) && New_ugContainsVertexSource && New_ugEdgeCount >= 0 && !(New_ugIsVerticesEmpty)))
+CNF simplified: ((New_ContainsEdgeSrcTar == New_Ret && New_ugContainsVertexSource == Old_ugContainsVertexSource && New_ugContainsVertexTarget == Old_ugContainsVertexTarget && New_ugEdgeCount == Old_ugEdgeCount && New_ugIsEdgesEmpty == Old_ugIsEdgesEmpty && New_ugIsVerticesEmpty == Old_ugIsVerticesEmpty && New_ugIsVerticesEmpty == Old_ugIsVerticesEmpty && New_ugVertexCount == Old_ugVertexCount && Old_ContainsEdgeSrcTar == New_Ret && ((!(!(New_Ret))) || (New_ugIsVerticesEmpty == New_Ret) ) && ((!(New_Ret)) || (New_ugContainsVertexSource == New_Ret)) && ((!(New_Ret)) || (New_ugContainsVertexTarget == New_Ret)) && ((!(New_Ret)) || (New_ugContainsVertexTarget)) && ((!(New_Ret)) || (!(New_ugIsEdgesEmpty))) && ((!(New_Ret)) || (New_ugIsEdgesEmpty == New_ugIsVerticesEmpty)) && New_ugContainsVertexSource && New_ugEdgeCount >= 0 && !(New_ugIsVerticesEmpty)))
 
 CNF simplified (smt): (and (= New_ContainsEdgeSrcTar New_Ret) (= New_ugContainsVertexSource Old_ugContainsVertexSource) (= New_ugContainsVertexTarget Old_ugContainsVertexTarget) (= New_ugEdgeCount Old_ugEdgeCount) (= New_ugIsEdgesEmpty Old_ugIsEdgesEmpty) (= New_ugIsVerticesEmpty Old_ugIsVerticesEmpty) (= New_ugIsVerticesEmpty Old_ugIsVerticesEmpty) (= New_ugVertexCount Old_ugVertexCount) (= Old_ContainsEdgeSrcTar New_Ret) (or (not (not New_Ret)) (= New_ugIsVerticesEmpty New_Ret)) (or (not New_Ret) (= New_ugContainsVertexSource New_Ret)) (or (not New_Ret) (= New_ugContainsVertexTarget New_Ret)) (or (not New_Ret) New_ugContainsVertexTarget) (or (not New_Ret) (not New_ugIsEdgesEmpty)) (or (not New_Ret) (= New_ugIsEdgesEmpty New_ugIsVerticesEmpty)) New_ugContainsVertexSource (>= New_ugEdgeCount 0) (not New_ugIsVerticesEmpty))
 
@@ -254,9 +254,9 @@ Disjunctive (Truly):
 
 smt check: Unknown
 
-Truly Safe:
+Truly Safe:  True
 
-Analysis:
+Analysis: 
 
 CNF simplified: ((New_ugEdgeCount == Old_ugEdgeCount && New_ugIsVerticesEmpty == Old_ugIsVerticesEmpty && New_ugVertexCount == Old_ugVertexCount && (New_ugEdgeCount == 0) == (New_Ret) && ((!(New_ugEdgeCount == 0)) || (New_ugEdgeCount <= New_ugVertexCount)) && New_ugEdgeCount >= 0))
 

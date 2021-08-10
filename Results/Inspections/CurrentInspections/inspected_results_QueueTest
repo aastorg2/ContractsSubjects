@@ -121,11 +121,6 @@ smt check: Precis
 
 
 
-
-
-
-
-
 Truly Safe: True
 
 Analysis: (New_s1Count == Old_s1Count) holds because the number of elements does not change between states. !(New_Ret) If the queried item is not present, then it holds that there are at least zero elements in the post state. If not, then it holds that there is at least one element present in the post state.
