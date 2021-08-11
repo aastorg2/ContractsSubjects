@@ -1,0 +1,32 @@
+Problem: QueueTest
+
+PUT: PUT_PeekContract
+
+===== Final Result for PUT_PeekContract
+
+simplified post: 
+((New_s1Count == Old_s1Count && New_s1ContainsNewRet))
+
+rounds: 5
+
+pex time: 39.36805009841919
+
+learn time: 16.0472412109375
+
+Samples: 22
+
+PUT: PUT_ContainsContract
+
+===== Final Result for PUT_ContainsContract
+
+simplified post: 
+((New_s1Count == Old_s1Count && ((!(New_Ret)) || (New_Top == Old_Top)) && ((!(New_Ret)) || (New_s1Count >= 1)) && New_s1Count >= 0))
+
+rounds: 6
+
+pex time: 72.36459112167358
+
+learn time: 24.188571453094482
+
+Samples: 52
+

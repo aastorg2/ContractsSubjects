@@ -1,0 +1,77 @@
+Problem: BinaryHeapTest
+
+PUT: PUT_AddContract
+
+===== Final Result for PUT_AddContract
+
+simplified post: 
+((New_bhCount >= 1 && New_bhIndexOfValue >= 0 && Old_bhCount >= 0 && New_bhCount > New_bhIndexOfValue && New_bhCount - Old_bhCount - 1 == 0 && New_bhCount > Old_bhIndexOfValue && New_bhIndexOfValue <= Old_bhCount && New_bhMinimumKey <= Old_key && Old_bhCount > Old_bhIndexOfValue))
+
+rounds: 6
+
+pex time: 184.22755527496338
+
+learn time: 27.225600957870483
+
+Samples: 73
+
+PUT: PUT_MinimumContract
+
+===== Final Result for PUT_MinimumContract
+
+simplified post: 
+((New_bhCount == Old_bhCount && New_bhMinimumKey == Old_bhMinimumKey && New_bhMinimumValue == Old_bhMinimumValue && New_bhCount >= 1))
+
+rounds: 7
+
+pex time: 91.1061499118805
+
+learn time: 26.057260990142822
+
+Samples: 40
+
+PUT: PUT_RemoveMinimumContract
+
+===== Final Result for PUT_RemoveMinimumContract
+
+simplified post: 
+((New_bhCount >= 0 && Old_bhCount >= 1 && New_bhCount - Old_bhCount + 1 == 0))
+
+rounds: 15
+
+pex time: 650.0243911743164
+
+learn time: 78.23235249519348
+
+Samples: 138
+
+PUT: PUT_RemoveAtContract
+
+===== Final Result for PUT_RemoveAtContract
+
+simplified post: 
+((New_bhCount >= 0 && Old_bhCount >= 1 && New_bhCount - Old_bhCount + 1 == 0 && New_bhCount >= Old_index && Old_bhCount > Old_index))
+
+rounds: 9
+
+pex time: 588.8340265750885
+
+learn time: 46.06918144226074
+
+Samples: 117
+
+PUT: PUT_IndexOfContract
+
+===== Final Result for PUT_IndexOfContract
+
+simplified post: 
+((New_bhCount == Old_bhCount && New_bhCount >= 0 && New_bhCount > New_Ret))
+
+rounds: 5
+
+pex time: 58.77640461921692
+
+learn time: 18.65810990333557
+
+Samples: 48
+

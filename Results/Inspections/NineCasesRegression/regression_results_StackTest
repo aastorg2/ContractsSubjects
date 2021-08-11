@@ -1,0 +1,17 @@
+Problem: StackTest
+
+PUT: PUT_ContainsContract
+
+===== Final Result for PUT_ContainsContract
+
+simplified post: 
+((New_s1Count == Old_s1Count && ((!(New_Ret)) || (New_Top == Old_Top)) && ((!(New_Ret)) || (New_s1Count >= 1)) && New_s1Count >= 0))
+
+rounds: 7
+
+pex time: 77.96467351913452
+
+learn time: 28.24419379234314
+
+Samples: 53
+

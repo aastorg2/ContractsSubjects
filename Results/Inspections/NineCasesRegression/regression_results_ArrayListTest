@@ -1,0 +1,17 @@
+Problem: ArrayListTest
+
+PUT: PUT_GetContract
+
+===== Final Result for PUT_GetContract
+
+simplified post: 
+((New_arrListCount == Old_arrListCount && New_containsNewRet && New_arrListCount > Old_index))
+
+rounds: 4
+
+pex time: 41.448092222213745
+
+learn time: 11.329307794570923
+
+Samples: 20
+
