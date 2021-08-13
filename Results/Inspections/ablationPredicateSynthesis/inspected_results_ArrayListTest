@@ -6,11 +6,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
+smt check: Incomparable
 
-smt check: Unknown
-
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -38,11 +36,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Other
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -70,11 +66,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
+smt check: Incomparable
 
-smt check: Unknown
-
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -102,11 +96,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Other
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -134,11 +126,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -166,11 +156,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -198,11 +186,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -230,11 +216,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -264,8 +248,7 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-Label:
-
+Truly Safe:
 Analysis:
 
 learned postcondition: (((Old_arrListLastIndexOfX <= Old_arrListCount && New_Ret <= Old_arrListLastIndexOfX && New_arrListCount == Old_arrListCount && (!(Old_arrListLastIndexOfX == Old_arrListCount)) && New_arrListLastIndexOfX ==           Old_arrListLastIndexOfX && New_Ret >= -1)) && ((Old_arrListContainsX && New_arrListContainsX && New_Ret >= 0 && Old_arrListCount >= 1 && New_arrListCount >= 1 && New_arrListLastIndexOfX >= 0 && Old_arrListLastIndexOfX >= 0) || ((!(Old_arrListContainsX)) && (!(New_arrListContainsX)) && New_Ret == -1 && Old_arrListLastIndexOfX == -1 && New_arrListLastIndexOfX == -1)))

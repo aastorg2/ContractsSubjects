@@ -10,8 +10,12 @@ def add_label(filename):
     for line_idx in range(len(lines)):
         line = lines[line_idx]
         if "smt check:" in line:
-            line = "Truly Safe: \n\n" + line
+            line = line + "\n\nTruly Safe:\n\n" 
+        
+        if "label:" in line:
+            continue
         i_file.write(line)
+
     i_file.close()
 
 if __name__ == "__main__":

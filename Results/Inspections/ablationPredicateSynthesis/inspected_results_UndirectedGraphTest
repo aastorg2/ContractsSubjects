@@ -6,9 +6,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Incomparable
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -36,9 +36,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Incomparable
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -66,9 +66,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Incomparable
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -98,7 +98,7 @@ Disjunctive (Truly):
 
 smt check: Other
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -126,9 +126,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Incomparable
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -156,9 +156,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Incomparable
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -188,7 +188,7 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -218,7 +218,7 @@ Disjunctive (Truly):
 
 smt check: Other
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -248,7 +248,7 @@ Disjunctive (Truly):
 
 smt check: Other
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -278,7 +278,7 @@ Disjunctive (Truly):
 
 smt check: Other
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -308,7 +308,7 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -338,7 +338,7 @@ Disjunctive (Truly):
 
 smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -366,9 +366,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-smt check: Unknown
+smt check: Incomparable
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -398,7 +398,7 @@ Disjunctive (Truly):
 
 smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 

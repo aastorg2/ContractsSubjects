@@ -6,15 +6,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
+smt check: Incomparable
 
-smt check: Unknown
-
-Truly Safe: 
-
-smt check: Unknown
-
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -44,15 +38,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Precis
 
-Truly Safe: 
-
-smt check: Precis
-
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -82,15 +70,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Equivalent
 
-Truly Safe: 
-
-smt check: Equivalent
-
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -120,15 +102,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Equivalent
 
-Truly Safe: 
-
-smt check: Equivalent
-
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -158,15 +134,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Equivalent
 
-Truly Safe: 
-
-smt check: Equivalent
-
-Label:
+Truly Safe:
 
 Analysis:
 

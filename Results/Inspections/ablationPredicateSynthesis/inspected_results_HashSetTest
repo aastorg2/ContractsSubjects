@@ -6,11 +6,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -40,11 +38,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Precis
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -74,11 +70,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
@@ -108,11 +102,9 @@ Disjunctive (PexChoose):
 Disjunctive (Alternate Semantics):
 Disjunctive (Truly):
 
-Truly Safe: 
-
 smt check: Equivalent
 
-Label:
+Truly Safe:
 
 Analysis:
 
